@@ -1,3 +1,7 @@
 #bottom-signup-text {
     margin-left: 10px;
 }
+
+#errors {
+    color: red;
+}

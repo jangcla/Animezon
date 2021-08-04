@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul id='errors'>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -39,7 +39,6 @@ class SessionForm extends React.Component {
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
 					<h1 id='form-header'>Create account</h1>
-					{this.renderErrors()}
 					<div className="login-form">
 						<br />
 						<p id='form-text'>Email</p>  						 
@@ -47,7 +46,7 @@ class SessionForm extends React.Component {
 								value={this.state.email}
 								onChange={this.update('email')}
 								className="login-input"
-							/>
+								/>
 						<br />
 						<p id='form-text'>Password</p>  
 							<input type="password"
@@ -64,6 +63,7 @@ class SessionForm extends React.Component {
 						<br />
 						<input className="session-submit" type="submit" value='Create your Animezon account' />
 					</div>
+						{this.renderErrors()}
 					<br />
 					<p id='bottom-signup-text'>Already have an account? {this.props.navLink}</p>	
 				</form>
