@@ -1,0 +1,47 @@
+ .login-form-container {
+   display: flex;
+   justify-content: center;
+   margin-top: 100px;
+
+ }
+
+ .login-form {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+ }
+
+ .login-input {
+   margin-left: 10px;
+   width: 295px;
+   height: 27px;
+ }
+
+ .login-form-box {
+   outline: 1px solid rgb(190, 187, 187);
+   padding: 15px;
+   width: 320px;
+   border-radius: 30px;
+ }
+
+  #login-create {
+     width: 350px;
+     height: 32px;
+     text-decoration: none;
+ }
+
+ .session-submit {
+     margin-left: 9px;
+     width: 305px;
+     height: 34px;
+     background: #f0c14b;
+     border-radius: 5px;
+ }
+
+ #login-header {
+     padding: 0px;
+ }
+
+ #form-text {
+     margin-left: 12px;
+ }

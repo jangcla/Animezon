@@ -1,7 +1,7 @@
 #nav-bar {
     border-bottom: 1px solid black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background: rgb(37, 50, 70);
     color: white;
 }

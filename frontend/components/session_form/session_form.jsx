@@ -38,35 +38,39 @@ class SessionForm extends React.Component {
     return (
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to Animezon!
-					<br />
-					Please {this.props.formType}. {this.props.navLink}
+					<h1>Create account</h1>
 					{this.renderErrors()}
 					<div className="login-form">
 						<br />
-						<label>Email:
+						<p id='form-text'>Email</p>  						 
 							<input type="text"
 								value={this.state.email}
 								onChange={this.update('email')}
 								className="login-input"
 							/>
-						</label>
 						<br />
-						<label>Password:
+						<p id='form-text'>Password</p>  
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update('password')}
 								className="login-input"
-							/>
-						</label>
+								placeholder='At least 6 characters'
+								/>
+							<br />
+							<p id='form-text'>Re-enter password</p> 
+							<input type="password"
+								className="login-input"
+								/>
 						<br />
-						<input className="session-submit" type="submit" value={this.props.formType} />
+						<input className="session-submit" type="submit" value='Create your Animezon account' />
 					</div>
+					<br />
+					<p id='bottom-signup-text'>Already have an account? {this.props.navLink}</p>	
 				</form>
 			</div>
     )
   }
-
+	
 }
 
 export default SessionForm;

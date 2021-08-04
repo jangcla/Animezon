@@ -9,7 +9,7 @@ const App = () => (
     <div>
         <header id='nav-bar'>
             <div>
-                <h1>Animezon <img src="https://decor.bruiloftideeen.com/images/urban-ninja-anime-art-1440x2560-wallpaper.jpg?s=woipHE27tE" height='80px'/></h1>
+                <h1>Animezon</h1>
             </div>
             <GreetingContainer/>
         </header>
