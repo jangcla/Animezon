@@ -39,7 +39,7 @@ class LoginForm extends React.Component {
 			<div className="login-form-container">
                 <div className='inner-login'>
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-                    <h1>Sign-In</h1>
+                    <h1 id='form-header'>Sign-In</h1>
 					{this.renderErrors()}
 					<div className="login-form">
 						<br />

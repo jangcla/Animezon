@@ -4,4 +4,16 @@
     justify-content: space-between;
     background: rgb(37, 50, 70);
     color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#greeting {
+    display: flex;
+    justify-content: space-between;
+}
+
+#log-out {
+    height: 25px;
+    margin-top: 15px;
 }

@@ -6,10 +6,10 @@ import {Route, HashRouter} from 'react-router-dom'
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 const App = () => (
-    <div>
+    <div id='main-div'>
         <header id='nav-bar'>
             <div>
-                <h1>Animezon</h1>
+                <h2>Animezon</h2>
             </div>
             <GreetingContainer/>
         </header>

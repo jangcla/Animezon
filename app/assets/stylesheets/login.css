@@ -18,10 +18,11 @@
  }
 
  .login-form-box {
-   outline: 1px solid rgb(190, 187, 187);
-   padding: 15px;
+   border: 1px solid rgb(226, 226, 226);
+   padding-left: 15px;
+   padding-right: 15px;
    width: 320px;
-   border-radius: 30px;
+   border-radius: 10px;
  }
 
   #login-create {
@@ -30,18 +31,33 @@
      text-decoration: none;
  }
 
+ 
  .session-submit {
      margin-left: 9px;
      width: 305px;
      height: 34px;
-     background: #f0c14b;
+     background: linear-gradient(180deg, #f0d38c, #f0c14b);
      border-radius: 5px;
- }
+    }
+    
+.session-submit:hover {
+   background: #e6b949ef;
+}
 
- #login-header {
-     padding: 0px;
+ #form-header {
+     margin-left: 12px;
+     padding-top: 20px;
  }
 
  #form-text {
      margin-left: 12px;
+     margin-top: 5px;
+     font-weight: bold;
+ }
+
+ input:focus {
+     outline: none;
+     border-color: rgb(250, 159, 54);
+     box-shadow: 0 0 10px rgb(247, 141, 19);
+     border-radius: 5px;
  }

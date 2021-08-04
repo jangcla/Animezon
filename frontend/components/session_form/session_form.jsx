@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
     return (
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					<h1>Create account</h1>
+					<h1 id='form-header'>Create account</h1>
 					{this.renderErrors()}
 					<div className="login-form">
 						<br />
