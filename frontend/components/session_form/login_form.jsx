@@ -71,6 +71,9 @@ class LoginForm extends React.Component {
 					</div>
 					<br />
 				</form>
+                <div id='divider'>
+                    <h5 id="new-to">New to Animezon?</h5>
+                </div>
                 <br />
                 <button id='login-create'>{this.props.navLink} </button>
                         {/* <form action=id='signin-create-acount'>

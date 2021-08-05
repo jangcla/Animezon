@@ -38,6 +38,7 @@
      height: 34px;
      background: linear-gradient(180deg, #f3e0af, #f1b51c);
      border-radius: 5px;
+     border-color: rgb(248, 207, 159);
     }
     
     .session-submit:hover {
@@ -62,3 +63,19 @@
      box-shadow: 0 0 10px rgb(247, 141, 19);
      border-radius: 5px;
  }
+
+#divider {
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #e7e7e7;
+  height: 9px;
+  padding: 0 115px 0 120px;
+}
+
+#new-to {
+  color: #919090;
+  background: white;
+  padding: 1px;
+  font-size: 12px;
+  font-weight: 500;
+}
