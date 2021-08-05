@@ -21,3 +21,10 @@
 .login-signup {
     margin-top: 25px;
 }
+
+#search {
+    height: 25px;
+    width: 400px;
+    margin-top: 20px;
+    border-radius: 1%;
+}

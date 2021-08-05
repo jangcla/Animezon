@@ -11,6 +11,11 @@ const App = () => (
             <div>
                 <h2>Animezon</h2>
             </div>
+            <label>
+                <input type="text" id='search'/>
+                <img src="" alt="" />
+            </label>
+
             <GreetingContainer/>
         </header>
         
