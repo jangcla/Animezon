@@ -11,7 +11,7 @@ class Api::SessionsController < ApplicationController
     end
 
 
-    def delete 
+    def destroy 
         @user = current_user
         if @user
             logout
