@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { login } from '../../actions/session_actions';
 
 const Greeting = ({currentUser, logout}) => {
     const sessionLinks = () => (
@@ -18,7 +19,9 @@ const Greeting = ({currentUser, logout}) => {
             
         </hgroup>
     );
-    return currentUser ? personalGreeting() : sessionLinks();
+
+    return currentUser ? personalGreeting() : sessionLinks()
+
 };
 
 export default Greeting;

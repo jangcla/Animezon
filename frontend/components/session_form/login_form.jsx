@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -38,8 +39,12 @@ class LoginForm extends React.Component {
         );
     }
 
-    render() {
+  render() {
     return (
+        <div id='whole-form'>
+                    <header id="session-logo">
+                        <Link to='/' id='link'><img src="https://i.pinimg.com/originals/13/69/c2/1369c275968915fa376e534f1d0fe891.jpg" id='anime' /></Link>
+                    </header>
 			<div className="login-form-container">
                 <div className='inner-login'>
 				<form onSubmit={this.handleSubmit} className="login-form-box">
@@ -72,7 +77,8 @@ class LoginForm extends React.Component {
                             <input type="submit" value="Create your Animezon account"  id ='login-create'/>
                         </form>      */}
                 </div>
-			</div>
+			</div> 
+        </div>
     )
   }
 }
