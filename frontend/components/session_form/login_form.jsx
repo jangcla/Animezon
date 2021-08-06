@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -75,10 +75,7 @@ class LoginForm extends React.Component {
                     <h5 id="new-to">New to Animezon?</h5>
                 </div>
                 <br />
-                <button id='login-create'>{this.props.navLink} </button>
-                        {/* <form action=id='signin-create-acount'>
-                            <input type="submit" value="Create your Animezon account"  id ='login-create'/>
-                        </form>      */}
+                <button id='login-create'>{this.props.navLink} </button>                            
                 </div>
 			</div> 
         </div>
