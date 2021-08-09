@@ -16,11 +16,34 @@ class ItemShow extends React.Component {
                 <Navbar/>
                 <div id='item-show'>
                     <div id="display">
-                        <img src={this.props.item.photoUrl} id='main-display'/>
+                        <div id="side-display">
+                            <button><img src={this.props.item.photoUrl} id="button-img"/></button>
+                        </div>
+
+                        <div id="main-display">
+                            <img src={this.props.item.photoUrl} id='main-display'/>
+                        </div>
                     </div>
 
                     <div id="item-info">
-                        info here
+                        <h1>{this.props.item.name}</h1>
+
+                        <div id='divider'/>
+                        <br />
+
+                        <div id="info-price">
+                            <p>Price:</p>
+                            <p id='price-num'>${this.props.item.price}</p>  
+                        </div>  
+
+                        <div id='divider'/>
+                        <br />
+
+                        <div id='item-description'>
+                            <h4>About this item</h4>
+                            <p>{this.props.item.description}</p>
+                        </div>  
+
                     </div>
 
                     <div id="to-cart">

@@ -63,11 +63,17 @@
 }
 
 #add-to {
-    background: rgb(253, 209, 31);
+    background: rgb(252, 213, 55);
+}
+#add-to:hover {
+    background: rgb(238, 196, 27);
 }
 
 #buy-now {
     background: rgb(255,164,27);
+}
+#buy-now:hover {
+    background: rgb(255, 145, 27);
 }
 
 #stock {
@@ -84,10 +90,10 @@
 
 #quantity {
     border-radius: 7px;
-    background: rgb(226, 226, 226);
+    background: linear-gradient(180deg, #dfdfdf, #fcfcfc);
     border-color: rgb(186, 186, 186);
-    font-weight: 400;
-    padding: 2px;
+    font-size: 10px;
+    padding: 3px;
 }
 
 #location {
@@ -108,4 +114,41 @@
 
 #li:hover {
     color: rgb(228, 94, 4);
+}
+
+#item-info {
+    width: 35%;
+}
+
+#item-info h1{
+    margin-top: 0;
+}
+
+
+#display {
+    width: 40%;
+    display: flex;
+}
+
+#button-img {
+    width: 40px;
+    height: 40px;
+}
+
+#main-display {
+    width: 500px;
+}
+
+#side-display {
+    padding-right: 20px;   
+}
+
+#info-price {
+    padding-left: 25px;
+    display: flex;
+}
+
+#info-price p {
+
+    padding-right: 5px;
 }
