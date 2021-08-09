@@ -8,7 +8,7 @@ import { receiveErrors } from "../../actions/session_actions";
 const mSTP = ({errors}) => ({
     errors: errors.session,
     formType: 'login',
-    navLink: <Link to='/signup'>Create your Animezon account</Link>
+    navLink: <Link to='/signup' id='create-acc'>Create your Animezon account</Link>
 })
 
 const mDTP = dispatch => ({

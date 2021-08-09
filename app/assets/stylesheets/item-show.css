@@ -19,6 +19,7 @@
 
 #buy-new {
     font-weight: bold;
+    margin-left: 1%;
 }
 
 #price-num {
@@ -32,9 +33,9 @@
 }
 
 #prime-ship-logo {
-    width: 70px;
-    height: 40px;
-    margin-top: 10px;
+    width: 80px;
+    height: 50px;
+    margin-top: 1px;
 }
 
 #shipping {
@@ -53,9 +54,9 @@
 }
 
 #to-cart-buttons button {
-    width: 85%;
+    width: 90%;
     height: 30px;
-    margin-left: 7%;
+    margin-left: 5%;
     margin-bottom: 10px;
     border-radius: 30px;
     border-color: transparent;
@@ -67,4 +68,44 @@
 
 #buy-now {
     background: rgb(255,164,27);
+}
+
+#stock {
+    margin-top: 30px;
+    margin-left: 5%;
+    padding-bottom: 5%;
+}
+
+#in-stock {
+    margin-bottom: 10px;
+    font-size: large;
+    color: green;
+}
+
+#quantity {
+    border-radius: 7px;
+    background: rgb(226, 226, 226);
+    border-color: rgb(186, 186, 186);
+    font-weight: 400;
+    padding: 2px;
+}
+
+#location {
+    width: 10%;
+    padding-top: 10px;
+    margin-left: 5%;
+}
+
+#ship-info p {
+    width: 80%;
+    margin-left: 5%;
+}
+
+#li {
+    color: rgb(1,113,133);
+    text-decoration: none;
+}
+
+#li:hover {
+    color: rgb(228, 94, 4);
 }

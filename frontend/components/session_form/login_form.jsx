@@ -75,7 +75,7 @@ class LoginForm extends React.Component {
                     <h5 id="new-to">New to Animezon?</h5>
                 </div>
                 <br />
-                <button id='login-create'>{this.props.navLink} </button>                            
+                {this.props.navLink}                        
                 </div>
 			</div> 
         </div>

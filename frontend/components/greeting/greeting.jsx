@@ -5,9 +5,9 @@ import { login } from '../../actions/session_actions';
 const Greeting = ({currentUser, logout}) => {
     const sessionLinks = () => (
         <nav className = 'login-signup'>
-            <button><Link to = '/login'>Login</Link></button>
+            <button><Link to = '/login' id='auth-link'>Login</Link></button>
             &nbsp;or&nbsp;
-            <button><Link to = '/signup'>Signup</Link></button>
+            <button><Link to = '/signup' id="auth-link">Signup</Link></button>
         </nav>
     );
     const personalGreeting = () => (

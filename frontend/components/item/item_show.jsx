@@ -9,7 +9,7 @@ class ItemShow extends React.Component {
     }
 
     render() {
-        return this.props.item ? 
+        return (this.props.item && this.props.item.availability) ? 
 
         (
             <div id="item-show-component">
@@ -39,8 +39,26 @@ class ItemShow extends React.Component {
      
                         </div>
 
+                        <div id="ship-info">
+                            <p>
+                                Get Fast, Free Shippng with <Link to='/' id="li">Animezon Prime</Link>
+                            </p>    
+                        </div>
+
+                        <div>
+                                <img src="https://icons-for-free.com/iconfiles/png/512/location-131965017472890605.png" id="location"/><Link to="/" id="li">Select delivery location</Link>
+                        </div>
+
                         <div id="stock">
+                            <div id="in-stock">
+                                In Stock.
+                            </div>
                             
+                            <select id="quantity">
+                                <option value="1">Qty: 1</option>
+                                <option value="2">Qty: 2</option>
+                                <option value="3">Qty: 3</option>   
+                            </select>
                         </div>
 
                         <div id="to-cart-buttons">

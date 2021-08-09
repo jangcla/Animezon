@@ -75,3 +75,8 @@
 option {
     text-align: center;
 }
+
+#auth-link {
+    color: black;
+    text-decoration: none;
+}

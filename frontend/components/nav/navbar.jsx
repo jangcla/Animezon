@@ -15,7 +15,7 @@ class Navbar extends React.Component {
                     <select id="search-select">
                         <option value="0">All</option>
                         <option value="1">Anime</option>
-                        <option value="2">Acc</option>
+                        <option value="2">Manga</option>
                         <option value="3">Merch</option>
                     </select>
                 <input type="text" id="search"></input>
