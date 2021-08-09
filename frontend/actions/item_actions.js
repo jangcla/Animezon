@@ -5,12 +5,12 @@ export const RECEIVE_ITEM = "RECEIVE_ITEM";
 
 export const receiveItems = items => ({
     type: RECEIVE_ITEMS,
-    items: items
+    items
 })
 
-export const receiveItem = item=> ({
+export const receiveItem = item => ({
     type: RECEIVE_ITEM,
-    item: item,
+    item
 })
 
 export const fetchItems = () => dispatch => (
@@ -18,7 +18,7 @@ export const fetchItems = () => dispatch => (
         .then(items => dispatch(receiveItems(items)))
 )
 
-export const fetchItem = itemId => (
+export const fetchItem = itemId => dispatch => (
     itemUtil.fetchItem(itemId)
         .then(item => dispatch(receiveItem(item)))
 )

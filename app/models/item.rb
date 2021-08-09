@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
     validates :name, :description, :price, presence: true
 
-    has_many_attached :photo
+    has_one_attached :photo
 end
