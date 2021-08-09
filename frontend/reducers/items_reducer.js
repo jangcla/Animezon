@@ -6,9 +6,7 @@ const itemsReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_ITEM:
-            console.log(action.item)
             nextState[action.item.id] = action.item
-            console.log(nextState)
             return nextState;
         case RECEIVE_ITEMS: 
             return action.items

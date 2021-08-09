@@ -1,0 +1,70 @@
+#item-show {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 40px;
+}
+
+#main-display {
+    width: 300px;
+    height: 280px;
+}
+
+#price {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#buy-new {
+    font-weight: bold;
+}
+
+#price-num {
+    color: #B22805;
+}
+
+#to-cart {
+    width: 250px;
+    border: 1px solid rgb(216, 214, 214);
+    border-radius: 10px;
+}
+
+#prime-ship-logo {
+    width: 70px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+#shipping {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#same-day p {
+    font-size: small;
+    color: rgb(182, 182, 182);
+}
+
+#to-cart-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#to-cart-buttons button {
+    width: 85%;
+    height: 30px;
+    margin-left: 7%;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    border-color: transparent;
+}
+
+#add-to {
+    background: rgb(253, 209, 31);
+}
+
+#buy-now {
+    background: rgb(255,164,27);
+}

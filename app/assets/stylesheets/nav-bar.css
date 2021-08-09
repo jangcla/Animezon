@@ -2,7 +2,7 @@
     border-bottom: 1px solid black;
     display: flex;
     justify-content: space-between;
-    background: rgb(37, 50, 70);
+    background: rgb(0, 0, 0);
     color: white;
     padding-left: 10px;
     padding-right: 10px;
@@ -23,10 +23,14 @@
 }
 
 #search {
-    height: 25px;
+    height: 35px;
     width: 400px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 1%;
+    border-color: transparent;
+    margin-right: -3px;
+    margin-left: -15px;
+    position: relative;
 }
 
 #anime {
@@ -48,4 +52,26 @@
 
 #nav-logo {
     margin-top: 5px;
+}
+
+#search-button {
+    background: #ffc170;
+    height: 41px;
+    width: 45px;
+    padding-bottom: 4px;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+#search-select {
+    height: 41px;
+    border-radius: 5px;
+    background: rgb(242, 240, 240);
+    width: auto;
+    border-color: transparent;
+    position: relative;
+}
+
+option {
+    text-align: center;
 }
