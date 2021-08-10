@@ -76,6 +76,7 @@ class SessionForm extends React.Component {
 						</div>
 							{this.renderErrors()}
 						<br />
+						<div id='divider'/>
 						<p id='bottom-signup-text'>Already have an account? {this.props.navLink}</p>	
 					</form>
 					
