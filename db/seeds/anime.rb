@@ -19,14 +19,15 @@ anime6.photo.attach(io: File.open("/Users/johnangcla/Desktop/animezon_imgages/ju
 anime7 = Item.create!(name: "Air Gear", type_tag: "anime", description: "Air Gear is about the life of Itsuki Minami and his friends. The story follows their use of Air Trecks, an in-universe invention derived from inline skates.", availability: true, price: 29.99)
 anime7.photo.attach(io: File.open("/Users/johnangcla/Desktop/animezon_imgages/air-gear.jpeg"), filename: 'air-gear.jpeg')
 
-anime8 = Item.create!(name: "Boku no My Hero Academia", type_tag: "anime", description: "The series focuses on a middle school student Izuku Midoriya, who has no superpowers. ... Academies across the globe train their students to learn to fight crime with their powers. Izuku Midoriya, a boy born without any powers, dreams of being able to become a super hero too, but gets bullied for his unrealistic dreams", availability: true, price: 34.99)
+anime8 = Item.create!(name: "Boku no Hero Academia", type_tag: "anime", description: "The series focuses on a middle school student Izuku Midoriya, who has no superpowers. ... Academies across the globe train their students to learn to fight crime with their powers. Izuku Midoriya, a boy born without any powers, dreams of being able to become a super hero too, but gets bullied for his unrealistic dreams", availability: true, price: 34.99)
 anime8.photo.attach(io: File.open("/Users/johnangcla/Desktop/animezon_imgages/my-hero.jpg"), filename: 'my-hero.jpg')
 
 anime9 = Item.create!(name: "Haikyuu", type_tag: "anime", description: "Hinata Shouyou, a short middle school student, gained a sudden love of volleyball after watching a national championship match on TV. Determined to become like the championship's star player, a short boy nicknamed the small giant, Shouyou joined his school's volleyball club.", availability: true, price: 29.99)
 anime9.photo.attach(io: File.open("/Users/johnangcla/Desktop/animezon_imgages/haikyuu.jpeg"), filename: 'haikyuu.jpeg')
 
-anime10 = Item.create!(name: "Kuroko no Bosuke (Kuroko's Basketball)", type_tag: "anime", description: "A legendary 6th player. An up-and-coming power player, Taiga Kagami, is just back from America. When he comes to Seirin High School, he meets the super-ordinary boy, Tetsuya Kuroko. ... Kuroko makes a pact with Kagami to defeat the other members of the Miracle Generation, who have all played basketball at other schools.", availability: true, price: 19.99)
+anime10 = Item.create!(name: "Kuroko no Basuke (Kuroko's Basketball)", type_tag: "anime", description: "A legendary 6th player. An up-and-coming power player, Taiga Kagami, is just back from America. When he comes to Seirin High School, he meets the super-ordinary boy, Tetsuya Kuroko. ... Kuroko makes a pact with Kagami to defeat the other members of the Miracle Generation, who have all played basketball at other schools.", availability: true, price: 19.99)
 anime10.photo.attach(io: File.open("/Users/johnangcla/Desktop/animezon_imgages/kuroko.jpg"), filename: 'kuroko.jpg')
 
-anime1 = Item.create!(name: "", type_tag: "anime", description: "", availability: true, price: 1)
-anime1.photo.attach(io: File.open("/Users/johnangcla/Desktop/screenshots/test.jpeg"), filename: 'test.jpeg')
+anime11 = Item.create!(name: "Jojo's Bizarre Adventure", type_tag: "anime", description: "The story of the Joestar family, who are possessed with intense psychic strength, and the adventures each member encounters throughout their lives. Chronicles the struggles of the cursed Joestar bloodline against the forces of evil.", availability: true, price: 24.99)
+anime11.photo.attach(io: File.open("/Users/johnangcla/Desktop/animezon_imgages/jojo.png"), filename: 'jojo.png')
+
