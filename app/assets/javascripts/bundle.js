@@ -807,7 +807,7 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
         to: "/",
         id: "link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://i.pinimg.com/originals/89/78/60/897860ca8b370f7e56be6208111080ad.jpg",
+        src: "../../../storage/images/animezon.jpeg",
         id: "anime-home"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
         id: "search-select"
