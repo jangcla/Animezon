@@ -1245,7 +1245,8 @@ var mSTP = function mSTP(_ref) {
     errors: errors.session,
     formType: 'signup',
     navLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-      to: "/login"
+      to: "/login",
+      id: "li"
     }, "Sign-in")
   };
 };
