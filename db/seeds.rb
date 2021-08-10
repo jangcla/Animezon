@@ -10,5 +10,6 @@ require 'open-uri'
 
 Item.destroy_all
 
-item1 = Item.create!(name: "test", type_tag: "anime", description: "test", availability: true, price: 1.99)
-item1.photo.attach(io: File.open("/Users/johnangcla/Desktop/screenshots/test.jpeg"), filename: 'test.jpeg')
+require_relative './seeds/anime.rb'
+require_relative './seeds/manga.rb'
+require_relative './seeds/merch.rb'

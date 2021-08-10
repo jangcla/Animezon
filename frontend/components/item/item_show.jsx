@@ -21,7 +21,7 @@ class ItemShow extends React.Component {
                         </div>
 
                         <div id="main-display">
-                            <img src={this.props.item.photoUrl} id='main-display'/>
+                            <img src={this.props.item.photoUrl} id='main-photo'/>
                         </div>
                     </div>
 

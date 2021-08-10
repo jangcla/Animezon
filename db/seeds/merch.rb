@@ -19,6 +19,6 @@ merch6.photo.attach(io: File.open("/Users/johnangcla/Desktop/animezon_imgages/ju
 merch7 = Item.create!(name: "Naruto and Sasuke Anime Figure Set of Two (Asura Gods Edition)", type_tag: "merch", description: "A collective set featuring both Sasuke and Naruto in battle form refering to the two japanese Gods of destruciton", availability: true, price: 99.99)
 merch7.photo.attach(io: File.open("/Users/johnangcla/Desktop/animezon_imgages/naruto-figure-merch.webp"), filename: 'naruto-figure-merch.webp')
 
-merch1 = Item.create!(name: "Tokyo Ghoul: One Eyed Ghoul Gaming Mousepad", type_tag: "merch", description: "A wide area gaming mousepad featuring Kaneki Ken in his Ghoul form as the main design of the gaming mouse pad.", availability: true, price: 12.99)
-merch1.photo.attach(io: File.open("/Users/johnangcla/Desktop/animezon_imgages/tokyo-mouse-pad.jpeg"), filename: 'tokyo-mouse-pad.jpeg')
+merch8 = Item.create!(name: "Tokyo Ghoul: One Eyed Ghoul Gaming Mousepad", type_tag: "merch", description: "A wide area gaming mousepad featuring Kaneki Ken in his Ghoul form as the main design of the gaming mouse pad.", availability: true, price: 12.99)
+merch8.photo.attach(io: File.open("/Users/johnangcla/Desktop/animezon_imgages/tokyo-mouse-pad.jpeg"), filename: 'tokyo-mouse-pad.jpeg')
 
