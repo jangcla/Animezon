@@ -8,10 +8,14 @@ class Navbar extends React.Component {
 
             <header id='nav-bar'>
             <div id='nav-logo'>
-                <Link to='/' id='link'><img src="./images/animezon.jpeg" id='anime-home' /></Link>
+                    <Link to='/' id='link'><img src="https://raw.githubusercontent.com/jangcla/Animezon/cart/frontend/components/nav/images/animezon.jpeg" id='anime-home' /></Link>
+            </div>
+            
+            <div id="location-selecting">
+                    <Link to='/' id='loc-li'><img src="https://i.pinimg.com/474x/35/38/84/35388450747d66cc94e19c96af601c94.jpg" id='loc-nav'/><big>Select your address</big></Link>
             </div>
 
-            <div>
+            <div id='search-div'>
                     <select id="search-select">
                         <option value="0">All</option>
                         <option value="1">Anime</option>

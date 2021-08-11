@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 class ItemIndex extends React.Component {
     componentDidMount() {
         this.props.fetchItems()
-        console.log(this.props)
     }
 
 
@@ -13,14 +12,11 @@ class ItemIndex extends React.Component {
         return this.props.items ?
         (
             <div id="main-index">
-
+                <h2 id="main-index-title">Choose From All</h2>
                 <div id="index-categorry">
-                    <ul>
-                        {/* <li>hello</li> */}
                         {
                             this.props.items.map(item => <ItemIndexItem item={item} key={item.id}/>)
                         }
-                    </ul>
                 </div>
 
             </div>

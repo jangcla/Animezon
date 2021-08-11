@@ -6,25 +6,49 @@
     color: white;
     padding-left: 10px;
     padding-right: 10px;
+    height: 65px;
 }
 
 #greeting {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 #log-out {
-    height: 25px;
-    margin-top: 15px;
+    height: 40px;
+    margin-top: 10px;
+    background: none;
+    border-color: transparent;
+    color: white;
+    font-size: small;
+    text-align: left;
+}
+
+#log-out:hover {
+    /* background: rgb(89, 89, 89); */
+    border: 1px solid white;
 }
 
 .login-signup {
-    margin-top: 25px;
+    margin-top: 8px;
+    font-size: small;
+    text-align: left;
+    padding: 5px;
 }
 
+.login-signup:hover {
+    /* background: rgb(89, 89, 89); */
+    margin-bottom: 10px;
+    border: 1px solid white;
+}
+
+#search-div{
+    width: 61%;
+}
 #search {
     height: 35px;
-    width: 400px;
+    width: inherit;
     margin-top: 10px;
     border-radius: 1%;
     border-color: transparent;
@@ -45,9 +69,12 @@
 }
 
 #anime-home {
-    height: 50px;
-    width: 90px;
-    border-radius: 10px;
+    height: 53px;
+    width: 149px;
+    position: relative;
+}
+#anime-home:hover {
+    border: 1px solid white;
 }
 
 #nav-logo {
@@ -77,6 +104,20 @@ option {
 }
 
 #auth-link {
-    color: black;
+    color: white;
     text-decoration: none;
+}
+
+#loc-nav {
+    height: 30px;
+    width: fit-content;
+}
+
+#loc-li {
+    text-decoration: none;
+    color: white;
+}
+
+#location-selecting {
+    margin-top: 13px;
 }

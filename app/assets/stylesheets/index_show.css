@@ -1,0 +1,29 @@
+#main-index {
+    height: auto;
+    background: white;
+    width: 98%;
+    margin-left: 1%;
+}
+
+#index-categorry {
+    display: flex;
+    flex-wrap: wrap;
+    height: 45%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#index-categorry div {
+    width: 7%;
+    padding: 1.05%;
+}
+
+#index-small-img {
+    width: 100%;
+    height: 100%;
+}
+
+#main-index-title {
+    padding-left: 2%;
+    padding-top: 1%;
+}

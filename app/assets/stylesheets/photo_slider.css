@@ -1,92 +1,161 @@
-.slider {
-  align-items: center;
-  width: 90%;
-  text-align: center;
-  overflow: hidden;
-  justify-content: center;
-  margin: auto;
-}
-
-.slides {
+/* body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: mandatory;
- 
-}
-.slides::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-.slides::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 10px;
-}
-.slides::-webkit-scrollbar-track {
-  background: transparent;
-}
-.slides > div {
-  scroll-snap-align: center;
-  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background: #23E3C9;
+} */
+
+.slider{
   width: 100%;
-  height: 300px;
-  border-radius: 10px;
-  background: #eee;
-  transform-origin: center center;
-  transform: scale(1);
-  transition: transform 0.5s;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 90px;
-}
-
-.slider > a {
-  display: inline-flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  height: 600px;
+  /* border-radius: 10px; */
+  overflow: hidden;
   background: white;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 0 0 0 0;
-  position: relative;
-}
-.slider > a:active {
-  top: 1px;
-}
-.slider > a:focus {
-  background: #000;
+  z-index: -1;
 }
 
-#slide-1 {
-  background-color: rgb(140, 140, 221);
-  background-image: url('/images/slides/purplebanner.png');
-  background-size: cover;
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
 }
 
-#slide-2 {
-  background-color: rgb(236, 114, 114);
-  background-image: url('/images/slides/redbanner.png');
-  background-size: cover;
+.slides input{
+    display: none;
 }
 
-#slide-3 {
-  background-color: rgb(233, 182, 87);
-  background-image: url('/images/slides/orangebanner.png');
-  background-size: cover;
+.slide {
+    width: 20%;
+    transition: 2s;
 }
-#slide-4 {
-  background-color: rgb(241, 241, 124);
-  background-image: url('/images/slides/yellowbanner.png');
-  background-size: cover;
+
+.slide-two{
+    width: 20%;
+    transition: 2s;
+    background-image: url(https://giffiles.alphacoders.com/354/35460.gif);
+    background-size: 100% 100%;
 }
-#slide-5 {
-  background-color: rgb(150, 236, 150);
-  background-image: url('/images/slides/greenbanner.png');
-  background-size: cover;
+
+.slide-three {
+    width: 20%;
+    transition: 2s;
+    background-image: url(https://miro.medium.com/max/900/1*MmLkpM4w_mpBdDoFex73bw.gif);
+    background-size: 100% 100%;
+}
+
+.slide-four {
+    width: 20%;
+    transition: 2s;
+    background-image: url(https://c.tenor.com/PvL266ALfUMAAAAd/deku-eri.gif);
+    background-size: 100% 100%;
+}
+#slide-Link:hover{
+    background: red;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;    
+}
+.slide-two img{
+    width: 100%;
+    height: 100%;    
+}
+.slide-three img{
+    width: 100%;
+    height: 100%;    
+}
+.slide-four img{
+    width: 100%;
+    height: 100%;    
+}
+
+
+.navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -25%;
+    display: flex;
+    justify-content: center;
+  margin-left: 25%;
+}
+
+.manual-btn{
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background: white;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: -25%;
+    margin-left: 25%;
+}
+
+.navigation-auto div{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: white;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: white;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: white;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: white;
+}
+
+#slide-photo{
+     mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+#slide-photo:hover{
+   opacity: 0;
 }

@@ -7,10 +7,10 @@ import PhotoSlider from '../slider/photo_slider'
 class HomePage extends React.Component {
     render() {
         return (
-            <div>
+            <div id='home-div'>
                     <Navbar/>
-                    {/* <PhotoSlider/> */}
-                <div>
+                <div id="home-inner">
+                    <PhotoSlider/>
                     <ItemIndexContainer/>
                 </div>
             </div>
