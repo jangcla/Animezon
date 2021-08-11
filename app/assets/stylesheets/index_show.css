@@ -27,3 +27,13 @@
     padding-left: 2%;
     padding-top: 1%;
 }
+
+#index-small-img:hover{
+    position:relative;
+    top:-25px;
+    left:-30px;
+    width: 180px;
+    height:auto;
+    display:block;
+    z-index:999;
+}

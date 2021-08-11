@@ -25,9 +25,9 @@ class PhotoSlider extends React.Component {
                         <input type="radio" name="radio-btn" id="radio3"/>
                             <input type="radio" name="radio-btn" id="radio4"/>
                             
-                                <div className="slide first">
+                                <div className="slide first" id='slide-one'>
                                     <Link to=''>
-                                        <img src="http://i.imgur.com/8AHAoTf.gif" id='slide-photo' />
+                                        <img src="http://i.imgur.com/8AHAoTf.gif" id='slide-photo1'/>
                                     </Link>
                                 </div>
                                 <div className="slide-two">
