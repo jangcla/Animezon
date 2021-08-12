@@ -29,14 +29,7 @@
 }
 
 #index-small-img:hover{
-    /* position:relative;
-    top:-25px;
-    left:-30px;
-    width: 180px;
-    height:auto;
-    display:block;
-    z-index:999; */
-    /* border: 1px solid rgb(232, 232, 232); */
+
     transform: scale(1.5);
     transition: .2s;
 }

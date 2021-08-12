@@ -26,7 +26,6 @@
 }
 
 #log-out:hover {
-    /* background: rgb(89, 89, 89); */
     border: 1px solid white;
 }
 
@@ -38,7 +37,7 @@
 }
 
 .login-signup:hover {
-    /* background: rgb(89, 89, 89); */
+
     margin-bottom: 10px;
     border: 1px solid white;
 }
