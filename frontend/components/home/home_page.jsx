@@ -12,8 +12,11 @@ class HomePage extends React.Component {
                     <Navbar/>
                 <div id="home-inner">
                     <PhotoSlider/>
-                    <ItemCompartmentContainer/>
-                    <ItemIndexContainer/>
+                    
+                    <div id="home-within">
+                        <ItemCompartmentContainer/>
+                        <ItemIndexContainer/>
+                    </div>
                 </div>
             </div>
         )

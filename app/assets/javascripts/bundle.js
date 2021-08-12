@@ -367,7 +367,9 @@ var HomePage = /*#__PURE__*/function (_React$Component) {
         id: "home-div"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_2__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "home-inner"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_slider_photo_slider__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_item_item_compartment_container__WEBPACK_IMPORTED_MODULE_4__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_item_item_index_container__WEBPACK_IMPORTED_MODULE_1__.default, null)));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_slider_photo_slider__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "home-within"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_item_item_compartment_container__WEBPACK_IMPORTED_MODULE_4__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_item_item_index_container__WEBPACK_IMPORTED_MODULE_1__.default, null))));
     }
   }]);
 
@@ -486,7 +488,9 @@ var ItemCompartment = /*#__PURE__*/function (_React$Component) {
         id: "main-index-comp"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "main-compartment"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        id: "comp-index-title"
+      }, "Choose From Animes"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "comp-categorry"
       }, this.props.animes.map(function (item) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_item_index_item__WEBPACK_IMPORTED_MODULE_1__.default, {
@@ -495,7 +499,9 @@ var ItemCompartment = /*#__PURE__*/function (_React$Component) {
         });
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "main-compartment"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        id: "comp-index-title"
+      }, "Choose From Mangas"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "comp-categorry"
       }, this.props.mangas.map(function (item) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_item_index_item__WEBPACK_IMPORTED_MODULE_1__.default, {
@@ -504,7 +510,9 @@ var ItemCompartment = /*#__PURE__*/function (_React$Component) {
         });
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "main-compartment"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        id: "comp-index-title"
+      }, "Choose From Merch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "comp-categorry"
       }, this.props.merch.map(function (item) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_item_index_item__WEBPACK_IMPORTED_MODULE_1__.default, {

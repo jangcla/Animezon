@@ -13,7 +13,7 @@ class ItemCompartment extends React.Component {
             (
                 <div id="main-index-comp">
                     <div id="main-compartment">
-                        {/* <h2 id="comp-index-title">Choose From Animes</h2> */}
+                        <h4 id="comp-index-title">Choose From Animes</h4>
                         <div id="comp-categorry">
                             {
                                 this.props.animes.map(item => <ItemIndexItem item={item} key={item.id} />)
@@ -21,7 +21,7 @@ class ItemCompartment extends React.Component {
                         </div>
                     </div>
                     <div id="main-compartment">
-                        {/* <h2 id="comp-index-title">Choose From Mangas</h2> */}
+                        <h4 id="comp-index-title">Choose From Mangas</h4>
                         <div id="comp-categorry">
                             {
                                 this.props.mangas.map(item => <ItemIndexItem item={item} key={item.id} />)
@@ -29,7 +29,7 @@ class ItemCompartment extends React.Component {
                         </div>
                     </div>
                     <div id="main-compartment">
-                        {/* <h2 id="comp-index-title">Choose From Merch</h2> */}
+                        <h4 id="comp-index-title">Choose From Merch</h4>
                         <div id="comp-categorry">
                             {
                                 this.props.merch.map(item => <ItemIndexItem item={item} key={item.id} />)
