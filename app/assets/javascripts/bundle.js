@@ -1629,7 +1629,7 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "slide-two"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-        to: "/items/29",
+        to: "/items/1",
         id: "slide-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://do.lolwot.com/wp-content/uploads/2015/04/20-of-the-best-anime-series-ever-created-2.jpg",
@@ -1637,7 +1637,7 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "slide-three"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-        to: "/items/31",
+        to: "/items/3",
         id: "slide-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://pbs.twimg.com/media/EGUS_PzWwAAStTa.jpg",
@@ -1645,7 +1645,7 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "slide-four"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-        to: "/items/36",
+        to: "/items/8",
         id: "slide-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://io.dropinblog.com/uploaded/blogs/34239009/files/featured/42370119_My-hero-academia-big-3-in-shonen-anime.png",
