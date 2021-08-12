@@ -1,5 +1,5 @@
 class Cart < ApplicationRecord
-    validates :user_id, :item_id, :quantity, :purchased, presence: true
+    validates :user_id, :item_id, :quantity, presence: true
 
 
     belongs_to :user,
