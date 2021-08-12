@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import { fetchItems } from '../../actions/item_actions';
 
-import ItemIndex from './item_index'
+import ItemIndex from './item_index';
+import ItemCompartment from './item_compartment';
 
 
 const mSTP = state => {
