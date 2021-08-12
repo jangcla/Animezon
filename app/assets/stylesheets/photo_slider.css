@@ -15,7 +15,7 @@
   overflow: hidden;
   background: white;
   z-index: -1;
-  -webkit-mask: linear-gradient(to bottom, rgb(0 0 0), rgb(0 0 0 / 50%), rgb(0 0 0 / 0%));
+  /* -webkit-mask: linear-gradient(to bottom, rgb(0 0 0), rgb(0 0 0 / 50%), rgb(0 0 0 / 0%)); */
 }
 
 .slides{
