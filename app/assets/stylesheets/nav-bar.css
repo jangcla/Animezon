@@ -29,7 +29,8 @@
     /* border: 1px solid white; */
     position: relative;
     transition: 1s;
-    opacity: 0.8;
+    /* opacity: 0.8; */
+    color: rgb(250, 159, 54);
     border: 0.5px solid rgb(250, 159, 54);
 }
 
@@ -45,7 +46,9 @@
     margin-bottom: 10px;
     /* border: 1px solid white; */
     position: relative;
-    opacity: 0.5;
+    /* opacity: 0.5; */
+    color: rgb(250, 159, 54);
+    border: 0.5px solid rgb(250, 159, 54);
     transition: 2s;
 }
 
