@@ -37,16 +37,19 @@ class PhotoSlider extends React.Component {
                                         </Link>
                                     </div>
                                     <div className="slide-two">
+                                        <p id='s1t1'><big> WATCH NOW</big></p>
                                         <Link to='/items/1' id='slide-link'>
                                             <img src="https://do.lolwot.com/wp-content/uploads/2015/04/20-of-the-best-anime-series-ever-created-2.jpg" id='slide-photo' />
                                         </Link>
                                     </div>
                                     <div className="slide-three">
+                                        <p id='s1t1'><big> WATCH NOW</big></p>
                                         <Link to='/items/3' id='slide-link'>
                                             <img src="https://pbs.twimg.com/media/EGUS_PzWwAAStTa.jpg" id='slide-photo' />
                                         </Link>
                                     </div>
                                     <div className="slide-four">
+                                        <p id='s1t1'><big> WATCH NOW</big></p>
                                         <Link to='/items/8' id='slide-link'>
                                             <img src="https://io.dropinblog.com/uploaded/blogs/34239009/files/featured/42370119_My-hero-academia-big-3-in-shonen-anime.png" id='slide-photo' />
                                         </Link>

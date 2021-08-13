@@ -88,6 +88,15 @@
     font-weight: bold;
     margin-top: 14%;
 }
+#s1t1 {
+    color: white;
+    position: absolute;
+    margin-left: 800px;
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 14%;
+}
 
 .navigation-manual{
     position: absolute;
@@ -165,6 +174,10 @@
 
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background: white;
+}
+
+#slide-photo{
+    position: relative;
 }
 
 #slide-photo:hover{
