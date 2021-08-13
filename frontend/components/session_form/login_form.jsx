@@ -74,7 +74,8 @@ class LoginForm extends React.Component {
 							<br />
 				
 						<input className="session-submit" type="submit" value='Sign-in' />
-						<input className="session-submit" type="submit" value='Sign-in Demo User' onClick={this.demoHandler}/>
+                        <br />
+						<input className="session-submit1" type="submit" value='Sign-in Demo User' onClick={this.demoHandler}/>
                         {this.renderErrors()}
 					</div>
 					<br />
