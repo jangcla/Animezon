@@ -1586,14 +1586,20 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var counter = 1;
-      setInterval(function () {
-        document.getElementById('radio' + counter).checked = true;
+      this.time = setInterval(function () {
+        var slide = document.getElementById('radio' + counter);
+        slide.checked = true;
         counter++;
 
         if (counter > 4) {
           counter = 1;
         }
-      }, 6000);
+      }, 5000);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearInterval(this.time);
     }
   }, {
     key: "render",
@@ -1621,7 +1627,9 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "slide first",
         id: "slide-one"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        id: "s1t"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, " YOU SHOULD BE WATCHING")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: ""
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "http://i.imgur.com/8AHAoTf.gif",

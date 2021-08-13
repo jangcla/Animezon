@@ -26,7 +26,11 @@
 }
 
 #log-out:hover {
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    position: relative;
+    transition: 1s;
+    opacity: 0.8;
+    border: 0.5px solid rgb(250, 159, 54);
 }
 
 .login-signup {
@@ -37,9 +41,12 @@
 }
 
 .login-signup:hover {
-
+    
     margin-bottom: 10px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    position: relative;
+    opacity: 0.5;
+    transition: 2s;
 }
 
 #search-div{
@@ -73,7 +80,10 @@
     position: relative;
 }
 #anime-home:hover {
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    position: relative;
+    opacity: 0.9;
+    transition: 1s;
 }
 
 #nav-logo {

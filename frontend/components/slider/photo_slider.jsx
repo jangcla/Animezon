@@ -2,17 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class PhotoSlider extends React.Component {
+    
     componentDidMount() {
         var counter = 1;
-        setInterval(function () {
-            document.getElementById('radio' + counter).checked = true;
+        this.time = setInterval(function () {
+            let slide = document.getElementById('radio' + counter)
+            slide.checked = true;
             counter++;
             if (counter > 4) {
                 counter = 1;
             }
-        }, 6000);
+        }, 5000);
     }
 
+    componentWillUnmount() {
+        clearInterval(this.time)
+    }
+    
     render() {
         return (
  
@@ -25,6 +31,7 @@ class PhotoSlider extends React.Component {
                                 <input type="radio" name="radio-btn" id="radio4"/>
                                 
                                     <div className="slide first" id='slide-one'>
+                                        <p id='s1t'><big> YOU SHOULD BE WATCHING</big></p>
                                         <Link to=''>
                                             <img src="http://i.imgur.com/8AHAoTf.gif" id='slide-photo1'/>
                                         </Link>

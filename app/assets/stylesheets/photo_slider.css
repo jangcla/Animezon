@@ -34,7 +34,7 @@
 }
 
 #slide-one{
-    background-image: url(http://aweber.design/gifs/images/Special/_Sans-Simple-Red.gif);
+    background-image: url(https://c.tenor.com/MuMLDWrW95gAAAAd/gojo-domain-expansion.gif);
     background-size: 100% 100%;
 }
 
@@ -79,6 +79,15 @@
     height: 100%;    
 }
 
+#s1t {
+    color: white;
+    position: absolute;
+    margin-left: 30%;
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 14%;
+}
 
 .navigation-manual{
     position: absolute;
@@ -159,9 +168,15 @@
 }
 
 #slide-photo:hover{
+   transition: 1s;
    opacity: 0;
 }
 
+#slide-photo1 {
+    position: relative;
+}
+
 #slide-photo1:hover{
-    opacity: 0.7;
+    transition: 2s;
+    opacity: 0;
 }

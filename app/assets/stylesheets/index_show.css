@@ -28,8 +28,7 @@
     padding-top: 1%;
 }
 
-#index-small-img:hover{
-
+#index-small-img:hover {
     transform: scale(1.5);
     transition: .2s;
 }
