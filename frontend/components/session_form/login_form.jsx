@@ -9,6 +9,7 @@ class LoginForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoHandler = this.demoHandler.bind(this);
     }
 
     componentWillUnmount() {
@@ -24,6 +25,12 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
+        this.props.processForm(user);
+    }
+
+    demoHandler(e) {
+        e.preventDefault();
+        const user = Object.assign({}, { email: "test", password: "password" })
         this.props.processForm(user);
     }
 
@@ -67,6 +74,7 @@ class LoginForm extends React.Component {
 							<br />
 				
 						<input className="session-submit" type="submit" value='Sign-in' />
+						<input className="session-submit" type="submit" value='Sign-in Demo User' onClick={this.demoHandler}/>
                         {this.renderErrors()}
 					</div>
 					<br />

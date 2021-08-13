@@ -1308,6 +1308,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       password: ''
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.demoHandler = _this.demoHandler.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1330,6 +1331,16 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
     value: function handleSubmit(e) {
       e.preventDefault();
       var user = Object.assign({}, this.state);
+      this.props.processForm(user);
+    }
+  }, {
+    key: "demoHandler",
+    value: function demoHandler(e) {
+      e.preventDefault();
+      var user = Object.assign({}, {
+        email: "test",
+        password: "password"
+      });
       this.props.processForm(user);
     }
   }, {
@@ -1385,6 +1396,11 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         className: "session-submit",
         type: "submit",
         value: "Sign-in"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        className: "session-submit",
+        type: "submit",
+        value: "Sign-in Demo User",
+        onClick: this.demoHandler
       }), this.renderErrors()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "divider"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
