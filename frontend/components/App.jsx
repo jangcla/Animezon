@@ -6,6 +6,7 @@ import ItemShowContainer from "./item/item_show_container"
 import {Route, HashRouter} from 'react-router-dom'
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import PhotoSlider from "./slider/photo_slider";
+import UnderConstruction from "./developing/unavailable";
 
 const App = () => (
     <div id='main-div'>
@@ -14,6 +15,7 @@ const App = () => (
         <AuthRoute path="/signup" component={SignUpFormContainer} />
         <AuthRoute path="/login" component={LogInFormContainer} />
         <Route exact path="/items/:itemId" component={ItemShowContainer}/>
+        <Route exact path='/error/underdevelopment' component={UnderConstruction}/>
         <Route exact path="/" component={HomePageContainer}/>
     </div>
 );

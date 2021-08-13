@@ -7,11 +7,20 @@ const Greeting = ({currentUser, logout}) => {
         <nav className = 'login-signup'>
             {/* <button><Link to = '/login' id='auth-link'>Login</Link></button>
             &nbsp;or&nbsp; */}
-            <Link to = '/signup' id="auth-link">
+            <div id="auth-link">
+                <Link to = '/signup' id="auth-link">
                 <small>Hello, Sign in</small>
                 <br />
                 <big>Account & Lists</big>
-            </Link>
+                </Link>
+            </div>
+            
+            <div id="cart-link">
+                <Link to='/login'>
+                <img src="https://www.pngkey.com/png/full/307-3071593_accessories-shopping-cart-icon-white.png" id='cart-img'/>
+                </Link>
+            </div>
+            
         </nav>
     );
     const personalGreeting = () => (
@@ -24,6 +33,11 @@ const Greeting = ({currentUser, logout}) => {
                 </button>
             </div>
             
+            <div id="cart-link">
+                <Link to='/error/underdevelopment'>
+                <img src="https://www.pngkey.com/png/full/307-3071593_accessories-shopping-cart-icon-white.png" id="cart-img"/>
+                </Link>
+            </div>
         </hgroup>
     );
 

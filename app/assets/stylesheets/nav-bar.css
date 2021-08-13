@@ -39,9 +39,23 @@
     font-size: small;
     text-align: left;
     padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 16%;
 }
 
-.login-signup:hover {
+.auth-link:hover {
+    
+    margin-bottom: 10px;
+    /* border: 1px solid white; */
+    position: relative;
+    /* opacity: 0.5; */
+    color: rgb(250, 159, 54);
+    border: 0.5px solid rgb(250, 159, 54);
+    transition: 2s;
+}
+.cart-link:hover {
     
     margin-bottom: 10px;
     /* border: 1px solid white; */
@@ -132,4 +146,18 @@ option {
 
 #location-selecting {
     margin-top: 13px;
+}
+
+#location-selecting:hover {
+    color: rgb(250, 159, 54);
+    transition: 1s;
+}
+
+#cart-link{
+    width: 25%;
+    margin-top: 3px;
+}
+
+#cart-img{
+    width: 33px;
 }

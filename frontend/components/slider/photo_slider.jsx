@@ -32,7 +32,7 @@ class PhotoSlider extends React.Component {
                                 
                                     <div className="slide first" id='slide-one'>
                                         <p id='s1t'><big> YOU SHOULD BE WATCHING</big></p>
-                                        <Link to=''>
+                                        <Link to='/error/underdevelopment'>
                                             <img src="http://i.imgur.com/8AHAoTf.gif" id='slide-photo1'/>
                                         </Link>
                                     </div>

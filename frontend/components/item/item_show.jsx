@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../nav/navbar';
+import ItemCompartmentContainer from './item_compartment_container';
 
 
 class ItemShow extends React.Component {
@@ -89,9 +90,24 @@ class ItemShow extends React.Component {
                             <button id='buy-now'>Buy Now</button>
                         </div>
                         
+                        <br />
+                        
+                        <br />
+                        <div id="security-link">
+                            <p><big>🔒</big><Link to='/error/underdevelopment' id="li">Secure Payment</Link></p>
+                        </div>
+                        <br />
+                        <div id="ship-info-text">
+                            <p>
+                                <small>Ships from  </small><big>Animezon</big>
+                                <br />
+                                <small>Sold by     </small><big>Animezon</big>
+                            </p>
+                        </div>
                     </div>
 
                 </div>
+                   <ItemCompartmentContainer/>
             </div>
             )
         :

@@ -158,3 +158,27 @@
     height: 100%;
     width: fit-content;
 }
+
+#security-link{
+    margin-left: 5%;
+}
+#security-link big{
+    margin-right: 5%;
+}
+
+#ship-info-text{
+    align-content: flex-end;
+    margin-left: 5%;
+}
+#ship-info-text p{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#show-index{
+    height: 100%;
+}
+
+#item-show-component{
+    background: rgb(216 214 214 / 27%);
+}
