@@ -67,5 +67,5 @@
 #leave-but{
     z-index: 1;
     margin-left: -465px;
-    -webkit-mask-image: linear-gradient(rgb(0 0 0 / 0%), rgb(0 0 0 / 82%), rgba(0, 0, 0, 0.868), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(rgb(0, 0, 0, 0%), rgb(0, 0, 0, 82%), rgba(0, 0, 0, 0.868), rgba(0, 0, 0, 0));
 }
