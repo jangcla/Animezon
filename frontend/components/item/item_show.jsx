@@ -28,7 +28,7 @@ class ItemShow extends React.Component {
 
                     <div id="item-info">
                         <h1>{this.props.item.name}</h1>
-
+                            <h5><big>Type:</big> <Link to='/error/underdevelopment' id='li'><big id='uppercase'>{this.props.item.type_tag}</big></Link></h5>
                         <div id='divider'/>
                         <br />
 

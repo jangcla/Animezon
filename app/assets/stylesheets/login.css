@@ -73,6 +73,13 @@
      font-weight: bold;
  }
 
+ #form-text1{
+    margin-left: 12px;
+    margin-top: 5px;
+    font-size: small;
+    width: 95%;
+ }
+
  input:focus {
      outline: none;
      border-color: rgb(250, 159, 54);

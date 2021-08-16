@@ -182,3 +182,7 @@
 #item-show-component{
     background: rgba(216, 214, 214, 0.27);
 }
+
+#uppercase {
+    text-transform: capitalize;
+}

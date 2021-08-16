@@ -1008,7 +1008,12 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
         id: "main-photo"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "item-info"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, this.props.item.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, this.props.item.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Type:"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+        to: "/error/underdevelopment",
+        id: "li"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+        id: "uppercase"
+      }, this.props.item.type_tag))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "divider"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "info-price"
@@ -1305,7 +1310,8 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
     _this.state = {
       email: '',
-      password: ''
+      password: '',
+      switches: ''
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.demoHandler = _this.demoHandler.bind(_assertThisInitialized(_this));
@@ -1316,6 +1322,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       this.props.receiveErrors([]);
+      this.update('email');
     }
   }, {
     key: "update",
@@ -1357,7 +1364,54 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      return this.state.switches === '' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "whole-form"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", {
+        id: "session-logo"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/",
+        id: "link"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://i.pinimg.com/originals/13/69/c2/1369c275968915fa376e534f1d0fe891.jpg",
+        id: "anime"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "login-form-container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "inner-login"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
+        onSubmit: this.update('switches'),
+        className: "login-form-box"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+        id: "form-header"
+      }, "Sign-In"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "login-form"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        id: "form-text"
+      }, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "email",
+        className: "login-input",
+        onChange: this.update('email')
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        className: "session-submit",
+        type: "submit",
+        value: "Continue"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        className: "session-submit1",
+        type: "submit",
+        value: "Sign-in Demo User"
+      }), this.renderErrors(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        id: "form-text1"
+      }, "By continuing, you agree to Animezon's ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/error/underdevelopment",
+        id: "li"
+      }, "Conditions of Use"), " and ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/error/underdevelopment",
+        id: "li"
+      }, "Privacy Notice"), ".")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "divider"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
+        id: "new-to"
+      }, "New to Animezon?")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), this.props.navLink))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "whole-form"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", {
         id: "session-logo"
@@ -1378,14 +1432,9 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         id: "form-header"
       }, "Sign-In"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "login-form"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "form-text"
-      }, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-        type: "text",
-        value: this.state.email,
-        onChange: this.update('email'),
-        className: "login-input"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+      }, this.state.email), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "form-text"
       }, "Password"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "password",
@@ -1412,7 +1461,92 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
   return LoginForm;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LoginForm);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LoginForm); // import React from 'react';
+// import { Link, Redirect } from 'react-router-dom'
+// class LoginForm extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             email: '',
+//             password: ''
+//         };
+//         this.handleSubmit = this.handleSubmit.bind(this);
+//         this.demoHandler = this.demoHandler.bind(this);
+//     }
+//     componentWillUnmount() {
+//         this.props.receiveErrors([]) 
+//     }
+//     update(field) {
+//         return e => this.setState({
+//             [field]: e.currentTarget.value
+//         });
+//     }
+//     handleSubmit(e) {
+//         e.preventDefault();
+//         const user = Object.assign({}, this.state);
+//         this.props.processForm(user);
+//     }
+//     demoHandler(e) {
+//         e.preventDefault();
+//         const user = Object.assign({}, { email: "test", password: "password" })
+//         this.props.processForm(user);
+//     }
+//     renderErrors() {
+//         return (
+//             <ul id='errors'>
+//                 {this.props.errors.map((error, i) => (
+//                     <li key={`error-${i}`}>
+//                         {error}
+//                     </li>
+//                 ))}
+//             </ul>
+//         );
+//     }
+//   render() {
+//     return (
+//         <div id='whole-form'>
+//                     <header id="session-logo">
+//                         <Link to='/' id='link'><img src="https://i.pinimg.com/originals/13/69/c2/1369c275968915fa376e534f1d0fe891.jpg" id='anime' /></Link>
+//                     </header>
+// 			<div className="login-form-container">
+//                 <div className='inner-login'>
+// 				<form onSubmit={this.handleSubmit} className="login-form-box">
+//                     <h1 id='form-header'>Sign-In</h1>
+// 					<div className="login-form">
+// 						<br />
+// 						<p id='form-text'>Email</p>
+// <input type="email"
+// 	value={this.state.email}
+// 	onChange={this.update('email')}
+// 	className="login-input"
+//     />
+// 						<br />
+// 						<p id='form-text'>Password</p>
+// 							<input type="password"
+// 								value={this.state.password}
+// 								onChange={this.update('password')}
+// 								className="login-input"
+// 								/>
+// 							<br />
+// 						<input className="session-submit" type="submit" value='Sign-in' />
+//                         <br />
+// 						<input className="session-submit1" type="submit" value='Sign-in Demo User' onClick={this.demoHandler}/>
+//                         {this.renderErrors()}
+// 					</div>
+// 					<br />
+// 				</form>
+//                 <div id='divider'>
+//                     <h5 id="new-to">New to Animezon?</h5>
+//                 </div>
+//                 <br />
+//                 {this.props.navLink}                        
+//                 </div>
+// 			</div> 
+//         </div>
+//     )
+//   }
+// }
+// export default LoginForm
 
 /***/ }),
 
@@ -1519,7 +1653,8 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
     _this.state = {
       email: '',
-      password: ''
+      password: '',
+      p2: ''
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
@@ -1573,7 +1708,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "login-form-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
-        onSubmit: this.handleSubmit,
+        onSubmit: this.state.p2 === this.state.password ? this.handleSubmit : '',
         className: "login-form-box"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
         id: "form-header"
@@ -1582,7 +1717,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "form-text"
       }, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-        type: "text",
+        type: "email",
         value: this.state.email,
         onChange: this.update('email'),
         className: "login-input"
@@ -1598,12 +1733,23 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
         id: "form-text"
       }, "Re-enter password"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "password",
-        className: "login-input"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        className: "login-input",
+        onChange: this.update('p2')
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        id: "perror"
+      }, this.state.p2 === this.state.password ? null : 'Password must match'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         className: "session-submit",
         type: "submit",
         value: "Create your Animezon account"
-      })), this.renderErrors(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      })), this.renderErrors(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        id: "form-text1"
+      }, "By creating an account, you agree to Animezon's ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/error/underdevelopment",
+        id: "li"
+      }, "Conditions of Use"), " and ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/error/underdevelopment",
+        id: "li"
+      }, "Privacy Notice"), "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "divider"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "bottom-signup-text"
