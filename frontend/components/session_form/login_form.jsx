@@ -109,6 +109,9 @@ class LoginForm extends React.Component {
                         <br />
 						<input className="session-submit1" type="submit" value='Sign-in Demo User' onClick={this.demoHandler}/>
                         {this.renderErrors()}
+                            <p id='form-text1'>
+                                By continuing, you agree to Animezon's <Link to='/error/underdevelopment' id='li'>Conditions of Use</Link> and <Link to='/error/underdevelopment' id='li'>Privacy Notice</Link>.
+                            </p>
 					</div>
 					<br />
 				</form>
