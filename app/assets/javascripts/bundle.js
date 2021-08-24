@@ -1378,8 +1378,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         className: "login-form-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "inner-login"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
-        onSubmit: this.update('switches'),
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "login-form-box"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
         id: "form-header"
@@ -1394,7 +1393,8 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         className: "session-submit",
         type: "submit",
-        value: "Continue"
+        value: "Continue",
+        onClick: this.update('switches')
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         className: "session-submit1",
         type: "submit",
@@ -1435,7 +1435,11 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         className: "login-form"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "form-text"
-      }, this.state.email), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+      }, this.state.email, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        id: "sign-in-change",
+        value: "",
+        onClick: this.update('switches')
+      }, "\u2023Change")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "form-text"
       }, "Password"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "password",
@@ -1804,7 +1808,7 @@ var mSTP = function mSTP(_ref) {
     navLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
       to: "/login",
       id: "li"
-    }, "Sign-in")
+    }, "\u2023 Sign-in")
   };
 };
 

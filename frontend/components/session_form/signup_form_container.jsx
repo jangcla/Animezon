@@ -8,7 +8,7 @@ import { receiveErrors } from "../../actions/session_actions";
 const mSTP = ({ errors }) => ({
     errors: errors.session,
     formType: 'signup',
-    navLink: <Link to='/login' id='li'>Sign-in</Link>
+    navLink: <Link to='/login' id='li'>‣ Sign-in</Link>
 })
 
 const mDTP = dispatch => ({

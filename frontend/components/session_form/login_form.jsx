@@ -56,7 +56,7 @@ class LoginForm extends React.Component {
                     </header>
 			<div className="login-form-container">
                 <div className='inner-login'>
-				<form onSubmit={this.update('switches')} className="login-form-box">
+				<div className="login-form-box">
                     <h1 id='form-header'>Sign-In</h1>
 					<div className="login-form">
 						<br />
@@ -67,7 +67,7 @@ class LoginForm extends React.Component {
                                 />
                         <br />
                         <br />
-						<input className="session-submit" type="submit" value='Continue'/>
+                            <input className="session-submit" type="submit" value='Continue' onClick={this.update('switches')}/>
                         <br />
                             <input className="session-submit1" type="submit" value='Sign-in Demo User' onClick={this.demoHandler}/>
                         {this.renderErrors()}
@@ -76,7 +76,7 @@ class LoginForm extends React.Component {
                             </p>
 					</div>
 					<br />
-				</form>
+				</div>
                 <div id='divider'>
                     <h5 id="new-to">New to Animezon?</h5>
                 </div>
@@ -96,7 +96,7 @@ class LoginForm extends React.Component {
 				<form onSubmit={this.handleSubmit} className="login-form-box">
                     <h1 id='form-header'>Sign-In</h1>
 					<div className="login-form">
-                            <p id='form-text'>{this.state.email}</p>
+                            <p id='form-text'>{this.state.email}<button id='sign-in-change' value="" onClick={this.update('switches')}>‣Change</button></p>
 						<p id='form-text'>Password</p>
 							<input type="password"
 								value={this.state.password}
