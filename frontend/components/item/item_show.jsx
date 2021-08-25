@@ -5,6 +5,28 @@ import ItemCompartmentContainer from './item_compartment_container';
 
 
 class ItemShow extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            user_id: `${this.props.user.id}`,
+            item_id:  `${this.props.match.params.itemId}`,
+            quantity:  0,
+            purchased: false,
+        }
+    }
+
+    update(field) {
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const cartItem = Object.assign({}, this.state);
+        this.props.createCart(cartItem);
+    }
+
     componentDidMount() {
         this.props.fetchItem(this.props.match.params.itemId)
     }
@@ -78,10 +100,10 @@ class ItemShow extends React.Component {
                                 In Stock.
                             </div>
                             
-                            <select id="quantity">
-                                <option value="1">Qty: 1</option>
-                                <option value="2">Qty: 2</option>
-                                <option value="3">Qty: 3</option>   
+                            <select id="quantity" value={0} onChange={this.update('quantity')}>
+                                <option value={1} >Qty: 1</option>
+                                <option value={2} >Qty: 2</option>
+                                <option value={3} >Qty: 3</option>   
                             </select>
                         </div>
 
