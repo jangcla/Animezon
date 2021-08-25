@@ -31,4 +31,5 @@
 #index-small-img:hover {
     transform: scale(1.5);
     transition: .2s;
+    box-shadow: 0px 0px 20px 0px #616161;
 }

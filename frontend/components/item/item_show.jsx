@@ -8,11 +8,13 @@ class ItemShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            user_id: `${this.props.user.id}`,
+            user_id: `${this.props.user}`,
             item_id:  `${this.props.match.params.itemId}`,
-            quantity:  0,
+            quantity:  1,
             purchased: false,
         }
+
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     update(field) {
@@ -24,6 +26,7 @@ class ItemShow extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const cartItem = Object.assign({}, this.state);
+        console.log(cartItem)
         this.props.createCart(cartItem);
     }
 
@@ -100,7 +103,7 @@ class ItemShow extends React.Component {
                                 In Stock.
                             </div>
                             
-                            <select id="quantity" value={0} onChange={this.update('quantity')}>
+                            <select id="quantity" onChange={this.update('quantity')}>
                                 <option value={1} >Qty: 1</option>
                                 <option value={2} >Qty: 2</option>
                                 <option value={3} >Qty: 3</option>   
@@ -108,7 +111,7 @@ class ItemShow extends React.Component {
                         </div>
 
                         <div id="to-cart-buttons">
-                            <button id='add-to'>Add to Cart</button>
+                            <button id='add-to' onClick={this.handleSubmit}>Add to Cart</button>
                             <button id='buy-now'>Buy Now</button>
                         </div>
                         

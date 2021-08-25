@@ -985,11 +985,12 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      user_id: "".concat(_this.props.user.id),
+      user_id: "".concat(_this.props.user),
       item_id: "".concat(_this.props.match.params.itemId),
-      quantity: 0,
+      quantity: 1,
       purchased: false
     };
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1007,6 +1008,7 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
     value: function handleSubmit(e) {
       e.preventDefault();
       var cartItem = Object.assign({}, this.state);
+      console.log(cartItem);
       this.props.createCart(cartItem);
     }
   }, {
@@ -1082,7 +1084,6 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
         id: "in-stock"
       }, "In Stock."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
         id: "quantity",
-        value: 0,
         onChange: this.update('quantity')
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
         value: 1
@@ -1093,7 +1094,8 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
       }, "Qty: 3"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "to-cart-buttons"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-        id: "add-to"
+        id: "add-to",
+        onClick: this.handleSubmit
       }, "Add to Cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         id: "buy-now"
       }, "Buy Now")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1140,7 +1142,7 @@ __webpack_require__.r(__webpack_exports__);
 var mSTP = function mSTP(state, ownProps) {
   return {
     item: state.entities.items[ownProps.match.params.itemId],
-    user: state.entities.users
+    user: state.session.id
   };
 };
 

@@ -4,8 +4,8 @@ import {
 } from '../actions/cart_actions';
 
 const cartsReducer = (state = {}, action) => {
-    Object.freeze(state);
-    let nextState = Object.assign({}, state)
+    Object.freeze(state)
+    const nextState = Object.assign({}, state)
 
     switch (action.type) {
         case RECEIVE_CART:

@@ -1,5 +1,5 @@
 class Api::CartsController < ApplicationController
-    before_action :erquire_logged_in
+    before_action :require_logged_in
 
     def create
         @cart = Cart.new(cart_params)
@@ -19,6 +19,6 @@ class Api::CartsController < ApplicationController
     end
 
     def cart_params
-        params.require(:carts).permit(:user_id, :item_id, :quantity, :purchased)
+        params.require(:cart).permit(:user_id, :item_id, :quantity, :purchased)
     end
 end

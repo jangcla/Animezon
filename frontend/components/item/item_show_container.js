@@ -10,7 +10,7 @@ import ItemShow from './item_show' ;
 // }
 const mSTP = (state, ownProps) => ({
     item: state.entities.items[ownProps.match.params.itemId],
-    user: state.entities.users
+    user: state.session.id
 })
 
 const mDTP = dispatch => ({
