@@ -18,6 +18,11 @@ export const createCart = cart => dispatch => (
         .then(madeCart => dispatch(receiveCart(madeCart)))
 )
 
+export const updateCart = cart => dispatch => (
+    cartUtil.updateCart(cart)
+        .then(updatedCart => dispatch(receiveCart(updatedCart)))
+)
+
 export const deleteCart = cartId => dispatch => (
     cartUtil.deleteCart(cartId)
         .then(cart => dispatch(removeCart(cart.id)))

@@ -6,6 +6,14 @@ export const createCart = cart => (
     })
 )
 
+export const updateCart = cart => (
+    $.ajax({
+        method: 'PATCH',
+        url: `/api/carts/${cart.id}`,
+        data: { cart }
+    })
+)
+
 export const deleteCart = cartId => (
     $.ajax({
         mehtod: `DELETE`,
