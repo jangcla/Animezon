@@ -11,6 +11,11 @@ class Api::CartsController < ApplicationController
         end
     end
 
+    def index
+        @carts = Cart.all
+        render :index
+    end
+
     def update
         @cart = Cart.find(params[:id])
 

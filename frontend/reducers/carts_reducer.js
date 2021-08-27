@@ -1,5 +1,6 @@
 import {
     RECEIVE_CART,
+    RECEIVE_CARTS,
     REMOVE_CART
 } from '../actions/cart_actions';
 
@@ -11,10 +12,11 @@ const cartsReducer = (state = {}, action) => {
         case RECEIVE_CART:
             nextState[action.cart.id] = action.cart
             return nextState;
+        case RECEIVE_CARTS:
+            return action.carts;
         case REMOVE_CART:
             delete nextState[action.eventId]
             return nextState;
-    
         default:
             return state;
     }

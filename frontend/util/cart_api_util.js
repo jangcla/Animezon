@@ -6,6 +6,13 @@ export const createCart = cart => (
     })
 )
 
+export const fetchCarts = () => (
+    $.ajax({
+        method: `GET`,
+        url: `/api/carts`
+    })
+)
+
 export const updateCart = cart => (
     $.ajax({
         method: 'PATCH',
