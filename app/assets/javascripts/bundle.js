@@ -12,8 +12,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "RECEIVE_CART": () => (/* binding */ RECEIVE_CART),
 /* harmony export */   "REMOVE_CART": () => (/* binding */ REMOVE_CART),
+/* harmony export */   "RECEIVE_CARTS": () => (/* binding */ RECEIVE_CARTS),
+/* harmony export */   "receiveCarts": () => (/* binding */ receiveCarts),
 /* harmony export */   "receiveCart": () => (/* binding */ receiveCart),
 /* harmony export */   "removeCart": () => (/* binding */ removeCart),
+/* harmony export */   "fetchCarts": () => (/* binding */ fetchCarts),
 /* harmony export */   "createCart": () => (/* binding */ createCart),
 /* harmony export */   "updateCart": () => (/* binding */ updateCart),
 /* harmony export */   "deleteCart": () => (/* binding */ deleteCart)
@@ -22,6 +25,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var RECEIVE_CART = 'RECEIVE_CART';
 var REMOVE_CART = 'REMOVE_CART';
+var RECEIVE_CARTS = 'RECEIVE_CARTS';
+var receiveCarts = function receiveCarts(carts) {
+  return {
+    type: RECEIVE_CARTS,
+    carts: carts
+  };
+};
 var receiveCart = function receiveCart(cart) {
   return {
     type: RECEIVE_CART,
@@ -32,6 +42,13 @@ var removeCart = function removeCart(cartId) {
   return {
     type: REMOVE_CART,
     cartId: cartId
+  };
+};
+var fetchCarts = function fetchCarts() {
+  return function (dispatch) {
+    return itemUtil.fetchCarts().then(function (carts) {
+      return dispatch(receiveCarts(carts));
+    });
   };
 };
 var createCart = function createCart(cart) {
@@ -996,7 +1013,10 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
       user_id: "".concat(_this.props.user),
       item_id: "".concat(_this.props.match.params.itemId),
       quantity: 1,
-      purchased: false
+      purchased: false,
+      title: "".concat(_this.props.item.name),
+      photoUrl: "".concat(_this.props.item.photoUrl),
+      price: "".concat(_this.props.item.price)
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
@@ -2039,6 +2059,9 @@ var cartsReducer = function cartsReducer() {
       nextState[action.cart.id] = action.cart;
       return nextState;
 
+    case _actions_cart_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_CARTS:
+      return action.carts;
+
     case _actions_cart_actions__WEBPACK_IMPORTED_MODULE_0__.REMOVE_CART:
       delete nextState[action.eventId];
       return nextState;
@@ -2317,6 +2340,7 @@ var configureStore = function configureStore() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "createCart": () => (/* binding */ createCart),
+/* harmony export */   "fetchCarts": () => (/* binding */ fetchCarts),
 /* harmony export */   "updateCart": () => (/* binding */ updateCart),
 /* harmony export */   "deleteCart": () => (/* binding */ deleteCart)
 /* harmony export */ });
@@ -2327,6 +2351,12 @@ var createCart = function createCart(cart) {
     data: {
       cart: cart
     }
+  });
+};
+var fetchCarts = function fetchCarts() {
+  return $.ajax({
+    method: "GET",
+    url: "/api/carts"
   });
 };
 var updateCart = function updateCart(cart) {

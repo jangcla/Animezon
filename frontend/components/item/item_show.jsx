@@ -12,6 +12,9 @@ class ItemShow extends React.Component {
             item_id:  `${this.props.match.params.itemId}`,
             quantity:  1,
             purchased: false,
+            title: `${this.props.item.name}`,
+            photoUrl: `${this.props.item.photoUrl}`,
+            price: `${this.props.item.price}`
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
