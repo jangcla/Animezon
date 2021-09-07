@@ -159,6 +159,7 @@ option {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    text-decoration: none;
 }
 
 #cart-img{
@@ -179,4 +180,5 @@ option {
     font-size: 17px;
     font-weight: bold;
     margin-top: 10px;
+    color: white;
 }
