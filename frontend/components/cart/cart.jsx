@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Navbar from '../nav/navbar'
 
 class Cart extends React.Component {
 
@@ -11,6 +12,7 @@ class Cart extends React.Component {
         return this.props.mine ? 
         (
             <div>
+                <Navbar/>
                 <div>Hello Testing</div>
                 <div>{this.props.mine.length}</div>
             </div>
