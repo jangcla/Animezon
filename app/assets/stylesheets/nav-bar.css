@@ -156,8 +156,18 @@ option {
 #cart-link{
     width: 25%;
     margin-top: 3px;
+    display: flex;
+    align-items: center;
 }
 
 #cart-img{
-    width: 33px;
+    width: 45px;
+    height: 35px;
+}
+
+#cart-amount{
+    margin-left: -20px;
+    margin-top: -26px;
+    color: orange;
+    font-weight: bold;
 }

@@ -494,7 +494,9 @@ var Greeting = function Greeting(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
       src: "https://www.pngkey.com/png/full/307-3071593_accessories-shopping-cart-icon-white.png",
       id: "cart-img"
-    }))));
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      id: "cart-amount"
+    }, mine.length)));
   };
 
   var personalGreeting = function personalGreeting() {
@@ -513,7 +515,9 @@ var Greeting = function Greeting(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
       src: "https://www.pngkey.com/png/full/307-3071593_accessories-shopping-cart-icon-white.png",
       id: "cart-img"
-    })), mine.length));
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      id: "cart-amount"
+    }, mine.length)));
   };
 
   return currentUser ? personalGreeting() : sessionLinks();

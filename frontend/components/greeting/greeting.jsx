@@ -19,6 +19,7 @@ const Greeting = ({currentUser, mine, logout}) => {
                 <Link to='/login'>
                 <img src="https://www.pngkey.com/png/full/307-3071593_accessories-shopping-cart-icon-white.png" id='cart-img'/>
                 </Link>
+                <div id="cart-amount">{mine.length}</div> 
             </div>
             
         </nav>
@@ -37,7 +38,7 @@ const Greeting = ({currentUser, mine, logout}) => {
                 <Link to='/cart'>
                 <img src="https://www.pngkey.com/png/full/307-3071593_accessories-shopping-cart-icon-white.png" id="cart-img"/>
                 </Link>
-                {mine.length}
+                <div id="cart-amount">{mine.length}</div> 
             </div>
         </hgroup>
     );
