@@ -5,6 +5,34 @@ import ItemCompartmentContainer from './item_compartment_container';
 
 
 class ItemShow extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            user_id: `${this.props.user}`,
+            item_id:  `${this.props.match.params.itemId}`,
+            quantity:  1,
+            purchased: false,
+            title: `${this.props.item.name}`,
+            photoUrl: `${this.props.item.photoUrl}`,
+            price: `${this.props.item.price}`
+        }
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    update(field) {
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const cartItem = Object.assign({}, this.state);
+        console.log(cartItem)
+        this.props.createCart(cartItem);
+    }
+
     componentDidMount() {
         this.props.fetchItem(this.props.match.params.itemId)
     }
@@ -78,15 +106,15 @@ class ItemShow extends React.Component {
                                 In Stock.
                             </div>
                             
-                            <select id="quantity">
-                                <option value="1">Qty: 1</option>
-                                <option value="2">Qty: 2</option>
-                                <option value="3">Qty: 3</option>   
+                            <select id="quantity" onChange={this.update('quantity')}>
+                                <option value={1} >Qty: 1</option>
+                                <option value={2} >Qty: 2</option>
+                                <option value={3} >Qty: 3</option>   
                             </select>
                         </div>
 
                         <div id="to-cart-buttons">
-                            <button id='add-to'>Add to Cart</button>
+                            <button id='add-to' onClick={this.handleSubmit}>Add to Cart</button>
                             <button id='buy-now'>Buy Now</button>
                         </div>
                         

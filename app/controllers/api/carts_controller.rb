@@ -1,5 +1,5 @@
 class Api::CartsController < ApplicationController
-    before_action :erquire_logged_in
+    before_action :require_logged_in
 
     def create
         @cart = Cart.new(cart_params)
@@ -11,6 +11,22 @@ class Api::CartsController < ApplicationController
         end
     end
 
+    def index
+        @carts = Cart.all
+        render :index
+    end
+
+    def update
+        @cart = Cart.find(params[:id])
+
+        if @cart.update(cart_params)
+            render :show
+        else
+            render json @cart.errors.full_messages, status: 422
+        end
+        
+    end
+
     def destroy
         @cart = Cart.find(params[:id])
         @cart.destroy
@@ -19,6 +35,6 @@ class Api::CartsController < ApplicationController
     end
 
     def cart_params
-        params.require(:carts).permit(:user_id, :item_id, :quantity, :purchased)
+        params.require(:cart).permit(:user_id, :item_id, :quantity, :purchased, :title, :photoUrl, :price)
     end
 end
