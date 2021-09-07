@@ -20,7 +20,7 @@ export const removeCart = cartId => ({
 })
 
 export const fetchCarts = () => dispatch => (
-    itemUtil.fetchCarts()
+    cartUtil.fetchCarts()
         .then(carts => dispatch(receiveCarts(carts)))
 )
 

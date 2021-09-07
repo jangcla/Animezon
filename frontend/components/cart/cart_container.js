@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import { deleteCart, updateCart } from '../../actions/cart_actions'
+import { fetchCarts } from '../../actions/cart_actions'
 
 import Cart from './cart'
 
@@ -14,7 +15,11 @@ const mSTP = state => {
 }
 
 const mDTP = dispatch => {
-    return {fetchCarts: () => dispatch(fetchCarts())}
+    return {
+        fetchCarts: () => dispatch(fetchCarts()),
+        deleteCart: (cartId) => dispatch(deleteCart(cartId)),
+        
+    }
 }
 
 export default connect(mSTP, mDTP)(Cart);
