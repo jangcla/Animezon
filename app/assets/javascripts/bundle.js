@@ -496,7 +496,9 @@ var Greeting = function Greeting(_ref) {
       id: "cart-img"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       id: "cart-amount"
-    }, mine.length)));
+    }, mine.length), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      id: "cart-title"
+    }, "Cart")));
   };
 
   var personalGreeting = function personalGreeting() {
@@ -517,7 +519,9 @@ var Greeting = function Greeting(_ref) {
       id: "cart-img"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       id: "cart-amount"
-    }, mine.length)));
+    }, mine.length), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      id: "cart-title"
+    }, "Cart")));
   };
 
   return currentUser ? personalGreeting() : sessionLinks();

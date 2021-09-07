@@ -154,10 +154,11 @@ option {
 }
 
 #cart-link{
-    width: 25%;
-    margin-top: 3px;
+    width: 30%;
+    margin-top: 13px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 #cart-img{
@@ -166,8 +167,16 @@ option {
 }
 
 #cart-amount{
-    margin-left: -20px;
+    margin-left: -27px;
     margin-top: -26px;
     color: orange;
     font-weight: bold;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+#cart-title{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 10px;
 }
