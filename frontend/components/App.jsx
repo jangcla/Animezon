@@ -5,9 +5,9 @@ import HomePageContainer from "./home/home_page_container";
 import ItemShowContainer from "./item/item_show_container"
 import {Route, HashRouter} from 'react-router-dom'
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
-import PhotoSlider from "./slider/photo_slider";
 import CartContainer from "./cart/cart_container";
 import UnderConstruction from "./developing/unavailable";
+
 
 const App = () => (
     <div id='main-div'>

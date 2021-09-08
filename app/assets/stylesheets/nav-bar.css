@@ -7,6 +7,7 @@
     padding-left: 10px;
     padding-right: 10px;
     height: 65px;
+    overflow: hidden;
 }
 
 #greeting {
@@ -92,9 +93,10 @@
 }
 
 #anime-home {
-    height: 53px;
-    width: 149px;
+    height: 67px;
+    width: 215px;
     position: relative;
+    margin-top: -5px;
 }
 #anime-home:hover {
     /* border: 1px solid white; */

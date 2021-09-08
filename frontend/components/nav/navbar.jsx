@@ -8,7 +8,7 @@ class Navbar extends React.Component {
 
             <header id='nav-bar'>
             <div id='nav-logo'>
-                    <Link to='/' id='link'><img src="https://raw.githubusercontent.com/jangcla/Animezon/cart/frontend/components/nav/images/animezon.jpeg" id='anime-home' /></Link>
+                    <Link to='/' id='link'><img src="https://github.com/jangcla/Animezon/blob/cartComp/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true" id='anime-home' /></Link>
             </div>
             
             <div id="location-selecting">

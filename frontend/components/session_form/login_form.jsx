@@ -52,7 +52,7 @@ class LoginForm extends React.Component {
     return this.state.switches === '' ? 
         (<div id='whole-form'>
                     <header id="session-logo">
-                        <Link to='/' id='link'><img src="https://i.pinimg.com/originals/13/69/c2/1369c275968915fa376e534f1d0fe891.jpg" id='anime' /></Link>
+                        <Link to='/' id='link'><img src="https://github.com/jangcla/Animezon/blob/cartComp/photos/login-smile.png?raw=true" id='anime' /></Link>
                     </header>
 			<div className="login-form-container">
                 <div className='inner-login'>
@@ -89,7 +89,7 @@ class LoginForm extends React.Component {
     : 
     (<div id='whole-form'>
                     <header id="session-logo">
-                        <Link to='/' id='link'><img src="https://i.pinimg.com/originals/13/69/c2/1369c275968915fa376e534f1d0fe891.jpg" id='anime' /></Link>
+                        <Link to='/' id='link'><img src="https://github.com/jangcla/Animezon/blob/cartComp/photos/login-smile.png?raw=true" id='anime' /></Link>
                     </header>
 			<div className="login-form-container">
                 <div className='inner-login'>
