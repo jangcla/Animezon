@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { login } from '../../actions/session_actions';
 
-const Greeting = ({currentUser, mine, logout}) => {
+const Greeting = ({currentUser, mine, logout, name}) => {
     const sessionLinks = () => (
         <nav className = 'login-signup'>
             {/* <button><Link to = '/login' id='auth-link'>Login</Link></button>
@@ -29,7 +29,7 @@ const Greeting = ({currentUser, mine, logout}) => {
         <hgroup className="header-group"> 
             <div id='greeting'>
                 <button className="header-button" onClick={logout} id='log-out'>
-                    <small>Hello, {currentUser.email}</small>
+                    <small id='uppercase'>Hello, {name}</small>
                     <br />
                     <big>Account & Lists</big>
                 </button>

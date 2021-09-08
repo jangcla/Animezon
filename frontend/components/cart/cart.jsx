@@ -14,12 +14,14 @@ class Cart extends React.Component {
         (
             <div>
                 <Navbar/>
-                <div>Hello Testing</div>
-                <div>{this.props.mine.length}</div>
-                <div id="cart-item-comp">
-                    {
-                        this.props.mine.map(cartItem => <CartItem cartItem={cartItem} key={cartItem.id} deleteCart={this.props.deleteCart}/>)
-                    }
+                <div id="main-cart-comp">
+                    <div id='uppercase'>Hello {this.props.name}</div>
+                    <div>{this.props.mine.length}</div>
+                    <div id="cart-item-comp">
+                        {
+                            this.props.mine.map(cartItem => <CartItem cartItem={cartItem} key={cartItem.id} deleteCart={this.props.deleteCart}/>)
+                        }
+                    </div>
                 </div>
             </div>
         )

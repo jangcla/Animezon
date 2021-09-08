@@ -335,7 +335,11 @@ var Cart = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return this.props.mine ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Hello Testing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.mine.length), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      return this.props.mine ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "main-cart-comp"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "uppercase"
+      }, "Hello ", this.props.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.mine.length), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-item-comp"
       }, this.props.mine.map(function (cartItem) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_cart_item__WEBPACK_IMPORTED_MODULE_2__.default, {
@@ -343,7 +347,7 @@ var Cart = /*#__PURE__*/function (_React$Component) {
           key: cartItem.id,
           deleteCart: _this2.props.deleteCart
         });
-      }))) : null;
+      })))) : null;
     }
   }]);
 
@@ -378,8 +382,12 @@ var mSTP = function mSTP(state) {
   var mine = cartItems.filter(function (cartItem) {
     return cartItem.user_id === state.session.id;
   });
+  var userName = state.entities.users[state.session.id].email.split("@");
+  var name = userName[0];
   return {
-    mine: mine
+    mine: mine,
+    currentUser: state.entities.users[state.session.id],
+    name: name
   };
 };
 
@@ -581,7 +589,8 @@ __webpack_require__.r(__webpack_exports__);
 var Greeting = function Greeting(_ref) {
   var currentUser = _ref.currentUser,
       mine = _ref.mine,
-      logout = _ref.logout;
+      logout = _ref.logout,
+      name = _ref.name;
 
   var sessionLinks = function sessionLinks() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
@@ -611,7 +620,9 @@ var Greeting = function Greeting(_ref) {
       className: "header-button",
       onClick: logout,
       id: "log-out"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "Hello, ", currentUser.email), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Account & Lists"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
+      id: "uppercase"
+    }, "Hello, ", name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Account & Lists"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
       to: "/cart",
       id: "cart-link"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
@@ -656,9 +667,12 @@ var mSTP = function mSTP(state) {
   var mine = cartItems.filter(function (cartItem) {
     return cartItem.user_id === state.session.id;
   });
+  var userName = state.entities.users[state.session.id].email.split("@");
+  var name = userName[0];
   return {
     currentUser: state.entities.users[state.session.id],
-    mine: mine
+    mine: mine,
+    name: name
   };
 };
 

@@ -6,11 +6,15 @@ import Cart from './cart'
 
 const mSTP = state => {
     const cartItems = Object.values(state.entities.carts)
-
     let mine = cartItems.filter(cartItem => cartItem.user_id === state.session.id)
 
+    const userName = state.entities.users[state.session.id].email.split("@")
+    let name = userName[0]
+
     return {
-        mine: mine
+        mine: mine,
+        currentUser: state.entities.users[state.session.id],
+        name: name
     }
 }
 

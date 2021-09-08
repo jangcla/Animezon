@@ -27,3 +27,12 @@
      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
  }
 
+html, body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    text-decoration: none;
+    outline: none;
+}

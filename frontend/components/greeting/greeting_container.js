@@ -7,12 +7,15 @@ import Greeting from './greeting';
 
 const mSTP = state => {
     const cartItems = Object.values(state.entities.carts)
-
     let mine = cartItems.filter(cartItem => cartItem.user_id === state.session.id)
+
+    const userName = state.entities.users[state.session.id].email.split("@")
+    let name = userName[0]
 
     return {
         currentUser: state.entities.users[state.session.id],
-        mine: mine
+        mine: mine,
+        name: name
     }
 }
 
