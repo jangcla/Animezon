@@ -1490,7 +1490,7 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
         to: "/",
         id: "link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://raw.githubusercontent.com/jangcla/Animezon/cart/frontend/components/nav/images/animezon.jpeg",
+        src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true",
         id: "anime-home"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "location-selecting"
@@ -2230,7 +2230,6 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, " YOU SHOULD BE WATCHING")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/error/underdevelopment"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true",
         id: "slide-photo1"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "slide-two"
