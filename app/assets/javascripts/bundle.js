@@ -1282,6 +1282,7 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
       var cartItem = Object.assign({}, this.state);
       console.log(cartItem);
       this.props.createCart(cartItem);
+      this.props.history.push('/cart');
     }
   }, {
     key: "componentDidMount",

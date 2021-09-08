@@ -31,6 +31,7 @@ class ItemShow extends React.Component {
         const cartItem = Object.assign({}, this.state);
         console.log(cartItem)
         this.props.createCart(cartItem);
+        this.props.history.push('/cart');
     }
 
     componentDidMount() {
