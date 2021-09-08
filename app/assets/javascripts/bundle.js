@@ -1676,7 +1676,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         to: "/",
         id: "link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://i.pinimg.com/originals/13/69/c2/1369c275968915fa376e534f1d0fe891.jpg",
+        src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/login-smile.png?raw=true",
         id: "anime"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "login-form-container"
@@ -2020,7 +2020,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
         to: "/",
         id: "link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://i.pinimg.com/originals/13/69/c2/1369c275968915fa376e534f1d0fe891.jpg",
+        src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/login-smile.png?raw=true",
         id: "anime"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "login-form-container"
