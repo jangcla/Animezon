@@ -10,16 +10,20 @@ class CartItem extends React.Component {
 
     deleteSubmit(e) {
         e.preventDefault();
+
         this.props.deleteCart(this.props.cartItem.id)
     }
 
     render() {
         return (
             <div>
-                {this.props.cartItem.item_id}
+                {this.props.cartItem.title}
+                {this.props.cartItem.id}
+                
                 <div>
                     <button onClick={this.deleteSubmit}>Delete</button>
                 </div>
+
             </div>
         )
     }

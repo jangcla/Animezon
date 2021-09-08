@@ -8,6 +8,7 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import PhotoSlider from "./slider/photo_slider";
 import CartContainer from "./cart/cart_container";
 import UnderConstruction from "./developing/unavailable";
+import CartItem from "./cart/cart_item";
 
 const App = () => (
     <div id='main-div'>
@@ -16,6 +17,7 @@ const App = () => (
         <AuthRoute path="/signup" component={SignUpFormContainer} />
         <AuthRoute path="/login" component={LogInFormContainer} />
         <Route exact path="/cart" component={CartContainer}/>
+        <Route exact path="/carts/:cartId" component={CartItem}/>
         <Route exact path="/items/:itemId" component={ItemShowContainer}/>
         <Route exact path='/error/underdevelopment' component={UnderConstruction}/>
         <Route exact path="/" component={HomePageContainer}/>

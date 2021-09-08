@@ -1,6 +1,10 @@
 class Api::CartsController < ApplicationController
     before_action :require_logged_in
 
+    def show
+        @cart = Cart.find(params[:id])
+    end
+
     def create
         @cart = Cart.new(cart_params)
 
@@ -29,9 +33,12 @@ class Api::CartsController < ApplicationController
 
     def destroy
         @cart = Cart.find(params[:id])
-        @cart.destroy
-
-        render :show
+        # @cart.destroy
+        if @cart.destroy
+            render :show
+        else
+            render json: @cart.errors.full_messages, status: 422
+        end
     end
 
     def cart_params

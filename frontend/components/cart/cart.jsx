@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../nav/navbar'
-import CartItemContainer from './cart_item_container'
+import CartItem from './cart_item'
 
 class Cart extends React.Component {
 
@@ -18,7 +18,7 @@ class Cart extends React.Component {
                 <div>{this.props.mine.length}</div>
                 <div id="cart-item-comp">
                     {
-                        this.props.mine.map(cartItem => <CartItemContainer cartItem={cartItem} key={cartItem.id}/>)
+                        this.props.mine.map(cartItem => <CartItem cartItem={cartItem} key={cartItem.id} deleteCart={this.props.deleteCart}/>)
                     }
                 </div>
             </div>
