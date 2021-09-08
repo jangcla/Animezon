@@ -41,5 +41,5 @@ export const updateCart = cart => dispatch => (
 
 export const deleteCart = cartId => dispatch => (
     cartUtil.deleteCart(cartId)
-        .then(cart => dispatch(removeCart(cart.id)))
+        .then((cart) => dispatch(removeCart(cart.id)))
 )
