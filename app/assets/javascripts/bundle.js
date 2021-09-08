@@ -2230,7 +2230,7 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, " YOU SHOULD BE WATCHING")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/error/underdevelopment"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "http://i.imgur.com/8AHAoTf.gif",
+        src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true",
         id: "slide-photo1"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "slide-two"
