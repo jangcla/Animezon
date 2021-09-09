@@ -5,17 +5,23 @@ import { fetchCarts } from '../../actions/cart_actions'
 import Cart from './cart'
 
 const mSTP = state => {
-    const cartItems = Object.values(state.entities.carts)
+    const cartItems = Object.values(state.entities.carts)  //this creates a new array of them i need to delete the actual objects in the database
     let mine = cartItems.filter(cartItem => cartItem.user_id === state.session.id)
 
-    const userName = state.entities.users[state.session.id].email.split("@")
-    let name = userName[0]
-
-    return {
-        mine: mine,
-        currentUser: state.entities.users[state.session.id],
-        name: name
+    if (state.entities.users[state.session.id]) {
+        const userName = state.entities.users[state.session.id].email.split("@");
+        let name = userName[0]
+        return {
+            currentUser: state.entities.users[state.session.id],
+            mine: mine,
+            name: name
+        }
+    } else {
+        return {
+            currentUser: state.entities.users[state.session.id],
+        }
     }
+
 }
 
 const mDTP = dispatch => {

@@ -17,11 +17,13 @@ class CartItem extends React.Component {
     render() {
         return (
             <div>
+                <div id="divider"/>
+
                 {this.props.cartItem.title}
                 {this.props.cartItem.id}
                 
                 <div>
-                    <button onClick={this.deleteSubmit}>Delete</button>
+                    <button onClick={this.deleteSubmit} id='cart-item-delete'>Delete</button>
                 </div>
 
             </div>

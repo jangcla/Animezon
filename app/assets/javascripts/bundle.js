@@ -297,8 +297,6 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -310,19 +308,9 @@ var Cart = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(Cart);
 
   function Cart() {
-    var _this;
-
     _classCallCheck(this, Cart);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _super.call.apply(_super, [this].concat(args));
-
-    _defineProperty(_assertThisInitialized(_this), "compo", void 0);
-
-    return _this;
+    return _super.apply(this, arguments);
   }
 
   _createClass(Cart, [{
@@ -333,21 +321,33 @@ var Cart = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this = this;
 
       return this.props.mine ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "main-cart-comp"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "uppercase"
       }, "Hello ", this.props.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.mine.length), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: "cart-item-comp"
+        id: "cart-left-div"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "cart-box"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "cart-box-title"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Shopping Cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Price")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "individual-cart-item"
       }, this.props.mine.map(function (cartItem) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_cart_item__WEBPACK_IMPORTED_MODULE_2__.default, {
           cartItem: cartItem,
           key: cartItem.id,
-          deleteCart: _this2.props.deleteCart
+          deleteCart: _this.props.deleteCart
         });
-      })))) : null;
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "divider"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "cart-box-subtotal"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Subtotal (", this.props.mine.length, " items): $$$")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "cart-right-div"
+      }))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "hello this broke");
     }
   }]);
 
@@ -378,17 +378,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mSTP = function mSTP(state) {
-  var cartItems = Object.values(state.entities.carts);
+  var cartItems = Object.values(state.entities.carts); //this creates a new array of them i need to delete the actual objects in the database
+
   var mine = cartItems.filter(function (cartItem) {
     return cartItem.user_id === state.session.id;
   });
-  var userName = state.entities.users[state.session.id].email.split("@");
-  var name = userName[0];
-  return {
-    mine: mine,
-    currentUser: state.entities.users[state.session.id],
-    name: name
-  };
+
+  if (state.entities.users[state.session.id]) {
+    var userName = state.entities.users[state.session.id].email.split("@");
+    var name = userName[0];
+    return {
+      currentUser: state.entities.users[state.session.id],
+      mine: mine,
+      name: name
+    };
+  } else {
+    return {
+      currentUser: state.entities.users[state.session.id]
+    };
+  }
 };
 
 var mDTP = function mDTP(dispatch) {
@@ -467,8 +475,11 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.cartItem.title, this.props.cartItem.id, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-        onClick: this.deleteSubmit
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "divider"
+      }), this.props.cartItem.title, this.props.cartItem.id, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        onClick: this.deleteSubmit,
+        id: "cart-item-delete"
       }, "Delete")));
     }
   }]);
@@ -616,7 +627,8 @@ var Greeting = function Greeting(_ref) {
       className: "header-group"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       id: "greeting"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+      to: "/",
       className: "header-button",
       onClick: logout,
       id: "log-out"
@@ -667,13 +679,20 @@ var mSTP = function mSTP(state) {
   var mine = cartItems.filter(function (cartItem) {
     return cartItem.user_id === state.session.id;
   });
-  var userName = state.entities.users[state.session.id].email.split("@");
-  var name = userName[0];
-  return {
-    currentUser: state.entities.users[state.session.id],
-    mine: mine,
-    name: name
-  };
+
+  if (state.entities.users[state.session.id]) {
+    var userName = state.entities.users[state.session.id].email.split("@");
+    var name = userName[0];
+    return {
+      currentUser: state.entities.users[state.session.id],
+      mine: mine,
+      name: name
+    };
+  } else {
+    return {
+      currentUser: state.entities.users[state.session.id]
+    };
+  }
 };
 
 var mDTP = function mDTP(dispatch) {
