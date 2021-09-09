@@ -1,0 +1,20 @@
+#main-cart-comp{
+    display: flex;
+    justify-content: space-between;
+    background: #eaeded;
+    padding: 1%;
+}
+
+#cart-left-div{
+    background: white;
+    width: 82.8%;
+    margin-right: 1%;
+}
+#cart-right-div{
+    background: white;
+    width: 16%;
+}
+
+#cart-box{
+
+}

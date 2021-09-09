@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CreateCartItem from '../item_add/cart_create';
 import Navbar from '../nav/navbar';
-import ItemCompartmentContainer from './item_compartment_container';
+// import ItemCompartmentContainer from './item_compartment_container';
 
 
 class ItemShow extends React.Component {
@@ -37,6 +38,12 @@ class ItemShow extends React.Component {
     componentDidMount() {
         this.props.fetchItem(this.props.match.params.itemId)
     }
+
+
+
+    // componentWillUnmount() {
+    //     this.props.fetchItem(this.props.match.params.itemId)
+    // }
 
 
     render() {
@@ -77,7 +84,9 @@ class ItemShow extends React.Component {
 
                     </div>
 
-                    <div id="to-cart">
+                    <CreateCartItem user={this.props.user} item={this.props.item} createCart={this.props.createCart} history={this.props.history}/>
+
+                    {/* <div id="to-cart">
                         <div id="price"> 
                             <p id='buy-new'>Buy new:</p>
                             <p id='price-num'>${this.props.item.price}</p>
@@ -134,10 +143,10 @@ class ItemShow extends React.Component {
                                 <small>Sold by     </small><big>Animezon</big>
                             </p>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
-                   <ItemCompartmentContainer/>
+                   {/* <ItemCompartmentContainer/> */}
             </div>
             )
         :

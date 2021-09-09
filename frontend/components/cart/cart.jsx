@@ -15,8 +15,7 @@ class Cart extends React.Component {
             <div>
                 <Navbar/>
                 <div id="main-cart-comp">
-                    <div id='uppercase'>Hello {this.props.name}</div>
-                    <div>{this.props.mine.length}</div>
+
                     <div id="cart-left-div">
 
                         <div id="cart-box">
@@ -40,7 +39,7 @@ class Cart extends React.Component {
                     </div>
 
                     <div id="cart-right-div">
-                        {/* Checkout Corner */}
+                        Checkout Corner
                     </div>
                 </div>
             </div>

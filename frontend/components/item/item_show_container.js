@@ -13,7 +13,8 @@ const mSTP = (state, ownProps) => {
         return {
             item: state.entities.items[ownProps.match.params.itemId],
             currentUser: state.entities.users[state.session.id],
-            name: name
+            name: name,
+            user: state.session.id
         }
     } else {
         return {
