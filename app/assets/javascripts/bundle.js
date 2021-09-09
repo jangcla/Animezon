@@ -426,6 +426,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -475,12 +476,30 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "cart-item-main-holder"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "divider"
-      }), this.props.cartItem.title, this.props.cartItem.id, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "main-cart-item-container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "c-i-photo"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: this.props.cartItem.photoUrl,
+        id: "main-c-i-photo"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "cart-item-info"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "c-i-title"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/items/".concat(this.props.cartItem.item_id),
+        id: "c-i-title-link"
+      }, this.props.cartItem.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "In Stock"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Shipped from: Animezon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Gift options not available. Learn More.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
+        id: "c-i-quantity"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", null, "Qauntity : ", this.props.cartItem.quantity)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         onClick: this.deleteSubmit,
         id: "cart-item-delete"
-      }, "Delete")));
+      }, "Delete")))));
     }
   }]);
 
@@ -1434,17 +1453,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // const mSTP = (state, ownProps) => {
-//     console.log(state, ownProps)
-//    return {item: state.entities.items[ownProps.match.params.itemId]}
-// }
+
 
 var mSTP = function mSTP(state, ownProps) {
-  return {
-    item: state.entities.items[ownProps.match.params.itemId],
-    user: state.session.id
-  };
-};
+  // console.log(state, ownProps)
+  if (state.entities.users[state.session.id]) {
+    var userName = state.entities.users[state.session.id].email.split("@");
+    var name = userName[0];
+    return {
+      item: state.entities.items[ownProps.match.params.itemId],
+      currentUser: state.entities.users[state.session.id],
+      name: name
+    };
+  } else {
+    return {
+      item: state.entities.items[ownProps.match.params.itemId]
+    };
+  }
+}; // const mSTP = (state, ownProps) => ({
+//     item: state.entities.items[ownProps.match.params.itemId],
+//     currentUser: state.session.id
+// })
+
 
 var mDTP = function mDTP(dispatch) {
   return {

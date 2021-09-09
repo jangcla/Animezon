@@ -1,0 +1,17 @@
+#cart-item-main-holder {
+
+}
+
+#main-cart-item-container {
+    gap: 15px;
+    display: flex;
+    padding: 10px;
+}
+
+#c-i-photo {
+    /* padding: 10px; */
+}
+
+#main-c-i-photo {
+    width: 140px;
+}
