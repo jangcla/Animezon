@@ -17,6 +17,12 @@ class Cart extends React.Component {
                 <div id="main-cart-comp">
 
                     <div id="cart-left-div">
+                        <div id="cart-ad-holder">
+                            <div id="cart-ad">
+                                <h3>Try Out Animezon Premium</h3> 
+                            </div>
+
+                        </div>
 
                         <div id="cart-box">
                             <div id="cart-box-title">
@@ -39,7 +45,13 @@ class Cart extends React.Component {
                     </div>
 
                     <div id="cart-right-div">
-                        Checkout Corner
+                        <div id="cart-item-all-checkout">
+                                <p>Subtotal ({this.props.mine.length} items): $$$</p>
+                        </div>
+
+                        <div id='cart-reccs'>
+                               <h4>Customers also shopped for these similar items:</h4>
+                        </div>
                     </div>
                 </div>
             </div>
