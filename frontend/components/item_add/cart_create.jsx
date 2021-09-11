@@ -19,6 +19,26 @@ class CreateCartItem extends React.Component {
     }
 
 
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.location !== this.props.location) {
+            this.props.fetchItem(this.props.match.params.itemId)
+                .then(this.props.updateAll());
+        }
+    }
+
+    updateAll() {
+        this.setState({
+            [user_id]: `${this.props.user}`,
+            [item_id]: `${this.props.match.params.itemId}`,
+            [quantity]: 1,
+            [purchased]: false,
+            [title]: `${this.props.item.name}`,
+            [photoUrl]: `${this.props.item.photoUrl}`,
+            [price]: `${this.props.item.price}`
+        })
+    }
+
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
@@ -30,7 +50,7 @@ class CreateCartItem extends React.Component {
         const cartItem = Object.assign({}, this.state);
         console.log(cartItem)
         this.props.createCart(cartItem);
-        this.props.history.push('/cart');
+        this.props.history.push('/added');
     }
 
     render() {

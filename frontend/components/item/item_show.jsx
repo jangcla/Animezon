@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CreateCartItem from '../item_add/cart_create';
 import Navbar from '../nav/navbar';
-// import ItemCompartmentContainer from './item_compartment_container';
+import ItemCompartmentContainer from './item_compartment_container';
 
 
 class ItemShow extends React.Component {
@@ -27,17 +27,40 @@ class ItemShow extends React.Component {
         });
     }
 
+    updateAll() {
+        this.setState({
+            [user_id]: `${this.props.user}`,
+            [item_id]: `${this.props.match.params.itemId}`,
+            [quantity]: 1,
+            [purchased]: false,
+            [title]: `${this.props.item.name}`,
+            [photoUrl]: `${this.props.item.photoUrl}`,
+            [price]: `${this.props.item.price}`
+        })
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         const cartItem = Object.assign({}, this.state);
         console.log(cartItem)
         this.props.createCart(cartItem);
-        this.props.history.push('/cart');
+        this.props.history.push('/added');
     }
 
     componentDidMount() {
         this.props.fetchItem(this.props.match.params.itemId)
     }
+
+
+    componentDidUpdate(prevProps,prevState) {
+        if(prevProps.location !== this.props.location){
+            this.props.fetchItem(this.props.match.params.itemId);
+            this.props.updateAll();
+        }
+    }
+
+    
+    
 
 
 
@@ -146,7 +169,7 @@ class ItemShow extends React.Component {
                     </div> */}
 
                 </div>
-                   {/* <ItemCompartmentContainer/> */}
+                   <ItemCompartmentContainer/>
             </div>
             )
         :

@@ -18,6 +18,7 @@ const mSTP = (state, ownProps) => {
         }
     } else {
         return {
+            currentUser: state.entities.users[state.session.id],
             item: state.entities.items[ownProps.match.params.itemId]
         }
     }

@@ -30,15 +30,19 @@
 #cart-ad-holder{
     display: flex;
     justify-content: center;
-    height: 100px;
+    height: 130px;
 }
 
 #cart-ad{
-    width: 78%;
+    width: 70%;
     background: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url(https://github.com/jangcla/Animezon/blob/cartComp/photos/Screen%20Shot%202021-09-09%20at%2010.42.32%20PM.png?raw=true);
+    background-size: 100% 190%;
+    background-position: 1px -24px;
+    color: transparent;
 }
 
 #cart-reccs{

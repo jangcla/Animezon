@@ -20,6 +20,7 @@ const mSTP = state => {
     } else {
         return {
             currentUser: state.entities.users[state.session.id],
+            
         }
     }
 
