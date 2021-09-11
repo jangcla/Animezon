@@ -6,38 +6,17 @@ class CreateCartItem extends React.Component {
         super(props);
 
         this.state = {
-            user_id: `${this.props.user}`,
-            item_id: `${this.props.item.id}`,
-            quantity: 1,
-            purchased: false,
-            title: `${this.props.item.name}`,
-            photoUrl: `${this.props.item.photoUrl}`,
-            price: `${this.props.item.price}`
+            quantity: 1,   
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-
     componentDidUpdate(prevProps, prevState) {
         if (prevProps.location !== this.props.location) {
             this.props.fetchItem(this.props.match.params.itemId)
-                .then(this.props.updateAll());
         }
     }
-
-    updateAll() {
-        this.setState({
-            [user_id]: `${this.props.user}`,
-            [item_id]: `${this.props.match.params.itemId}`,
-            [quantity]: 1,
-            [purchased]: false,
-            [title]: `${this.props.item.name}`,
-            [photoUrl]: `${this.props.item.photoUrl}`,
-            [price]: `${this.props.item.price}`
-        })
-    }
-
 
     update(field) {
         return e => this.setState({
@@ -47,7 +26,15 @@ class CreateCartItem extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const cartItem = Object.assign({}, this.state);
+        // const cartItem = Object.assign({}, this.state);
+        const cartItem = {
+            user_id: `${this.props.user}`,
+            item_id: `${this.props.item.id}`,
+            quantity: `${this.state.quantity}`,
+            purchased: false,
+            title: `${this.props.item.name}`,
+            photoUrl: `${this.props.item.photoUrl}`,
+            price: `${this.props.item.price}`}
         console.log(cartItem)
         this.props.createCart(cartItem);
         this.props.history.push('/added');

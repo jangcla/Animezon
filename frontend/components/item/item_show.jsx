@@ -8,46 +8,34 @@ import ItemCompartmentContainer from './item_compartment_container';
 class ItemShow extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            user_id: `${this.props.user}`,
-            item_id:  `${this.props.match.params.itemId}`,
-            quantity:  1,
-            purchased: false,
-            title: `${this.props.item.name}`,
-            photoUrl: `${this.props.item.photoUrl}`,
-            price: `${this.props.item.price}`
-        }
+        // this.state = {
+        //     user_id: `${this.props.user}`,
+        //     item_id:  `${this.props.match.params.itemId}`,
+        //     quantity:  1,
+        //     purchased: false,
+        //     title: `${this.props.item.name}`,
+        //     photoUrl: `${this.props.item.photoUrl}`,
+        //     price: `${this.props.item.price}`
+        // }
 
-        this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    update(field) {
-        return e => this.setState({
-            [field]: e.currentTarget.value
-        });
-    }
+    // update(field) {
+    //     return e => this.setState({
+    //         [field]: e.currentTarget.value
+    //     });
+    // }
 
-    updateAll() {
-        this.setState({
-            [user_id]: `${this.props.user}`,
-            [item_id]: `${this.props.match.params.itemId}`,
-            [quantity]: 1,
-            [purchased]: false,
-            [title]: `${this.props.item.name}`,
-            [photoUrl]: `${this.props.item.photoUrl}`,
-            [price]: `${this.props.item.price}`
-        })
-    }
+    // handleSubmit(e) {
+    //     e.preventDefault();
+    //     const cartItem = Object.assign({}, this.state);
+    //     console.log(cartItem)
+    //     this.props.createCart(cartItem);
+    //     this.props.history.push('/added');
+    // }
 
-    handleSubmit(e) {
-        e.preventDefault();
-        const cartItem = Object.assign({}, this.state);
-        console.log(cartItem)
-        this.props.createCart(cartItem);
-        this.props.history.push('/added');
-    }
-
-    componentDidMount() {
+    UNSAFE_componentWillMount(){
         this.props.fetchItem(this.props.match.params.itemId)
     }
 
@@ -55,7 +43,6 @@ class ItemShow extends React.Component {
     componentDidUpdate(prevProps,prevState) {
         if(prevProps.location !== this.props.location){
             this.props.fetchItem(this.props.match.params.itemId);
-            this.props.updateAll();
         }
     }
 

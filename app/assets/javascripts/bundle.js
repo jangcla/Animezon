@@ -320,8 +320,8 @@ var Cart = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(Cart, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
+    key: "componentWillMount",
+    value: function componentWillMount() {
       this.props.fetchCarts();
     }
   }, {
@@ -394,7 +394,7 @@ var mSTP = function mSTP(state) {
 
   var mine = cartItems.filter(function (cartItem) {
     return cartItem.user_id === state.session.id;
-  });
+  }).reverse();
 
   if (state.entities.users[state.session.id]) {
     var userName = state.entities.users[state.session.id].email.split("@");
@@ -709,8 +709,7 @@ __webpack_require__.r(__webpack_exports__);
 var Greeting = function Greeting(_ref) {
   var currentUser = _ref.currentUser,
       mine = _ref.mine,
-      logout = _ref.logout,
-      name = _ref.name;
+      logout = _ref.logout;
 
   var sessionLinks = function sessionLinks() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
@@ -743,7 +742,7 @@ var Greeting = function Greeting(_ref) {
       id: "log-out"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
       id: "uppercase"
-    }, "Hello, ", name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Account & Lists"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    }, "Hello, ", currentUser.email.split('@')[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Account & Lists"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
       to: "/cart",
       id: "cart-link"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
@@ -788,20 +787,10 @@ var mSTP = function mSTP(state) {
   var mine = cartItems.filter(function (cartItem) {
     return cartItem.user_id === state.session.id;
   });
-
-  if (state.entities.users[state.session.id]) {
-    var userName = state.entities.users[state.session.id].email.split("@");
-    var name = userName[0];
-    return {
-      currentUser: state.entities.users[state.session.id],
-      mine: mine,
-      name: name
-    };
-  } else {
-    return {
-      currentUser: state.entities.users[state.session.id]
-    };
-  }
+  return {
+    currentUser: state.entities.users[state.session.id],
+    mine: mine
+  };
 };
 
 var mDTP = function mDTP(dispatch) {
@@ -1352,8 +1341,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _item_compartment_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./item_compartment_container */ "./frontend/components/item/item_compartment_container.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -1386,52 +1373,35 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(ItemShow);
 
   function ItemShow(props) {
-    var _this;
-
     _classCallCheck(this, ItemShow);
 
-    _this = _super.call(this, props);
-    _this.state = {
-      user_id: "".concat(_this.props.user),
-      item_id: "".concat(_this.props.match.params.itemId),
-      quantity: 1,
-      purchased: false,
-      title: "".concat(_this.props.item.name),
-      photoUrl: "".concat(_this.props.item.photoUrl),
-      price: "".concat(_this.props.item.price)
-    };
-    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
-    return _this;
-  }
+    return _super.call(this, props); // this.state = {
+    //     user_id: `${this.props.user}`,
+    //     item_id:  `${this.props.match.params.itemId}`,
+    //     quantity:  1,
+    //     purchased: false,
+    //     title: `${this.props.item.name}`,
+    //     photoUrl: `${this.props.item.photoUrl}`,
+    //     price: `${this.props.item.price}`
+    // }
+    // this.handleSubmit = this.handleSubmit.bind(this);
+  } // update(field) {
+  //     return e => this.setState({
+  //         [field]: e.currentTarget.value
+  //     });
+  // }
+  // handleSubmit(e) {
+  //     e.preventDefault();
+  //     const cartItem = Object.assign({}, this.state);
+  //     console.log(cartItem)
+  //     this.props.createCart(cartItem);
+  //     this.props.history.push('/added');
+  // }
+
 
   _createClass(ItemShow, [{
-    key: "update",
-    value: function update(field) {
-      var _this2 = this;
-
-      return function (e) {
-        return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
-      };
-    }
-  }, {
-    key: "updateAll",
-    value: function updateAll() {
-      var _this$setState;
-
-      this.setState((_this$setState = {}, _defineProperty(_this$setState, user_id, "".concat(this.props.user)), _defineProperty(_this$setState, item_id, "".concat(this.props.match.params.itemId)), _defineProperty(_this$setState, quantity, 1), _defineProperty(_this$setState, purchased, false), _defineProperty(_this$setState, title, "".concat(this.props.item.name)), _defineProperty(_this$setState, photoUrl, "".concat(this.props.item.photoUrl)), _defineProperty(_this$setState, price, "".concat(this.props.item.price)), _this$setState));
-    }
-  }, {
-    key: "handleSubmit",
-    value: function handleSubmit(e) {
-      e.preventDefault();
-      var cartItem = Object.assign({}, this.state);
-      console.log(cartItem);
-      this.props.createCart(cartItem);
-      this.props.history.push('/added');
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
+    key: "UNSAFE_componentWillMount",
+    value: function UNSAFE_componentWillMount() {
       this.props.fetchItem(this.props.match.params.itemId);
     }
   }, {
@@ -1439,7 +1409,6 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
     value: function componentDidUpdate(prevProps, prevState) {
       if (prevProps.location !== this.props.location) {
         this.props.fetchItem(this.props.match.params.itemId);
-        this.props.updateAll();
       }
     } // componentWillUnmount() {
     //     this.props.fetchItem(this.props.match.params.itemId)
@@ -1519,21 +1488,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var mSTP = function mSTP(state, ownProps) {
   // console.log(state, ownProps)
-  if (state.entities.users[state.session.id]) {
-    var userName = state.entities.users[state.session.id].email.split("@");
-    var name = userName[0];
-    return {
-      item: state.entities.items[ownProps.match.params.itemId],
-      currentUser: state.entities.users[state.session.id],
-      name: name,
-      user: state.session.id
-    };
-  } else {
-    return {
-      currentUser: state.entities.users[state.session.id],
-      item: state.entities.items[ownProps.match.params.itemId]
-    };
-  }
+  return {
+    currentUser: state.entities.users[state.session.id],
+    item: state.entities.items[ownProps.match.params.itemId],
+    user: state.session.id
+  };
 }; // const mSTP = (state, ownProps) => ({
 //     item: state.entities.items[ownProps.match.params.itemId],
 //     currentUser: state.session.id
@@ -1607,13 +1566,7 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      user_id: "".concat(_this.props.user),
-      item_id: "".concat(_this.props.item.id),
-      quantity: 1,
-      purchased: false,
-      title: "".concat(_this.props.item.name),
-      photoUrl: "".concat(_this.props.item.photoUrl),
-      price: "".concat(_this.props.item.price)
+      quantity: 1
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
@@ -1623,15 +1576,8 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
       if (prevProps.location !== this.props.location) {
-        this.props.fetchItem(this.props.match.params.itemId).then(this.props.updateAll());
+        this.props.fetchItem(this.props.match.params.itemId);
       }
-    }
-  }, {
-    key: "updateAll",
-    value: function updateAll() {
-      var _this$setState;
-
-      this.setState((_this$setState = {}, _defineProperty(_this$setState, user_id, "".concat(this.props.user)), _defineProperty(_this$setState, item_id, "".concat(this.props.match.params.itemId)), _defineProperty(_this$setState, quantity, 1), _defineProperty(_this$setState, purchased, false), _defineProperty(_this$setState, title, "".concat(this.props.item.name)), _defineProperty(_this$setState, photoUrl, "".concat(this.props.item.photoUrl)), _defineProperty(_this$setState, price, "".concat(this.props.item.price)), _this$setState));
     }
   }, {
     key: "update",
@@ -1645,8 +1591,17 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
-      e.preventDefault();
-      var cartItem = Object.assign({}, this.state);
+      e.preventDefault(); // const cartItem = Object.assign({}, this.state);
+
+      var cartItem = {
+        user_id: "".concat(this.props.user),
+        item_id: "".concat(this.props.item.id),
+        quantity: "".concat(this.state.quantity),
+        purchased: false,
+        title: "".concat(this.props.item.name),
+        photoUrl: "".concat(this.props.item.photoUrl),
+        price: "".concat(this.props.item.price)
+      };
       console.log(cartItem);
       this.props.createCart(cartItem);
       this.props.history.push('/added');

@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import { login } from '../../actions/session_actions';
 
 
-const Greeting = ({currentUser, mine, logout, name}) => {
- 
-
+const Greeting = ({currentUser, mine, logout}) => {
     const sessionLinks = () => (
         <nav className = 'login-signup'>
             {/* <button><Link to = '/login' id='auth-link'>Login</Link></button>
@@ -32,7 +30,7 @@ const Greeting = ({currentUser, mine, logout, name}) => {
         <hgroup className="header-group"> 
             <div id='greeting'>
                 <Link to='/' className="header-button" onClick={logout} id='log-out'>
-                    <small id='uppercase'>Hello, {name}</small>
+                    <small id='uppercase'>Hello, {currentUser.email.split('@')[0]}</small>
                     <br />
                     <big>Account & Lists</big>
                 </Link>

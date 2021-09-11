@@ -6,7 +6,7 @@ import Cart from './cart'
 
 const mSTP = state => {
     const cartItems = Object.values(state.entities.carts)  //this creates a new array of them i need to delete the actual objects in the database
-    let mine = cartItems.filter(cartItem => cartItem.user_id === state.session.id)
+    let mine = cartItems.filter(cartItem => cartItem.user_id === state.session.id).reverse()
 
     if (state.entities.users[state.session.id]) {
         const userName = state.entities.users[state.session.id].email.split("@");

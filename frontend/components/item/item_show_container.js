@@ -7,21 +7,12 @@ import ItemShow from './item_show' ;
 const mSTP = (state, ownProps) => {
     // console.log(state, ownProps)
 
-    if (state.entities.users[state.session.id]) {
-        const userName = state.entities.users[state.session.id].email.split("@");
-        let name = userName[0]
         return {
-            item: state.entities.items[ownProps.match.params.itemId],
             currentUser: state.entities.users[state.session.id],
-            name: name,
+            item: state.entities.items[ownProps.match.params.itemId],
             user: state.session.id
         }
-    } else {
-        return {
-            currentUser: state.entities.users[state.session.id],
-            item: state.entities.items[ownProps.match.params.itemId]
-        }
-    }
+
 }
 // const mSTP = (state, ownProps) => ({
 //     item: state.entities.items[ownProps.match.params.itemId],
