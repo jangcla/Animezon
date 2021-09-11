@@ -27,11 +27,19 @@ class CartItem extends React.Component {
 
                     <div id="cart-item-info">
                         <div id="c-i-title">
-                            <Link to={`/items/${this.props.cartItem.item_id}`} id='c-i-title-link'>{this.props.cartItem.title}</Link>
+                            <div id="title-and-price">
+                               <h2>
+                                   <Link to={`/items/${this.props.cartItem.item_id}`} id='c-i-title-link'>{this.props.cartItem.title}</Link>
+                               </h2> 
+
+                                <h3>$ {this.props.cartItem.price * this.props.cartItem.quantity}</h3>
+                            </div>
+
+                            <small>In Stock</small>
                             <br />
-                            <p>In Stock</p>
-                            <p>Shipped from: Animezon</p>
-                            <p>Gift options not available. Learn More.</p>
+                            <small>Shipped from: Animezon</small>
+                            <br />
+                            <small>Gift options not available. </small>
 
                         </div>
                         {/* {this.props.cartItem.id} */}

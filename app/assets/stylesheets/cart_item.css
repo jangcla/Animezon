@@ -8,10 +8,19 @@
     padding: 10px;
 }
 
-#c-i-photo {
-    /* padding: 10px; */
-}
+/* #c-i-photo {
+    padding: 10px;
+} */
 
 #main-c-i-photo {
     width: 140px;
+}
+
+#cart-item-info {
+    width: 90%;
+}
+
+#tittle-and-price {
+    display: flex;
+    justify-content: space-between;
 }
