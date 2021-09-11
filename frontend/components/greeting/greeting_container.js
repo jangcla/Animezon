@@ -7,13 +7,12 @@ import Greeting from './greeting';
 
 const mSTP = state => {
     const cartItems = Object.values(state.entities.carts)
-
     let mine = cartItems.filter(cartItem => cartItem.user_id === state.session.id)
 
-    return {
-        currentUser: state.entities.users[state.session.id],
-        mine: mine
-    }
+        return {
+            currentUser: state.entities.users[state.session.id],
+            mine: mine,
+        }
 }
 
 const mDTP = dispatch => ({

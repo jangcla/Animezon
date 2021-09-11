@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CreateCartItem from '../item_add/cart_create';
 import Navbar from '../nav/navbar';
 import ItemCompartmentContainer from './item_compartment_container';
 
@@ -7,36 +8,52 @@ import ItemCompartmentContainer from './item_compartment_container';
 class ItemShow extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            user_id: `${this.props.user}`,
-            item_id:  `${this.props.match.params.itemId}`,
-            quantity:  1,
-            purchased: false,
-            title: `${this.props.item.name}`,
-            photoUrl: `${this.props.item.photoUrl}`,
-            price: `${this.props.item.price}`
-        }
+        // this.state = {
+        //     user_id: `${this.props.user}`,
+        //     item_id:  `${this.props.match.params.itemId}`,
+        //     quantity:  1,
+        //     purchased: false,
+        //     title: `${this.props.item.name}`,
+        //     photoUrl: `${this.props.item.photoUrl}`,
+        //     price: `${this.props.item.price}`
+        // }
 
-        this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    update(field) {
-        return e => this.setState({
-            [field]: e.currentTarget.value
-        });
-    }
+    // update(field) {
+    //     return e => this.setState({
+    //         [field]: e.currentTarget.value
+    //     });
+    // }
 
-    handleSubmit(e) {
-        e.preventDefault();
-        const cartItem = Object.assign({}, this.state);
-        console.log(cartItem)
-        this.props.createCart(cartItem);
-        this.props.history.push('/cart');
-    }
+    // handleSubmit(e) {
+    //     e.preventDefault();
+    //     const cartItem = Object.assign({}, this.state);
+    //     console.log(cartItem)
+    //     this.props.createCart(cartItem);
+    //     this.props.history.push('/added');
+    // }
 
-    componentDidMount() {
+    UNSAFE_componentWillMount(){
         this.props.fetchItem(this.props.match.params.itemId)
     }
+
+
+    componentDidUpdate(prevProps,prevState) {
+        if(prevProps.location !== this.props.location){
+            this.props.fetchItem(this.props.match.params.itemId);
+        }
+    }
+
+    
+    
+
+
+
+    // componentWillUnmount() {
+    //     this.props.fetchItem(this.props.match.params.itemId)
+    // }
 
 
     render() {
@@ -77,7 +94,9 @@ class ItemShow extends React.Component {
 
                     </div>
 
-                    <div id="to-cart">
+                    <CreateCartItem user={this.props.user} item={this.props.item} createCart={this.props.createCart} history={this.props.history}/>
+
+                    {/* <div id="to-cart">
                         <div id="price"> 
                             <p id='buy-new'>Buy new:</p>
                             <p id='price-num'>${this.props.item.price}</p>
@@ -134,7 +153,7 @@ class ItemShow extends React.Component {
                                 <small>Sold by     </small><big>Animezon</big>
                             </p>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
                    <ItemCompartmentContainer/>
