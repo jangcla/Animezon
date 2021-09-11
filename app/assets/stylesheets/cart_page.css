@@ -19,12 +19,18 @@
     display: flex;
     flex-direction: column;
     align-content: center;
-    gap: 1%;
+    gap: 15px;
 }
 
 #cart-box{
     background: white;
     padding: 1%;
+}
+
+#cart-box-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 #cart-ad-holder{
@@ -51,4 +57,24 @@
 
 #cart-item-all-checkout{
     background: white;
+}
+
+#title-price-cart{
+    color: #868686;
+    margin-bottom: -7px;
+    font: small-caption;
+    font-size: 13px;
+}
+
+#title-title{
+    font: icon;
+    font-size: 27px;
+    margin-bottom: -5px;
+}
+
+#shop-more{
+color: #228495;
+    font-size: 13px;
+    font-weight: 300;
+    margin-top: 1px;
 }
