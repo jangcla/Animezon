@@ -320,13 +320,11 @@ var Cart = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(Cart, [{
-    key: "componentWillMount",
-    value: function componentWillMount() {
-      this.props.fetchCarts();
-    }
-  }, {
     key: "render",
-    value: function render() {
+    value: // componentWillMount() {
+    //     this.props.fetchCarts()
+    // }
+    function render() {
       var _this = this;
 
       return this.props.mine ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -341,7 +339,7 @@ var Cart = /*#__PURE__*/function (_React$Component) {
         id: "cart-box"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-box-title"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "title-title"
       }, "Shopping Cart ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
         id: "shop-more"

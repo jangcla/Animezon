@@ -13,3 +13,6 @@ Item.destroy_all
 require_relative './seeds/anime.rb'
 require_relative './seeds/manga.rb'
 require_relative './seeds/merch.rb'
+
+
+demo = User.create!(email: 'teat', password: 'password')
