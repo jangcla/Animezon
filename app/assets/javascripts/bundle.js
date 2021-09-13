@@ -234,7 +234,7 @@ __webpack_require__.r(__webpack_exports__);
 var App = function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "main-div"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__.AuthRoute, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__.AuthRoute, {
     path: "/signup",
     component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_2__.default
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__.AuthRoute, {
@@ -260,7 +260,7 @@ var App = function App() {
     exact: true,
     path: "/",
     component: _home_home_page_container__WEBPACK_IMPORTED_MODULE_3__.default
-  }));
+  })));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -320,11 +320,13 @@ var Cart = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(Cart, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      this.props.fetchCarts();
+    }
+  }, {
     key: "render",
-    value: // componentWillMount() {
-    //     this.props.fetchCarts()
-    // }
-    function render() {
+    value: function render() {
       var _this = this;
 
       return this.props.mine ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -492,6 +494,7 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
     key: "deleteSubmit",
     value: function deleteSubmit(e) {
       e.preventDefault();
+      console.log(this.props.cartItem.id);
       this.props.deleteCart(this.props.cartItem.id);
     }
   }, {
@@ -2929,7 +2932,7 @@ var updateCart = function updateCart(cart) {
 };
 var deleteCart = function deleteCart(cartId) {
   return $.ajax({
-    mehtod: "DELETE",
+    method: "DELETE",
     url: "/api/carts/".concat(cartId)
   });
 };

@@ -5,9 +5,9 @@ import CartItem from './cart_item'
 
 class Cart extends React.Component {
 
-    // componentWillMount() {
-    //     this.props.fetchCarts()
-    // }
+    componentWillMount() {
+        this.props.fetchCarts()
+    }
 
     render() {
         return this.props.mine ? 
