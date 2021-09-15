@@ -35,7 +35,6 @@ class CreateCartItem extends React.Component {
             title: `${this.props.item.name}`,
             photoUrl: `${this.props.item.photoUrl}`,
             price: `${this.props.item.price}`}
-        console.log(cartItem)
         this.props.createCart(cartItem);
         this.props.history.push('/added');
     }

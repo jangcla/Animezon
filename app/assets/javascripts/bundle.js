@@ -494,7 +494,6 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
     key: "deleteSubmit",
     value: function deleteSubmit(e) {
       e.preventDefault();
-      console.log(this.props.cartItem.id);
       this.props.deleteCart(this.props.cartItem.id);
     }
   }, {
@@ -1641,7 +1640,6 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
         photoUrl: "".concat(this.props.item.photoUrl),
         price: "".concat(this.props.item.price)
       };
-      console.log(cartItem);
       this.props.createCart(cartItem);
       this.props.history.push('/added');
     }
