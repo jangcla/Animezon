@@ -14,7 +14,6 @@ class CartItem extends React.Component {
 
     deleteSubmit(e) {
         e.preventDefault();
-
         this.props.deleteCart(this.props.cartItem.id)
     }
 

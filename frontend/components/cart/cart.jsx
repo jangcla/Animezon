@@ -26,7 +26,7 @@ class Cart extends React.Component {
 
                         <div id="cart-box">
                             <div id="cart-box-title">
-                                <h1 id='title-title'>Shopping Cart <br /> <h3 id='shop-more'>Shop more items</h3></h1>
+                                <div id='title-title'>Shopping Cart <br /> <h3 id='shop-more'>Shop more items</h3></div>
                                 <h5 id='title-price-cart'>Price</h5>
                             </div>
 

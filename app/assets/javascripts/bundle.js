@@ -234,7 +234,7 @@ __webpack_require__.r(__webpack_exports__);
 var App = function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "main-div"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__.AuthRoute, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__.AuthRoute, {
     path: "/signup",
     component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_2__.default
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__.AuthRoute, {
@@ -260,7 +260,7 @@ var App = function App() {
     exact: true,
     path: "/",
     component: _home_home_page_container__WEBPACK_IMPORTED_MODULE_3__.default
-  }));
+  })));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -341,7 +341,7 @@ var Cart = /*#__PURE__*/function (_React$Component) {
         id: "cart-box"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-box-title"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "title-title"
       }, "Shopping Cart ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
         id: "shop-more"
@@ -1640,7 +1640,6 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
         photoUrl: "".concat(this.props.item.photoUrl),
         price: "".concat(this.props.item.price)
       };
-      console.log(cartItem);
       this.props.createCart(cartItem);
       this.props.history.push('/added');
     }
@@ -2931,7 +2930,7 @@ var updateCart = function updateCart(cart) {
 };
 var deleteCart = function deleteCart(cartId) {
   return $.ajax({
-    mehtod: "DELETE",
+    method: "DELETE",
     url: "/api/carts/".concat(cartId)
   });
 };
