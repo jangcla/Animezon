@@ -34,8 +34,8 @@ class ItemAdded extends React.Component {
                     <div id="cart-right-div">
                         <div id="cart-item-checkout-browse">
                             <p>Continue to shop or go to cart?</p>
-                            <Link to='/cart' id='preview-add-buttons'>Go to Cart</Link>
-                            <Link to='/' id='preview-add-buttons'>Continue Browsing</Link>
+                            <Link to='/cart' id='preview-add-buttons'>Proceed to Cart</Link>
+                            <Link to='/' id='preview-add-buttons1'>Continue Browsing</Link>
 
                         </div>
 

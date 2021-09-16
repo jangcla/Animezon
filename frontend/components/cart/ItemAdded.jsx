@@ -12,9 +12,9 @@ class ItemAdd extends React.Component {
                 </div>
 
                 <div id="item-preview-text">
-                    <h3>Item has been succesfully added to cart</h3>
+                    <h3 id='item-success-text'>Item has been succesfully added to cart</h3>
 
-                    <h4><big>Cart subtotal</big><small>({this.props.mine.length} items)</small></h4>
+                    <h4 id='item-cart-sub'><big id='big-sub'>Cart subtotal</big>  <big>({this.props.mine.length} items)</big></h4>
                 </div>
 
             </div>

@@ -330,7 +330,13 @@ var ItemAdd = /*#__PURE__*/function (_React$Component) {
         id: "green-cart2"
       }, "Added to Cart")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "item-preview-text"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Item has been succesfully added to cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Cart subtotal"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "(", this.props.mine.length, " items)"))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+        id: "item-success-text"
+      }, "Item has been succesfully added to cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        id: "item-cart-sub"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+        id: "big-sub"
+      }, "Cart subtotal"), "  ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "(", this.props.mine.length, " items)"))));
     }
   }]);
 
@@ -720,9 +726,9 @@ var ItemAdded = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Continue to shop or go to cart?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
         to: "/cart",
         id: "preview-add-buttons"
-      }, "Go to Cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+      }, "Proceed to Cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
         to: "/",
-        id: "preview-add-buttons"
+        id: "preview-add-buttons1"
       }, "Continue Browsing"))))) : null;
     }
   }]);
