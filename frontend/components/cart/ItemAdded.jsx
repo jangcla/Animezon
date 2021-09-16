@@ -8,7 +8,7 @@ class ItemAdd extends React.Component {
                 <div id="item-preview-photo">
                     <big id='green-cart'>✓</big> 
                     <img src={this.props.addItem.photoUrl} id='added-photo'/>
-                    <big id='green-cart'>Added to Cart</big>
+                    <big id='green-cart2'>Added to Cart</big>
                 </div>
 
                 <div id="item-preview-text">

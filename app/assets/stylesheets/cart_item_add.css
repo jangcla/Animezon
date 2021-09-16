@@ -1,0 +1,41 @@
+#item-add-preview {
+    display: flex;
+    background: white;
+}
+
+#item-preview-photo {
+    display: flex;
+    align-items: center;
+    color: green;
+    width: 30%;
+    padding: 10px;
+}
+
+#added-photo {
+    height: 160px;
+}
+
+#item-preview-text {
+    width: 70%;
+}
+
+#cart-item-checkout-browse {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#green-cart{
+    font-size: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#green-cart2{
+    font: menu;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+

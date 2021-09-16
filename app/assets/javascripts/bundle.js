@@ -327,7 +327,7 @@ var ItemAdd = /*#__PURE__*/function (_React$Component) {
         src: this.props.addItem.photoUrl,
         id: "added-photo"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
-        id: "green-cart"
+        id: "green-cart2"
       }, "Added to Cart")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "item-preview-text"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Item has been succesfully added to cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Cart subtotal"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "(", this.props.mine.length, " items)"))));
@@ -706,21 +706,23 @@ var ItemAdded = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-ad"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Try Out Animezon Premium"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: "cart-box"
+        id: "cart-box-preview"
       }, this.props.last.map(function (addedItem) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ItemAdded__WEBPACK_IMPORTED_MODULE_2__.default, {
           addItem: addedItem,
           key: addedItem.id,
           mine: _this.props.mine
         });
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Item has been succesfully added to your cart."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-right-div"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: "cart-item-all-checkout"
+        id: "cart-item-checkout-browse"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Continue to shop or go to cart?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-        to: "/cart"
+        to: "/cart",
+        id: "preview-add-buttons"
       }, "Go to Cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-        to: "/"
+        to: "/",
+        id: "preview-add-buttons"
       }, "Continue Browsing"))))) : null;
     }
   }]);

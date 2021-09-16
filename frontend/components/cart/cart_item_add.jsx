@@ -24,20 +24,18 @@ class ItemAdded extends React.Component {
 
                         </div>
 
-                        <div id="cart-box">
+                        <div id="cart-box-preview">
                             {
                                 this.props.last.map(addedItem => <ItemAdd addItem={addedItem} key={addedItem.id} mine={this.props.mine}/>)
-                            }
-                           <h1>Item has been succesfully added to your cart.</h1>
-                                
+                            }                                
                         </div>
                     </div>
 
                     <div id="cart-right-div">
-                        <div id="cart-item-all-checkout">
+                        <div id="cart-item-checkout-browse">
                             <p>Continue to shop or go to cart?</p>
-                            <Link to='/cart'>Go to Cart</Link>
-                            <Link to='/'>Continue Browsing</Link>
+                            <Link to='/cart' id='preview-add-buttons'>Go to Cart</Link>
+                            <Link to='/' id='preview-add-buttons'>Continue Browsing</Link>
 
                         </div>
 
