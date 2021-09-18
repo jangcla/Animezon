@@ -8,20 +8,31 @@ const mSTP = state => {
     const cartItems = Object.values(state.entities.carts)  //this creates a new array of them i need to delete the actual objects in the database
     let mine = cartItems.filter(cartItem => cartItem.user_id === state.session.id).reverse()
 
-    if (state.entities.users[state.session.id]) {
-        const userName = state.entities.users[state.session.id].email.split("@");
-        let name = userName[0]
-        return {
-            currentUser: state.entities.users[state.session.id],
-            mine: mine,
-            name: name
+    let also = []
+        if (cartItems.length !== 0) {
+            while (also.legnth < 4) {
+                let num = Math.floor(Math.random() * anime.length)
+                let random = also[num]
+                if (!also.includes(random)) {
+                    also.push(random)
+                }
+            }
         }
-    } else {
-        return {
-            currentUser: state.entities.users[state.session.id],
-        }
-    }
 
+    let sumTotal = 0
+        if (mine.length !== 0) {
+            mine.forEach(item => {
+                sumTotal += (item.price * item.quantity)
+            })
+        }
+    console.log(sumTotal)
+
+    return {
+        currentUser: state.entities.users[state.session.id],
+        mine: mine,
+        also: also,
+        sumTotal: sumTotal
+    }
 }
 
 const mDTP = dispatch => {

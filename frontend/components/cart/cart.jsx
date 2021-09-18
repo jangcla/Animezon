@@ -39,14 +39,14 @@ class Cart extends React.Component {
                             </div>
 
                             <div id='cart-box-subtotal'>
-                                <p>Subtotal ({this.props.mine.length} items): $$$</p> 
+                                <p id='bottom-of-cart-total'>Subtotal ({this.props.mine.length} items): <small id='money-total'> ${this.props.sumTotal}</small></p> 
                             </div>
                         </div>
                     </div>
 
                     <div id="cart-right-div">
                         <div id="cart-item-all-checkout">
-                                <p>Subtotal ({this.props.mine.length} items): $$$</p>
+                                <p>Subtotal ({this.props.mine.length} items): <small id='money-total'>${this.props.sumTotal}</small></p>
 
                                 <p id='buy-for-yourself'>📦 This order is a gift for yourself</p>
 

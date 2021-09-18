@@ -440,11 +440,17 @@ var Cart = /*#__PURE__*/function (_React$Component) {
         id: "divider"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-box-subtotal"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Subtotal (", this.props.mine.length, " items): $$$")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        id: "bottom-of-cart-total"
+      }, "Subtotal (", this.props.mine.length, " items): ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
+        id: "money-total"
+      }, " $", this.props.sumTotal))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-right-div"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-item-all-checkout"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Subtotal (", this.props.mine.length, " items): $$$"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Subtotal (", this.props.mine.length, " items): ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
+        id: "money-total"
+      }, "$", this.props.sumTotal)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "buy-for-yourself"
       }, "\uD83D\uDCE6 This order is a gift for yourself"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
         to: "/error/underdevelopment",
@@ -487,20 +493,34 @@ var mSTP = function mSTP(state) {
   var mine = cartItems.filter(function (cartItem) {
     return cartItem.user_id === state.session.id;
   }).reverse();
+  var also = [];
 
-  if (state.entities.users[state.session.id]) {
-    var userName = state.entities.users[state.session.id].email.split("@");
-    var name = userName[0];
-    return {
-      currentUser: state.entities.users[state.session.id],
-      mine: mine,
-      name: name
-    };
-  } else {
-    return {
-      currentUser: state.entities.users[state.session.id]
-    };
+  if (cartItems.length !== 0) {
+    while (also.legnth < 4) {
+      var num = Math.floor(Math.random() * anime.length);
+      var random = also[num];
+
+      if (!also.includes(random)) {
+        also.push(random);
+      }
+    }
   }
+
+  var sumTotal = 0;
+
+  if (mine.length !== 0) {
+    mine.forEach(function (item) {
+      sumTotal += item.price * item.quantity;
+    });
+  }
+
+  console.log(sumTotal);
+  return {
+    currentUser: state.entities.users[state.session.id],
+    mine: mine,
+    also: also,
+    sumTotal: sumTotal
+  };
 };
 
 var mDTP = function mDTP(dispatch) {
@@ -777,7 +797,6 @@ var mSTP = function mSTP(state) {
     }
   }
 
-  console.log(last);
   return {
     last: last,
     mine: mine

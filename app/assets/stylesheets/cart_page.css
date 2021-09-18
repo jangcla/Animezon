@@ -105,3 +105,15 @@
     font-size: 14px;
     margin-top: -15px;
 }
+
+#money-total{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#bottom-of-cart-total {
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
