@@ -6,10 +6,20 @@ class CartItem extends React.Component {
         super(props);
 
         this.state = {
-            quantity: `${this.props.cartItem.quantity}`
+            id: `${this.props.cartItem.id}`,
+            quantity: `${this.props.cartItem.quantity}`,
+            user_id: `${this.props.cartItem.user_id}`,
+            item_id: `${this.props.cartItem.item_id}`,
+            purchased: false,
+            title: `${this.props.cartItem.title}`,
+            photoUrl: `${this.props.cartItem.photoUrl}`,
+            price: `${this.props.cartItem.price}`
         }
 
         this.deleteSubmit = this.deleteSubmit.bind(this);
+        this.updateSubmit = this.updateSubmit.bind(this);
+        this.update = this.update.bind(this);
+        this.doubleEvent = this.doubleEvent.bind(this);
     }
 
     deleteSubmit(e) {
@@ -17,10 +27,21 @@ class CartItem extends React.Component {
         this.props.deleteCart(this.props.cartItem.id)
     }
 
-    update(field) {
-        return e => this.setState({
-            [field]: e.currentTarget.value
+    updateSubmit(e) {
+        e.preventDefault();
+        const cartItem = Object.assign({}, this.state)
+        this.props.updateCart(cartItem);
+    }
+
+    update(e) {
+        this.setState({
+            ['quantity']: e.currentTarget.value
         });
+    }
+
+    doubleEvent(e) {
+        this.update(e);
+        this.updateSubmit(e);
     }
 
     render() {
@@ -56,7 +77,7 @@ class CartItem extends React.Component {
                         {/* {this.props.cartItem.id} */}
                         
                         <div id='select-delete'> 
-                            <select id="c-i-quantity" onChange={this.update('quantity')}>
+                            <select id="c-i-quantity" onChange={this.doubleEvent}>
                                 <option value={this.props.cartItem.quantity}>
                                     - Qty: {this.props.cartItem.quantity} -
                                 </option>
@@ -65,6 +86,7 @@ class CartItem extends React.Component {
                                 <option value={3} >Qty: 3</option>
                             </select>
                             <button onClick={this.deleteSubmit} id='cart-item-delete'>Delete</button>
+                            <button onClick={this.updateSubmit} id='cart-item-delete'>Save</button>
                         </div>
                     </div>
 

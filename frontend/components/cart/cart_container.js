@@ -25,7 +25,6 @@ const mSTP = state => {
                 sumTotal += (item.price * item.quantity)
             })
         }
-    console.log(sumTotal)
 
     return {
         currentUser: state.entities.users[state.session.id],
@@ -39,7 +38,7 @@ const mDTP = dispatch => {
     return {
         fetchCarts: () => dispatch(fetchCarts()),
         deleteCart: (cartId) => dispatch(deleteCart(cartId)),
-        
+        updateCart: (cart) => dispatch(updateCart(cart)),
     }
 }
 

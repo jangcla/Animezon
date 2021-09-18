@@ -434,7 +434,8 @@ var Cart = /*#__PURE__*/function (_React$Component) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_cart_item__WEBPACK_IMPORTED_MODULE_2__.default, {
           cartItem: cartItem,
           key: cartItem.id,
-          deleteCart: _this.props.deleteCart
+          deleteCart: _this.props.deleteCart,
+          updateCart: _this.props.updateCart
         });
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "divider"
@@ -514,7 +515,6 @@ var mSTP = function mSTP(state) {
     });
   }
 
-  console.log(sumTotal);
   return {
     currentUser: state.entities.users[state.session.id],
     mine: mine,
@@ -530,6 +530,9 @@ var mDTP = function mDTP(dispatch) {
     },
     deleteCart: function deleteCart(cartId) {
       return dispatch((0,_actions_cart_actions__WEBPACK_IMPORTED_MODULE_1__.deleteCart)(cartId));
+    },
+    updateCart: function updateCart(cart) {
+      return dispatch((0,_actions_cart_actions__WEBPACK_IMPORTED_MODULE_1__.updateCart)(cart));
     }
   };
 };
@@ -590,9 +593,19 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      quantity: "".concat(_this.props.cartItem.quantity)
+      id: "".concat(_this.props.cartItem.id),
+      quantity: "".concat(_this.props.cartItem.quantity),
+      user_id: "".concat(_this.props.cartItem.user_id),
+      item_id: "".concat(_this.props.cartItem.item_id),
+      purchased: false,
+      title: "".concat(_this.props.cartItem.title),
+      photoUrl: "".concat(_this.props.cartItem.photoUrl),
+      price: "".concat(_this.props.cartItem.price)
     };
     _this.deleteSubmit = _this.deleteSubmit.bind(_assertThisInitialized(_this));
+    _this.updateSubmit = _this.updateSubmit.bind(_assertThisInitialized(_this));
+    _this.update = _this.update.bind(_assertThisInitialized(_this));
+    _this.doubleEvent = _this.doubleEvent.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -603,13 +616,22 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
       this.props.deleteCart(this.props.cartItem.id);
     }
   }, {
+    key: "updateSubmit",
+    value: function updateSubmit(e) {
+      e.preventDefault();
+      var cartItem = Object.assign({}, this.state);
+      this.props.updateCart(cartItem);
+    }
+  }, {
     key: "update",
-    value: function update(field) {
-      var _this2 = this;
-
-      return function (e) {
-        return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
-      };
+    value: function update(e) {
+      this.setState(_defineProperty({}, 'quantity', e.currentTarget.value));
+    }
+  }, {
+    key: "doubleEvent",
+    value: function doubleEvent(e) {
+      this.update(e);
+      this.updateSubmit(e);
     }
   }, {
     key: "render",
@@ -643,7 +665,7 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
         id: "select-delete"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
         id: "c-i-quantity",
-        onChange: this.update('quantity')
+        onChange: this.doubleEvent
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
         value: this.props.cartItem.quantity
       }, "- Qty: ", this.props.cartItem.quantity, " -"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
@@ -655,7 +677,10 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
       }, "Qty: 3")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         onClick: this.deleteSubmit,
         id: "cart-item-delete"
-      }, "Delete")))));
+      }, "Delete"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        onClick: this.updateSubmit,
+        id: "cart-item-delete"
+      }, "Save")))));
     }
   }]);
 

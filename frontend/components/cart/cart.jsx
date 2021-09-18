@@ -32,7 +32,7 @@ class Cart extends React.Component {
 
                             <div id="individual-cart-item">
                                 {
-                                    this.props.mine.map(cartItem => <CartItem cartItem={cartItem} key={cartItem.id} deleteCart={this.props.deleteCart}/>)
+                                    this.props.mine.map(cartItem => <CartItem cartItem={cartItem} key={cartItem.id} deleteCart={this.props.deleteCart} updateCart={this.props.updateCart}/>)
                                 }
 
                                 <div id="divider" />
