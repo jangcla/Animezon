@@ -5,21 +5,8 @@ class CartItem extends React.Component {
     constructor(props){
         super(props);
 
-        this.state = {
-            id: `${this.props.cartItem.id}`,
-            quantity: `${this.props.cartItem.quantity}`,
-            user_id: `${this.props.cartItem.user_id}`,
-            item_id: `${this.props.cartItem.item_id}`,
-            purchased: false,
-            title: `${this.props.cartItem.title}`,
-            photoUrl: `${this.props.cartItem.photoUrl}`,
-            price: `${this.props.cartItem.price}`
-        }
-
         this.deleteSubmit = this.deleteSubmit.bind(this);
-        this.updateSubmit = this.updateSubmit.bind(this);
         this.update = this.update.bind(this);
-        this.doubleEvent = this.doubleEvent.bind(this);
     }
 
     deleteSubmit(e) {
@@ -27,21 +14,19 @@ class CartItem extends React.Component {
         this.props.deleteCart(this.props.cartItem.id)
     }
 
-    updateSubmit(e) {
-        e.preventDefault();
-        const cartItem = Object.assign({}, this.state)
-        this.props.updateCart(cartItem);
-    }
-
     update(e) {
-        this.setState({
-            ['quantity']: e.currentTarget.value
-        });
-    }
-
-    doubleEvent(e) {
-        this.update(e);
-        this.updateSubmit(e);
+        const cartItem = {
+            id: `${this.props.cartItem.id}`,
+            quantity: `${e.currentTarget.value}`,
+            user_id: `${this.props.cartItem.user_id}`,
+            item_id: `${this.props.cartItem.item_id}`,
+            purchased: false,
+            title: `${this.props.cartItem.title}`,
+            photoUrl: `${this.props.cartItem.photoUrl}`,
+            price: `${this.props.cartItem.price}`
+        }
+        // const cartItem = Object.assign({}, this.state)
+        this.props.updateCart(cartItem);
     }
 
     render() {
@@ -62,7 +47,7 @@ class CartItem extends React.Component {
                                    <Link to={`/items/${this.props.cartItem.item_id}`} id='c-i-title-link'>{this.props.cartItem.title}</Link>
                                </h2> 
 
-                                <h3 >$ {this.props.cartItem.price * this.state.quantity}</h3>
+                                <h3 >$ {this.props.cartItem.price * this.props.cartItem.quantity}</h3>
                             </div>
 
                             <small id='small-stock'>In Stock</small>
@@ -77,7 +62,7 @@ class CartItem extends React.Component {
                         {/* {this.props.cartItem.id} */}
                         
                         <div id='select-delete'> 
-                            <select id="c-i-quantity" onChange={this.doubleEvent}>
+                            <select id="c-i-quantity" onChange={this.update}>
                                 <option value={this.props.cartItem.quantity}>
                                     - Qty: {this.props.cartItem.quantity} -
                                 </option>
@@ -86,7 +71,6 @@ class CartItem extends React.Component {
                                 <option value={3} >Qty: 3</option>
                             </select>
                             <button onClick={this.deleteSubmit} id='cart-item-delete'>Delete</button>
-                            <button onClick={this.updateSubmit} id='cart-item-delete'>Save</button>
                         </div>
                     </div>
 

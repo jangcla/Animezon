@@ -401,8 +401,8 @@ var Cart = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(Cart, [{
-    key: "componentWillMount",
-    value: function componentWillMount() {
+    key: "UNSAFE_componentWillMount",
+    value: function UNSAFE_componentWillMount() {
       this.props.fetchCarts();
     }
   }, {
@@ -443,13 +443,13 @@ var Cart = /*#__PURE__*/function (_React$Component) {
         id: "cart-box-subtotal"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "bottom-of-cart-total"
-      }, "Subtotal (", this.props.mine.length, " items): ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
+      }, "Subtotal (", this.props.itemTotal, " items): ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
         id: "money-total"
       }, " $", this.props.sumTotal))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-right-div"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-item-all-checkout"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Subtotal (", this.props.mine.length, " items): ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Subtotal (", this.props.itemTotal, " items): ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
         id: "money-total"
       }, "$", this.props.sumTotal)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "buy-for-yourself"
@@ -515,11 +515,20 @@ var mSTP = function mSTP(state) {
     });
   }
 
+  var itemTotal = 0;
+
+  if (mine.length !== 0) {
+    mine.forEach(function (item) {
+      itemTotal += item.quantity;
+    });
+  }
+
   return {
     currentUser: state.entities.users[state.session.id],
     mine: mine,
     also: also,
-    sumTotal: sumTotal
+    sumTotal: sumTotal,
+    itemTotal: itemTotal
   };
 };
 
@@ -556,8 +565,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -592,20 +599,8 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, CartItem);
 
     _this = _super.call(this, props);
-    _this.state = {
-      id: "".concat(_this.props.cartItem.id),
-      quantity: "".concat(_this.props.cartItem.quantity),
-      user_id: "".concat(_this.props.cartItem.user_id),
-      item_id: "".concat(_this.props.cartItem.item_id),
-      purchased: false,
-      title: "".concat(_this.props.cartItem.title),
-      photoUrl: "".concat(_this.props.cartItem.photoUrl),
-      price: "".concat(_this.props.cartItem.price)
-    };
     _this.deleteSubmit = _this.deleteSubmit.bind(_assertThisInitialized(_this));
-    _this.updateSubmit = _this.updateSubmit.bind(_assertThisInitialized(_this));
     _this.update = _this.update.bind(_assertThisInitialized(_this));
-    _this.doubleEvent = _this.doubleEvent.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -616,22 +611,20 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
       this.props.deleteCart(this.props.cartItem.id);
     }
   }, {
-    key: "updateSubmit",
-    value: function updateSubmit(e) {
-      e.preventDefault();
-      var cartItem = Object.assign({}, this.state);
-      this.props.updateCart(cartItem);
-    }
-  }, {
     key: "update",
     value: function update(e) {
-      this.setState(_defineProperty({}, 'quantity', e.currentTarget.value));
-    }
-  }, {
-    key: "doubleEvent",
-    value: function doubleEvent(e) {
-      this.update(e);
-      this.updateSubmit(e);
+      var cartItem = {
+        id: "".concat(this.props.cartItem.id),
+        quantity: "".concat(e.currentTarget.value),
+        user_id: "".concat(this.props.cartItem.user_id),
+        item_id: "".concat(this.props.cartItem.item_id),
+        purchased: false,
+        title: "".concat(this.props.cartItem.title),
+        photoUrl: "".concat(this.props.cartItem.photoUrl),
+        price: "".concat(this.props.cartItem.price)
+      }; // const cartItem = Object.assign({}, this.state)
+
+      this.props.updateCart(cartItem);
     }
   }, {
     key: "render",
@@ -657,7 +650,7 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/items/".concat(this.props.cartItem.item_id),
         id: "c-i-title-link"
-      }, this.props.cartItem.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "$ ", this.props.cartItem.price * this.state.quantity)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
+      }, this.props.cartItem.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "$ ", this.props.cartItem.price * this.props.cartItem.quantity)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
         id: "small-stock"
       }, "In Stock"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
         id: "small-free"
@@ -665,7 +658,7 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
         id: "select-delete"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
         id: "c-i-quantity",
-        onChange: this.doubleEvent
+        onChange: this.update
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
         value: this.props.cartItem.quantity
       }, "- Qty: ", this.props.cartItem.quantity, " -"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
@@ -677,10 +670,7 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
       }, "Qty: 3")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         onClick: this.deleteSubmit,
         id: "cart-item-delete"
-      }, "Delete"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-        onClick: this.updateSubmit,
-        id: "cart-item-delete"
-      }, "Save")))));
+      }, "Delete")))));
     }
   }]);
 
@@ -961,7 +951,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Greeting = function Greeting(_ref) {
   var currentUser = _ref.currentUser,
-      mine = _ref.mine,
+      itemTotal = _ref.itemTotal,
       logout = _ref.logout;
 
   var sessionLinks = function sessionLinks() {
@@ -1003,7 +993,7 @@ var Greeting = function Greeting(_ref) {
       id: "cart-img"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       id: "cart-amount"
-    }, mine.length), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    }, itemTotal), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       id: "cart-title"
     }, "Cart")));
   };
@@ -1040,9 +1030,18 @@ var mSTP = function mSTP(state) {
   var mine = cartItems.filter(function (cartItem) {
     return cartItem.user_id === state.session.id;
   });
+  var itemTotal = 0;
+
+  if (mine.length !== 0) {
+    mine.forEach(function (item) {
+      itemTotal += item.quantity;
+    });
+  }
+
   return {
     currentUser: state.entities.users[state.session.id],
-    mine: mine
+    mine: mine,
+    itemTotal: itemTotal
   };
 };
 

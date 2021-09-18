@@ -26,11 +26,19 @@ const mSTP = state => {
             })
         }
 
+    let itemTotal = 0
+        if (mine.length !== 0) {
+            mine.forEach(item => {
+                itemTotal += (item.quantity)
+            })
+        }
+
     return {
         currentUser: state.entities.users[state.session.id],
         mine: mine,
         also: also,
-        sumTotal: sumTotal
+        sumTotal: sumTotal,
+        itemTotal: itemTotal
     }
 }
 

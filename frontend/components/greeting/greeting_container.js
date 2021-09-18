@@ -9,10 +9,18 @@ const mSTP = state => {
     const cartItems = Object.values(state.entities.carts)
     let mine = cartItems.filter(cartItem => cartItem.user_id === state.session.id)
 
-        return {
-            currentUser: state.entities.users[state.session.id],
-            mine: mine,
-        }
+    let itemTotal = 0
+    if (mine.length !== 0) {
+        mine.forEach(item => {
+            itemTotal += (item.quantity)
+        })
+    }
+
+    return {
+        currentUser: state.entities.users[state.session.id],
+        mine: mine,
+        itemTotal: itemTotal
+    }
 }
 
 const mDTP = dispatch => ({
