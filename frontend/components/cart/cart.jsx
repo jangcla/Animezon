@@ -77,8 +77,9 @@ class Cart extends React.Component {
                         <div id="cart-box">
 
                             <div id="empty-cart-img">
+                                    <img src="https://i.pinimg.com/originals/ff/ed/6b/ffed6b3b3d9dbd473dc0759807399fa2.png" alt="" />
 
-                                
+                                    <img src="https://yaxoncare.com/uploads/loader.gif"/>
                             </div>
 
 
