@@ -5,11 +5,8 @@ class CartItem extends React.Component {
     constructor(props){
         super(props);
 
-        this.state = {
-            quantity: `${this.props.cartItem.quantity}`
-        }
-
         this.deleteSubmit = this.deleteSubmit.bind(this);
+        this.update = this.update.bind(this);
     }
 
     deleteSubmit(e) {
@@ -17,10 +14,19 @@ class CartItem extends React.Component {
         this.props.deleteCart(this.props.cartItem.id)
     }
 
-    update(field) {
-        return e => this.setState({
-            [field]: e.currentTarget.value
-        });
+    update(e) {
+        const cartItem = {
+            id: `${this.props.cartItem.id}`,
+            quantity: `${e.currentTarget.value}`,
+            user_id: `${this.props.cartItem.user_id}`,
+            item_id: `${this.props.cartItem.item_id}`,
+            purchased: false,
+            title: `${this.props.cartItem.title}`,
+            photoUrl: `${this.props.cartItem.photoUrl}`,
+            price: `${this.props.cartItem.price}`
+        }
+        // const cartItem = Object.assign({}, this.state)
+        this.props.updateCart(cartItem);
     }
 
     render() {
@@ -41,7 +47,7 @@ class CartItem extends React.Component {
                                    <Link to={`/items/${this.props.cartItem.item_id}`} id='c-i-title-link'>{this.props.cartItem.title}</Link>
                                </h2> 
 
-                                <h3 >$ {this.props.cartItem.price * this.state.quantity}</h3>
+                                <h3 >$ {this.props.cartItem.price * this.props.cartItem.quantity}</h3>
                             </div>
 
                             <small id='small-stock'>In Stock</small>
@@ -56,7 +62,7 @@ class CartItem extends React.Component {
                         {/* {this.props.cartItem.id} */}
                         
                         <div id='select-delete'> 
-                            <select id="c-i-quantity" onChange={this.update('quantity')}>
+                            <select id="c-i-quantity" onChange={this.update}>
                                 <option value={this.props.cartItem.quantity}>
                                     - Qty: {this.props.cartItem.quantity} -
                                 </option>

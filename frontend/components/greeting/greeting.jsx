@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { login } from '../../actions/session_actions';
 
 
-const Greeting = ({currentUser, mine, logout}) => {
+const Greeting = ({currentUser, itemTotal, logout}) => {
     const sessionLinks = () => (
         <nav className = 'login-signup'>
             {/* <button><Link to = '/login' id='auth-link'>Login</Link></button>
@@ -40,7 +40,7 @@ const Greeting = ({currentUser, mine, logout}) => {
                 <div >
                 <img src="https://www.pngkey.com/png/full/307-3071593_accessories-shopping-cart-icon-white.png" id="cart-img"/>
                 </div>
-                <div id="cart-amount">{mine.length}</div> 
+                <div id="cart-amount">{itemTotal}</div> 
                 <div id="cart-title">Cart</div> 
             </Link>
         </hgroup>
