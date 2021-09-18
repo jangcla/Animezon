@@ -56,7 +56,15 @@
 }
 
 #cart-item-all-checkout{
+    height: 145px;
     background: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font: menu;
+    font-size: 18px;
 }
 
 #title-price-cart{
