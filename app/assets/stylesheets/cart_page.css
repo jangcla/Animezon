@@ -56,7 +56,15 @@
 }
 
 #cart-item-all-checkout{
+    height: 145px;
     background: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font: menu;
+    font-size: 18px;
 }
 
 #title-price-cart{
@@ -73,8 +81,27 @@
 }
 
 #shop-more{
-color: #228495;
+    color: #228495;
     font-size: 13px;
     font-weight: 300;
     margin-top: 1px;
+}
+
+#proceed-to-checkout-button {
+   text-decoration: none;
+    color: black;
+    background: #ffd814;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 8px;
+    font: menu;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#buy-for-yourself {
+    font-size: 14px;
+    margin-top: -15px;
 }

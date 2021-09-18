@@ -1,10 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../nav/navbar';
+import ItemAdd from './ItemAdded';
 
 class ItemAdded extends React.Component {
+    componentDidMount() {
+        this.props.fetchCarts()
+    }
+
     render() {
-        return (
+        return this.props.last ? 
+        (
             <div>
                 <Navbar />
                 <div id="main-cart-comp">
@@ -14,25 +20,31 @@ class ItemAdded extends React.Component {
                             <div id="cart-ad">
                                 <h3>Try Out Animezon Premium</h3>
                             </div>
+                            
 
                         </div>
 
-                        <div id="cart-box">
-                           <h1>Item has been succesfully added to your cart.</h1>
+                        <div id="cart-box-preview">
+                            {
+                                this.props.last.map(addedItem => <ItemAdd addItem={addedItem} key={addedItem.id} mine={this.props.mine}/>)
+                            }                                
                         </div>
                     </div>
 
                     <div id="cart-right-div">
-                        <div id="cart-item-all-checkout">
+                        <div id="cart-item-checkout-browse">
                             <p>Continue to shop or go to cart?</p>
-                            <button>Go to Cart</button>
-                            <button>Continue Browsing</button>
+                            <Link to='/cart' id='preview-add-buttons'>Proceed to Cart</Link>
+                            <Link to='/' id='preview-add-buttons1'>Continue Browsing</Link>
+
                         </div>
 
                     </div>
                 </div>
             </div>
         )
+        :
+        null;
     }
 }
 

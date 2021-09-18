@@ -47,6 +47,10 @@ class Cart extends React.Component {
                     <div id="cart-right-div">
                         <div id="cart-item-all-checkout">
                                 <p>Subtotal ({this.props.mine.length} items): $$$</p>
+
+                                <p id='buy-for-yourself'>📦 This order is a gift for yourself</p>
+
+                                <Link to='/error/underdevelopment' id='proceed-to-checkout-button'>Proceed to checkout</Link>
                         </div>
 
                         <div id='cart-reccs'>

@@ -1,20 +1,31 @@
 import { connect } from 'react-redux'
+import { fetchCarts } from '../../actions/cart_actions'
 
 import ItemAdded from './cart_item_add'
 
 const mSTP = state => {
     const cartItems = Object.values(state.entities.carts) 
-    let last = cartItems.filter(cartItem => cartItem.user_id === state.session.id).reverse()[0]
-
+    let mine = cartItems.filter(cartItem => cartItem.user_id === state.session.id).reverse()
+ 
+    let last = []
+        if (mine.length !== 0) {
+            while (last.length < 1) {
+                last.push(mine[0])
+            }
+        }
+    console.log(last)
+    
     return {
-        last: last
+        last: last,
+        mine: mine
     }
 
 }
 
 const mDTP = dispatch => {
     return {
-        deleteCart: (cartId) => dispatch(deleteCart(cartId)),
+        fetchCarts: () => dispatch(fetchCarts()),
+        fetchCart: (cartId) => dispatch(fetchCart(cartId))
     }
 }
 

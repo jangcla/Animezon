@@ -7,7 +7,7 @@ import {Route, HashRouter, Switch} from 'react-router-dom'
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import CartContainer from "./cart/cart_container";
 import UnderConstruction from "./developing/unavailable";
-import ItemAdded from "./cart/cart_item_add";
+import ItemAddedContainer from "./cart/cart_item_add_container";
 
 
 const App = () => (
@@ -16,7 +16,7 @@ const App = () => (
             <AuthRoute path="/signup" component={SignUpFormContainer} />
             <AuthRoute path="/login" component={LogInFormContainer} />
             <Route exact path="/cart" component={CartContainer}/>
-            <Route exact path="/added" component={ItemAdded}/>
+            <Route exact path="/added" component={ItemAddedContainer}/>
             <Route exact path="/items/:itemId" component={ItemShowContainer}/>
             <Route exact path='/error/underdevelopment' component={UnderConstruction}/>
             <Route exact path="/" component={HomePageContainer}/>
