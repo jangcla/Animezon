@@ -34,28 +34,28 @@
 }
 
 #slide-one{
-    background-image: url(https://c.tenor.com/MuMLDWrW95gAAAAd/gojo-domain-expansion.gif);
+    background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/you-should-watch.gif?raw=true);
     background-size: 100% 100%;
 }
 
 .slide-two{
     width: 20%;
     transition: 2s;
-    background-image: url(https://giffiles.alphacoders.com/354/35460.gif);
+    background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/one-piece-intro.gif?raw=true);
     background-size: 100% 100%;
 }
 
 .slide-three {
     width: 20%;
     transition: 2s;
-    background-image: url(https://miro.medium.com/max/900/1*MmLkpM4w_mpBdDoFex73bw.gif);
+    background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/hunter-intro.gif?raw=true);
     background-size: 100% 100%;
 }
 
 .slide-four {
     width: 20%;
     transition: 2s;
-    background-image: url(https://c.tenor.com/PvL266ALfUMAAAAd/deku-eri.gif);
+    background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/my-hero-fight-scene.gif?raw=true);
     background-size: 100% 100%;
 }
 #slide-Link:hover{
