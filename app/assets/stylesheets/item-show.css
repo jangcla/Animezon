@@ -1,8 +1,8 @@
 #item-show {
     display: flex;
-    justify-content: space-between;
     margin-top: 50px;
     padding: 40px;
+    justify-content: space-evenly
 }
 
 #main-display {

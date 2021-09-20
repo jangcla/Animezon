@@ -58,7 +58,7 @@ class ItemShow extends React.Component {
 
                     <CreateCartItem user={this.props.user} item={this.props.item} createCart={this.props.createCart} history={this.props.history}/>
                 </div>
-                   <ItemCompartmentContainer/>
+                   {/* <ItemCompartmentContainer/> */}
             </div>
             )
         :

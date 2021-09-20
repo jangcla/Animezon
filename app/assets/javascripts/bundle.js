@@ -1124,7 +1124,7 @@ var Greeting = function Greeting(_ref) {
       to: "/cart",
       id: "cart-link"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      src: "https://www.pngkey.com/png/full/307-3071593_accessories-shopping-cart-icon-white.png",
+      src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/cart-link-logo.png?raw=true",
       id: "cart-img"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       id: "cart-amount"
@@ -1818,7 +1818,7 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
         item: this.props.item,
         createCart: this.props.createCart,
         history: this.props.history
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_item_compartment_container__WEBPACK_IMPORTED_MODULE_3__.default, null)) : null;
+      }))) : null;
     }
   }]);
 
@@ -2105,7 +2105,7 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
         to: "/error/underdevelopment",
         id: "loc-li"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://i.pinimg.com/474x/35/38/84/35388450747d66cc94e19c96af601c94.jpg",
+        src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/nav-bar-tag.jpeg?raw=true",
         id: "loc-nav"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Select your address"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "search-div"

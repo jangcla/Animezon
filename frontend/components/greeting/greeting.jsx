@@ -38,7 +38,7 @@ const Greeting = ({currentUser, itemTotal, logout}) => {
             
             <Link to='/cart' id="cart-link">
                 <div >
-                <img src="https://www.pngkey.com/png/full/307-3071593_accessories-shopping-cart-icon-white.png" id="cart-img"/>
+                    <img src="https://github.com/jangcla/Animezon/blob/cartComp/photos/cart-link-logo.png?raw=true" id="cart-img"/>
                 </div>
                 <div id="cart-amount">{itemTotal}</div> 
                 <div id="cart-title">Cart</div> 
