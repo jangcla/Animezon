@@ -2,11 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../nav/navbar'
 import CartItem from './cart_item'
+import CartSimilar from './cart_similar';
 
 class Cart extends React.Component {
 
     UNSAFE_componentWillMount() {
-        this.props.fetchCarts()
+        this.props.fetchCarts();
+        this.props.fetchItems();
     }
 
     render() {
@@ -55,6 +57,12 @@ class Cart extends React.Component {
 
                         <div id='cart-reccs'>
                                <h4>Customers also shopped for these similar items:</h4>
+
+                                <div>
+                                    {
+                                        this.props.alsoItems.map(alsoItem => <CartSimilar alsoItem={alsoItem} key={alsoItem.id} />)
+                                    }
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -91,17 +99,17 @@ class Cart extends React.Component {
                     </div>
 
                     <div id="cart-right-div">
-                        <div id="cart-item-all-checkout">
-                                <p>Subtotal ({this.props.itemTotal} items): <small id='money-total'>${this.props.sumTotal}</small></p>
-
-                                <p id='buy-for-yourself'>📦 This order is a gift for yourself</p>
-
-                                <Link to='/error/underdevelopment' id='proceed-to-checkout-button'>Proceed to checkout</Link>
-                        </div>
 
                         <div id='cart-reccs'>
                                <h4>Customers also shopped for these similar items:</h4>
+
+                                <div>
+                                    {
+                                        this.props.alsoItems.map(alsoItem => <CartSimilar alsoItem={alsoItem} key={alsoItem.id} />)
+                                    }
+                                </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
