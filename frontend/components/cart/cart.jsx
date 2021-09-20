@@ -56,9 +56,9 @@ class Cart extends React.Component {
                         </div>
 
                         <div id='cart-reccs'>
-                               <h4>Customers also shopped for these similar items:</h4>
+                                <h4 id='similar-items-title'>Customers also shopped for these similar items</h4>
 
-                                <div>
+                                <div id='reccs-div'>
                                     {
                                         this.props.alsoItems.map(alsoItem => <CartSimilar alsoItem={alsoItem} key={alsoItem.id} />)
                                     }
@@ -101,15 +101,15 @@ class Cart extends React.Component {
                     <div id="cart-right-div">
 
                         <div id='cart-reccs'>
-                               <h4>Customers also shopped for these similar items:</h4>
+                               <h4 id='similar-items-title'>Customers also shopped for these similar items</h4>
 
-                                <div>
+                                <div id='reccs-div'>
                                     {
                                         this.props.alsoItems.map(alsoItem => <CartSimilar alsoItem={alsoItem} key={alsoItem.id} />)
                                     }
                                 </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

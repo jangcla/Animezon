@@ -52,8 +52,12 @@
 }
 
 #cart-reccs{
-    background: white;
-    padding: 20px;
+background: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
 }
 
 #cart-item-all-checkout{
@@ -151,10 +155,22 @@
 #try-browsing-blue {
     color: #389bad;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
     margin-top: -5px;
 }
 
 #is-empty-text {
    margin-top: -5px;
+}
+
+#reccs-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#similar-items-title {
+    font: menu;
+    font-weight: bold;
+    font-size: 14px;    
 }

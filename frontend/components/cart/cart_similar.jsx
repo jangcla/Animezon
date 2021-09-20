@@ -12,15 +12,15 @@ class CartSimilar extends React.Component {
                 </div>
 
                 <div id="also-item-info">
-                    <p id="also-title-name">
+                    <Link to={`/items/${this.props.alsoItem.id}`} id='also-title-link'>
                         {this.props.alsoItem.name}
-                    </p>
+                    </Link>
 
                     <p id="also-type">
-                        {this.props.alsoItem.type}
+                        Type: <small id="also-type-blue">{this.props.alsoItem.type_tag}</small> 
                     </p>
 
-                    <p>
+                    <p id='also-red-price'>
                         ${this.props.alsoItem.price}
                     </p>
                 </div>

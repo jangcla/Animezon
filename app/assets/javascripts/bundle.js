@@ -461,7 +461,11 @@ var Cart = /*#__PURE__*/function (_React$Component) {
         id: "proceed-to-checkout-button"
       }, "Proceed to checkout")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-reccs"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "Customers also shopped for these similar items:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.alsoItems.map(function (alsoItem) {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        id: "similar-items-title"
+      }, "Customers also shopped for these similar items"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "reccs-div"
+      }, this.props.alsoItems.map(function (alsoItem) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_cart_similar__WEBPACK_IMPORTED_MODULE_3__.default, {
           alsoItem: alsoItem,
           key: alsoItem.id
@@ -492,7 +496,11 @@ var Cart = /*#__PURE__*/function (_React$Component) {
         id: "cart-right-div"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-reccs"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "Customers also shopped for these similar items:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.alsoItems.map(function (alsoItem) {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        id: "similar-items-title"
+      }, "Customers also shopped for these similar items"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "reccs-div"
+      }, this.props.alsoItems.map(function (alsoItem) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_cart_similar__WEBPACK_IMPORTED_MODULE_3__.default, {
           alsoItem: alsoItem,
           key: alsoItem.id
@@ -950,11 +958,16 @@ var CartSimilar = /*#__PURE__*/function (_React$Component) {
         id: "also-photo"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "also-item-info"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-        id: "also-title-name"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/items/".concat(this.props.alsoItem.id),
+        id: "also-title-link"
       }, this.props.alsoItem.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "also-type"
-      }, this.props.alsoItem.type), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "$", this.props.alsoItem.price)));
+      }, "Type: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
+        id: "also-type-blue"
+      }, this.props.alsoItem.type_tag)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        id: "also-red-price"
+      }, "$", this.props.alsoItem.price)));
     }
   }]);
 
@@ -1969,7 +1982,7 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
       }, "$", this.props.item.price)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "shipping"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://images-na.ssl-images-amazon.com/images/G/01/dex/2019/PrimeDelivery/DEX_2019_Prime_PrimeDelivery_LP_1DC_250x170._CB1567810397_.jpg",
+        src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/prime-box.jpg?raw=true",
         id: "prime-ship-logo"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "same-day"

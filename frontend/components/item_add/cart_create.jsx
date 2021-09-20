@@ -48,7 +48,7 @@ class CreateCartItem extends React.Component {
             </div>
 
             <div id="shipping">
-                <img src="https://images-na.ssl-images-amazon.com/images/G/01/dex/2019/PrimeDelivery/DEX_2019_Prime_PrimeDelivery_LP_1DC_250x170._CB1567810397_.jpg" id='prime-ship-logo' />
+                    <img src="https://github.com/jangcla/Animezon/blob/cartComp/photos/prime-box.jpg?raw=true" id='prime-ship-logo' />
 
                 <div id="same-day">
                     <p>FREE Same-Day</p>
