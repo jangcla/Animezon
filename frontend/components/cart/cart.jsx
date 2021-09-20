@@ -81,10 +81,10 @@ class Cart extends React.Component {
                             </div>
 
 
-                            <div id="individual-cart-item">
-                                <h2>Your Animezon Cart is empty</h2>
+                            <div id="individual-cart-item-empty">
+                                <h2 id='is-empty-text'>Your Animezon Cart is empty</h2>
 
-                                <h4>Try browsing more items!</h4>
+                                <Link to='/' id='try-browsing-blue'>Try browsing more items!</Link>
                             </div>
 
                         </div>

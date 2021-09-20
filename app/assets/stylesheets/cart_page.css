@@ -123,6 +123,7 @@
     background: white;
     padding: 22px;
     padding-left: 35px;
+    gap: 30px;
 }
 
 #empty-cart-img {
@@ -137,4 +138,22 @@
     width: 295px;
     margin-left: -65px;
     margin-top: -60px;
+}
+
+#individual-cart-item-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font: menu;
+}
+
+#try-browsing-blue {
+    color: #389bad;
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: -5px;
+}
+
+#is-empty-text {
+   margin-top: -5px;
 }
