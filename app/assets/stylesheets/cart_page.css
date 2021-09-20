@@ -118,6 +118,23 @@
     gap: 5px;
 }
 
+#cart-box-of-empty {
+    display: flex;
+    background: white;
+    padding: 22px;
+    padding-left: 35px;
+}
+
 #empty-cart-img {
-    
+    background-image: url(https://github.com/jangcla/Animezon/blob/cartComp/photos/empty_cart.png?raw=true);
+    border-radius: 50%;
+    background-size: 100% 100%;
+    height: 160px;
+    width: 160px;
+}
+
+#cart-with-items-gif {
+    width: 295px;
+    margin-left: -65px;
+    margin-top: -60px;
 }
