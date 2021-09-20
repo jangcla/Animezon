@@ -1,0 +1,36 @@
+#also-item {
+    display: flex;
+    gap: 15px;
+}
+
+#also-photo {
+    width: 90px;
+}
+
+#also-item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font: menu;
+    font-size: 13px;
+}
+
+#also-title-link {
+    text-decoration: none;
+    color: #00839a;
+    font: menu;
+}
+
+#also-red-price {
+    color: #981d09;
+    font-size: 15px;
+    margin-top: -5px;
+}
+
+#also-type-blue {
+    color: #00839a;
+    text-transform: capitalize;
+    font-size: 13px;
+    font-weight: bold;
+}

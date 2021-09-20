@@ -359,9 +359,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _nav_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../nav/navbar */ "./frontend/components/nav/navbar.jsx");
 /* harmony import */ var _cart_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cart_item */ "./frontend/components/cart/cart_item.jsx");
+/* harmony import */ var _cart_similar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./cart_similar */ "./frontend/components/cart/cart_similar.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -389,6 +390,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var Cart = /*#__PURE__*/function (_React$Component) {
   _inherits(Cart, _React$Component);
 
@@ -404,6 +406,7 @@ var Cart = /*#__PURE__*/function (_React$Component) {
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
       this.props.fetchCarts();
+      this.props.fetchItems();
     }
   }, {
     key: "render",
@@ -453,12 +456,21 @@ var Cart = /*#__PURE__*/function (_React$Component) {
         id: "money-total"
       }, "$", this.props.sumTotal)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "buy-for-yourself"
-      }, "\uD83D\uDCE6 This order is a gift for yourself"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+      }, "\uD83D\uDCE6 This order is a gift for yourself"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
         to: "/error/underdevelopment",
         id: "proceed-to-checkout-button"
       }, "Proceed to checkout")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-reccs"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "Customers also shopped for these similar items:"))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        id: "similar-items-title"
+      }, "Customers also shopped for these similar items"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "reccs-div"
+      }, this.props.alsoItems.map(function (alsoItem) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_cart_similar__WEBPACK_IMPORTED_MODULE_3__.default, {
+          alsoItem: alsoItem,
+          key: alsoItem.id
+        });
+      })))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "main-cart-comp"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-left-div"
@@ -467,30 +479,33 @@ var Cart = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-ad"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Try Out Animezon Premium"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: "cart-box"
+        id: "cart-box-of-empty"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "empty-cart-img"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://i.pinimg.com/originals/ff/ed/6b/ffed6b3b3d9dbd473dc0759807399fa2.png",
-        alt: ""
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://yaxoncare.com/uploads/loader.gif"
+        src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/cart_empty_gif.gif?raw=true",
+        id: "cart-with-items-gif"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: "individual-cart-item"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Your Animezon Cart is empty"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "Try browsing more items!")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "individual-cart-item-empty"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+        id: "is-empty-text"
+      }, "Your Animezon Cart is empty"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+        to: "/",
+        id: "try-browsing-blue"
+      }, "Try browsing more items!")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-right-div"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: "cart-item-all-checkout"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Subtotal (", this.props.itemTotal, " items): ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
-        id: "money-total"
-      }, "$", this.props.sumTotal)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-        id: "buy-for-yourself"
-      }, "\uD83D\uDCE6 This order is a gift for yourself"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-        to: "/error/underdevelopment",
-        id: "proceed-to-checkout-button"
-      }, "Proceed to checkout")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-reccs"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "Customers also shopped for these similar items:")))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        id: "similar-items-title"
+      }, "Customers also shopped for these similar items"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "reccs-div"
+      }, this.props.alsoItems.map(function (alsoItem) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_cart_similar__WEBPACK_IMPORTED_MODULE_3__.default, {
+          alsoItem: alsoItem,
+          key: alsoItem.id
+        });
+      }))))));
     }
   }]);
 
@@ -514,27 +529,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_cart_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/cart_actions */ "./frontend/actions/cart_actions.js");
-/* harmony import */ var _cart__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cart */ "./frontend/components/cart/cart.jsx");
+/* harmony import */ var _actions_item_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/item_actions */ "./frontend/actions/item_actions.js");
+/* harmony import */ var _cart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./cart */ "./frontend/components/cart/cart.jsx");
+
 
 
 
 
 
 var mSTP = function mSTP(state) {
-  var cartItems = Object.values(state.entities.carts); //this creates a new array of them i need to delete the actual objects in the database
-
+  var allItems = Object.values(state.entities.items);
+  var cartItems = Object.values(state.entities.carts);
   var mine = cartItems.filter(function (cartItem) {
     return cartItem.user_id === state.session.id;
   }).reverse();
-  var also = [];
+  var alsoItems = [];
 
-  if (cartItems.length !== 0) {
-    while (also.legnth < 4) {
-      var num = Math.floor(Math.random() * anime.length);
-      var random = also[num];
+  if (allItems.length !== 0) {
+    while (alsoItems.length < 4) {
+      var num = Math.floor(Math.random() * allItems.length);
+      var random = allItems[num];
 
-      if (!also.includes(random)) {
-        also.push(random);
+      if (!alsoItems.includes(random)) {
+        alsoItems.push(random);
       }
     }
   }
@@ -558,7 +575,7 @@ var mSTP = function mSTP(state) {
   return {
     currentUser: state.entities.users[state.session.id],
     mine: mine,
-    also: also,
+    alsoItems: alsoItems,
     sumTotal: sumTotal,
     itemTotal: itemTotal
   };
@@ -569,6 +586,9 @@ var mDTP = function mDTP(dispatch) {
     fetchCarts: function fetchCarts() {
       return dispatch((0,_actions_cart_actions__WEBPACK_IMPORTED_MODULE_1__.fetchCarts)());
     },
+    fetchItems: function fetchItems() {
+      return dispatch((0,_actions_item_actions__WEBPACK_IMPORTED_MODULE_2__.fetchItems)());
+    },
     deleteCart: function deleteCart(cartId) {
       return dispatch((0,_actions_cart_actions__WEBPACK_IMPORTED_MODULE_1__.deleteCart)(cartId));
     },
@@ -578,7 +598,7 @@ var mDTP = function mDTP(dispatch) {
   };
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_0__.connect)(mSTP, mDTP)(_cart__WEBPACK_IMPORTED_MODULE_2__.default));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_0__.connect)(mSTP, mDTP)(_cart__WEBPACK_IMPORTED_MODULE_3__.default));
 
 /***/ }),
 
@@ -875,6 +895,89 @@ var mDTP = function mDTP(dispatch) {
 
 /***/ }),
 
+/***/ "./frontend/components/cart/cart_similar.jsx":
+/*!***************************************************!*\
+  !*** ./frontend/components/cart/cart_similar.jsx ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var CartSimilar = /*#__PURE__*/function (_React$Component) {
+  _inherits(CartSimilar, _React$Component);
+
+  var _super = _createSuper(CartSimilar);
+
+  function CartSimilar() {
+    _classCallCheck(this, CartSimilar);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(CartSimilar, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "also-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "also-item-photo"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/items/".concat(this.props.alsoItem.id)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: this.props.alsoItem.photoUrl,
+        id: "also-photo"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "also-item-info"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/items/".concat(this.props.alsoItem.id),
+        id: "also-title-link"
+      }, this.props.alsoItem.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        id: "also-type"
+      }, "Type: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
+        id: "also-type-blue"
+      }, this.props.alsoItem.type_tag)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        id: "also-red-price"
+      }, "$", this.props.alsoItem.price)));
+    }
+  }]);
+
+  return CartSimilar;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CartSimilar);
+
+/***/ }),
+
 /***/ "./frontend/components/developing/unavailable.jsx":
 /*!********************************************************!*\
   !*** ./frontend/components/developing/unavailable.jsx ***!
@@ -1021,7 +1124,7 @@ var Greeting = function Greeting(_ref) {
       to: "/cart",
       id: "cart-link"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      src: "https://www.pngkey.com/png/full/307-3071593_accessories-shopping-cart-icon-white.png",
+      src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/cart-link-logo.png?raw=true",
       id: "cart-img"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       id: "cart-amount"
@@ -1656,32 +1759,11 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(ItemShow);
 
-  function ItemShow(props) {
+  function ItemShow() {
     _classCallCheck(this, ItemShow);
 
-    return _super.call(this, props); // this.state = {
-    //     user_id: `${this.props.user}`,
-    //     item_id:  `${this.props.match.params.itemId}`,
-    //     quantity:  1,
-    //     purchased: false,
-    //     title: `${this.props.item.name}`,
-    //     photoUrl: `${this.props.item.photoUrl}`,
-    //     price: `${this.props.item.price}`
-    // }
-    // this.handleSubmit = this.handleSubmit.bind(this);
-  } // update(field) {
-  //     return e => this.setState({
-  //         [field]: e.currentTarget.value
-  //     });
-  // }
-  // handleSubmit(e) {
-  //     e.preventDefault();
-  //     const cartItem = Object.assign({}, this.state);
-  //     console.log(cartItem)
-  //     this.props.createCart(cartItem);
-  //     this.props.history.push('/added');
-  // }
-
+    return _super.apply(this, arguments);
+  }
 
   _createClass(ItemShow, [{
     key: "UNSAFE_componentWillMount",
@@ -1694,10 +1776,7 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
       if (prevProps.location !== this.props.location) {
         this.props.fetchItem(this.props.match.params.itemId);
       }
-    } // componentWillUnmount() {
-    //     this.props.fetchItem(this.props.match.params.itemId)
-    // }
-
+    }
   }, {
     key: "render",
     value: function render() {
@@ -1739,7 +1818,7 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
         item: this.props.item,
         createCart: this.props.createCart,
         history: this.props.history
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_item_compartment_container__WEBPACK_IMPORTED_MODULE_3__.default, null)) : null;
+      }))) : null;
     }
   }]);
 
@@ -1903,7 +1982,7 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
       }, "$", this.props.item.price)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "shipping"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://images-na.ssl-images-amazon.com/images/G/01/dex/2019/PrimeDelivery/DEX_2019_Prime_PrimeDelivery_LP_1DC_250x170._CB1567810397_.jpg",
+        src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/prime-box.jpg?raw=true",
         id: "prime-ship-logo"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "same-day"
@@ -2026,7 +2105,7 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
         to: "/error/underdevelopment",
         id: "loc-li"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://i.pinimg.com/474x/35/38/84/35388450747d66cc94e19c96af601c94.jpg",
+        src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/nav-bar-tag.jpeg?raw=true",
         id: "loc-nav"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Select your address"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "search-div"

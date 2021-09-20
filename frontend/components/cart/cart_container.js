@@ -1,20 +1,22 @@
 import { connect } from 'react-redux'
 import { deleteCart, updateCart } from '../../actions/cart_actions'
 import { fetchCarts } from '../../actions/cart_actions'
+import { fetchItems } from '../../actions/item_actions'
 
 import Cart from './cart'
 
 const mSTP = state => {
-    const cartItems = Object.values(state.entities.carts)  //this creates a new array of them i need to delete the actual objects in the database
+    const allItems = Object.values(state.entities.items)
+    const cartItems = Object.values(state.entities.carts) 
     let mine = cartItems.filter(cartItem => cartItem.user_id === state.session.id).reverse()
 
-    let also = []
-        if (cartItems.length !== 0) {
-            while (also.legnth < 4) {
-                let num = Math.floor(Math.random() * anime.length)
-                let random = also[num]
-                if (!also.includes(random)) {
-                    also.push(random)
+    let alsoItems = []
+        if (allItems.length !== 0) {
+            while (alsoItems.length < 4) {
+                let num = Math.floor(Math.random() * allItems.length)
+                let random = allItems[num]
+                if (!alsoItems.includes(random)) {
+                    alsoItems.push(random)
                 }
             }
         }
@@ -36,7 +38,7 @@ const mSTP = state => {
     return {
         currentUser: state.entities.users[state.session.id],
         mine: mine,
-        also: also,
+        alsoItems: alsoItems,
         sumTotal: sumTotal,
         itemTotal: itemTotal
     }
@@ -45,6 +47,7 @@ const mSTP = state => {
 const mDTP = dispatch => {
     return {
         fetchCarts: () => dispatch(fetchCarts()),
+        fetchItems: () => dispatch(fetchItems()),
         deleteCart: (cartId) => dispatch(deleteCart(cartId)),
         updateCart: (cart) => dispatch(updateCart(cart)),
     }
