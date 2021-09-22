@@ -6,4 +6,8 @@ class Item < ApplicationRecord
     has_many :carts,
         foreign_key: :item_id,
         class_name: :Cart
+
+    has_many :reviews,
+        foreign_key: :item_id,
+        class_name: :Review
 end
