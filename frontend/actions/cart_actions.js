@@ -21,8 +21,8 @@ export const removeCart = cartId => ({
 
 export const fetchCarts = () => dispatch => (
     cartUtil.fetchCarts()
-    .then(carts => dispatch(receiveCarts(carts)))
-    )
+        .then(carts => dispatch(receiveCarts(carts)))
+)
     
 export const fetchCart = cartId => dispatch => (
     cartUtil.fetchCart(cartId)
