@@ -15,4 +15,4 @@ require_relative './seeds/manga.rb'
 require_relative './seeds/merch.rb'
 
 
-demo = User.create!(email: 'teat', password: 'password')
+demo = User.create!(email: 'test', password: 'password')
