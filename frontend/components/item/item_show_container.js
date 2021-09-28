@@ -6,9 +6,6 @@ import ItemShow from './item_show' ;
 
 const mSTP = (state, ownProps) => {
     // console.log(state, ownProps)
-    const allReviews = Object.values(state.entities.reviews)
-
-    let itemReviews = allReviews.filter(review => review.item_id === ownProps.match.params)
 
         return {
             currentUser: state.entities.users[state.session.id],

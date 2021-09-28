@@ -1,2 +1,2 @@
-module Api::ReviewsControllerHelper
+module Api::ReviewsHelper
 end

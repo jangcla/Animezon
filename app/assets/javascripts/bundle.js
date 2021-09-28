@@ -1933,10 +1933,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var mSTP = function mSTP(state, ownProps) {
   // console.log(state, ownProps)
-  var allReviews = Object.values(state.entities.reviews);
-  var itemReviews = allReviews.filter(function (review) {
-    return review.item_id === ownProps.match.params;
-  });
   return {
     currentUser: state.entities.users[state.session.id],
     item: state.entities.items[ownProps.match.params.itemId],
