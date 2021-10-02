@@ -1,7 +1,7 @@
-import { connect } from 'react-redux'
-import { deleteCart, updateCart } from '../../actions/cart_actions'
-import { fetchCarts } from '../../actions/cart_actions'
-import { fetchItems } from '../../actions/item_actions'
+import { connect } from 'react-redux';
+import { deleteCart, updateCart } from '../../actions/cart_actions';
+import { fetchCarts } from '../../actions/cart_actions';
+import { fetchItems } from '../../actions/item_actions';
 
 import Cart from './cart'
 
