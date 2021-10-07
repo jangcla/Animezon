@@ -1,3 +1,18 @@
 import { connect } from "react-redux";
-import { createProfile } from "../../actions/profile_actions";
-import { fetchProfile } from "../../actions/profile_actions";
+import { createProfile, fetchProfile } from "../../actions/profile_actions";
+
+const mSTP = state => {
+
+    return {
+
+    }
+}
+
+const mDTP = dispatch => {
+
+    return {
+
+    }
+}
+
+export default connect(mSTP, mDTP)(ProfileForm);
