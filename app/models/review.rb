@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-    validates :user_id, :item_id, :title, :rating, :body, presence: true
+    validates :user_id, :item_id, :title, :rating, :body, :photo_Url, presence: true
 
     belongs_to :user,
         foreign_key: :user_id,
