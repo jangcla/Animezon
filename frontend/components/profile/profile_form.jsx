@@ -10,7 +10,7 @@ class ProfileForm extends React.Component {
             avatar_photo: '',
             banner_photo: '',
             bio: '',
-            user_id: ``,
+            user_id: `${this.props.userId}`,
         };
     }
 
@@ -18,7 +18,9 @@ class ProfileForm extends React.Component {
         return (
             <div id='profile-form-container'>
                 <Navbar/>
-                This shoule be the profile create page if it words :D
+                <div id="profile-form">
+                    <input type="text" id='profile-name-input' onChange={this.forceUpdate('name')}/>
+                </div>
             </div>
         );
     }

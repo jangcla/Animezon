@@ -2360,7 +2360,7 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
       avatar_photo: '',
       banner_photo: '',
       bio: '',
-      user_id: ""
+      user_id: "".concat(_this.props.userId)
     };
     return _this;
   }
@@ -2370,7 +2370,13 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "profile-form-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), "This shoule be the profile create page if it words :D");
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "profile-form"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "text",
+        id: "profile-name-input",
+        onChange: this.forceUpdate('name')
+      })));
     }
   }]);
 
