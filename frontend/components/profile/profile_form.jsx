@@ -22,7 +22,6 @@ class ProfileForm extends React.Component {
     }
 
     profileSubmit(e) {
-        e.preventDefault();
         const profile = Object.assign({}, this.state);
         this.props.createProfile(profile);
     }
@@ -32,7 +31,10 @@ class ProfileForm extends React.Component {
             <div id='profile-form-container'>
                 <Navbar/>
                 <div id="profile-form">
-                    <input type="text" id='profile-name-input' onChange={this.forceUpdate('name')}/>
+                    <div id="prfilename-div">
+                    <big>Profile Name:</big>
+                    <input type="text" id='profile-name-input' onChange={this.update('name')}/>
+                    </div>
                 </div>
             </div>
         );

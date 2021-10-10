@@ -2380,7 +2380,6 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "profileSubmit",
     value: function profileSubmit(e) {
-      e.preventDefault();
       var profile = Object.assign({}, this.state);
       this.props.createProfile(profile);
     }
@@ -2391,11 +2390,13 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
         id: "profile-form-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "profile-form"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "prfilename-div"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Profile Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "text",
         id: "profile-name-input",
-        onChange: this.forceUpdate('name')
-      })));
+        onChange: this.update('name')
+      }))));
     }
   }]);
 
