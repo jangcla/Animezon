@@ -12,6 +12,19 @@ class ProfileForm extends React.Component {
             bio: '',
             user_id: `${this.props.userId}`,
         };
+        this.profileSubmit = this.profileSubmit(this);
+    }
+
+    update(field) {
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        });
+    }
+
+    profileSubmit(e) {
+        e.preventDefault();
+        const profile = Object.assign({}, this.state);
+        this.props.createProfile(profile);
     }
 
     render() {
