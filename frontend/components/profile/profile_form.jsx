@@ -45,6 +45,12 @@ class ProfileForm extends React.Component {
                         <big>
                             Choose your own avatar photo:
                         </big>
+
+                        <form id="avater-selection">
+                            <input type="radio" />
+                            <input type="radio" />
+                            <input type="radio" />
+                        </form>
                     </div>
 
                     <div id="profile-banner-div">
@@ -52,9 +58,11 @@ class ProfileForm extends React.Component {
                             Choose a banner to customize on your profile:
                         </big>
 
-                        <div id="banner-selection">
+                        <form id="banner-selection">
                             <input type="radio" />
-                        </div>
+                            <input type="radio" />
+                            <input type="radio" />
+                        </form>
                     </div>
                 </div>
             </div>
