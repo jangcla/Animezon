@@ -2406,7 +2406,11 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
         id: "profile-avatar-div"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Choose your own avatar photo:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "profile-banner-div"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Choose a banner to customize on your profile:"))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Choose a banner to customize on your profile:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "banner-selection"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "radio"
+      })))));
     }
   }]);
 

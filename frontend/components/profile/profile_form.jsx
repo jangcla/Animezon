@@ -51,6 +51,10 @@ class ProfileForm extends React.Component {
                         <big>
                             Choose a banner to customize on your profile:
                         </big>
+
+                        <div id="banner-selection">
+                            <input type="radio" />
+                        </div>
                     </div>
                 </div>
             </div>
