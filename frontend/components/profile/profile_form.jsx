@@ -87,9 +87,33 @@ class ProfileForm extends React.Component {
                             </div>
 
                             <div id="mha-select">
+                                <h3>My hero academia</h3>
                                 <label>
-                                    <input type="radio" name="avatar"/>
-                                    <img src="" id="" />
+                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/deku-face.jpeg?raw=true" id="mha-avatar" />
+                                </label>
+                                <label>
+                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/bakugo-face.jpeg?raw=true" id="mha-avatar" />
+                                </label>
+                                <label>
+                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/todoroki-face.png?raw=true" id="mha-avatar" />
+                                </label>
+                            </div>
+       
+                            <div id="one-piece-select">
+                                <label>
+                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/luffy-face.jpeg?raw=true" id="one-piece-avatar" />
+                                </label>
+                                <label>
+                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zoro-face.jpeg?raw=true" id="one-piece-avatar" />
+                                </label>
+                                <label>
+                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/chopper-face.jpeg?raw=true" id="one-piece-avatar" />
                                 </label>
                             </div>
                             
