@@ -47,6 +47,12 @@ class ProfileForm extends React.Component {
                         </big>
 
                         <div id="avatar-selection">
+                            <div id="default-avatar-select">
+                                <label>
+                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/default-avatar.png?raw=true" id='default-avatar' />
+                                </label>
+                            </div>
                             <div id="hunter-select">
                                 <h3>Hunter x Hunter</h3>
 
@@ -176,9 +182,48 @@ class ProfileForm extends React.Component {
                         </big>
 
                         <div id="banner-selection">
-                            <input type="radio" name="banner" />
-                            <input type="radio" name="banner" />
-                            <input type="radio" name="banner" />
+                            <div id="default-banner-select">
+                                <label>
+                                    <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true" id="default-banner"/>
+                                </label>                                
+                            </div>
+
+                            <div id="banner-anime-select">
+                                <div id="first-banner-set">
+                                    <label>
+                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/demon-slayer-banner.jpeg?raw=true"id="anime-banner" />
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/hunterhunter1.jpeg?raw=true"id="anime-banner" />
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/jujutsu-banner.jpeg?raw=true"id="anime-banner" />
+                                    </label>
+                                </div>
+
+                                <div id="second-banner-set">
+                                    <label>
+                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/mha-banner.jpg?raw=true"id="anime-banner" />
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/naruto-banner.jpeg?raw=true"id="anime-banner" />
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/onepiece-banner.jpeg?raw=true"id="anime-banner" />
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
