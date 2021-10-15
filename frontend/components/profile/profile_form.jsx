@@ -137,6 +137,36 @@ class ProfileForm extends React.Component {
                                     <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zenitsu-face.jpeg?raw=true" id="demon-slayer-avatar" />
                                 </label>
                             </div>
+
+                            <div id="jkaisen-select">
+                                <h3>Jujutsu Kaisen</h3>
+
+                                <label>
+                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gojo-face.jpeg?raw=true" id='jkaisen-select'/>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sukuna-face.jpeg?raw=true" id='jkaisen-select'/>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nobara-face.jpeg?raw=true" id='jkaisen-select'/>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/yuuji-face.png?raw=true" id='jkaisen-select'/>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/megumi-face.jpeg?raw=true" id='jkaisen-select'/>
+                                </label>
+
+                            </div>
                         </div>
                     </div>
 
