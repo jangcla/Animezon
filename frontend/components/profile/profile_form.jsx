@@ -48,6 +48,7 @@ class ProfileForm extends React.Component {
 
                         <div id="avatar-selection">
                             <div id="default-avatar-select">
+                                <h3>Default Avatar</h3>
                                 <label>
                                     <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
                                     <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/default-avatar.png?raw=true" id='default-avatar' />
@@ -183,6 +184,7 @@ class ProfileForm extends React.Component {
 
                         <div id="banner-selection">
                             <div id="default-banner-select">
+                                <h3>Default Banner</h3>
                                 <label>
                                     <input type="radio" name="banner" onClick={this.update('banner-photo')} />
                                     <img src="https://github.com/jangcla/Animezon/blob/reviews/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true" id="default-banner"/>
@@ -190,38 +192,42 @@ class ProfileForm extends React.Component {
                             </div>
 
                             <div id="banner-anime-select">
-                                <div id="first-banner-set">
-                                    <label>
-                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} />
-                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/demon-slayer-banner.jpeg?raw=true"id="anime-banner" />
-                                    </label>
+                                <h3>Anime Banner Set</h3>
 
-                                    <label>
-                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} />
-                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/hunterhunter1.jpeg?raw=true"id="anime-banner" />
-                                    </label>
+                                <div id="split-banner-select">
+                                    <div id="first-banner-set">
+                                        <label>
+                                            <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/demon-slayer-banner.jpeg?raw=true"id="anime-banner" />
+                                        </label>
 
-                                    <label>
-                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} />
-                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/jujutsu-banner.jpeg?raw=true"id="anime-banner" />
-                                    </label>
-                                </div>
+                                        <label>
+                                            <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/hunterhunter1.jpeg?raw=true"id="anime-banner" />
+                                        </label>
 
-                                <div id="second-banner-set">
-                                    <label>
-                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} />
-                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/mha-banner.jpg?raw=true"id="anime-banner" />
-                                    </label>
+                                        <label>
+                                            <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/jujutsu-banner.jpeg?raw=true"id="anime-banner" />
+                                        </label>
+                                    </div>
 
-                                    <label>
-                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} />
-                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/naruto-banner.jpeg?raw=true"id="anime-banner" />
-                                    </label>
+                                    <div id="second-banner-set">
+                                        <label>
+                                            <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/mha-banner.jpg?raw=true"id="anime-banner" />
+                                        </label>
 
-                                    <label>
-                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} />
-                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/onepiece-banner.jpeg?raw=true"id="anime-banner" />
-                                    </label>
+                                        <label>
+                                            <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/naruto-banner.jpeg?raw=true"id="anime-banner" />
+                                        </label>
+
+                                        <label>
+                                            <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/onepiece-banner.jpeg?raw=true"id="anime-banner" />
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
