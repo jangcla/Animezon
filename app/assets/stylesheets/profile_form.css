@@ -4,11 +4,6 @@
     padding: 2%;
 }
 
-#profile-form img {
-    width: 100px;
-    height: 100px;
-}
-
 /* 
 CSS for the left side of the form
 */
@@ -36,3 +31,69 @@ CSS for the left side of the form
 CSS for the right side of the form
 */
 
+#right-pform {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#profile-avatar-div {
+
+}
+
+#avatar-set1 {
+    display: flex;
+}
+
+#default-avatar {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    border: solid #ff8035;
+}
+
+#hunter-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: solid #3b9f32;
+}
+
+#naruto-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: solid orange;
+}
+
+#mha-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: solid #47b390;
+}
+
+#avatar-set2 {
+    display: flex;
+}
+
+#jkaisen-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: solid #876bb1;
+}
+
+#one-piece-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: solid #e94a54;
+}
+
+#demon-slayer-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: solid #d576a1;
+}

@@ -65,57 +65,61 @@ class ProfileForm extends React.Component {
 
                                     <div id="hunter-select">
                                         <h3>Hunter x Hunter</h3>
+                                        <div id="hunter-inner">
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <img src="https://i.pinimg.com/originals/bc/e6/f9/bce6f9fb6a35710531b5b85c825ccb66.jpg" id='hunter-avatar'/>
+                                            </label>
 
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
-                                            <img src="https://i.pinimg.com/originals/bc/e6/f9/bce6f9fb6a35710531b5b85c825ccb66.jpg" id='hunter-avatar'/>
-                                        </label>
+                                            <label >
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gon-face.jpeg?raw=true" id='hunter-avatar'/>
+                                            </label>
 
-                                        <label >
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gon-face.jpeg?raw=true" id='hunter-avatar'/>
-                                        </label>
-
-                                        <label >
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/killua-face.png?raw=true" id='hunter-avatar'/>
-                                        </label>
+                                            <label >
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/killua-face.png?raw=true" id='hunter-avatar'/>
+                                            </label>
+                                        </div>
                                     </div>
 
                                     <div id="naruto-select">
                                         <h3>Naruto</h3>
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/naruto-face.jpeg?raw=true" id="naruto-avatar" />
-                                        </label>
+                                        <div id="naruto-inner">
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/naruto-face.jpeg?raw=true" id="naruto-avatar" />
+                                            </label>
 
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sasuke-face.png?raw=true" id="naruto-avatar" />
-                                        </label>
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sasuke-face.png?raw=true" id="naruto-avatar" />
+                                            </label>
 
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/kakashi-face.jpeg?raw=true" id="naruto-avatar" />
-                                        </label>
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/kakashi-face.jpeg?raw=true" id="naruto-avatar" />
+                                            </label>
+                                        </div>
                                     </div>
 
                                     <div id="mha-select">
                                         <h3>My hero academia</h3>
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/deku-face.jpeg?raw=true" id="mha-avatar" />
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/bakugo-face.jpeg?raw=true" id="mha-avatar" />
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/todoroki-face.png?raw=true" id="mha-avatar" />
-                                        </label>
+                                        <div id="mha-inner">
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/deku-face.jpeg?raw=true" id="mha-avatar" />
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/bakugo-face.jpeg?raw=true" id="mha-avatar" />
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/todoroki-face.png?raw=true" id="mha-avatar" />
+                                            </label>
+                                        </div>
                                     </div>
-
                                 </div>
 
                                 <div id="avatar-set2">
@@ -123,67 +127,72 @@ class ProfileForm extends React.Component {
                                     <div id="jkaisen-select">
                                         <h3>Jujutsu Kaisen</h3>
 
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gojo-face.jpeg?raw=true" id='jkaisen-select'/>
-                                        </label>
+                                        <div id="jkaisen-inner">
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gojo-face.jpeg?raw=true" id='jkaisen-avatar'/>
+                                            </label>
 
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sukuna-face.jpeg?raw=true" id='jkaisen-select'/>
-                                        </label>
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sukuna-face.jpeg?raw=true" id='jkaisen-avatar'/>
+                                            </label>
 
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nobara-face.jpeg?raw=true" id='jkaisen-select'/>
-                                        </label>
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nobara-face.jpeg?raw=true" id='jkaisen-avatar'/>
+                                            </label>
 
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/yuuji-face.png?raw=true" id='jkaisen-select'/>
-                                        </label>
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/yuuji-face.png?raw=true" id='jkaisen-avatar'/>
+                                            </label>
 
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/megumi-face.jpeg?raw=true" id='jkaisen-select'/>
-                                        </label>
-
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/megumi-face.jpeg?raw=true" id='jkaisen-avatar'/>
+                                            </label>
+                                        </div>
                                     </div>
                     
                                     <div id="one-piece-select">
                                         <h3>One Piece</h3>
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/luffy-face.jpeg?raw=true" id="one-piece-avatar" />
-                                        </label>
+                                        <div id="one-piece-inner">
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/luffy-face.jpeg?raw=true" id="one-piece-avatar" />
+                                            </label>
 
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zoro-face.jpeg?raw=true" id="one-piece-avatar" />
-                                        </label>
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zoro-face.jpeg?raw=true" id="one-piece-avatar" />
+                                            </label>
 
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/chopper-face.jpeg?raw=true" id="one-piece-avatar" />
-                                        </label>
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/chopper-face.jpeg?raw=true" id="one-piece-avatar" />
+                                            </label>
+                                        </div>
                                     </div>
                                     
                                     <div id="demon-slayer-select">
                                         <h3>Demon Slayer</h3>
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/tanjiro-face.png?raw=true" id="demon-slayer-avatar" />
-                                        </label>
+                                        <div id="demon-slayer-inner">
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/tanjiro-face.png?raw=true" id="demon-slayer-avatar" />
+                                            </label>
 
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nezuko-face.jpeg?raw=true" id="demon-slayer-avatar" />
-                                        </label>
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nezuko-face.jpeg?raw=true" id="demon-slayer-avatar" />
+                                            </label>
 
-                                        <label>
-                                            <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
-                                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zenitsu-face.jpeg?raw=true" id="demon-slayer-avatar" />
-                                        </label>
+                                            <label>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zenitsu-face.jpeg?raw=true" id="demon-slayer-avatar" />
+                                            </label>
+                                        </div>
                                     </div>
 
                                 </div>
