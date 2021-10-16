@@ -1,0 +1,38 @@
+#profile-form {
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+
+#profile-form img {
+    width: 100px;
+    height: 100px;
+}
+
+/* 
+CSS for the left side of the form
+*/
+
+#left-pform {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 3%;
+}
+
+#profilename-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profile-bio-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 
+CSS for the right side of the form
+*/
+
