@@ -106,7 +106,7 @@ class ProfileForm extends React.Component {
                                         </div>
 
                                         <div id="mha-select">
-                                            <h3>My hero academia</h3>
+                                            <h3>My Hero Academia</h3>
                                             <div id="mha-inner">
                                                 <label>
                                                     <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
@@ -212,7 +212,7 @@ class ProfileForm extends React.Component {
 
                             <div id="banner-selection">
                                 <div id="default-banner-select">
-                                    <h3>Default Banner</h3>
+
                                     <label>
                                         <input type="radio" name="banner" onClick={this.update('banner-photo')} />
                                         <img src="https://github.com/jangcla/Animezon/blob/reviews/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true" id="default-banner"/>
@@ -220,7 +220,6 @@ class ProfileForm extends React.Component {
                                 </div>
 
                                 <div id="banner-anime-select">
-                                    <h3>Anime Banner Set</h3>
 
                                     <div id="split-banner-select">
                                         <div id="first-banner-set">
