@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { createProfile } from "../../actions/profile_actions";
+
 import ProfileForm from "./profile_form";
 
 const mSTP = state => {

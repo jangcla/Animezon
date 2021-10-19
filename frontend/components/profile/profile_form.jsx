@@ -12,7 +12,7 @@ class ProfileForm extends React.Component {
             bio: '',
             user_id: `${this.props.userId}`,
         };
-        this.profileSubmit = this.profileSubmit(this);
+        this.profileSubmit = this.profileSubmit.bind(this);
     }
 
     update(field) {
@@ -22,6 +22,7 @@ class ProfileForm extends React.Component {
     }
 
     profileSubmit(e) {
+        e.preventDefault();
         const profile = Object.assign({}, this.state);
         this.props.createProfile(profile);
     }
@@ -30,33 +31,15 @@ class ProfileForm extends React.Component {
         return (
             <div id='profile-form-container'>
                 <Navbar/>
-                <div id="profile-form">
-                    <div id="left-pform">
-
-                        <div id="profilename-div">
-                            <big>Profile Name</big>
-                            <input type="text" id='profile-name-input' onChange={this.update('name')}/>
-                        </div>
-
-                        <div id="profile-bio-div">
-                            <big>Profile Bio</big>
-                            <textarea id="bio-text-box" cols="30" rows="10"/>
-                        </div>
-
-                    </div>
-
+                <div id="profile-form">            
                     <div id="right-pform">
 
                         <div id="profile-avatar-div">
-                            <big>
-                                Select a profile photo
-                            </big>
-
                             <div id="avatar-selection">
                                 <div id="avatar-set1">
                                     <div id="set1-left">
                                         <div id="default-avatar-select">
-                                            <h3>Default Avatar</h3>
+                                            <h3 id='a-select-caption'>Avatar Select</h3>
                                             <label>
                                                 <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/default-avatar.png?raw=true" id='default-avatar' />
@@ -210,7 +193,7 @@ class ProfileForm extends React.Component {
                             <div id="banner-selection">
                                 <div id="default-banner-select">
                                     <big>
-                                        Choose a banner to customize on your profile
+                                        Banner Select
                                     </big>
 
                                     <label>
@@ -258,6 +241,20 @@ class ProfileForm extends React.Component {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                    </div>
+
+                    <div id="left-pform">
+
+                        <div id="profilename-div">
+                            <big>Profile Name</big>
+                            <input type="text" id='profile-name-input' onChange={this.update('name')} />
+                        </div>
+
+                        <div id="profile-bio-div">
+                            <big>Profile Bio</big>
+                            <textarea id="bio-text-box" cols="30" rows="10" />
                         </div>
 
                     </div>
