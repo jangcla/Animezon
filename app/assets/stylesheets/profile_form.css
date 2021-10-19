@@ -3,6 +3,11 @@
     justify-content: center;
     padding: 1%;
 }
+/* 
+#profile-form img {
+    width: 80px;
+    height: 80px;
+} */
 
 /* 
 CSS for the left side of the form
@@ -34,7 +39,7 @@ CSS for the right side of the form
 #right-pform {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 68%;
 }
 
 #profile-avatar-div {
@@ -45,20 +50,22 @@ CSS for the right side of the form
     display: flex;
     justify-content: space-between;
     padding-bottom: 1%;
+    align-items: flex-end;
+
 }
 #set1-left {
     margin-left: 1.5%;
 }
 #set1-right {
     display: flex;
-    width: 83%;
-    gap: 1.1%;
+    width: 85%;
+    gap: 1.45%;
     justify-content: flex-end;
 }
 
 #default-avatar {
-    width: 175px;
-    height: 175px;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
     border: solid #ff8035;
 }
@@ -68,8 +75,8 @@ CSS for the right side of the form
 }
 
 #hunter-avatar {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     border: solid #3b9f32;
 }
@@ -85,8 +92,8 @@ CSS for the right side of the form
 }
 
 #naruto-avatar {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     border: solid orange;
 }
@@ -102,8 +109,8 @@ CSS for the right side of the form
 }
 
 #mha-avatar {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     border: solid #47b390;
 }
@@ -124,8 +131,8 @@ CSS for the right side of the form
 }
 
 #jkaisen-avatar {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     border: solid #876bb1;
 }
@@ -140,8 +147,8 @@ CSS for the right side of the form
 }
 
 #one-piece-avatar {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     border: solid #e94a54;
 }
@@ -156,8 +163,8 @@ CSS for the right side of the form
 }
 
 #demon-slayer-avatar {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     border: solid #d576a1;
 }
@@ -172,13 +179,13 @@ CSS for the right side of the form
 }
 
 #banner-anime-select img {
-    width: 475px;
-    height: 160px;
+    width: 400px;
+    height: 130px;
 }
 
 #default-banner {
-    width: 600px;
-    height: 185px;
+    width: 400px;
+    height: 130px;
 }
 
 #banner-selection {
@@ -189,6 +196,7 @@ CSS for the right side of the form
 
 #default-banner-select {
     padding-bottom: 15px;
+    width: 100%;
 }
 
 #split-banner-select {

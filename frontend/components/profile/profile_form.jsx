@@ -206,12 +206,12 @@ class ProfileForm extends React.Component {
                         </div>
 
                         <div id="profile-banner-div">
-                            <big>
-                                Choose a banner to customize on your profile
-                            </big>
 
                             <div id="banner-selection">
                                 <div id="default-banner-select">
+                                    <big>
+                                        Choose a banner to customize on your profile
+                                    </big>
 
                                     <label>
                                         <input type="radio" name="banner" onClick={this.update('banner-photo')} />
