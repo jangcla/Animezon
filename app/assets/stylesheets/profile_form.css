@@ -22,6 +22,7 @@ CSS for the left side of the form
     font: caption;
     font-weight: bold;
     font-size: 20px;
+    align-items: center;
 }
 
 #profilename-div {
@@ -235,5 +236,5 @@ CSS for the right side of the form
 }
 
 #profile-create-button {
-    
+
 }

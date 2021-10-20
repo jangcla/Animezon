@@ -58,12 +58,12 @@ class ProfileForm extends React.Component {
                                                 </label>
 
                                                 <label >
-                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gon-face.jpeg?raw=true" />
                                                     <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gon-face.jpeg?raw=true" id='hunter-avatar'/>
                                                 </label>
 
                                                 <label >
-                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/killua-face.png?raw=true"/>
                                                     <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/killua-face.png?raw=true" id='hunter-avatar'/>
                                                 </label>
                                             </div>
@@ -73,17 +73,17 @@ class ProfileForm extends React.Component {
                                             <h3>Naruto</h3>
                                             <div id="naruto-inner">
                                                 <label>
-                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/naruto-face.jpeg?raw=true" id="naruto-avatar"/>
                                                     <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/naruto-face.jpeg?raw=true" id="naruto-avatar" />
                                                 </label>
 
                                                 <label>
-                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sasuke-face.png?raw=true" id="naruto-avatar"/>
                                                     <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sasuke-face.png?raw=true" id="naruto-avatar" />
                                                 </label>
 
                                                 <label>
-                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/kakashi-face.jpeg?raw=true"/>
                                                     <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/kakashi-face.jpeg?raw=true" id="naruto-avatar" />
                                                 </label>
                                             </div>
@@ -93,15 +93,15 @@ class ProfileForm extends React.Component {
                                             <h3>My Hero Academia</h3>
                                             <div id="mha-inner">
                                                 <label>
-                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/deku-face.jpeg?raw=true" />
                                                     <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/deku-face.jpeg?raw=true" id="mha-avatar" />
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/bakugo-face.jpeg?raw=true" />
                                                     <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/bakugo-face.jpeg?raw=true" id="mha-avatar" />
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/todoroki-face.png?raw=true" />
                                                     <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/todoroki-face.png?raw=true" id="mha-avatar" />
                                                 </label>
                                             </div>
@@ -116,27 +116,27 @@ class ProfileForm extends React.Component {
 
                                         <div id="jkaisen-inner">
                                             <label>
-                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gojo-face.jpeg?raw=true"/>
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gojo-face.jpeg?raw=true" id='jkaisen-avatar'/>
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sukuna-face.jpeg?raw=true"/>
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sukuna-face.jpeg?raw=true" id='jkaisen-avatar'/>
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nobara-face.jpeg?raw=true"/>
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nobara-face.jpeg?raw=true" id='jkaisen-avatar'/>
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/yuuji-face.png?raw=true"/>
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/yuuji-face.png?raw=true" id='jkaisen-avatar'/>
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/megumi-face.jpeg?raw=true"/>
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/megumi-face.jpeg?raw=true" id='jkaisen-avatar'/>
                                             </label>
                                         </div>
@@ -146,17 +146,17 @@ class ProfileForm extends React.Component {
                                         <h3>One Piece</h3>
                                         <div id="one-piece-inner">
                                             <label>
-                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/luffy-face.jpeg?raw=true" />
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/luffy-face.jpeg?raw=true" id="one-piece-avatar" />
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zoro-face.jpeg?raw=true" />
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zoro-face.jpeg?raw=true" id="one-piece-avatar" />
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')}/>
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/chopper-face.jpeg?raw=true" />
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/chopper-face.jpeg?raw=true" id="one-piece-avatar" />
                                             </label>
                                         </div>
@@ -166,17 +166,17 @@ class ProfileForm extends React.Component {
                                         <h3>Demon Slayer</h3>
                                         <div id="demon-slayer-inner">
                                             <label>
-                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/tanjiro-face.png?raw=true" />
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/tanjiro-face.png?raw=true" id="demon-slayer-avatar" />
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nezuko-face.jpeg?raw=true" />
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nezuko-face.jpeg?raw=true" id="demon-slayer-avatar" />
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zenitsu-face.jpeg?raw=true"/>
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zenitsu-face.jpeg?raw=true" id="demon-slayer-avatar" />
                                             </label>
                                         </div>
@@ -205,7 +205,7 @@ class ProfileForm extends React.Component {
                                     </label> 
 
                                     <label>
-                                        <input type="radio" name="banner" onClick={this.update('banner_photo')} />
+                                        <input type="radio" name="banner" onClick={this.update('banner_photo')} value="https://github.com/jangcla/Animezon/blob/main/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true" />
                                         <img src="https://github.com/jangcla/Animezon/blob/main/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true" id="default-banner"/>
                                     </label>                                
                                 </div>
@@ -215,34 +215,34 @@ class ProfileForm extends React.Component {
                                     <div id="split-banner-select">
                                         <div id="first-banner-set">
                                             <label>
-                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} />
+                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/demon-slayer-banner.jpeg?raw=true"/>
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/demon-slayer-banner.jpeg?raw=true"id="anime-banner" />
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} />
+                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/hunterhunter1.jpeg?raw=true"/>
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/hunterhunter1.jpeg?raw=true"id="anime-banner" />
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} />
+                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/jujutsu-banner.jpeg?raw=true"/>
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/jujutsu-banner.jpeg?raw=true"id="anime-banner" />
                                             </label>
                                         </div>
 
                                         <div id="second-banner-set">
                                             <label>
-                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} />
+                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/mha-banner.jpg?raw=true"/>
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/mha-banner.jpg?raw=true"id="anime-banner" />
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} />
+                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/naruto-banner.jpeg?raw=true"/>
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/naruto-banner.jpeg?raw=true"id="anime-banner" />
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} />
+                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/onepiece-banner.jpeg?raw=true"/>
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/onepiece-banner.jpeg?raw=true"id="anime-banner" />
                                             </label>
                                         </div>
