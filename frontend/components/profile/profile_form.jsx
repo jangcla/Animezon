@@ -24,6 +24,7 @@ class ProfileForm extends React.Component {
     profileSubmit(e) {
         e.preventDefault();
         const profile = Object.assign({}, this.state);
+        console.log(profile)
         this.props.createProfile(profile);
     }
 
@@ -41,7 +42,7 @@ class ProfileForm extends React.Component {
                                         <div id="default-avatar-select">
                                             <h3 id='a-select-caption'>Avatar Select</h3>
                                             <label>
-                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/default-avatar.png?raw=true"/>
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/default-avatar.png?raw=true" id='default-avatar' />
                                             </label>
                                         </div>
@@ -52,7 +53,7 @@ class ProfileForm extends React.Component {
                                             <h3>Hunter x Hunter</h3>
                                             <div id="hunter-inner">
                                                 <label>
-                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} />
+                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://i.pinimg.com/originals/bc/e6/f9/bce6f9fb6a35710531b5b85c825ccb66.jpg"/>
                                                     <img src="https://i.pinimg.com/originals/bc/e6/f9/bce6f9fb6a35710531b5b85c825ccb66.jpg" id='hunter-avatar'/>
                                                 </label>
 
@@ -192,13 +193,20 @@ class ProfileForm extends React.Component {
 
                             <div id="banner-selection">
                                 <div id="default-banner-select">
-                                    <big>
-                                        Banner Select
-                                    </big>
+                                    <div id='banner-select-caption'>
+                                        <big >
+                                            Banner Select
+                                        </big>
+                                    </div>
+
+                                    <label>
+                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} value="https://github.com/jangcla/Animezon/blob/reviews/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true" />
+                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true" id="default-banner"/>
+                                    </label> 
 
                                     <label>
                                         <input type="radio" name="banner" onClick={this.update('banner-photo')} />
-                                        <img src="https://github.com/jangcla/Animezon/blob/reviews/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true" id="default-banner"/>
+                                        <img src="https://github.com/jangcla/Animezon/blob/main/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true" id="default-banner"/>
                                     </label>                                
                                 </div>
 
@@ -254,8 +262,12 @@ class ProfileForm extends React.Component {
 
                         <div id="profile-bio-div">
                             <big>Profile Bio</big>
-                            <textarea id="bio-text-box" cols="30" rows="10" />
+                            <textarea id="bio-text-box" cols="30" rows="10" onChange={this.update('bio')}/>
                         </div>
+
+                        <button id='profile-create-button' onClick={this.profileSubmit}>
+                            Create Profile
+                        </button>
 
                     </div>
 

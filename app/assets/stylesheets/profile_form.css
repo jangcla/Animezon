@@ -19,6 +19,9 @@ CSS for the left side of the form
     width: 20%;
     gap: 3%;
     justify-content: center;
+    font: caption;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 #profilename-div {
@@ -45,6 +48,7 @@ CSS for the right side of the form
 
 #profile-avatar-div {
     padding-bottom: 2%;
+    background: white;
 }
 
 #avatar-set1 {
@@ -187,12 +191,12 @@ CSS for the right side of the form
 }
 
 #banner-anime-select img {
-    width: 400px;
+    width: 405.2px;
     height: 135px;
 }
 
 #default-banner {
-    width: 400px;
+    width: 405.2px;
     height: 135px;
 }
 
@@ -204,14 +208,20 @@ CSS for the right side of the form
 
 #default-banner-select {
     display: flex;
-    justify-content: center;
     align-items: center;
     font: icon;
     font-size: 30px;
     font-weight: bold;
-    gap: 10%;
+    /* gap: 6.5%; */
     width: 100%;
     padding-bottom: 10px;
+    justify-content: flex-end;
+    padding-right: 0.1%;
+}
+#banner-select-caption {
+    width: 32.5%;
+    display: flex;
+    justify-content: center;
 }
 
 #banner-anime-select {
@@ -222,4 +232,8 @@ CSS for the right side of the form
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+#profile-create-button {
+    
 }
