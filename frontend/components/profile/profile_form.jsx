@@ -24,7 +24,7 @@ class ProfileForm extends React.Component {
     profileSubmit(e) {
         e.preventDefault();
         const profile = Object.assign({}, this.state);
-        console.log(profile)
+        console.log(profile);
         this.props.createProfile(profile);
     }
 
@@ -200,12 +200,12 @@ class ProfileForm extends React.Component {
                                     </div>
 
                                     <label>
-                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} value="https://github.com/jangcla/Animezon/blob/reviews/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true" />
+                                        <input type="radio" name="banner" onClick={this.update('banner_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true" />
                                         <img src="https://github.com/jangcla/Animezon/blob/reviews/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true" id="default-banner"/>
                                     </label> 
 
                                     <label>
-                                        <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                        <input type="radio" name="banner" onClick={this.update('banner_photo')} />
                                         <img src="https://github.com/jangcla/Animezon/blob/main/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true" id="default-banner"/>
                                     </label>                                
                                 </div>
@@ -215,34 +215,34 @@ class ProfileForm extends React.Component {
                                     <div id="split-banner-select">
                                         <div id="first-banner-set">
                                             <label>
-                                                <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} />
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/demon-slayer-banner.jpeg?raw=true"id="anime-banner" />
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} />
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/hunterhunter1.jpeg?raw=true"id="anime-banner" />
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} />
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/jujutsu-banner.jpeg?raw=true"id="anime-banner" />
                                             </label>
                                         </div>
 
                                         <div id="second-banner-set">
                                             <label>
-                                                <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} />
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/mha-banner.jpg?raw=true"id="anime-banner" />
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} />
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/naruto-banner.jpeg?raw=true"id="anime-banner" />
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="banner" onClick={this.update('banner-photo')} />
+                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} />
                                                 <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/onepiece-banner.jpeg?raw=true"id="anime-banner" />
                                             </label>
                                         </div>
