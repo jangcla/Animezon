@@ -178,7 +178,9 @@ var removeProfile = function removeProfile(profileId) {
 };
 var fetchProfiles = function fetchProfiles() {
   return function (dispatch) {
-    return _util_profile_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchProfiles().then(profiles = dispatch(receiveProfiles(profiles)));
+    return _util_profile_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchProfiles().then(function (profiles) {
+      return dispatch(receiveProfiles(profiles));
+    });
   };
 };
 var fetchProfile = function fetchProfile(profileId) {
@@ -2369,6 +2371,11 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(ProfileForm, [{
+    key: "UNSAFE_componentWillMount",
+    value: function UNSAFE_componentWillMount() {
+      this.props.fetchProfiles();
+    }
+  }, {
     key: "update",
     value: function update(field) {
       var _this2 = this;
@@ -2388,7 +2395,7 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      return this.props.myProfile.length !== 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "It seems that you already have a profile made! ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Click here to view profile ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", null, "CLick me"), this.props.personal.length) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "profile-form-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "profile-form"
@@ -2452,8 +2459,7 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
         type: "radio",
         name: "avatar",
         onClick: this.update('avatar_photo'),
-        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/naruto-face.jpeg?raw=true",
-        id: "naruto-avatar"
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/naruto-face.jpeg?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/naruto-face.jpeg?raw=true",
         id: "naruto-avatar"
@@ -2461,8 +2467,7 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
         type: "radio",
         name: "avatar",
         onClick: this.update('avatar_photo'),
-        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sasuke-face.png?raw=true",
-        id: "naruto-avatar"
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sasuke-face.png?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sasuke-face.png?raw=true",
         id: "naruto-avatar"
@@ -2732,9 +2737,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mSTP = function mSTP(state) {
+  var profilesAll = Object.values(state.entities.profiles);
+  var myProfile = profilesAll.filter(function (profile) {
+    return profile.user_id === state.session.id;
+  });
+  var personal = [];
+
+  if (myProfile !== 0) {
+    while (personal.length < 1) {
+      personal.push(myProfile[0]);
+    }
+  }
+
   return {
     currentUser: state.entities.users[state.session.id],
-    userId: state.session.id
+    userId: state.session.id,
+    personal: personal,
+    myProfile: myProfile
   };
 };
 
@@ -2742,6 +2761,9 @@ var mDTP = function mDTP(dispatch) {
   return {
     createProfile: function createProfile(profile) {
       return dispatch((0,_actions_profile_actions__WEBPACK_IMPORTED_MODULE_1__.createProfile)(profile));
+    },
+    fetchProfiles: function fetchProfiles() {
+      return dispatch((0,_actions_profile_actions__WEBPACK_IMPORTED_MODULE_1__.fetchProfiles)());
     }
   };
 };

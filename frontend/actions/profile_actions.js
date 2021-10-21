@@ -21,7 +21,7 @@ export const removeProfile = profileId => ({
 
 export const fetchProfiles = () => dispatch => (
     profileUtil.fetchProfiles()
-        .then(profiles = dispatch(receiveProfiles(profiles)))
+        .then(profiles => dispatch(receiveProfiles(profiles)))
 )
 
 export const fetchProfile = profileId => dispatch => (

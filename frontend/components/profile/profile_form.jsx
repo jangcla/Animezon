@@ -15,6 +15,10 @@ class ProfileForm extends React.Component {
         this.profileSubmit = this.profileSubmit.bind(this);
     }
 
+    UNSAFE_componentWillMount() {
+        this.props.fetchProfiles()
+    }
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
@@ -29,7 +33,14 @@ class ProfileForm extends React.Component {
     }
 
     render() {
-        return (
+        return this.props.myProfile.length !== 0 ? 
+        (
+            <div>It seems that you already have a profile made! <br />Click here to view profile <button>CLick me</button>
+            {this.props.personal.length}
+            </div>
+        )
+        :
+        (
             <div id='profile-form-container'>
                 <Navbar/>
                 <div id="profile-form">            
@@ -73,12 +84,12 @@ class ProfileForm extends React.Component {
                                             <h3>Naruto</h3>
                                             <div id="naruto-inner">
                                                 <label>
-                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/naruto-face.jpeg?raw=true" id="naruto-avatar"/>
+                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/naruto-face.jpeg?raw=true"/>
                                                     <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/naruto-face.jpeg?raw=true" id="naruto-avatar" />
                                                 </label>
 
                                                 <label>
-                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sasuke-face.png?raw=true" id="naruto-avatar"/>
+                                                    <input type="radio" name="avatar" onClick={this.update('avatar_photo')} value="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sasuke-face.png?raw=true" />
                                                     <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sasuke-face.png?raw=true" id="naruto-avatar" />
                                                 </label>
 

@@ -236,5 +236,9 @@ CSS for the right side of the form
 }
 
 #profile-create-button {
-
+    width: 65%;
+    height: 34px;
+    background: linear-gradient(180deg, #f3e0af, #f1b51c);
+    border-radius: 5px;
+    border-color: #f8cf9f;  
 }
