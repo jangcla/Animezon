@@ -39,16 +39,27 @@ class ProfileForm extends React.Component {
                 <div id='profile-already-made'>
                     <Navbar/>
                     <div id="whoops-profile">
-                        Profile has been created!
+                        <div id='whoops-caption'>
+                            <big>Profile has been created!</big>
+                        </div>
+
+                        <div id="finished-split-form">
+                            <div id="whoops-links">
+                                <big>Click here to visit profile</big>
+                                <Link to='/'>
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/homepage.png?raw=true" />
+                                </Link>
+                            </div>
+                            
+                            <div id="whoops-links">
+                                <big>Click here to visit the home page</big>
+                                <Link to='/'>
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/homepage.png?raw=true"/>
+                                </Link>
+                            </div>
+                        </div>
                     </div>
 
-                    <div id="whoops-profile">
-                        Click here to visit profile
-                    </div>
-                    
-                    <div id="whoops-profile">
-                        Click here to go to home page
-                    </div>
                     
                 </div>
         )
