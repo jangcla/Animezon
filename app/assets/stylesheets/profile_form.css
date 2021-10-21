@@ -1,0 +1,304 @@
+#profile-form {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+/* 
+#profile-form img {
+    width: 80px;
+    height: 80px;
+} */
+
+/* 
+CSS for the left side of the form
+*/
+
+#left-pform {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 3%;
+    justify-content: center;
+    font: caption;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+}
+
+#profilename-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profile-bio-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 
+CSS for the right side of the form
+*/
+
+#right-pform {
+    display: flex;
+    flex-direction: column;
+    width: 68%;
+}
+
+#profile-avatar-div {
+    padding-bottom: 2%;
+    background: white;
+}
+
+#avatar-set1 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1%;
+    align-items: flex-end;
+
+}
+#set1-left {
+    margin-left: 1.5%;
+}
+#set1-right {
+    display: flex;
+    width: 86%;
+    gap: 1.7%;
+    justify-content: flex-end;
+}
+
+#a-select-caption {
+    font: caption;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: -2px;
+}
+
+#default-avatar {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    border: solid #ff8035;
+}
+#default-avatar-select {
+    text-align: center;
+    color: #ff8035;
+}
+
+#hunter-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: solid #3b9f32;
+}
+#hunter-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #3b9f32;
+    border: solid;
+    margin-top: 5.5%;
+    padding-right: 1.35%;
+}
+
+#naruto-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: solid orange;
+}
+#naruto-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: orange;
+    border: solid;
+    margin-top: 5.5%;
+    padding-right: 1.43%;
+}
+
+#mha-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: solid #47b390;
+}
+#mha-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #47b390;
+    border: solid;
+    margin-top: 5.5%;
+    padding-right: 1.4%;
+}
+
+#avatar-set2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#jkaisen-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: solid #876bb1;
+}
+#jkaisen-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #876bb1;
+    border: solid #876bb1;
+    padding-right: 1.2%;
+}
+
+#one-piece-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: solid #e94a54;
+}
+#one-piece-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #e94a54;
+    border: solid #e94a54;
+    padding-right: 1.2%;
+}
+
+#demon-slayer-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: solid #d576a1;
+}
+#demon-slayer-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #d576a1;
+    border: solid #d576a1;
+    padding-right: 1.2%;
+}
+
+#banner-anime-select img {
+    width: 405.2px;
+    height: 135px;
+}
+
+#default-banner {
+    width: 405.2px;
+    height: 135px;
+}
+
+#banner-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#default-banner-select {
+    display: flex;
+    align-items: center;
+    font: icon;
+    font-size: 30px;
+    font-weight: bold;
+    /* gap: 6.5%; */
+    width: 100%;
+    padding-bottom: 10px;
+    justify-content: flex-end;
+    padding-right: 0.1%;
+}
+#banner-select-caption {
+    width: 32.5%;
+    display: flex;
+    justify-content: center;
+}
+
+#banner-anime-select {
+    width: 100%;
+}
+
+#split-banner-select {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#profile-create-button {
+    width: 65%;
+    height: 34px;
+    background: linear-gradient(180deg, #f3e0af, #f1b51c);
+    border-radius: 5px;
+    border-color: #f8cf9f;  
+}
+
+
+
+
+/* 
+    Css for the finished side section of the profile form
+*/
+
+#whoops-profile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#whoops-caption {
+    font: caption;
+    font-size: 60px;
+    font-weight: bold;
+    width: 60%;
+    height: 550px;
+    text-align: center;
+    background: url(https://github.com/jangcla/Animezon/blob/reviews/profile-banners/fist-bump.gif?raw=true);
+    background-size: 100%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    -webkit-mask: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0.868), rgba(0, 0, 0, 0));
+}
+#whoops-caption big {
+    margin-top: 10%;
+    color: white;
+}
+
+#finished-split-form {
+    display: flex;
+    width: 60%;
+    align-items: flex-start;
+    gap: 0%;
+    justify-content: space-around;
+    margin-top: -11%;
+    z-index: 999;
+}
+
+#whoops-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#whoops-links img {
+    width: 450px;
+    height: 230px;
+}
+#whoops-links big {
+    color: orange;
+    font: caption;
+    font-weight: bold;
+    font-size: 22px;
+}

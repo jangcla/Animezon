@@ -178,7 +178,9 @@ var removeProfile = function removeProfile(profileId) {
 };
 var fetchProfiles = function fetchProfiles() {
   return function (dispatch) {
-    return _util_profile_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchProfiles().then(profiles = dispatch(receiveProfiles(profiles)));
+    return _util_profile_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchProfiles().then(function (profiles) {
+      return dispatch(receiveProfiles(profiles));
+    });
   };
 };
 var fetchProfile = function fetchProfile(profileId) {
@@ -2134,7 +2136,7 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
         price: "".concat(this.props.item.price)
       };
       this.props.createCart(cartItem);
-      this.props.history.push('/added');
+      this.props.history.push('/');
     }
   }, {
     key: "render",
@@ -2317,6 +2319,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _nav_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../nav/navbar */ "./frontend/components/nav/navbar.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2364,11 +2367,16 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
       bio: '',
       user_id: "".concat(_this.props.userId)
     };
-    _this.profileSubmit = _this.profileSubmit(_assertThisInitialized(_this));
+    _this.profileSubmit = _this.profileSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(ProfileForm, [{
+    key: "UNSAFE_componentWillMount",
+    value: function UNSAFE_componentWillMount() {
+      this.props.fetchProfiles();
+    }
+  }, {
     key: "update",
     value: function update(field) {
       var _this2 = this;
@@ -2380,198 +2388,347 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "profileSubmit",
     value: function profileSubmit(e) {
+      e.preventDefault();
       var profile = Object.assign({}, this.state);
+      console.log(profile);
       this.props.createProfile(profile);
     }
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      return this.props.myProfile.length !== 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "profile-already-made"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "whoops-profile"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "whoops-caption"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Profile has been created!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "finished-split-form"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "whoops-links"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Click here to visit profile"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+        to: "/"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/homepage.png?raw=true"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "whoops-links"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Click here to visit the home page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+        to: "/"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/homepage.png?raw=true"
+      })))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "profile-form-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "profile-form"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: "profilename-div"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Profile Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-        type: "text",
-        id: "profile-name-input",
-        onChange: this.update('name')
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: "profile-bio-div"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Profile Bio:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
-        id: "bio-text-box",
-        cols: "30",
-        rows: "10"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "right-pform"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "profile-avatar-div"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Choose your own avatar photo:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "avatar-selection"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: "hunter-select"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Hunter x Hunter"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        id: "avatar-set1"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "set1-left"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "default-avatar-select"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+        id: "a-select-caption"
+      }, "Avatar Select"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/default-avatar.png?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/default-avatar.png?raw=true",
+        id: "default-avatar"
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "set1-right"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "hunter-select"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Hunter x Hunter"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "hunter-inner"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "radio",
+        name: "avatar",
+        onClick: this.update('avatar_photo'),
+        value: "https://i.pinimg.com/originals/bc/e6/f9/bce6f9fb6a35710531b5b85c825ccb66.jpg"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://i.pinimg.com/originals/bc/e6/f9/bce6f9fb6a35710531b5b85c825ccb66.jpg",
         id: "hunter-avatar"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gon-face.jpeg?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gon-face.jpeg?raw=true",
         id: "hunter-avatar"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/killua-face.png?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/killua-face.png?raw=true",
         id: "hunter-avatar"
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "naruto-select"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Naruto"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Naruto"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "naruto-inner"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/naruto-face.jpeg?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/naruto-face.jpeg?raw=true",
         id: "naruto-avatar"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sasuke-face.png?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sasuke-face.png?raw=true",
         id: "naruto-avatar"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/kakashi-face.jpeg?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/kakashi-face.jpeg?raw=true",
         id: "naruto-avatar"
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "mha-select"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "My hero academia"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "My Hero Academia"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "mha-inner"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/deku-face.jpeg?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/deku-face.jpeg?raw=true",
         id: "mha-avatar"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/bakugo-face.jpeg?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/bakugo-face.jpeg?raw=true",
         id: "mha-avatar"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/todoroki-face.png?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/todoroki-face.png?raw=true",
         id: "mha-avatar"
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: "one-piece-select"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "One Piece"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+      })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "avatar-set2"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "jkaisen-select"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Jujutsu Kaisen"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "jkaisen-inner"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gojo-face.jpeg?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gojo-face.jpeg?raw=true",
+        id: "jkaisen-avatar"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "radio",
+        name: "avatar",
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sukuna-face.jpeg?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sukuna-face.jpeg?raw=true",
+        id: "jkaisen-avatar"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "radio",
+        name: "avatar",
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nobara-face.jpeg?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nobara-face.jpeg?raw=true",
+        id: "jkaisen-avatar"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "radio",
+        name: "avatar",
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/yuuji-face.png?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/yuuji-face.png?raw=true",
+        id: "jkaisen-avatar"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "radio",
+        name: "avatar",
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/megumi-face.jpeg?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/megumi-face.jpeg?raw=true",
+        id: "jkaisen-avatar"
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "one-piece-select"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "One Piece"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "one-piece-inner"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "radio",
+        name: "avatar",
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/luffy-face.jpeg?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/luffy-face.jpeg?raw=true",
         id: "one-piece-avatar"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zoro-face.jpeg?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zoro-face.jpeg?raw=true",
         id: "one-piece-avatar"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/chopper-face.jpeg?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/chopper-face.jpeg?raw=true",
         id: "one-piece-avatar"
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "demon-slayer-select"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Demon Slayer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Demon Slayer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "demon-slayer-inner"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/tanjiro-face.png?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/tanjiro-face.png?raw=true",
         id: "demon-slayer-avatar"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nezuko-face.jpeg?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nezuko-face.jpeg?raw=true",
         id: "demon-slayer-avatar"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
         name: "avatar",
-        onClick: this.update('avatar_photo')
+        onClick: this.update('avatar_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zenitsu-face.jpeg?raw=true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/zenitsu-face.jpeg?raw=true",
         id: "demon-slayer-avatar"
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: "jkaisen-select"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Jujutsu Kaisen"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-        type: "radio",
-        name: "avatar",
-        onClick: this.update('avatar_photo')
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/gojo-face.jpeg?raw=true",
-        id: "jkaisen-select"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-        type: "radio",
-        name: "avatar",
-        onClick: this.update('avatar_photo')
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/sukuna-face.jpeg?raw=true",
-        id: "jkaisen-select"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-        type: "radio",
-        name: "avatar",
-        onClick: this.update('avatar_photo')
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/nobara-face.jpeg?raw=true",
-        id: "jkaisen-select"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-        type: "radio",
-        name: "avatar",
-        onClick: this.update('avatar_photo')
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/yuuji-face.png?raw=true",
-        id: "jkaisen-select"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-        type: "radio",
-        name: "avatar",
-        onClick: this.update('avatar_photo')
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/megumi-face.jpeg?raw=true",
-        id: "jkaisen-select"
-      }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "profile-banner-div"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Choose a banner to customize on your profile:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "banner-selection"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "default-banner-select"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "banner-select-caption"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Banner Select")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
-        name: "banner"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        name: "banner",
+        onClick: this.update('banner_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true",
+        id: "default-banner"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
-        name: "banner"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        name: "banner",
+        onClick: this.update('banner_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/main/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/main/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true",
+        id: "default-banner"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "banner-anime-select"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "split-banner-select"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "first-banner-set"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
-        name: "banner"
-      })))));
+        name: "banner",
+        onClick: this.update('banner_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/demon-slayer-banner.jpeg?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/demon-slayer-banner.jpeg?raw=true",
+        id: "anime-banner"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "radio",
+        name: "banner",
+        onClick: this.update('banner_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/hunterhunter1.jpeg?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/hunterhunter1.jpeg?raw=true",
+        id: "anime-banner"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "radio",
+        name: "banner",
+        onClick: this.update('banner_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/jujutsu-banner.jpeg?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/jujutsu-banner.jpeg?raw=true",
+        id: "anime-banner"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "second-banner-set"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "radio",
+        name: "banner",
+        onClick: this.update('banner_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/mha-banner.jpg?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/mha-banner.jpg?raw=true",
+        id: "anime-banner"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "radio",
+        name: "banner",
+        onClick: this.update('banner_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/naruto-banner.jpeg?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/naruto-banner.jpeg?raw=true",
+        id: "anime-banner"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "radio",
+        name: "banner",
+        onClick: this.update('banner_photo'),
+        value: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/onepiece-banner.jpeg?raw=true"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/onepiece-banner.jpeg?raw=true",
+        id: "anime-banner"
+      })))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "left-pform"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "profilename-div"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Profile Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "text",
+        id: "profile-name-input",
+        onChange: this.update('name')
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "profile-bio-div"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Profile Bio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
+        id: "bio-text-box",
+        cols: "30",
+        rows: "10",
+        onChange: this.update('bio')
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        id: "profile-create-button",
+        onClick: this.profileSubmit
+      }, "Create Profile"))));
     }
   }]);
 
@@ -2601,9 +2758,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mSTP = function mSTP(state) {
+  var profilesAll = Object.values(state.entities.profiles);
+  var myProfile = profilesAll.filter(function (profile) {
+    return profile.user_id === state.session.id;
+  });
+  var personal = myProfile[0];
+  console.log(personal);
   return {
     currentUser: state.entities.users[state.session.id],
-    userId: state.session.id
+    userId: state.session.id,
+    personal: personal,
+    myProfile: myProfile
   };
 };
 
@@ -2611,6 +2776,12 @@ var mDTP = function mDTP(dispatch) {
   return {
     createProfile: function createProfile(profile) {
       return dispatch((0,_actions_profile_actions__WEBPACK_IMPORTED_MODULE_1__.createProfile)(profile));
+    },
+    fetchProfiles: function fetchProfiles() {
+      return dispatch((0,_actions_profile_actions__WEBPACK_IMPORTED_MODULE_1__.fetchProfiles)());
+    },
+    updateProfile: function updateProfile(profile) {
+      return dispatch((0,_actions_profile_actions__WEBPACK_IMPORTED_MODULE_1__.updateProfile)(profile));
     }
   };
 };

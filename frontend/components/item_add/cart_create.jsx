@@ -36,7 +36,7 @@ class CreateCartItem extends React.Component {
             photoUrl: `${this.props.item.photoUrl}`,
             price: `${this.props.item.price}`}
         this.props.createCart(cartItem);
-        this.props.history.push('/added');
+        this.props.history.push('/');
     }
 
     render() {
