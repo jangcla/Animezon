@@ -12,9 +12,60 @@
 #profile-header {
     width: 50%;
     background: white;
+    border: solid 1px #e1e0e0;
+    border-radius: 5px;
 }
 
 #banner-slot-photo {
     width: 100%;
     height: 350px;
+    border-bottom: solid 1px #e1e0e0;
+}
+
+#header-avatar-name {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 25px;
+}
+
+#avatar-with-name {
+    display: flex;
+    width: 73%;
+    align-items: flex-start;
+}
+#avatar-with-name big{
+    font: caption;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+#avatar-slot-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: solid 5px white;
+    margin-top: -110px;
+    margin-left: 30px;
+}
+
+#header-button-edit {
+    width: 27%;
+}
+#editing-profile-button {
+    border-radius: 7px;
+    width: 230px;
+    height: 32.5px;
+    border: solid #ffd814;
+    background: #ffd814;
+    box-shadow: 1px 4px 8px 0px #ede4e4;
+}
+#editing-profile-button:hover {
+    border-radius: 7px;
+    width: 230px;
+    height: 32.5px;
+    border: solid transparent;
+    background: #f1b51c;
+    box-shadow: 1px 4px 8px 0px #ede4e4;
+    transition: 0.1s;
 }

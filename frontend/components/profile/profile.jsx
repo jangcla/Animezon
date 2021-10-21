@@ -45,6 +45,12 @@ class Profile extends React.Component {
 
                                 <big>{this.props.personal.name}</big>
                             </div>
+
+                            <div id="header-button-edit">
+                                <button id="editing-profile-button">
+                                    Edit your public profile
+                                </button>
+                            </div>
                         </div>
                     </div>
 
