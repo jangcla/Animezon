@@ -25,6 +25,7 @@ class ProfileForm extends React.Component {
         });
     }
 
+
     profileSubmit(e) {
         e.preventDefault();
         const profile = Object.assign({}, this.state);
@@ -35,9 +36,21 @@ class ProfileForm extends React.Component {
     render() {
         return this.props.myProfile.length !== 0 ? 
         (
-            <div>It seems that you already have a profile made! <br />Click here to view profile <button>CLick me</button>
-            {this.props.personal.length}
-            </div>
+                <div id='profile-already-made'>
+                    <Navbar/>
+                    <div id="whoops-profile">
+                        Profile has been created!
+                    </div>
+
+                    <div id="whoops-profile">
+                        Click here to visit profile
+                    </div>
+                    
+                    <div id="whoops-profile">
+                        Click here to go to home page
+                    </div>
+                    
+                </div>
         )
         :
         (

@@ -2136,7 +2136,7 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
         price: "".concat(this.props.item.price)
       };
       this.props.createCart(cartItem);
-      this.props.history.push('/added');
+      this.props.history.push('/');
     }
   }, {
     key: "render",
@@ -2395,7 +2395,15 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return this.props.myProfile.length !== 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "It seems that you already have a profile made! ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Click here to view profile ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", null, "CLick me"), this.props.personal.length) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      return this.props.myProfile.length !== 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "profile-already-made"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "whoops-profile"
+      }, "Profile has been created!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "whoops-profile"
+      }, "Click here to visit profile"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "whoops-profile"
+      }, "Click here to go to home page")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "profile-form-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "profile-form"
@@ -2741,14 +2749,8 @@ var mSTP = function mSTP(state) {
   var myProfile = profilesAll.filter(function (profile) {
     return profile.user_id === state.session.id;
   });
-  var personal = [];
-
-  if (myProfile !== 0) {
-    while (personal.length < 1) {
-      personal.push(myProfile[0]);
-    }
-  }
-
+  var personal = myProfile[0];
+  console.log(personal);
   return {
     currentUser: state.entities.users[state.session.id],
     userId: state.session.id,
@@ -2764,6 +2766,9 @@ var mDTP = function mDTP(dispatch) {
     },
     fetchProfiles: function fetchProfiles() {
       return dispatch((0,_actions_profile_actions__WEBPACK_IMPORTED_MODULE_1__.fetchProfiles)());
+    },
+    updateProfile: function updateProfile(profile) {
+      return dispatch((0,_actions_profile_actions__WEBPACK_IMPORTED_MODULE_1__.updateProfile)(profile));
     }
   };
 };
