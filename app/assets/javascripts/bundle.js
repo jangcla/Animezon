@@ -2142,7 +2142,7 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
         price: "".concat(this.props.item.price)
       };
       this.props.createCart(cartItem);
-      this.props.history.push('/');
+      this.props.history.push('/added');
     }
   }, {
     key: "render",
@@ -2597,7 +2597,7 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "whoops-links"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Click here to visit profile"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-        to: "/"
+        to: "/profile/personal"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/homepage.png?raw=true"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
