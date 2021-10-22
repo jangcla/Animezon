@@ -59,7 +59,9 @@ class Profile extends React.Component {
                         <div id="profile-body-left">
 
                             <div id="about-me-bio">
+                                <big>About</big>
 
+                                <small>{this.props.personal.bio}</small>
                             </div>
 
                             <div id="left-side-different-products">
@@ -84,8 +86,11 @@ class Profile extends React.Component {
         )
         :
         (
-            <div>
-                This page should show if i have no profile made
+            <div id='need-to-create-profile'>
+                <Navbar/>
+                <div id="link-to-create-profile">
+                    <Link to='profile/create'></Link>
+                </div>
             </div>
         )
         ;
