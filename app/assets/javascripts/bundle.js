@@ -3106,7 +3106,80 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           id: "inner-blue-info"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
           src: this.props.personal.avatar_photo
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, this.props.personal.name))));
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, this.props.personal.name))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "main-review-form-div"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "main-review-inner"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "make-a-review-header"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+          id: "review-subheader-title"
+        }, "Create Review"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "item-preview-left-right"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "item-info-preview"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+          src: this.props.item.photoUrl
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, this.props.item.name)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "divider"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "overall-rating-header"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+          id: "review-mini-subheader-title"
+        }, "Overall rating"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "review-stars-inputs"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+          type: "radio",
+          name: "star",
+          id: "star-select-radio",
+          value: 1
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+          type: "radio",
+          name: "star",
+          id: "star-select-radio",
+          value: 2
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+          type: "radio",
+          name: "star",
+          id: "star-select-radio",
+          value: 3
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+          type: "radio",
+          name: "star",
+          id: "star-select-radio",
+          value: 4
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+          type: "radio",
+          name: "star",
+          id: "star-select-radio",
+          value: 5
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "divider"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "review-add-headline"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+          id: "review-mini-subheader-title"
+        }, "Add a headline"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+          type: "text",
+          id: "title-maker-input",
+          placeholder: "Title your review on the most important to know."
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "divider"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "review-write-review"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+          id: "review-mini-subheader-title"
+        }, "Add a written review"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
+          name: "",
+          id: "",
+          cols: "30",
+          rows: "10",
+          placeholder: "What did you like or dislike? What did you use this product for?"
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "submit-review-button-div"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+          id: "submit-review-button"
+        }, "Submit")))));
       } else if (this.props.myProfile.length === 0 && this.props.item.id !== undefined) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           id: "review-without-profile-comp"

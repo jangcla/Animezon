@@ -66,6 +66,67 @@ class ReviewForm extends React.Component {
                         </div>
                     </div>
 
+                    <div id="main-review-form-div">
+                        <div id="main-review-inner">
+                            <div id="make-a-review-header">
+                                <big id='review-subheader-title'>
+                                    Create Review
+                                </big>
+
+                                <div id="item-preview-left-right">
+                                    <div id="item-info-preview">
+                                        <img src={this.props.item.photoUrl}/>
+                                        <big>
+                                            {this.props.item.name}
+                                        </big>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="divider" />
+
+                            <div id="overall-rating-header">
+                                <big id='review-mini-subheader-title'>
+                                    Overall rating
+                                </big>
+
+                                <div id="review-stars-inputs">
+                                    <input type="radio" name="star" id="star-select-radio" value={1}/>
+                                    <input type="radio" name="star" id="star-select-radio" value={2}/>
+                                    <input type="radio" name="star" id="star-select-radio" value={3}/>
+                                    <input type="radio" name="star" id="star-select-radio" value={4}/>
+                                    <input type="radio" name="star" id="star-select-radio" value={5}/>
+                                </div>
+                            </div>
+
+                            <div id="divider"/>
+
+                            <div id="review-add-headline">
+                                <big id='review-mini-subheader-title'>
+                                    Add a headline
+                                </big>
+                                
+                                <input type="text" id="title-maker-input" placeholder='Title your review on the most important to know.'/>
+                            </div>
+
+                            <div id="divider"/>
+
+                            <div id="review-write-review">
+                                <big id='review-mini-subheader-title'>
+                                    Add a written review
+                                </big>
+
+                                <textarea name="" id="" cols="30" rows="10" placeholder='What did you like or dislike? What did you use this product for?'></textarea>
+                            </div>
+
+                            <div id="submit-review-button-div">
+                                <button id="submit-review-button">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
 
                </div>
             )
