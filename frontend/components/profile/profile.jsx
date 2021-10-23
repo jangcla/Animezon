@@ -33,7 +33,7 @@ class Profile extends React.Component {
                <Navbar />
 
                <div id="personal-profile-div">
-
+            
                     <div id="profile-header">
                         <div id="banner-slot">
                             <img src={this.props.personal.banner_photo} id="banner-slot-photo" />
