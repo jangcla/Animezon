@@ -4,6 +4,8 @@ import SignUpFormContainer from './session_form/signup_form_container'
 import HomePageContainer from "./home/home_page_container";
 import ItemShowContainer from "./item/item_show_container"
 import ProfileFormContainer from "./profile/profile_form_container";
+import ProfileContainer from "./profile/profile_container";
+import ReviewFormContainer from "./review/review_form_container";
 import CartContainer from "./cart/cart_container";
 import UnderConstruction from "./developing/unavailable";
 import ItemAddedContainer from "./cart/cart_item_add_container";
@@ -20,6 +22,8 @@ const App = () => (
             <Route exact path="/added" component={ItemAddedContainer}/>
             <Route exact path="/items/:itemId" component={ItemShowContainer}/>
             <Route exact path='/profile/create' component={ProfileFormContainer}/>
+            <Route exact path='/profile/personal' component={ProfileContainer}/>
+            <Route exact path='/review/form' component={ReviewFormContainer}/>
             <Route exact path='/error/underdevelopment' component={UnderConstruction}/>
             <Route exact path="/" component={HomePageContainer}/>
         </Switch>

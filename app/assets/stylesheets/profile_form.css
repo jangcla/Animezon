@@ -2,27 +2,41 @@
     display: flex;
     justify-content: center;
     padding: 1%;
+    background: #f3f5f5;
 }
-/* 
-#profile-form img {
-    width: 80px;
-    height: 80px;
-} */
+
+#profile-form-inner {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 135px;
+}
+
+
 
 /* 
 CSS for the left side of the form
 */
 
+#left-pform-outer {
+    display: flex;
+    align-items: center;
+}
+
 #left-pform {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 100%;
     gap: 3%;
     justify-content: center;
     font: caption;
     font-weight: bold;
     font-size: 20px;
     align-items: center;
+    height: 330px;
+    background: white;
+    padding: 10px;
 }
 
 #profilename-div {
@@ -44,7 +58,10 @@ CSS for the right side of the form
 #right-pform {
     display: flex;
     flex-direction: column;
-    width: 68%;
+    width: 75%;
+    padding-right: 7px;
+    padding-bottom: 10px;
+    background: white;
 }
 
 #profile-avatar-div {
@@ -59,26 +76,28 @@ CSS for the right side of the form
     align-items: flex-end;
 
 }
+
 #set1-left {
-    margin-left: 1.5%;
-}
+    margin-left: 15px;
+} 
+
 #set1-right {
     display: flex;
     width: 86%;
-    gap: 1.7%;
+    gap: 1.583%;
     justify-content: flex-end;
 }
 
 #a-select-caption {
     font: caption;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: -2px;
 }
 
 #default-avatar {
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     border: solid #ff8035;
 }
@@ -88,8 +107,8 @@ CSS for the right side of the form
 }
 
 #hunter-avatar {
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     border: solid #3b9f32;
 }
@@ -105,8 +124,8 @@ CSS for the right side of the form
 }
 
 #naruto-avatar {
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     border: solid orange;
 }
@@ -122,8 +141,8 @@ CSS for the right side of the form
 }
 
 #mha-avatar {
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     border: solid #47b390;
 }
@@ -144,8 +163,8 @@ CSS for the right side of the form
 }
 
 #jkaisen-avatar {
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     border: solid #876bb1;
 }
@@ -157,11 +176,12 @@ CSS for the right side of the form
     color: #876bb1;
     border: solid #876bb1;
     padding-right: 1.2%;
+    margin-left: 5px;
 }
 
 #one-piece-avatar {
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     border: solid #e94a54;
 }
@@ -176,8 +196,8 @@ CSS for the right side of the form
 }
 
 #demon-slayer-avatar {
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     border: solid #d576a1;
 }
@@ -191,14 +211,12 @@ CSS for the right side of the form
     padding-right: 1.2%;
 }
 
-#banner-anime-select img {
-    width: 405.2px;
-    height: 135px;
+#profile-banner-div {
+    background: white;
 }
-
-#default-banner {
-    width: 405.2px;
-    height: 135px;
+#profile-banner-div img{
+    width: 305px;
+    height: 95px;
 }
 
 #banner-selection {
@@ -213,14 +231,13 @@ CSS for the right side of the form
     font: icon;
     font-size: 30px;
     font-weight: bold;
-    /* gap: 6.5%; */
     width: 100%;
     padding-bottom: 10px;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding-right: 0.1%;
 }
 #banner-select-caption {
-    width: 32.5%;
+    width: 33%;
     display: flex;
     justify-content: center;
 }
@@ -243,8 +260,17 @@ CSS for the right side of the form
     border-color: #f8cf9f;  
 }
 
+#bio-text-box {
+    border: solid 2px #ff9351;
+    border-radius: 10px;
+}
 
-
+#profile-name-input {
+    width: 180px;
+    height: 23px;
+    border: solid 2px #fa9351;
+    border-radius: 5px;
+}
 
 /* 
     Css for the finished side section of the profile form
@@ -297,8 +323,14 @@ CSS for the right side of the form
     height: 230px;
 }
 #whoops-links big {
-    color: orange;
+    color: #ff660b;
     font: caption;
     font-weight: bold;
     font-size: 22px;
 }
+
+/* #profile-form img {
+    width: 55px;
+    height: 55px;
+} */
+

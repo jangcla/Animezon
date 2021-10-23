@@ -5,8 +5,8 @@ const itemReducer = (state = {}, action) => {
     
     switch (action.type) {
         case RECEIVE_ITEM:
-            let nextState = Object.assign({}, state)
-            nextState[action.item.id] = action.item
+            let nextState = {}
+            nextState = action.item
             return nextState;
         default:
             return state;
