@@ -1,0 +1,20 @@
+#user-show-blue-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #defaff;
+}
+
+#inner-blue-info {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#inner-blue-info img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}

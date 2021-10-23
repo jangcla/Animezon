@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import Navbar from '../nav/navbar';
 
 class ReviewForm extends React.Component {
     constructor(props){
@@ -54,25 +55,71 @@ class ReviewForm extends React.Component {
     }
 
     render() {
-        return this.props.myProfile.length !== 0 ? 
-        (
-            <div id="review-with-profile">
-                this div has access to the profile photo
+        if (this.props.myProfile.length !== 0 && this.props.item.id !== undefined) {
+           return ( 
+               <div id="review-with-profile-comp">
+                   <Navbar />
+                    <div id="user-show-blue-tab">
+                        <div id="inner-blue-info">
+                            <img src={this.props.personal.avatar_photo}/>
+                            <big>{this.props.personal.name}</big>
+                        </div>
+                    </div>
 
-                <br />
-                {this.props.currentUser.email}
-                <button onClick={this.noProfileSubmit}>no Profile</button>
 
-                <button onClick={this.withProfileSubmit}>with Profile</button>
-            </div>
-        )
-        :
-        (
-            <div id="review-without-profile">
-                this div has no access to the profile photo
-            </div>
-        )
+               </div>
+            )
+
+        } else if (this.props.myProfile.length === 0 && this.props.item.id !== undefined) {
+           return (
+               <div id="review-without-profile-comp">
+                   <Navbar/>
+                    <div id="user-show-blue-tab">
+                        <div id="inner-blue-info">
+                            <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/default-avatar.png?raw=true"/>
+                            <big>{this.props.currentUser.email}</big>
+                        </div>
+                    </div>
+                   this div has no access to the profile photo
+               </div>
+           )
+
+        } else if (this.props.item.id === undefined) {
+            return ( 
+                <div>
+                    <Navbar/>
+                    error the time session has expired
+                </div>
+            )
+
+        }
     }
 }
 
 export default ReviewForm;
+
+
+
+
+
+
+
+
+// return this.props.myProfile.length !== 0 ? 
+// (
+    // <div id="review-with-profile">
+    //     this div has access to the profile photo
+
+    //     <br />
+    //     {this.props.currentUser.email}
+    //     <button onClick={this.noProfileSubmit}>no Profile</button>
+
+    //     <button onClick={this.withProfileSubmit}>with Profile</button>
+    // </div>
+// )
+// :
+// (
+    // <div id="review-without-profile">
+    //     this div has no access to the profile photo
+    // </div>
+// )
