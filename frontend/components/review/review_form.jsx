@@ -91,11 +91,36 @@ class ReviewForm extends React.Component {
                                 </big>
 
                                 <div id="review-stars-inputs">
-                                    <input type="radio" name="star" id="star-select-radio" value={1}/>
-                                    <input type="radio" name="star" id="star-select-radio" value={2}/>
-                                    <input type="radio" name="star" id="star-select-radio" value={3}/>
-                                    <input type="radio" name="star" id="star-select-radio" value={4}/>
-                                    <input type="radio" name="star" id="star-select-radio" value={5}/>
+                                    {/* <label id="star-labels">
+                                        <div id="star-label"/>
+                                        <input type="radio" name="star" id="star-select-radio" value={1}/>
+                                    </label>
+
+                                    <label id="star-labels">
+                                        <div id="star-label"/>
+                                       <input type="radio" name="star" id="star-select-radio" value={2} />
+                                    </label>
+                                    
+                                    <label id="star-labels">
+                                        <div id="star-label"/>
+                                       <input type="radio" name="star" id="star-select-radio" value={3} />
+                                    </label>
+
+                                    <label id="star-labels">
+                                        <div id="star-label"/>
+                                        <input type="radio" name="star" id="star-select-radio" value={4}/>
+                                    </label>
+
+                                    <label id="star-labels">
+                                        <div id="star-label"/>
+                                        <input type="radio" name="star" id="star-select-radio" value={5}/>
+                                    </label> */}
+                                    
+                                    <button id="star-test"></button>
+                                    <button id="star-test"></button>
+                                    <button id="star-test"></button>
+                                    <button id="star-test"></button>
+                                    <button id="star-test"></button>
                                 </div>
                             </div>
 

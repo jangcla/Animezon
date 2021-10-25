@@ -36,12 +36,12 @@
 
 #review-subheader-title {
     font: caption;
-    font-size: 23px;
+    font-size: 25px;
     font-weight: bold;
 }
 #review-mini-subheader-title {
     font: caption;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -66,4 +66,35 @@
 }
 #item-info-preview img {
     width: 85px;
+}
+
+#star-test {
+    background: rgb(0, 0, 0);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+#star-test:focus::before {
+    content: '';
+    background: gold;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+
+#star-label {
+  background: rgb(151, 151, 149);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+#star-label:focus {
+  background: gold;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  display: inline-block;
+  height: 100px;
+  width: 100px;
 }
