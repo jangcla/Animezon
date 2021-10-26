@@ -7,8 +7,10 @@ const mSTP = state => {
     const profilesAll = Object.values(state.entities.profiles);
     let myProfile = profilesAll.filter(profile => profile.user_id === state.session.id)
 
-    let personal = myProfile[0]
-    console.log(personal)
+    let personal = myProfile[0];
+    // console.log(personal);
+
+
 
     return {
         currentUser: state.entities.users[state.session.id],
@@ -22,7 +24,7 @@ const mDTP = dispatch => {
     return {
         createProfile: profile => dispatch(createProfile(profile)),
         fetchProfiles: () => dispatch(fetchProfiles()),
-        updateProfile: (profile) => dispatch(updateProfile(profile))
+        updateProfile: (profile) => dispatch(updateProfile(profile)),
     }
 }
 

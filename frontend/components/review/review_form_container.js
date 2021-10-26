@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { fetchProfiles } from "../../actions/profile_actions";
 import { createReview } from "../../actions/review_actions";
+import { faStar } from '@fortawesome/free-regular-svg-icons';
 
 
 import ReviewForm from './review_form';
@@ -15,7 +16,8 @@ const mSTP = state => {
         userId: state.session.id,
         personal: personal,
         myProfile: myProfile,
-        item: state.entities.item
+        item: state.entities.item,
+        hollowStar: faStar
     }
 }
 
