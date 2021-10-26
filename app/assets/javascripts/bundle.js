@@ -12266,7 +12266,8 @@ __webpack_require__.r(__webpack_exports__);
 var Greeting = function Greeting(_ref) {
   var currentUser = _ref.currentUser,
       itemTotal = _ref.itemTotal,
-      logout = _ref.logout;
+      logout = _ref.logout,
+      history = _ref.history;
 
   var sessionLinks = function sessionLinks() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
@@ -12290,10 +12291,12 @@ var Greeting = function Greeting(_ref) {
   var personalGreeting = function personalGreeting() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hgroup", {
       className: "header-group"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      id: "greeting"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-      to: "/",
+      to: "/profile/personal",
+      id: "nav-to-profile"
+    }, "View Profile"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      id: "greeting"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "header-button",
       onClick: logout,
       id: "log-out"
@@ -13526,6 +13529,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _item_item_review__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../item/item_review */ "./frontend/components/item/item_review.jsx");
 /* harmony import */ var _nav_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../nav/navbar */ "./frontend/components/nav/navbar.jsx");
 /* harmony import */ var _profile_review__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./profile_review */ "./frontend/components/profile/profile_review.jsx");
@@ -13661,8 +13665,9 @@ var Profile = /*#__PURE__*/function (_React$Component) {
         id: "avatar-slot-photo"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, this.props.currentUser.email)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "header-button-edit"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-        id: "editing-profile-button"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+        to: "/profile/create",
+        id: "editing-profile-link-button"
       }, "Make your public profile")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "profile-body-split"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {

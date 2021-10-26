@@ -113,9 +113,9 @@ class Profile extends React.Component {
                                 </div>
 
                                 <div id="header-button-edit">
-                                    <button id="editing-profile-button">
+                                    <Link to='/profile/create' id="editing-profile-link-button">
                                         Make your public profile
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

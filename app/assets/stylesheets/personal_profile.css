@@ -122,3 +122,22 @@
 #profile-body-right {
     width: 65%;
 }
+
+
+
+
+#editing-profile-link-button {
+    text-decoration: none;
+    color: black;
+    font: caption;
+    font-size: 13px;
+    border-radius: 7px;
+    width: 230px;
+    height: 32.5px;
+    border: solid #ffd814;
+    background: #ffd814;
+    box-shadow: 1px 4px 8px 0px #ede4e4;
+    padding: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+}

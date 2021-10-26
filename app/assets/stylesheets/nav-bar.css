@@ -14,26 +14,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: solid 2px black;
+    padding: 10px;
+    font-size: 14px;
 }
-
-#log-out {
-    height: 40px;
-    margin-top: 10px;
-    background: none;
-    border-color: transparent;
-    color: white;
-    font-size: small;
-    text-align: left;
-}
-
-#log-out:hover {
-    /* border: 1px solid white; */
-    position: relative;
+#greeting:hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 2px white;
+    padding: 10px;
+    font-size: 14px;
     transition: 1s;
-    /* opacity: 0.8; */
-    color: rgb(250, 159, 54);
-    border: 0.5px solid rgb(250, 159, 54);
-}
+ }
 
 .login-signup {
     margin-top: 8px;
@@ -68,11 +61,11 @@
 }
 
 #search-div{
-    width: 61%;
+    width: 51%;
 }
 #search {
     height: 35px;
-    width: inherit;
+    width: 730px;
     margin-top: 10px;
     border-radius: 1%;
     border-color: transparent;
@@ -155,14 +148,27 @@ option {
     transition: 1s;
 }
 
-#cart-link{
+#cart-link {
     width: 30%;
-    margin-top: 13px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: solid 2px black;
 }
+#cart-link:hover {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: solid 2px white;
+    transition: 1s;
+ }
 
 #cart-img{
     width: 45px;
@@ -183,4 +189,29 @@ option {
     font-weight: bold;
     margin-top: 10px;
     color: white;
+}
+
+
+#nav-to-profile {
+    margin-left: -180px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border: solid 2px black;
+    width: 105px;
+    justify-content: center;
+}
+#nav-to-profile:hover { 
+    margin-left: -180px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border: solid 2px white;
+    width: 105px;
+    justify-content: center; 
+    transition: 1s; 
 }
