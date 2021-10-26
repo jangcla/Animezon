@@ -1,6 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Navbar from '../nav/navbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
 
 class ReviewForm extends React.Component {
     constructor(props){
@@ -91,36 +94,32 @@ class ReviewForm extends React.Component {
                                 </big>
 
                                 <div id="review-stars-inputs">
-                                    {/* <label id="star-labels">
-                                        <div id="star-label"/>
-                                        <input type="radio" name="star" id="star-select-radio" value={1}/>
-                                    </label>
 
-                                    <label id="star-labels">
-                                        <div id="star-label"/>
-                                       <input type="radio" name="star" id="star-select-radio" value={2} />
-                                    </label>
+                                        <input type="radio" name="star" id="star-radio1" value={1}/>
+                                    <label id="star-labels" htmlFor='star-radio1'><FontAwesomeIcon icon={faStar} id='faStar-icon'/></label>                                         
                                     
-                                    <label id="star-labels">
-                                        <div id="star-label"/>
-                                       <input type="radio" name="star" id="star-select-radio" value={3} />
-                                    </label>
 
-                                    <label id="star-labels">
-                                        <div id="star-label"/>
-                                        <input type="radio" name="star" id="star-select-radio" value={4}/>
-                                    </label>
-
-                                    <label id="star-labels">
-                                        <div id="star-label"/>
-                                        <input type="radio" name="star" id="star-select-radio" value={5}/>
-                                    </label> */}
+                                       <input type="radio" name="star" id="star-radio2" value={2} />
+                                    <label id="star-labels" htmlFor='star-radio2'><FontAwesomeIcon icon={faStar} id='faStar-icon'/></label>
+                                         
                                     
+                                       <input type="radio" name="star" id="star-radio3" value={3} />
+                                    <label id="star-labels" htmlFor='star-radio3'><FontAwesomeIcon icon={faStar} id='faStar-icon'/></label>                                         
+                                    
+
+                                        <input type="radio" name="star" id="star-radio4" value={4}/>
+                                    <label id="star-labels" htmlFor='star-radio4'><FontAwesomeIcon icon={faStar} id='faStar-icon'/></label>
+                                        
+                                  
+                                        <input type="radio" name="star" id="star-radio" value={5}/>
+                                    <label id="star-labels" htmlFor='star-radio5'><FontAwesomeIcon icon={faStar} id='faStar-icon'/></label>
+                                    
+                                    
+                                    {/* <button id="star-test"></button>
                                     <button id="star-test"></button>
                                     <button id="star-test"></button>
                                     <button id="star-test"></button>
-                                    <button id="star-test"></button>
-                                    <button id="star-test"></button>
+                                    <button id="star-test"></button> */}
                                 </div>
                             </div>
 
@@ -175,6 +174,8 @@ class ReviewForm extends React.Component {
                 <div>
                     <Navbar/>
                     error the time session has expired
+                    <FontAwesomeIcon icon={faStar}/>
+                    
                 </div>
             )
 
