@@ -27,6 +27,7 @@ class Api::ReviewsController < ApplicationController
             render :show
         else
             render json @review.errors.full_messages, status: 422
+        end
     end
 
     def destroy
@@ -40,6 +41,6 @@ class Api::ReviewsController < ApplicationController
     end
 
     def review_params
-        params.require(:review).permit(:name, :title, :rating, :body, :user_id, :item_id, :photo_Url)
+        params.require(:review).permit(:title, :rating, :body, :user_id, :item_id, :name, :photo_Url)
     end
 end

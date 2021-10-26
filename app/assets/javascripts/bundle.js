@@ -14072,32 +14072,32 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
     value: function noProfileSubmit(e) {
       e.preventDefault();
       var noProfile = {
+        name: "".concat(this.props.currentUser.email),
         title: "".concat(this.state.title),
         rating: "".concat(this.state.rating),
         body: "".concat(this.state.body),
         user_id: "".concat(this.props.userId),
         item_id: "".concat(this.props.item.id),
-        name: "".concat(this.props.currentUser.email),
         photo_Url: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/default-avatar.png?raw=true"
-      }; // this.props.createReview(noProfile);
-
+      };
       console.log(noProfile);
+      this.props.createReview(noProfile);
     }
   }, {
     key: "withProfileSubmit",
     value: function withProfileSubmit(e) {
       e.preventDefault();
       var withProfile = {
+        name: "".concat(this.props.personal.name),
         title: "".concat(this.state.title),
         rating: "".concat(this.state.rating),
         body: "".concat(this.state.body),
         user_id: "".concat(this.props.userId),
         item_id: "".concat(this.props.item.id),
-        name: "".concat(this.props.personal.name),
         photo_Url: "".concat(this.props.personal.avatar_photo)
-      }; // this.props.createReview(withProfile);
-
+      };
       console.log(withProfile);
+      this.props.createReview(withProfile);
     }
   }, {
     key: "render",
@@ -14132,59 +14132,64 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
           id: "review-mini-subheader-title"
         }, "Overall rating"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          id: "review-stars-inputs"
+          "class": "star-widget"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
-          name: "star",
-          id: "star-radio1",
-          value: 1
+          name: "rate",
+          id: "rate-5",
+          value: 5,
+          onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
-          id: "star-labels",
-          htmlFor: "star-radio1"
+          htmlFor: "rate-5",
+          "class": "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
-          name: "star",
-          id: "star-radio2",
-          value: 2
+          name: "rate",
+          id: "rate-4",
+          value: 4,
+          onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
-          id: "star-labels",
-          htmlFor: "star-radio2"
+          htmlFor: "rate-4",
+          "class": "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
-          name: "star",
-          id: "star-radio3",
-          value: 3
+          name: "rate",
+          id: "rate-3",
+          value: 3,
+          onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
-          id: "star-labels",
-          htmlFor: "star-radio3"
+          htmlFor: "rate-3",
+          "class": "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
-          name: "star",
-          id: "star-radio4",
-          value: 4
+          name: "rate",
+          id: "rate-2",
+          value: 2,
+          onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
-          id: "star-labels",
-          htmlFor: "star-radio4"
+          htmlFor: "rate-2",
+          "class": "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
-          name: "star",
-          id: "star-radio",
-          value: 5
+          name: "rate",
+          id: "rate-1",
+          value: 1,
+          onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
-          id: "star-labels",
-          htmlFor: "star-radio5"
+          htmlFor: "rate-1",
+          "class": "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
@@ -14197,7 +14202,8 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
         }, "Add a headline"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "text",
           id: "title-maker-input",
-          placeholder: "Title your review on the most important to know."
+          placeholder: " Title your review on the most important to know.",
+          onChange: this.update('title')
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           id: "divider"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -14206,25 +14212,138 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           id: "review-mini-subheader-title"
         }, "Add a written review"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
           name: "",
-          id: "",
+          id: "textarea-review",
           cols: "30",
           rows: "10",
-          placeholder: "What did you like or dislike? What did you use this product for?"
+          placeholder: " What did you like or dislike? What did you use this product for?",
+          onChange: this.update('body')
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           id: "submit-review-button-div"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-          id: "submit-review-button"
+          id: "submit-review-button",
+          onClick: this.withProfileSubmit
         }, "Submit")))));
       } else if (this.props.myProfile.length === 0 && this.props.item.id !== undefined) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          id: "review-without-profile-comp"
+          id: "review-with-profile-comp"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           id: "user-show-blue-tab"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           id: "inner-blue-info"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
           src: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/default-avatar.png?raw=true"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, this.props.currentUser.email))), "this div has no access to the profile photo");
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, this.props.currentUser.email))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "main-review-form-div"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "main-review-inner"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "make-a-review-header"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+          id: "review-subheader-title"
+        }, "Create Review"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "item-preview-left-right"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "item-info-preview"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+          src: this.props.item.photoUrl
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, this.props.item.name)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "divider"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "overall-rating-header"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+          id: "review-mini-subheader-title"
+        }, "Overall rating"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          "class": "star-widget"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+          type: "radio",
+          name: "rate",
+          id: "rate-5",
+          value: 5,
+          onClick: this.update("rating")
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+          htmlFor: "rate-5",
+          "class": "fas fa-star"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
+          id: "faStar-icon"
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+          type: "radio",
+          name: "rate",
+          id: "rate-4",
+          value: 4,
+          onClick: this.update("rating")
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+          htmlFor: "rate-4",
+          "class": "fas fa-star"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
+          id: "faStar-icon"
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+          type: "radio",
+          name: "rate",
+          id: "rate-3",
+          value: 3,
+          onClick: this.update("rating")
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+          htmlFor: "rate-3",
+          "class": "fas fa-star"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
+          id: "faStar-icon"
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+          type: "radio",
+          name: "rate",
+          id: "rate-2",
+          value: 2,
+          onClick: this.update("rating")
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+          htmlFor: "rate-2",
+          "class": "fas fa-star"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
+          id: "faStar-icon"
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+          type: "radio",
+          name: "rate",
+          id: "rate-1",
+          value: 1,
+          onClick: this.update("rating")
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+          htmlFor: "rate-1",
+          "class": "fas fa-star"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
+          id: "faStar-icon"
+        })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "divider"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "review-add-headline"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+          id: "review-mini-subheader-title"
+        }, "Add a headline"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+          type: "text",
+          id: "title-maker-input",
+          placeholder: " Title your review on the most important to know.",
+          onChange: this.update('title')
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "divider"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "review-write-review"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+          id: "review-mini-subheader-title"
+        }, "Add a written review"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
+          name: "",
+          id: "textarea-review",
+          cols: "30",
+          rows: "10",
+          placeholder: " What did you like or dislike? What did you use this product for?",
+          onChange: this.update('body')
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          id: "submit-review-button-div"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+          id: "submit-review-button",
+          onClick: this.noProfileSubmit
+        }, "Submit")))));
       } else if (this.props.item.id === undefined) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), "error the time session has expired", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar
@@ -14252,6 +14371,14 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
 //     this div has no access to the profile photo
 // </div>
 // )
+
+{
+  /* <button id="star-test"></button>
+                                     <button id="star-test"></button>
+                                     <button id="star-test"></button>
+                                     <button id="star-test"></button>
+                                     <button id="star-test"></button> */
+}
 
 /***/ }),
 
@@ -14283,6 +14410,7 @@ var mSTP = function mSTP(state) {
     return profile.user_id === state.session.id;
   });
   var personal = myProfile[0];
+  var starArray = [null, null, null, null, null];
   return {
     currentUser: state.entities.users[state.session.id],
     userId: state.session.id,
