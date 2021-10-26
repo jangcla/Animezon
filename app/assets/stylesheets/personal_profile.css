@@ -70,3 +70,50 @@
     box-shadow: 1px 4px 8px 0px #ede4e4;
     transition: 0.1s;
 }
+
+#profile-body-split {
+    width: 50%;
+    display: flex;
+    margin-top: 15px;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+#profile-body-left {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    font: caption;
+}
+
+#about-me-bio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: solid 1px #e1e0e0;
+    border-radius: 6px;
+}
+
+#about-me-bio big { 
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+#about-me-bio small { 
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 15px;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+#community-review-activity {
+    background: white;
+    padding: 18px;
+    font: caption;
+    border: solid 1px #e1e0e0;
+    border-radius: 5px;
+    margin-bottom: -3px;
+}

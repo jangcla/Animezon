@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ItemReview from '../item/item_review';
 import Navbar from '../nav/navbar'
+import ProfileReview from './profile_review';
 
 class Profile extends React.Component {
     constructor(props){
@@ -16,7 +18,8 @@ class Profile extends React.Component {
     }
 
     UNSAFE_componentWillMount() {
-        this.props.fetchProfiles()
+        this.props.fetchProfiles();
+        this.props.fetchReviews();
     }
 
     update(field) {
@@ -73,8 +76,14 @@ class Profile extends React.Component {
                         <div id="profile-body-right">
 
                             <div id="community-review-activity">
-
+                                <big>
+                                    Community activity
+                                </big>
                             </div>
+
+                            {
+                                this.props.myReviews.map(myReview => <ProfileReview myReview={myReview} hollowStar={this.props.hollowStar} key={myReview.id} allItems={this.props.allItems}/> )
+                            }
 
                         </div>
 
@@ -86,12 +95,66 @@ class Profile extends React.Component {
         )
         :
         (
-            <div id='need-to-create-profile'>
-                <Navbar/>
-                <div id="link-to-create-profile">
-                    <Link to='profile/create'></Link>
+                <div id='personal-profile-comp'>
+                    <Navbar />
+
+                    <div id="personal-profile-div">
+
+                        <div id="profile-header">
+                            <div id="banner-slot">
+                                <img src="https://github.com/jangcla/Animezon/blob/reviews/photos/Screen%20Shot%202021-09-08%20at%201.48.27%20AM.png?raw=true" id="banner-slot-photo" />
+                            </div>
+
+                            <div id="header-avatar-name">
+                                <div id="avatar-with-name">
+                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile_photos/default-avatar.png?raw=true" id='avatar-slot-photo' />
+
+                                    <big>{this.props.currentUser.email}</big>
+                                </div>
+
+                                <div id="header-button-edit">
+                                    <button id="editing-profile-button">
+                                        Make your public profile
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="profile-body-split">
+
+                            <div id="profile-body-left">
+
+                                <div id="about-me-bio">
+                                    <big>About</big>
+
+                                    <small>No personal profile found</small>
+                                </div>
+
+                                <div id="left-side-different-products">
+
+                                </div>
+
+                            </div>
+
+                            <div id="profile-body-right">
+
+                                <div id="community-review-activity">
+                                    <big>
+                                        Community activity
+                                    </big>
+                                </div>
+
+                                {
+                                    this.props.myReviews.map(myReview => <ProfileReview myReview={myReview} hollowStar={this.props.hollowStar} key={myReview.id} allItems={this.props.allItems}/>)
+                                }
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
-            </div>
         )
         ;
     }

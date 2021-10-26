@@ -11,8 +11,6 @@ const mSTP = state => {
     let myProfile = profilesAll.filter(profile => profile.user_id === state.session.id)
 
     let personal = myProfile[0]
-
-    const starArray = [null, null, null, null, null]
     return {
         currentUser: state.entities.users[state.session.id],
         userId: state.session.id,
