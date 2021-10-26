@@ -38,10 +38,11 @@ class ReviewForm extends React.Component {
             item_id: `${this.props.item.id}`,
             photo_Url: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/default-avatar.png?raw=true"
         }
-        console.log(noProfile);
+        // console.log(noProfile);
         this.props.createReview(noProfile);
+        this.props.history.push(`/items/${this.props.item.id}`)
     }
-
+    
     withProfileSubmit(e) {
         e.preventDefault();
         let withProfile = {
@@ -53,8 +54,9 @@ class ReviewForm extends React.Component {
             item_id: `${this.props.item.id}`,
             photo_Url: `${this.props.personal.avatar_photo}`
         }
-        console.log(withProfile);
+        // console.log(withProfile);
         this.props.createReview(withProfile);
+        this.props.history.push(`/items/${this.props.item.id}`)
     }
 
     render() {
@@ -92,21 +94,21 @@ class ReviewForm extends React.Component {
                                 <big id='review-mini-subheader-title'>
                                     Overall rating
                                 </big>
-                               <div class="star-widget">
+                               <div className="star-widget">
                                    <input type="radio" name="rate" id="rate-5" value={5} onClick={this.update("rating")}/>
-                                   <label htmlFor="rate-5" class="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
+                                   <label htmlFor="rate-5" className="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
 
                                    <input type="radio" name="rate" id="rate-4" value={4} onClick={this.update("rating")}/>
-                                   <label htmlFor="rate-4" class="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
+                                   <label htmlFor="rate-4" className="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
 
                                    <input type="radio" name="rate" id="rate-3" value={3} onClick={this.update("rating")}/>
-                                   <label htmlFor="rate-3" class="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
+                                   <label htmlFor="rate-3" className="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
 
                                    <input type="radio" name="rate" id="rate-2" value={2} onClick={this.update("rating")}/>
-                                   <label htmlFor="rate-2" class="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
+                                   <label htmlFor="rate-2" className="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
 
                                    <input type="radio" name="rate" id="rate-1" value={1} onClick={this.update("rating")}/>
-                                   <label htmlFor="rate-1" class="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
+                                   <label htmlFor="rate-1" className="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
                                 </div>
 {/* 
                                 <div id="review-stars-inputs">
@@ -200,21 +202,21 @@ class ReviewForm extends React.Component {
                                    Overall rating
                                </big>
 
-                               <div class="star-widget">
+                               <div className="star-widget">
                                    <input type="radio" name="rate" id="rate-5" value={5} onClick={this.update("rating")} />
-                                   <label htmlFor="rate-5" class="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
+                                   <label htmlFor="rate-5" className="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
 
                                    <input type="radio" name="rate" id="rate-4" value={4} onClick={this.update("rating")} />
-                                   <label htmlFor="rate-4" class="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
+                                   <label htmlFor="rate-4" className="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
 
                                    <input type="radio" name="rate" id="rate-3" value={3} onClick={this.update("rating")} />
-                                   <label htmlFor="rate-3" class="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
+                                   <label htmlFor="rate-3" className="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
 
                                    <input type="radio" name="rate" id="rate-2" value={2} onClick={this.update("rating")} />
-                                   <label htmlFor="rate-2" class="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
+                                   <label htmlFor="rate-2" className="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
 
                                    <input type="radio" name="rate" id="rate-1" value={1} onClick={this.update("rating")} />
-                                   <label htmlFor="rate-1" class="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
+                                   <label htmlFor="rate-1" className="fas fa-star"><FontAwesomeIcon icon={faStar} id='faStar-icon' /></label>
                                </div>
 
 

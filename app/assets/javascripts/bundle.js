@@ -14079,9 +14079,10 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
         user_id: "".concat(this.props.userId),
         item_id: "".concat(this.props.item.id),
         photo_Url: "https://github.com/jangcla/Animezon/blob/reviews/profile_photos/default-avatar.png?raw=true"
-      };
-      console.log(noProfile);
+      }; // console.log(noProfile);
+
       this.props.createReview(noProfile);
+      this.props.history.push("/items/".concat(this.props.item.id));
     }
   }, {
     key: "withProfileSubmit",
@@ -14095,9 +14096,10 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
         user_id: "".concat(this.props.userId),
         item_id: "".concat(this.props.item.id),
         photo_Url: "".concat(this.props.personal.avatar_photo)
-      };
-      console.log(withProfile);
+      }; // console.log(withProfile);
+
       this.props.createReview(withProfile);
+      this.props.history.push("/items/".concat(this.props.item.id));
     }
   }, {
     key: "render",
@@ -14132,7 +14134,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
           id: "review-mini-subheader-title"
         }, "Overall rating"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          "class": "star-widget"
+          className: "star-widget"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
           name: "rate",
@@ -14141,7 +14143,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
           htmlFor: "rate-5",
-          "class": "fas fa-star"
+          className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
@@ -14153,7 +14155,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
           htmlFor: "rate-4",
-          "class": "fas fa-star"
+          className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
@@ -14165,7 +14167,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
           htmlFor: "rate-3",
-          "class": "fas fa-star"
+          className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
@@ -14177,7 +14179,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
           htmlFor: "rate-2",
-          "class": "fas fa-star"
+          className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
@@ -14189,7 +14191,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
           htmlFor: "rate-1",
-          "class": "fas fa-star"
+          className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
@@ -14253,7 +14255,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
           id: "review-mini-subheader-title"
         }, "Overall rating"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          "class": "star-widget"
+          className: "star-widget"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
           name: "rate",
@@ -14262,7 +14264,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
           htmlFor: "rate-5",
-          "class": "fas fa-star"
+          className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
@@ -14274,7 +14276,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
           htmlFor: "rate-4",
-          "class": "fas fa-star"
+          className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
@@ -14286,7 +14288,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
           htmlFor: "rate-3",
-          "class": "fas fa-star"
+          className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
@@ -14298,7 +14300,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
           htmlFor: "rate-2",
-          "class": "fas fa-star"
+          className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"
@@ -14310,7 +14312,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           onClick: this.update("rating")
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
           htmlFor: "rate-1",
-          "class": "fas fa-star"
+          className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar,
           id: "faStar-icon"

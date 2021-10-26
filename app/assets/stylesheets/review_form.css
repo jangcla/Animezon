@@ -126,3 +126,11 @@ input:checked ~ label{
     background: rgb(252, 213, 55);
     border-radius: 6px;
 }
+#submit-review-button:hover { 
+    height: 32px;
+    width: 90px;
+    border: solid 2px #f9ad1f3b;
+    background: rgb(229, 171, 12);
+    border-radius: 6px;
+    transition: 1.5s;
+}
