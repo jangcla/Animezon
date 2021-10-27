@@ -14355,8 +14355,8 @@ var ProfileReview = /*#__PURE__*/function (_React$Component) {
         to: "/items/".concat(this.props.myReview.item_id),
         id: "link-to-review-item"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: this.props.allItems[this.props.myReview.item_id].photoUrl
-      }), this.props.allItems[this.props.myReview.item_id].name)));
+        src: this.props.allItems[this.props.myReview.item_id - 1].photoUrl
+      }), this.props.allItems[this.props.myReview.item_id - 1].name)));
     }
   }]);
 

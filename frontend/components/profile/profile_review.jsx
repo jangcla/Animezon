@@ -52,9 +52,9 @@ class ProfileReview extends React.Component {
                     </big>
 
                     <Link to={`/items/${this.props.myReview.item_id}`} id='link-to-review-item'>
-                        <img src={this.props.allItems[this.props.myReview.item_id].photoUrl} />
+                        <img src={this.props.allItems[this.props.myReview.item_id - 1].photoUrl} />
 
-                        {this.props.allItems[this.props.myReview.item_id].name}
+                        {this.props.allItems[this.props.myReview.item_id - 1].name}
                     </Link>
 
                 </div>
