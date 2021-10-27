@@ -14333,8 +14333,10 @@ var ProfileReview = /*#__PURE__*/function (_React$Component) {
         id: "two-stars"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "stars"
-      }, _toConsumableArray(Array(this.props.myReview.rating)).map(function (star) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
+      }, _toConsumableArray(Array(this.props.myReview.rating)).map(function (star, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+          key: i
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__.faStar,
           id: "faStar-icon-review"
         }));
