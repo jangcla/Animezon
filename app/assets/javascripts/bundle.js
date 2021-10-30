@@ -14342,8 +14342,10 @@ var ProfileReview = /*#__PURE__*/function (_React$Component) {
         }));
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "stars-hollow"
-      }, _toConsumableArray(Array(5 - this.props.myReview.rating)).map(function (star) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
+      }, _toConsumableArray(Array(5 - this.props.myReview.rating)).map(function (star, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+          key: i
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
           icon: _this.props.hollowStar,
           id: "faStar-icon-review"
         }));
