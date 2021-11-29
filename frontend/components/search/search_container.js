@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchItems } from '../../actions/item_actions';
 
-const mSTP = state => {
+const mSTP = (state, ownProps) => {
     const items = Object.values(state.entities.items)
     return {
         items: items
