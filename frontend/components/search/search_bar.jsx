@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
+
 const SearchBar = () => {
     const history = useHistory();
     const [keyword, SetKeyword] = useState(() => '');
@@ -13,15 +14,17 @@ const SearchBar = () => {
     }
 
     return(
-        <form id="search-bar-form" onSubmit={hadleKeyword}>
+        <form id="search-bar-form">
             <input
                 type="text"
-                className="header-searchbar"
+                className=".searchbar"
                 placeholder="Search"
                 name="s"
                 onChange={(e) => SetKeyword(e.currentTarget.value)}
             />
-            <button id="search-bar-submit" onClick={handleKeyword}></button>
+            <button id="search-bar-submit" onClick={handleKeyword}>
+                🔍
+            </button>
         </form>
     )
 }
