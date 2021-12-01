@@ -36,7 +36,7 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    width: 16%;
+    /* width: 16%; */
 }
 
 .auth-link:hover {
@@ -61,11 +61,11 @@
 }
 
 #search-div{
-    width: 51%;
+    width: 45%;
 }
 #search {
     height: 35px;
-    width: 730px;
+    width: 90%;
     margin-top: 10px;
     border-radius: 1%;
     border-color: transparent;

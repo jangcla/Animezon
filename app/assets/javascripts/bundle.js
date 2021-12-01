@@ -14881,22 +14881,21 @@ var SearchBar = function SearchBar() {
     history.push({
       pathname: "/search/".concat(keyword),
       state: keyword
-    });
-    document.querySelector(".searchbar").value = "";
+    }); // document.querySelector(".searchbar").value = ""
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
     id: "search-bar-form"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     type: "text",
-    className: ".searchbar",
+    id: "search",
     placeholder: "Search",
     name: "s",
     onChange: function onChange(e) {
       return SetKeyword(e.currentTarget.value);
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    id: "search-bar-submit",
+    id: "search-button",
     onClick: handleKeyword
   }, "\uD83D\uDD0D"));
 };

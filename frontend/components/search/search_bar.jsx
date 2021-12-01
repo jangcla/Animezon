@@ -10,19 +10,19 @@ const SearchBar = () => {
     function handleKeyword(e) {
         e.preventDefault();
         history.push({ pathname: `/search/${keyword}`, state: keyword })
-        document.querySelector(".searchbar").value = ""
+        // document.querySelector(".searchbar").value = ""
     }
 
     return(
         <form id="search-bar-form">
             <input
                 type="text"
-                className=".searchbar"
+                id="search"
                 placeholder="Search"
                 name="s"
                 onChange={(e) => SetKeyword(e.currentTarget.value)}
             />
-            <button id="search-bar-submit" onClick={handleKeyword}>
+            <button id="search-button" onClick={handleKeyword}>
                 🔍
             </button>
         </form>
