@@ -1,13 +1,14 @@
 #nav-bar {
     border-bottom: 1px solid black;
     display: flex;
-    justify-content: space-between;
     background: rgb(0, 0, 0);
     color: white;
     padding-left: 10px;
     padding-right: 10px;
     height: 65px;
     overflow: hidden;
+    justify-content: flex-start;
+    gap: 2%;
 }
 
 #greeting {
@@ -36,7 +37,7 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    width: 16%;
+    /* width: 16%; */
 }
 
 .auth-link:hover {
@@ -61,11 +62,11 @@
 }
 
 #search-div{
-    width: 51%;
+    width: 43%;
 }
 #search {
     height: 35px;
-    width: 730px;
+    width: 90%;
     margin-top: 10px;
     border-radius: 1%;
     border-color: transparent;
@@ -141,6 +142,7 @@ option {
 
 #location-selecting {
     margin-top: 13px;
+    width: 15%;
 }
 
 #location-selecting:hover {
@@ -193,7 +195,7 @@ option {
 
 
 #nav-to-profile {
-    margin-left: -180px;
+    /* margin-left: -180px; */
     display: flex;
     align-content: center;
     align-items: center;
@@ -204,7 +206,7 @@ option {
     justify-content: center;
 }
 #nav-to-profile:hover { 
-    margin-left: -180px;
+    /* margin-left: -180px; */
     display: flex;
     align-content: center;
     align-items: center;

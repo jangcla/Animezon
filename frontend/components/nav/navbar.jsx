@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container';
+import SearchBar from '../search/search_bar';
 
 class Navbar extends React.Component {
     render() {
@@ -16,14 +17,15 @@ class Navbar extends React.Component {
             </div>
 
             <div id='search-div'>
-                    <select id="search-select">
+                    {/* <select id="search-select">
                         <option value="0">All</option>
                         <option value="1">Anime</option>
                         <option value="2">Manga</option>
                         <option value="3">Merch</option>
                     </select>
                 <input type="text" id="search"></input>
-                <input type="button" id="search-button" value="🔎"/>
+                <input type="button" id="search-button" value="🔎"/> */}
+                    <SearchBar />
             </div>
 
             <GreetingContainer />

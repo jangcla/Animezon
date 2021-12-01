@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { login } from '../../actions/session_actions';
+import { useHistory } from 'react-router-dom';
 
 
-const Greeting = ({currentUser, itemTotal, logout, history}) => {
+const Greeting = ({currentUser, itemTotal, logout}) => {
+    const history = useHistory();
+
+    function loggingOut(e) {
+        e.preventDefault();
+        history.push({ pathname: `/`});
+        logout();
+    };
 
     const sessionLinks = () => (
         <nav className = 'login-signup'>
@@ -34,7 +42,7 @@ const Greeting = ({currentUser, itemTotal, logout, history}) => {
             </Link>
 
             <div id='greeting'>
-                <div className="header-button" onClick={logout} id='log-out'>
+                <div className="header-button" onClick={loggingOut} id='log-out'>
                     <small id='uppercase'>Hello, {currentUser.email.split('@')[0]}</small>
                     <br />
                     <big>Account & Lists</big>
