@@ -14485,7 +14485,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      if (this.props.myProfile.length !== 0 && this.props.item.id !== undefined) {
+      if (this.props.myProfile.length !== 0 && this.props.item.id !== undefined && this.props.userId !== undefined) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           id: "review-with-profile-comp"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -14606,7 +14606,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           id: "submit-review-button",
           onClick: this.withProfileSubmit
         }, "Submit")))));
-      } else if (this.props.myProfile.length === 0 && this.props.item.id !== undefined) {
+      } else if (this.props.myProfile.length === 0 && this.props.item.id !== undefined && this.props.userId !== undefined) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           id: "review-with-profile-comp"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -14727,10 +14727,12 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           id: "submit-review-button",
           onClick: this.noProfileSubmit
         }, "Submit")))));
-      } else if (this.props.item.id === undefined) {
+      } else if (this.props.item.id === undefined && this.props.userId !== undefined) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), "error the time session has expired", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar
         }));
+      } else if (this.props.item.id === undefined && this.props.userId === undefined) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Please log in to leave a customer review");
       }
     }
   }]);
