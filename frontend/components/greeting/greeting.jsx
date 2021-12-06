@@ -51,9 +51,9 @@ const Greeting = ({currentUser, itemTotal, logout}) => {
             
             <Link to='/cart' id="cart-link">
                 <div >
+                    <div id="cart-amount">{itemTotal}</div> 
                     <img src="https://github.com/jangcla/Animezon/blob/cartComp/photos/cart-link-logo.png?raw=true" id="cart-img"/>
                 </div>
-                <div id="cart-amount">{itemTotal}</div> 
                 <div id="cart-title">Cart</div> 
             </Link>
         </hgroup>
