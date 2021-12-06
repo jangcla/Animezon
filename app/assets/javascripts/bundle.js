@@ -12317,12 +12317,12 @@ var Greeting = function Greeting(_ref) {
     }, "Hello, ", currentUser.email.split('@')[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Account & Lists"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
       to: "/cart",
       id: "cart-link"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      id: "cart-amount"
+    }, itemTotal), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
       src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/cart-link-logo.png?raw=true",
       id: "cart-img"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      id: "cart-amount"
-    }, itemTotal), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       id: "cart-title"
     }, "Cart")));
   };
@@ -14485,7 +14485,11 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      if (this.props.myProfile.length !== 0 && this.props.item.id !== undefined) {
+      if (this.props.userId === null) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar
+        }), "must be logged in to leave a review");
+      } else if (this.props.myProfile.length !== 0 && this.props.item.id !== undefined && this.props.userId !== undefined) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           id: "review-with-profile-comp"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -14606,7 +14610,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           id: "submit-review-button",
           onClick: this.withProfileSubmit
         }, "Submit")))));
-      } else if (this.props.myProfile.length === 0 && this.props.item.id !== undefined) {
+      } else if (this.props.myProfile.length === 0 && this.props.item.id !== undefined && this.props.userId !== undefined) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           id: "review-with-profile-comp"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -14727,7 +14731,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           id: "submit-review-button",
           onClick: this.noProfileSubmit
         }, "Submit")))));
-      } else if (this.props.item.id === undefined) {
+      } else if (this.props.item.id === undefined && this.props.userId !== undefined) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), "error the time session has expired", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faStar
         }));

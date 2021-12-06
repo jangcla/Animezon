@@ -60,7 +60,16 @@ class ReviewForm extends React.Component {
     }
 
     render() {
-        if (this.props.myProfile.length !== 0 && this.props.item.id !== undefined) {
+        if (this.props.userId === null) {
+            return (
+                 <div>
+                    <Navbar/>
+                    <FontAwesomeIcon icon={faStar}/>
+                     must be logged in to leave a review
+                    
+                </div>
+            )
+        } else if (this.props.myProfile.length !== 0 && this.props.item.id !== undefined && this.props.userId !== undefined) {
            return ( 
                <div id="review-with-profile-comp">
                    <Navbar />
@@ -167,7 +176,7 @@ class ReviewForm extends React.Component {
                </div>
             )
 
-        } else if (this.props.myProfile.length === 0 && this.props.item.id !== undefined) {
+        } else if (this.props.myProfile.length === 0 && this.props.item.id !== undefined && this.props.userId !== undefined) {
            return (
                <div id="review-with-profile-comp">
                    <Navbar />
@@ -283,7 +292,7 @@ class ReviewForm extends React.Component {
                </div>
            )
 
-        } else if (this.props.item.id === undefined) {
+        } else if (this.props.item.id === undefined && this.props.userId !== undefined) {
             return ( 
                 <div>
                     <Navbar/>
@@ -293,7 +302,7 @@ class ReviewForm extends React.Component {
                 </div>
             )
 
-        }
+        } 
     }
 }
 
