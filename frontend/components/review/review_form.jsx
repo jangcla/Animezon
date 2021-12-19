@@ -62,10 +62,11 @@ class ReviewForm extends React.Component {
     render() {
         if (this.props.userId === null) {
             return (
-                 <div>
+                 <div id='main-must-be-logged-in'>
                     <Navbar/>
-                    <FontAwesomeIcon icon={faStar}/>
-                     must be logged in to leave a review
+                    <div id="logged-in-required">
+                        Must be logged in to leave a review
+                    </div>
                     
                 </div>
             )
