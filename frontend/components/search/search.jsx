@@ -12,3 +12,5 @@ class Search extends React.Component {
         return null;
     }
 }
+
+export default Search;
