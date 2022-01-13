@@ -1,0 +1,65 @@
+/* Search Items Container*/
+
+#search-index {
+    height: 15%;
+    width: 100%;
+}
+
+/* Search Item Individual */
+
+#search-item {
+    display: flex;
+    gap: 1%;
+    padding: 10px;
+    border-bottom: solid 2px #DDDDDD;
+}
+
+#search-photo-div {
+    width: 8%;
+    height: 8%;
+
+}
+#search-item-photo {
+    width: 100%;
+    height: 100%;
+}
+
+#search-item-description {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+#search-item-name {
+    text-decoration: none;
+    color: black;
+    font: caption;
+    font-weight: bold;
+    font-size: 20px;
+}
+#search-item-type {
+    font-weight: bold;
+    color: #565959c2;
+    margin-top: -5px;
+}
+#search-type {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #1d788b;
+}
+#search-item-price {
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+    gap: 1px;
+}
+#search-item-price big{
+    font-size: 23px;
+    margin-top: -3px;
+}
+#reviews-count-total {
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 5px;
+    color: #1d788b;
+    font-weight: bold;
+}

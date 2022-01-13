@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { fetchCarts } from "../../actions/cart_actions";
 import HomePage from "./home_page";
 
 const mSTP = state => {
@@ -9,7 +10,8 @@ const mSTP = state => {
 }
 
 const mDTP = dispatch => ({
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    fetchCarts: () => dispatch(fetchCarts()),
 })
 
 export default connect(mSTP, mDTP)(HomePage);
