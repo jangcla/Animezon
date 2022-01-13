@@ -34,7 +34,7 @@ const App = () => (
         </div>
 
         <footer>
-            Animezon copywrited since 2021
+           Copy © Animezon.com 2021-2022
         </footer>
     </div>
 

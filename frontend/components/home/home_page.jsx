@@ -6,6 +6,10 @@ import PhotoSlider from '../slider/photo_slider'
 import ItemCompartmentContainer from '../item/item_compartment_container';
 
 class HomePage extends React.Component {
+    UNSAFE_componentWillMount() {
+        this.props.fetchCarts();
+    }
+
     render() {
         return (
             <div id='home-div'>

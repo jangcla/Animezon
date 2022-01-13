@@ -10,7 +10,7 @@ const SearchBar = () => {
     function handleKeyword(e) {
         e.preventDefault();
         history.push({ pathname: `/search/${keyword}`, state: keyword })
-        // document.querySelector(".searchbar").value = ""
+
     }
 
     return(
