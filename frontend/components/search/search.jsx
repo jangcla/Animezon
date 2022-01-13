@@ -8,8 +8,20 @@ class Search extends React.Component {
 
     }
 
+    UNSAFE_componentWillMount() {
+        this.props.fetchItems();
+    }
+
     render() {
-        return null;
+        
+        return <div>
+            <Navbar/>
+            this is the test results
+            <br />
+            {this.props.keyword}
+            <br />
+            
+        </div>;
     }
 }
 

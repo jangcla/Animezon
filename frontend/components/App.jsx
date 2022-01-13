@@ -15,21 +15,29 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 
 const App = () => (
-    <div id='main-div'>
-        <Switch>
-            <AuthRoute path="/signup" component={SignUpFormContainer} />
-            <AuthRoute path="/login" component={LogInFormContainer} />
-            <Route exact path="/cart" component={CartContainer}/>
-            <Route exact path="/added" component={ItemAddedContainer}/>
-            <Route exact path="/items/:itemId" component={ItemShowContainer}/>
-            <Route exact path='/profile/create' component={ProfileFormContainer}/>
-            <Route exact path='/profile/personal' component={ProfileContainer}/>
-            <Route exact path='/review/form' component={ReviewFormContainer}/>
-            <Route exact path='/search/:keyword' component={SearchContainer}/>
-            <Route exact path='/error/underdevelopment' component={UnderConstruction}/>
-            <Route exact path="/" component={HomePageContainer}/>
-        </Switch>
+    <div id="website-container">
+        <div id='main-div'>
+            <Switch>
+                <AuthRoute path="/signup" component={SignUpFormContainer} />
+                <AuthRoute path="/login" component={LogInFormContainer} />
+                <Route exact path="/cart" component={CartContainer}/>
+                <Route exact path="/added" component={ItemAddedContainer}/>
+                <Route exact path="/items/:itemId" component={ItemShowContainer}/>
+                <Route exact path='/profile/create' component={ProfileFormContainer}/>
+                <Route exact path='/profile/personal' component={ProfileContainer}/>
+                <Route exact path='/review/form' component={ReviewFormContainer}/>
+                <Route exact path='/search/:keyword' component={SearchContainer}/>
+                <Route exact path='/error/underdevelopment' component={UnderConstruction}/>
+                <Route exact path="/" component={HomePageContainer}/>
+            </Switch> 
+            
+        </div>
+
+        <footer>
+            Animezon copywrited since 2021
+        </footer>
     </div>
+
 );
 
 export default App;

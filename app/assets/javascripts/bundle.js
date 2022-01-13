@@ -11402,6 +11402,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var App = function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "website-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "main-div"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_12__.AuthRoute, {
     path: "/signup",
@@ -11445,7 +11447,7 @@ var App = function App() {
     exact: true,
     path: "/",
     component: _home_home_page_container__WEBPACK_IMPORTED_MODULE_3__.default
-  })));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", null, "Animezon copywrited since 2021"));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -14911,9 +14913,14 @@ var Search = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(Search, [{
+    key: "UNSAFE_componentWillMount",
+    value: function UNSAFE_componentWillMount() {
+      this.props.fetchItems();
+    }
+  }, {
     key: "render",
     value: function render() {
-      return null;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), "this is the test results", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), this.props.keyword, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null));
     }
   }]);
 
@@ -14957,7 +14964,7 @@ var SearchBar = function SearchBar() {
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useHistory)();
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(function () {
-    return '';
+    return ' ';
   }),
       _useState2 = _slicedToArray(_useState, 2),
       keyword = _useState2[0],
@@ -15011,8 +15018,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var mSTP = function mSTP(state, ownProps) {
   var items = Object.values(state.entities.items);
+  var keywords = ownProps.match.params.keyword;
+  var keywordList = keywords.toLowerCase();
+  var searchedAnime = items.filter(function (item) {
+    return item.name.toLowerCase().includes(keywordList);
+  }); // console.log(searchedAnime);
+
   return {
-    items: items
+    items: items,
+    keyword: keywords,
+    searchedAnime: searchedAnime
   };
 };
 
