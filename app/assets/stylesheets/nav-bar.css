@@ -217,3 +217,7 @@ option {
     justify-content: center; 
     transition: 1s; 
 }
+.sign-in {
+    color: white;
+    text-decoration: none;
+}
