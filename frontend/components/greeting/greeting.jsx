@@ -14,14 +14,18 @@ const Greeting = ({currentUser, itemTotal, logout}) => {
     };
 
     const sessionLinks = () => (
-        <nav className = 'login-signup'>
+        <nav className = 'header-group'>
             {/* <button><Link to = '/login' id='auth-link'>Login</Link></button>
             &nbsp;or&nbsp; */}
-            <div id="auth-link">
-                <Link to = '/signup' id="auth-link">
-                <small>Hello, Sign in</small>
-                <br />
-                <big>Account & Lists</big>
+            <Link to='/error/underdevelopment' id='nav-to-profile'>
+                About Project
+            </Link>
+
+            <div id="greeting">
+                <Link to='/signup' className="sign-in">
+                    <small id='uppercase'>Hello, Sign in</small>
+                    <br />
+                    <big>Account & Lists</big>
                 </Link>
             </div>
             
