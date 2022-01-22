@@ -12302,7 +12302,9 @@ var Greeting = function Greeting(_ref) {
       className: "sign-in"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
       id: "uppercase"
-    }, "Hello, Sign in"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Account & Lists"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    }, "Hello, Sign in"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+      id: "acc-lists"
+    }, "Account & Lists"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
       to: "/login",
       id: "cart-link"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
@@ -12327,10 +12329,14 @@ var Greeting = function Greeting(_ref) {
       id: "log-out"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
       id: "uppercase"
-    }, "Hello, ", currentUser.email.split('@')[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Account & Lists"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    }, "Hello, ", currentUser.email.split('@')[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+      id: "acc-lists"
+    }, "Account & Lists"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
       to: "/cart",
       id: "cart-link"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      id: "cart-div-icon"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       id: "cart-amount"
     }, itemTotal), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
       src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/cart-link-logo.png?raw=true",
@@ -13524,7 +13530,9 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://github.com/jangcla/Animezon/blob/cartComp/photos/nav-bar-tag.jpeg?raw=true",
         id: "loc-nav"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Select your address"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+        id: "select-address"
+      }, "Select your address"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "search-div"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_search_search_bar__WEBPACK_IMPORTED_MODULE_2__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__.default, null));
     }

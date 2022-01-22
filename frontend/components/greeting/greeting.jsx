@@ -25,7 +25,7 @@ const Greeting = ({currentUser, itemTotal, logout}) => {
                 <Link to='/signup' className="sign-in">
                     <small id='uppercase'>Hello, Sign in</small>
                     <br />
-                    <big>Account & Lists</big>
+                    <big id='acc-lists'>Account & Lists</big>
                 </Link>
             </div>
             
@@ -49,12 +49,12 @@ const Greeting = ({currentUser, itemTotal, logout}) => {
                 <div className="header-button" onClick={loggingOut} id='log-out'>
                     <small id='uppercase'>Hello, {currentUser.email.split('@')[0]}</small>
                     <br />
-                    <big>Account & Lists</big>
+                    <big id='acc-lists'>Account & Lists</big>
                 </div>
             </div>
             
             <Link to='/cart' id="cart-link">
-                <div >
+                <div id='cart-div-icon'>
                     <div id="cart-amount">{itemTotal}</div> 
                     <img src="https://github.com/jangcla/Animezon/blob/cartComp/photos/cart-link-logo.png?raw=true" id="cart-img"/>
                 </div>
