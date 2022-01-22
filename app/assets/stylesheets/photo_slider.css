@@ -187,9 +187,8 @@
 
 #slide-photo1 {
     position: relative;
-    background: url(https://github.com/jangcla/Animezon/blob/cartComp/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true);
-    background-size: 150% 115%;
-    background-position: -420px -25px;
+    background: url(https://github.com/jangcla/Animezon/blob/search/photos/animezon-splash-banner.png?raw=true);
+    background-size: 100% 100%;
     margin-top: -1px;
 }
 
