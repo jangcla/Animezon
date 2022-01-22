@@ -18,10 +18,8 @@ class UnderConstruction extends React.Component {
                             <img src="https://www.nicepng.com/png/full/111-1110394_itachi-facepalm-anime-facepalm.png"/>
                         </div>
 
-                        <div id="apology">
+                        <div id="apology2">
                             <p>For now click here to navigate back to the website</p>
-                            <br />
-                            <br />
                             <Link to='/' id='leave'>Nothing to see here</Link>
                             <img src="https://i.pinimg.com/originals/03/fb/55/03fb5513a8bb9a452a60b910d82d47eb.gif" id="leave-but" />
                         </div>

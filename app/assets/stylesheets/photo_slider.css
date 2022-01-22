@@ -36,6 +36,10 @@
 #slide-one{
     background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/you-should-watch.gif?raw=true);
     background-size: 100% 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center; */
 }
 
 .slide-two{
@@ -82,20 +86,20 @@
 #s1t {
     color: white;
     position: absolute;
-    margin-left: 30%;
     font-size: 36px;
     text-align: center;
     font-weight: bold;
-    margin-top: 14%;
+    margin-top: 17%;
+    width: 100%;
 }
 #s1t1 {
     color: white;
     position: absolute;
-    margin-left: 800px;
     font-size: 36px;
     text-align: center;
     font-weight: bold;
-    margin-top: 14%;
+    margin-top: 17%;
+    width: 100%;
 }
 
 .navigation-manual{
@@ -187,9 +191,8 @@
 
 #slide-photo1 {
     position: relative;
-    background: url(https://github.com/jangcla/Animezon/blob/cartComp/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true);
-    background-size: 150% 115%;
-    background-position: -420px -25px;
+    background: url(https://github.com/jangcla/Animezon/blob/search/photos/animezon-splash-banner.png?raw=true);
+    background-size: 100% 100%;
     margin-top: -1px;
 }
 

@@ -30,6 +30,22 @@
     height: 370px;
     background: white;
 }
+#apology2 {
+    width: 35%;
+    height: 370px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#apology2 p{
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.8%;
+    padding-bottom: 10px;
+}
 #apology img{
     height: 77%;
     width: inherit;
@@ -60,12 +76,25 @@
    font-size: 13px;
    position: relative;
    z-index: 999;
-   margin-left: 26%;
-
+   margin-top: 10%;
+}
+#leave:hover{
+   padding: 7px 95px;
+   background: linear-gradient(180deg, #f3e0af, #ff9d00);
+   border: 1px solid rgb(248, 207, 159);;
+   text-decoration: none;
+   color: black;
+   border-radius: 4px;
+   font-size: 13px;
+   position: relative;
+   z-index: 999;
+   margin-top: 10%;
+   /* transition: 5s; */
 }
 
 #leave-but{
-    z-index: 1;
-    margin-left: -465px;
+    margin-top: -21%;
+    width: 100%;
+    height: 80%;
     -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.035), rgba(0, 0, 0, 0.844), rgba(0, 0, 0, 0.868), rgba(0, 0, 0, 0));
 }

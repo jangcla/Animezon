@@ -13,7 +13,7 @@ class Navbar extends React.Component {
             </div>
             
             <div id="location-selecting">
-                    <Link to='/error/underdevelopment' id='loc-li'><img src="https://github.com/jangcla/Animezon/blob/cartComp/photos/nav-bar-tag.jpeg?raw=true" id='loc-nav'/><big>Select your address</big></Link>
+                    <Link to='/error/underdevelopment' id='loc-li'><img src="https://github.com/jangcla/Animezon/blob/cartComp/photos/nav-bar-tag.jpeg?raw=true" id='loc-nav'/><big id='select-address'>Select your address</big></Link>
             </div>
 
             <div id='search-div'>
