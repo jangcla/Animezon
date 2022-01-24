@@ -95,6 +95,6 @@
 #leave-but{
     margin-top: -21%;
     width: 100%;
-    height: 80%;
+    height: 76%;
     -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.035), rgba(0, 0, 0, 0.844), rgba(0, 0, 0, 0.868), rgba(0, 0, 0, 0));
 }

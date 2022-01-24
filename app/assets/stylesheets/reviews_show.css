@@ -52,6 +52,12 @@
     font: caption;
 }
 
+#item-review-show {
+    padding: 15px;
+    /* padding-bottom: 0%; */
+    border-bottom: solid 1px #d5d3d3;
+}
+
 #reviewer-name-photo {
     display: flex;
     align-items: center;
