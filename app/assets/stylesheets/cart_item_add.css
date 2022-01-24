@@ -64,8 +64,8 @@
     text-decoration: none;
     color: black;
     background: #ffd814;
-    padding-left: 85px;
-    padding-right: 85px;
+    padding-left: 25%;
+    padding-right: 25%;
     padding-top: 9px;
     padding-bottom: 9px;
     border-radius: 8px;
@@ -77,9 +77,9 @@
 #preview-add-buttons1 {
     text-decoration: none;
     color: black;
-    background: #ffd814;
-    padding-left: 78px;
-    padding-right: 78px;
+    background: rgb(255, 161, 52);
+    padding-left: 22%;
+    padding-right: 22%;
     padding-top: 9px;
     padding-bottom: 9px;
     border-radius: 8px;

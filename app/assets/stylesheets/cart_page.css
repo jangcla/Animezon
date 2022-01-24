@@ -93,11 +93,11 @@ background: white;
 }
 
 #proceed-to-checkout-button {
-   text-decoration: none;
+    text-decoration: none;
     color: black;
     background: #ffd814;
-    padding-left: 75px;
-    padding-right: 75px;
+    padding-left: 21%;
+    padding-right: 21%;
     padding-top: 9px;
     padding-bottom: 9px;
     border-radius: 8px;
