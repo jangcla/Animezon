@@ -19,10 +19,10 @@ class ItemReview extends React.Component {
                         <div id="two-stars">
                             <div id="stars">
                                 {
-                                    [...Array(this.props.itemReview.rating)].map((star) => {
+                                    [...Array(this.props.itemReview.rating)].map((star, i) => {
                                         return (
-                                            <label>
-                                                <FontAwesomeIcon icon={faStar} id='faStar-icon-review' />
+                                            <label key={i}>
+                                                <FontAwesomeIcon icon={faStar} id='faStar-icon-review'/>
                                             </label>
                                         )
                                     })
@@ -30,9 +30,9 @@ class ItemReview extends React.Component {
                             </div>
                             <div id="stars-hollow">
                                 {
-                                    [...Array(5 - this.props.itemReview.rating)].map((star) => {
+                                    [...Array(5 - this.props.itemReview.rating)].map((star, i) => {
                                         return (
-                                            <label>
+                                            <label key={i}>
                                                 <FontAwesomeIcon icon={this.props.hollowStar} id='faStar-icon-review' />
                                             </label>
                                         )
