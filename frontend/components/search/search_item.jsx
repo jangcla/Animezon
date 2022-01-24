@@ -22,7 +22,6 @@ class SearchedItem extends React.Component {
             totalScore = totalScore/itemReviews.length
         }
         let starCount = Math.round(totalScore);
-        console.log(starCount)
 
         
         // console.log(itemReviews);

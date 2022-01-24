@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 
 import { fetchCarts } from "../../actions/cart_actions";
+import { fetchReviews } from "../../actions/review_actions";
 import { logout } from "../../actions/session_actions";
 import Greeting from './greeting';
 
@@ -25,7 +26,7 @@ const mSTP = state => {
 
 const mDTP = dispatch => ({
     logout: () => dispatch(logout()),
-    fetchCarts: () => dispatch(fetchCarts()) 
+    fetchCarts: () => dispatch(fetchCarts()),
 })
 
 export default connect(mSTP, mDTP)(Greeting)
