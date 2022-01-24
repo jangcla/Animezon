@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     font: caption;
-    width: 320px;
+    width: 25%;
     height: 155px;
     gap: 18px;
     justify-content: center;
@@ -50,6 +50,7 @@
     display: flex;
     flex-direction: column;
     font: caption;
+    width: 75%;
 }
 
 #item-review-show {
