@@ -15,28 +15,28 @@ class Search extends React.Component {
     }
 
     render() {
-      return this.props.keyword === ' ' ? 
-      (
-          <div id="searched-all">
-              <Navbar/>
-              <div id="search-index">
-                  {
-                          this.props.items.map(item => <SearchedItem item={item} key={item.id} hollowStar={this.props.hollowStar} reviews={this.props.allReviews}/>)
-                  }
-              </div>
-          </div>
-      )
-      :
-      (
-          <div id="filtered-search">
-              <Navbar/>
-              <div id="search-index">
-                  {
-                          this.props.searchedItem.map(item => <SearchedItem item={item} key={item.id} hollowStar={this.props.hollowStar} reviews={this.props.allReviews}/>)
-                  }
-              </div>
-          </div>
-      )
+        return this.props.keyword === ' ' ?
+            (
+                <div id="searched-all">
+                    <Navbar />
+                    <div id="search-index">
+                        {
+                            this.props.items.map(item => <SearchedItem item={item} key={item.id} hollowStar={this.props.hollowStar} reviews={this.props.allReviews} />)
+                        }
+                    </div>
+                </div>
+            )
+            :
+            (
+                <div id="filtered-search">
+                    <Navbar />
+                    <div id="search-index">
+                        {
+                            this.props.searchedItem.map(item => <SearchedItem item={item} key={item.id} hollowStar={this.props.hollowStar} reviews={this.props.allReviews} />)
+                        }
+                    </div>
+                </div>
+            )
     }
 }
 

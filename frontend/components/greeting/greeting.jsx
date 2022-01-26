@@ -4,7 +4,7 @@ import { login } from '../../actions/session_actions';
 import { useHistory } from 'react-router-dom';
 
 
-const Greeting = ({currentUser, itemTotal, logout}) => {
+const Greeting = ({currentUser, itemTotal, logout, fetchReviews}) => {
     const history = useHistory();
 
     function loggingOut(e) {
