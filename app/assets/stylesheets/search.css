@@ -17,6 +17,7 @@
     border-bottom: solid 2px #DDDDDD;
     flex-direction: column;
     width: 20%;
+    margin-top: 3%;
 }
 
 #search-photo-div {
