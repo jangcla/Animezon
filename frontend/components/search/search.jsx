@@ -19,7 +19,11 @@ class Search extends React.Component {
       (
           <div id="searched-all">
               <Navbar/>
-              this is for all search
+              <div id="search-index">
+                  {
+                          this.props.items.map(item => <SearchedItem item={item} key={item.id} hollowStar={this.props.hollowStar} reviews={this.props.allReviews}/>)
+                  }
+              </div>
           </div>
       )
       :
