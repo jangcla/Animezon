@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../nav/navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import LoginFormContainer from '../session_form/login_form_container';
 
 
 class ReviewForm extends React.Component {
@@ -62,13 +63,7 @@ class ReviewForm extends React.Component {
     render() {
         if (this.props.userId === null) {
             return (
-                 <div id='main-must-be-logged-in'>
-                    <Navbar/>
-                    <div id="logged-in-required">
-                        Must be logged in to leave a review
-                    </div>
-                    
-                </div>
+                <LoginFormContainer />
             )
         } else if (this.props.myProfile.length !== 0 && this.props.item.id !== undefined && this.props.userId !== undefined) {
            return ( 

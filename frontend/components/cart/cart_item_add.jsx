@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../nav/navbar';
 import ItemAdd from './ItemAdded';
+import LoginFormContainer from '../session_form/login_form_container';
 
 class ItemAdded extends React.Component {
     componentDidMount() {
@@ -9,7 +10,7 @@ class ItemAdded extends React.Component {
     }
 
     render() {
-        return this.props.last ? 
+        return this.props.last === [] ? 
         (
             <div>
                 <Navbar />
@@ -41,10 +42,13 @@ class ItemAdded extends React.Component {
 
                     </div>
                 </div>
+
             </div>
         )
         :
-        null;
+        (
+            <LoginFormContainer />
+        );
     }
 }
 
