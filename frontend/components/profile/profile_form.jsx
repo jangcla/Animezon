@@ -47,7 +47,7 @@ class ProfileForm extends React.Component {
                             <div id="whoops-links">
                                 <big>Click here to visit profile</big>
                                 <Link to='/profile/personal'>
-                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/homepage.png?raw=true" />
+                                    <img src="https://github.com/jangcla/Animezon/blob/search/photos/Profile-screen.png?raw=true" />
                                 </Link>
                             </div>
                             
@@ -241,8 +241,8 @@ class ProfileForm extends React.Component {
                                         </label> 
 
                                         <label>
-                                            <input type="radio" name="banner" onClick={this.update('banner_photo')} value="https://github.com/jangcla/Animezon/blob/main/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true" />
-                                            <img src="https://github.com/jangcla/Animezon/blob/main/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true" id="default-banner"/>
+                                                <input type="radio" name="banner" onClick={this.update('banner_photo')} value="https://github.com/jangcla/Animezon/blob/search/photos/animezon-splash-banner.png?raw=true" id="default-banner"/>
+                                                <img src="https://github.com/jangcla/Animezon/blob/search/photos/animezon-splash-banner.png?raw=true" id="default-banner"/>
                                         </label>                                
                                     </div>
 

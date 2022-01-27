@@ -6,7 +6,7 @@
 }
 
 #profile-form-inner {
-    width: 70%;
+    width: 94%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -282,17 +282,18 @@ CSS for the right side of the form
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5%;
 }
 
 #whoops-caption {
     font: caption;
     font-size: 60px;
     font-weight: bold;
-    width: 60%;
+    width: 90%;
     height: 550px;
     text-align: center;
     background: url(https://github.com/jangcla/Animezon/blob/reviews/profile-banners/fist-bump.gif?raw=true);
-    background-size: 100%;
+    background-size: 100% 110%;
     margin-top: 1%;
     display: flex;
     justify-content: center;
@@ -307,7 +308,7 @@ CSS for the right side of the form
     display: flex;
     width: 60%;
     align-items: flex-start;
-    gap: 0%;
+    gap: 20%;
     justify-content: space-around;
     margin-top: -11%;
     z-index: 999;

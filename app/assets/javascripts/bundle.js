@@ -13900,7 +13900,7 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Click here to visit profile"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
         to: "/profile/personal"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://github.com/jangcla/Animezon/blob/reviews/profile-banners/homepage.png?raw=true"
+        src: "https://github.com/jangcla/Animezon/blob/search/photos/Profile-screen.png?raw=true"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "whoops-links"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Click here to visit the home page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
@@ -14143,9 +14143,10 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
         type: "radio",
         name: "banner",
         onClick: this.update('banner_photo'),
-        value: "https://github.com/jangcla/Animezon/blob/main/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true"
+        value: "https://github.com/jangcla/Animezon/blob/search/photos/animezon-splash-banner.png?raw=true",
+        id: "default-banner"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://github.com/jangcla/Animezon/blob/main/photos/Screen%20Shot%202021-09-08%20at%2012.56.53%20AM.png?raw=true",
+        src: "https://github.com/jangcla/Animezon/blob/search/photos/animezon-splash-banner.png?raw=true",
         id: "default-banner"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "banner-anime-select"
