@@ -242,6 +242,7 @@ class ProfileForm extends React.Component {
 
                                         <label>
                                                 <input type="radio" name="banner" onClick={this.update('banner_photo')} value="https://github.com/jangcla/Animezon/blob/search/photos/animezon-splash-banner.png?raw=true" id="default-banner"/>
+                                                <img src="https://github.com/jangcla/Animezon/blob/search/photos/animezon-splash-banner.png?raw=true" id="default-banner"/>
                                         </label>                                
                                     </div>
 

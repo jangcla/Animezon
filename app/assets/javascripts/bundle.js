@@ -14145,6 +14145,9 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
         onClick: this.update('banner_photo'),
         value: "https://github.com/jangcla/Animezon/blob/search/photos/animezon-splash-banner.png?raw=true",
         id: "default-banner"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/search/photos/animezon-splash-banner.png?raw=true",
+        id: "default-banner"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "banner-anime-select"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
