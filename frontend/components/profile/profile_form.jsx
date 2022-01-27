@@ -47,7 +47,7 @@ class ProfileForm extends React.Component {
                             <div id="whoops-links">
                                 <big>Click here to visit profile</big>
                                 <Link to='/profile/personal'>
-                                    <img src="https://github.com/jangcla/Animezon/blob/reviews/profile-banners/homepage.png?raw=true" />
+                                    <img src="https://github.com/jangcla/Animezon/blob/search/photos/Profile-screen.png?raw=true" />
                                 </Link>
                             </div>
                             
