@@ -47,7 +47,7 @@ class CartItem extends React.Component {
                                    <Link to={`/items/${this.props.cartItem.item_id}`} id='c-i-title-link'>{this.props.cartItem.title}</Link>
                                </h2> 
 
-                                <h3 >$ {this.props.cartItem.price * this.props.cartItem.quantity}</h3>
+                                <h3 >$ {this.props.cartItem.price}</h3>
                             </div>
 
                             <small id='small-stock'>In Stock</small>
