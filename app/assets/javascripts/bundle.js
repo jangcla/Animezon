@@ -15937,7 +15937,7 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
         to: "/items/1",
         id: "slide-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://do.lolwot.com/wp-content/uploads/2015/04/20-of-the-best-anime-series-ever-created-2.jpg",
+        src: "https://github.com/jangcla/Animezon/blob/main/profile-banners/op-banner.jpg?raw=true",
         id: "slide-photo"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "slide-three"
@@ -15947,7 +15947,7 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
         to: "/items/3",
         id: "slide-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://pbs.twimg.com/media/EGUS_PzWwAAStTa.jpg",
+        src: "https://github.com/jangcla/Animezon/blob/main/profile-banners/hh-banner.jpg?raw=true",
         id: "slide-photo"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "slide-four"
@@ -15957,7 +15957,7 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
         to: "/items/8",
         id: "slide-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://io.dropinblog.com/uploaded/blogs/34239009/files/featured/42370119_My-hero-academia-big-3-in-shonen-anime.png",
+        src: "https://github.com/jangcla/Animezon/blob/main/profile-banners/mh-banner.png?raw=true",
         id: "slide-photo"
       })))));
     }
