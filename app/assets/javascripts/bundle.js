@@ -11635,13 +11635,13 @@ var Cart = /*#__PURE__*/function (_React$Component) {
         id: "bottom-of-cart-total"
       }, "Subtotal (", this.props.itemTotal, " items): ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
         id: "money-total"
-      }, " $", this.props.sumTotal))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, " $", this.props.sumTotal.toFixed(2)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-right-div"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-item-all-checkout"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Subtotal (", this.props.itemTotal, " items): ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
         id: "money-total"
-      }, "$", this.props.sumTotal)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+      }, "$", this.props.sumTotal.toFixed(2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "buy-for-yourself"
       }, "\uD83D\uDCE6 This order is a gift for yourself"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
         to: "/error/underdevelopment",
@@ -11889,7 +11889,7 @@ var CartItem = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/items/".concat(this.props.cartItem.item_id),
         id: "c-i-title-link"
-      }, this.props.cartItem.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "$ ", this.props.cartItem.price * this.props.cartItem.quantity)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
+      }, this.props.cartItem.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "$ ", this.props.cartItem.price)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
         id: "small-stock"
       }, "In Stock"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
         id: "small-free"
