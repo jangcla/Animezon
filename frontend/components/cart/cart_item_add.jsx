@@ -10,7 +10,7 @@ class ItemAdded extends React.Component {
     }
 
     render() {
-        return this.props.last === [] ? 
+        return this.props.last.length === 1 ? 
         (
             <div>
                 <Navbar />
