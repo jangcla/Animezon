@@ -13,7 +13,7 @@ const mSTP = state => {
                 last.push(mine[0])
             }
         }
-    console.log(last)
+
     return {
         last: last,
         mine: mine
