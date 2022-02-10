@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import Navbar from '../nav/navbar';
 import ItemAdd from './ItemAdded';
 import LoginFormContainer from '../session_form/login_form_container';
@@ -47,7 +47,7 @@ class ItemAdded extends React.Component {
         )
         :
         (
-            <LoginFormContainer />
+            < Redirect to='/login'/>
         );
     }
 }
