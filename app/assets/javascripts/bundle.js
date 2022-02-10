@@ -11345,7 +11345,9 @@ var login = function login(user) {
 };
 var logout = function logout() {
   return function (dispatch) {
-    return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__.logout().then(user = dispatch(logoutCurrentUser()));
+    return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__.logout().then(function (user) {
+      return dispatch(logoutCurrentUser());
+    });
   };
 };
 var signup = function signup(user) {
@@ -11933,6 +11935,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _nav_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../nav/navbar */ "./frontend/components/nav/navbar.jsx");
 /* harmony import */ var _ItemAdded__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ItemAdded */ "./frontend/components/cart/ItemAdded.jsx");
 /* harmony import */ var _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../session_form/login_form_container */ "./frontend/components/session_form/login_form_container.jsx");
@@ -12011,7 +12014,9 @@ var ItemAdded = /*#__PURE__*/function (_React$Component) {
       }, "Proceed to Cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
         to: "/",
         id: "preview-add-buttons1"
-      }, "Continue Browsing"))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_session_form_login_form_container__WEBPACK_IMPORTED_MODULE_3__.default, null);
+      }, "Continue Browsing"))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Redirect, {
+        to: "/login"
+      });
     }
   }]);
 
@@ -12473,7 +12478,9 @@ var HomePage = /*#__PURE__*/function (_React$Component) {
   _createClass(HomePage, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
-      this.props.fetchCarts();
+      if (this.props.sessionId) {
+        this.props.fetchCarts();
+      }
     }
   }, {
     key: "render",
@@ -12517,7 +12524,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var mSTP = function mSTP(state) {
   return {
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    sessionId: state.session.id
   };
 };
 
@@ -14422,9 +14430,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _nav_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../nav/navbar */ "./frontend/components/nav/navbar.jsx");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../session_form/login_form_container */ "./frontend/components/session_form/login_form_container.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -14481,7 +14490,9 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
   _createClass(ReviewForm, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
-      this.props.fetchProfiles();
+      if (this.props.userId) {
+        this.props.fetchProfiles();
+      }
     }
   }, {
     key: "update",
@@ -14530,7 +14541,9 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       if (this.props.userId === null) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_session_form_login_form_container__WEBPACK_IMPORTED_MODULE_3__.default, null);
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Redirect, {
+          to: "/login"
+        });
       } else if (this.props.myProfile.length !== 0 && this.props.item.id !== undefined && this.props.userId !== undefined) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           id: "review-with-profile-comp"
@@ -14572,7 +14585,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           htmlFor: "rate-5",
           className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faStar,
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faStar,
           id: "faStar-icon"
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
@@ -14584,7 +14597,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           htmlFor: "rate-4",
           className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faStar,
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faStar,
           id: "faStar-icon"
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
@@ -14596,7 +14609,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           htmlFor: "rate-3",
           className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faStar,
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faStar,
           id: "faStar-icon"
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
@@ -14608,7 +14621,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           htmlFor: "rate-2",
           className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faStar,
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faStar,
           id: "faStar-icon"
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
@@ -14620,7 +14633,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           htmlFor: "rate-1",
           className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faStar,
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faStar,
           id: "faStar-icon"
         })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           id: "divider"
@@ -14693,7 +14706,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           htmlFor: "rate-5",
           className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faStar,
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faStar,
           id: "faStar-icon"
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
@@ -14705,7 +14718,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           htmlFor: "rate-4",
           className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faStar,
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faStar,
           id: "faStar-icon"
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
@@ -14717,7 +14730,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           htmlFor: "rate-3",
           className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faStar,
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faStar,
           id: "faStar-icon"
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
@@ -14729,7 +14742,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           htmlFor: "rate-2",
           className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faStar,
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faStar,
           id: "faStar-icon"
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "radio",
@@ -14741,7 +14754,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
           htmlFor: "rate-1",
           className: "fas fa-star"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faStar,
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faStar,
           id: "faStar-icon"
         })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           id: "divider"
@@ -14775,7 +14788,7 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
         }, "Submit")))));
       } else if (this.props.item.id === undefined && this.props.userId !== undefined) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), "error the time session has expired", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faStar
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faStar
         }));
       }
     }
@@ -15340,7 +15353,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
     value: function handleSubmit(e) {
       e.preventDefault();
       var user = Object.assign({}, this.state);
-      this.props.processForm(user);
+      this.props.processForm(user); // this.props.history.push('/');
     }
   }, {
     key: "demoHandler",
@@ -15350,7 +15363,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         email: "test",
         password: "password"
       });
-      this.props.processForm(user);
+      this.props.processForm(user); // this.props.history.push('/');
     }
   }, {
     key: "renderErrors",

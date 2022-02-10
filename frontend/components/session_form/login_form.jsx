@@ -23,17 +23,19 @@ class LoginForm extends React.Component {
             [field]: e.currentTarget.value
         });
     }
-
+    
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+        // this.props.history.push('/');
     }
-
+    
     demoHandler(e) {
         e.preventDefault();
         const user = Object.assign({}, { email: "test", password: "password"})
         this.props.processForm(user);
+        // this.props.history.push('/');
     }
 
     renderErrors() {

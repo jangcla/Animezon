@@ -20,7 +20,7 @@ const mSTP = state => {
     return {
         currentUser: state.entities.users[state.session.id],
         mine: mine,
-        itemTotal: itemTotal
+        itemTotal: itemTotal,
     }
 }
 

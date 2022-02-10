@@ -7,7 +7,10 @@ import ItemCompartmentContainer from '../item/item_compartment_container';
 
 class HomePage extends React.Component {
     UNSAFE_componentWillMount() {
-        this.props.fetchCarts();
+        if (this.props.sessionId) {
+            this.props.fetchCarts();
+        }
+
     }
 
     render() {

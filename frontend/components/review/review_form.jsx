@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Navbar from '../nav/navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -19,7 +19,10 @@ class ReviewForm extends React.Component {
     }
 
     UNSAFE_componentWillMount() {
-        this.props.fetchProfiles()
+        if (this.props.userId) {
+            this.props.fetchProfiles();
+
+        }
     }
 
     update(field) {
@@ -63,7 +66,7 @@ class ReviewForm extends React.Component {
     render() {
         if (this.props.userId === null) {
             return (
-                <LoginFormContainer />
+                < Redirect to='/login' />
             )
         } else if (this.props.myProfile.length !== 0 && this.props.item.id !== undefined && this.props.userId !== undefined) {
            return ( 
