@@ -11981,7 +11981,9 @@ var ItemAdded = /*#__PURE__*/function (_React$Component) {
   _createClass(ItemAdded, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchCarts();
+      if (this.props.sessionId) {
+        this.props.fetchCarts();
+      }
     }
   }, {
     key: "render",
@@ -12058,10 +12060,10 @@ var mSTP = function mSTP(state) {
     }
   }
 
-  console.log(last);
   return {
     last: last,
-    mine: mine
+    mine: mine,
+    sessionId: state.session.id
   };
 };
 
@@ -13395,16 +13397,19 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
     value: function handleSubmit(e) {
       e.preventDefault(); // const cartItem = Object.assign({}, this.state);
 
-      var cartItem = {
-        user_id: "".concat(this.props.user),
-        item_id: "".concat(this.props.item.id),
-        quantity: "".concat(this.state.quantity),
-        purchased: false,
-        title: "".concat(this.props.item.name),
-        photoUrl: "".concat(this.props.item.photoUrl),
-        price: "".concat(this.props.item.price)
-      };
-      this.props.createCart(cartItem);
+      if (this.props.user) {
+        var cartItem = {
+          user_id: "".concat(this.props.user),
+          item_id: "".concat(this.props.item.id),
+          quantity: "".concat(this.state.quantity),
+          purchased: false,
+          title: "".concat(this.props.item.name),
+          photoUrl: "".concat(this.props.item.photoUrl),
+          price: "".concat(this.props.item.price)
+        };
+        this.props.createCart(cartItem);
+      }
+
       this.props.history.push('/added');
     }
   }, {
@@ -13890,7 +13895,6 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
     value: function profileSubmit(e) {
       e.preventDefault();
       var profile = Object.assign({}, this.state);
-      console.log(profile);
       this.props.createProfile(profile);
     }
   }, {
@@ -15099,8 +15103,7 @@ var mSTP = function mSTP(state, ownProps) {
   var searchedItem = items.filter(function (item) {
     return item.name.toLowerCase().includes(keywordList);
   });
-  var allReviews = Object.values(state.entities.reviews);
-  console.log(keywords); // console.log(searchedAnime);
+  var allReviews = Object.values(state.entities.reviews); // console.log(searchedAnime);
 
   return {
     items: items,

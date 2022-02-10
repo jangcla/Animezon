@@ -6,7 +6,9 @@ import LoginFormContainer from '../session_form/login_form_container';
 
 class ItemAdded extends React.Component {
     componentDidMount() {
-        this.props.fetchCarts()
+        if (this.props.sessionId) {
+            this.props.fetchCarts();
+        }
     }
 
     render() {

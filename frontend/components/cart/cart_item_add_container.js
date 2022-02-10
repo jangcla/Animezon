@@ -16,7 +16,8 @@ const mSTP = state => {
 
     return {
         last: last,
-        mine: mine
+        mine: mine,
+        sessionId: state.session.id,
     }
 
 }
