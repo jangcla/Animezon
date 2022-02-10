@@ -12,7 +12,7 @@ const mSTP = (state, ownProps) => {
 
     let searchedItem = items.filter(item => item.name.toLowerCase().includes(keywordList));
     let allReviews = Object.values(state.entities.reviews);
-    console.log(keywords)    
+ 
     
     // console.log(searchedAnime);
     return {
