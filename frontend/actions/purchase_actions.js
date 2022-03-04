@@ -14,7 +14,7 @@ export const receivePurchases = purchases => ({
     purchases
 })
 
-export const receivePurchase = purchaseId => ({
+export const removePurchase = purchaseId => ({
     type: REMOVE_PURCHASE,
     purchaseId
 })
@@ -34,4 +34,12 @@ export const createPurchase = purchase => dispatch => (
         .then(madePurchase => dispatch(receivePurchase(madePurchase)))
 )
 
-export const updatePurchase = purchase => dispatch
+export const updatePurchase = purchase => dispatch => (
+    purchaseUtil.updatePurchase(purchase)
+        .then(updatedPurchase => dispatch(receivePurchase(updatedPurchase)))
+)
+
+export const deletePurchase = purchaseId => dispatch => (
+    purchaseUtil.deletePurchase(purchaseId)
+        .then(purchase => dispatch(removePurchase(purchase.id)))
+)
