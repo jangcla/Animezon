@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :carts, only: [:create, :show, :index, :update, :destroy]
     resources :reviews, only: [:create, :show, :index, :update, :destroy]
     resources :profiles, only: [:create, :show, :index, :update, :destroy]
+    resources :purchases, only: [:create, :show, :index, :update, :destroy]
   end
 
 end
