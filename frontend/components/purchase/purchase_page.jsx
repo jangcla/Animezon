@@ -3,9 +3,26 @@ import { Link, Redirect } from "react-router-dom";
 import Navbar from "../nav/navbar";
 
 class PurchasePage extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.deleteAllItems = this.deleteAllItems.bind(this);
+    }
+
+    deleteAllItems(e) {
+        e.preventDefault();
+        this.props.myItems.forEach(item => {
+            this.props.deleteCart(item.id);
+        });
+    }
 
     render() {
-        return null;
+        return <div>
+            Are you sure you want to buy these? Is your wallet full of money?
+            <button onClick={this.deleteAllItems}>
+                Buy it all!!!!
+            </button>
+        </div>
     }
 }
 

@@ -7,6 +7,7 @@ import ProfileFormContainer from "./profile/profile_form_container";
 import ProfileContainer from "./profile/profile_container";
 import ReviewFormContainer from "./review/review_form_container";
 import CartContainer from "./cart/cart_container";
+import PurchasePageContainer from "./purchase/purchase_page_container";
 import UnderConstruction from "./developing/unavailable";
 import ItemAddedContainer from "./cart/cart_item_add_container";
 import SearchContainer from "./search/search_container";
@@ -21,6 +22,7 @@ const App = () => (
                 <AuthRoute path="/signup" component={SignUpFormContainer} />
                 <AuthRoute path="/login" component={LogInFormContainer} />
                 <Route exact path="/cart" component={CartContainer}/>
+                <Route exact path="/confirm/purchase" component={PurchasePageContainer}/>
                 <Route exact path="/added" component={ItemAddedContainer}/>
                 <Route exact path="/items/:itemId" component={ItemShowContainer}/>
                 <Route exact path='/profile/create' component={ProfileFormContainer}/>
