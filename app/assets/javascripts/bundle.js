@@ -13477,6 +13477,8 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
+      var _this3 = this;
+
       e.preventDefault(); // const cartItem = Object.assign({}, this.state);
 
       if (this.props.user) {
@@ -13489,10 +13491,10 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
           photoUrl: "".concat(this.props.item.photoUrl),
           price: "".concat(this.props.item.price)
         };
-        this.props.createCart(cartItem);
+        this.props.createCart(cartItem).then(function () {
+          return _this3.props.history.push('/added');
+        });
       }
-
-      this.props.history.push('/added');
     }
   }, {
     key: "render",
