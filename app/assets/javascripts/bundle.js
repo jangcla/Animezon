@@ -11211,6 +11211,88 @@ var deleteProfile = function deleteProfile(profileId) {
 
 /***/ }),
 
+/***/ "./frontend/actions/purchase_actions.js":
+/*!**********************************************!*\
+  !*** ./frontend/actions/purchase_actions.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RECEIVE_PURCHASE": () => (/* binding */ RECEIVE_PURCHASE),
+/* harmony export */   "RECEIVE_PURCHASES": () => (/* binding */ RECEIVE_PURCHASES),
+/* harmony export */   "REMOVE_PURCHASE": () => (/* binding */ REMOVE_PURCHASE),
+/* harmony export */   "receivePurchase": () => (/* binding */ receivePurchase),
+/* harmony export */   "receivePurchases": () => (/* binding */ receivePurchases),
+/* harmony export */   "removePurchase": () => (/* binding */ removePurchase),
+/* harmony export */   "fetchPurchase": () => (/* binding */ fetchPurchase),
+/* harmony export */   "fetchPurchases": () => (/* binding */ fetchPurchases),
+/* harmony export */   "createPurchase": () => (/* binding */ createPurchase),
+/* harmony export */   "updatePurchase": () => (/* binding */ updatePurchase),
+/* harmony export */   "deletePurchase": () => (/* binding */ deletePurchase)
+/* harmony export */ });
+/* harmony import */ var _util_purchase_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/purchase_api_util */ "./frontend/util/purchase_api_util.js");
+
+var RECEIVE_PURCHASE = 'RECEIVE_PURCHASE';
+var RECEIVE_PURCHASES = 'RECEIVE_PURCHASES';
+var REMOVE_PURCHASE = 'REMOVE_PURCHASE';
+var receivePurchase = function receivePurchase(purchase) {
+  return {
+    type: RECEIVE_PURCHASE,
+    purchase: purchase
+  };
+};
+var receivePurchases = function receivePurchases(purchases) {
+  return {
+    type: RECEIVE_PURCHASE,
+    purchases: purchases
+  };
+};
+var removePurchase = function removePurchase(purchaseId) {
+  return {
+    type: REMOVE_PURCHASE,
+    purchaseId: purchaseId
+  };
+};
+var fetchPurchase = function fetchPurchase(purchaseId) {
+  return function (dispatch) {
+    return _util_purchase_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchPurchase(purchaseId).then(function (purchase) {
+      return dispatch(receivePurchase(purchase));
+    });
+  };
+};
+var fetchPurchases = function fetchPurchases() {
+  return function (dispatch) {
+    return _util_purchase_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchPurchases().then(function (purchases) {
+      return dispatch(receivePurchases(purchases));
+    });
+  };
+};
+var createPurchase = function createPurchase(purchase) {
+  return function (dispatch) {
+    return _util_purchase_api_util__WEBPACK_IMPORTED_MODULE_0__.createPurchase(purchase).then(function (madePurchase) {
+      return dispatch(receivePurchase(madePurchase));
+    });
+  };
+};
+var updatePurchase = function updatePurchase(purchase) {
+  return function (dispatch) {
+    return _util_purchase_api_util__WEBPACK_IMPORTED_MODULE_0__.updatePurchase(purchase).then(function (updatedPurchase) {
+      return dispatch(receivePurchase(updatedPurchase));
+    });
+  };
+};
+var deletePurchase = function deletePurchase(purchaseId) {
+  return function (dispatch) {
+    return _util_purchase_api_util__WEBPACK_IMPORTED_MODULE_0__.deletePurchase(purchaseId).then(function (purchase) {
+      return dispatch(removePurchase(purchase.id));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/review_actions.js":
 /*!********************************************!*\
   !*** ./frontend/actions/review_actions.js ***!
@@ -16038,13 +16120,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _carts_reducer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./carts_reducer */ "./frontend/reducers/carts_reducer.js");
 /* harmony import */ var _items_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./items_reducer */ "./frontend/reducers/items_reducer.js");
 /* harmony import */ var _item_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./item_reducer */ "./frontend/reducers/item_reducer.js");
 /* harmony import */ var _profiles_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./profiles_reducer */ "./frontend/reducers/profiles_reducer.js");
-/* harmony import */ var _reviews_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./reviews_reducer */ "./frontend/reducers/reviews_reducer.js");
-/* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
+/* harmony import */ var _purchases_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./purchases_reducer */ "./frontend/reducers/purchases_reducer.js");
+/* harmony import */ var _reviews_reducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./reviews_reducer */ "./frontend/reducers/reviews_reducer.js");
+/* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
 
 
 
@@ -16052,13 +16135,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var entitiesReducer = (0,redux__WEBPACK_IMPORTED_MODULE_6__.combineReducers)({
-  users: _users_reducer__WEBPACK_IMPORTED_MODULE_5__.default,
+
+var entitiesReducer = (0,redux__WEBPACK_IMPORTED_MODULE_7__.combineReducers)({
+  users: _users_reducer__WEBPACK_IMPORTED_MODULE_6__.default,
   items: _items_reducer__WEBPACK_IMPORTED_MODULE_1__.default,
   item: _item_reducer__WEBPACK_IMPORTED_MODULE_2__.default,
   carts: _carts_reducer__WEBPACK_IMPORTED_MODULE_0__.default,
-  reviews: _reviews_reducer__WEBPACK_IMPORTED_MODULE_4__.default,
-  profiles: _profiles_reducer__WEBPACK_IMPORTED_MODULE_3__.default
+  reviews: _reviews_reducer__WEBPACK_IMPORTED_MODULE_5__.default,
+  profiles: _profiles_reducer__WEBPACK_IMPORTED_MODULE_3__.default,
+  purchases: _purchases_reducer__WEBPACK_IMPORTED_MODULE_4__.default
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (entitiesReducer);
 
@@ -16137,9 +16222,9 @@ __webpack_require__.r(__webpack_exports__);
 var itemsReducer = function itemsReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+  var nextState = Object.assign({}, state);
 
-  // Object.freeze(state)
-  // const nextState = Object.assign({}, state)
   switch (action.type) {
     case _actions_item_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_ITEMS:
       return action.items;
@@ -16191,6 +16276,47 @@ var profilesReducer = function profilesReducer() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (profilesReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/purchases_reducer.js":
+/*!************************************************!*\
+  !*** ./frontend/reducers/purchases_reducer.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _actions_purchase_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/purchase_actions */ "./frontend/actions/purchase_actions.js");
+
+
+var purchasesReducer = function purchasesReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+  var nextState = Object.assign({}, state);
+
+  switch (action.type) {
+    case _actions_purchase_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_PURCHASE:
+      nextState[action.purchase.id] = action.purchase;
+      return nextState;
+
+    case _actions_purchase_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_PURCHASES:
+      return action.purchases;
+
+    case _actions_purchase_actions__WEBPACK_IMPORTED_MODULE_0__.REMOVE_PURCHASE:
+      delete nextState[action.purchaseId];
+      return nextState;
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (purchasesReducer);
 
 /***/ }),
 
@@ -16396,7 +16522,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var configureStore = function configureStore() {
   var preloadedState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  return (0,redux__WEBPACK_IMPORTED_MODULE_3__.createStore)(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_2__.default, preloadedState, (0,redux__WEBPACK_IMPORTED_MODULE_3__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_1__.default));
+  return (0,redux__WEBPACK_IMPORTED_MODULE_3__.createStore)(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_2__.default, preloadedState, (0,redux__WEBPACK_IMPORTED_MODULE_3__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_1__.default, (redux_logger__WEBPACK_IMPORTED_MODULE_0___default())));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (configureStore);
@@ -16533,6 +16659,60 @@ var deleteProfile = function deleteProfile(profileId) {
   return $.ajax({
     method: "DELETE",
     url: "api/profiles/".concat(profileId)
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/util/purchase_api_util.js":
+/*!********************************************!*\
+  !*** ./frontend/util/purchase_api_util.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createPurchase": () => (/* binding */ createPurchase),
+/* harmony export */   "fetchPurchase": () => (/* binding */ fetchPurchase),
+/* harmony export */   "fetchPurchases": () => (/* binding */ fetchPurchases),
+/* harmony export */   "updatePurchase": () => (/* binding */ updatePurchase),
+/* harmony export */   "deletePurchase": () => (/* binding */ deletePurchase)
+/* harmony export */ });
+var createPurchase = function createPurchase(purchase) {
+  return $.ajax({
+    method: 'POST',
+    url: "/api/purchases",
+    data: {
+      purchase: purchase
+    }
+  });
+};
+var fetchPurchase = function fetchPurchase(purchaseId) {
+  return $.ajax({
+    method: 'GET',
+    url: "/api/purchases/".concat(purchaseId)
+  });
+};
+var fetchPurchases = function fetchPurchases() {
+  return $.ajax({
+    method: 'GET',
+    url: "api/purchases"
+  });
+};
+var updatePurchase = function updatePurchase(purchase) {
+  return $.ajax({
+    method: 'PATCH',
+    url: "api/purchases/".concat(purchase.id),
+    data: {
+      purchase: purchase
+    }
+  });
+};
+var deletePurchase = function deletePurchase(purchaseId) {
+  return $.ajax({
+    method: 'DELETE',
+    url: "api/purchases/".concat(purchaseId)
   });
 };
 
