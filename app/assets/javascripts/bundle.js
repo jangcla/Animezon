@@ -14526,7 +14526,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+
 
 
 
@@ -14536,16 +14538,41 @@ var PurchasePreview = function PurchasePreview(_ref) {
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useHistory)();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "purchase-item-preview-cont"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Delivery date: The 32nd of the month"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    id: "green-prev-title"
+  }, "Delivery date: The 32nd of the month", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
+    id: "dark-gray-prev-title"
+  }, "Item shipped from Animezon.com")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "purchase-item-info"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "/items/".concat(item.item_id)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: item.photoUrl,
     id: "purchase-item-img"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "purch-info-cont"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "purchase-inner-info"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     id: "purchase-item-title"
-  }, item.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "$", item.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Qty: ", item.quantity))));
+  }, item.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    id: "purchase-item-price"
+  }, "$", item.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    id: "purchase-free-return"
+  }, "FREE Returns"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    id: "quantity-purchse-item"
+  }, "Qty: ", item.quantity)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "purchase-delivery-info"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    id: "purchase-delivery-p"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
+    id: "big-purch-delivery"
+  }, "Animezon Prime Delivery"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
+    id: "small-purch-delivery"
+  }, "Comming by 32nd of month")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://github.com/jangcla/Animezon/blob/main/photos/prime-box.jpg?raw=true",
+    id: "prev-purch-img"
+  })))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PurchasePreview);
@@ -14633,14 +14660,26 @@ var PurchasePage = /*#__PURE__*/function (_React$Component) {
         id: "purchase-confirm-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "purchase-main-div"
-      }, console.log(this.props.myItems), this.props.myItems.map(function (myItem) {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "purchase-main-left"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "purchase-address-container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Shipping Address"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "purchase-adress"
+      }, this.props.userName, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "1801 ANGELO DR", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "BEVERLY HILLS, CA 90210")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "divider-purchase"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "review-items-to-purchase"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Review Items"), this.props.myItems.map(function (myItem) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_purchasePreview__WEBPACK_IMPORTED_MODULE_2__.default, {
           item: myItem,
           key: myItem.id
         });
-      }), "Are you sure you want to buy these? Is your wallet full of money?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "purchases-main-right"
+      }, "Are you sure you want to buy these? Is your wallet full of money?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         onClick: this.purchaseAllItems
-      }, "Buy it all!!!!")));
+      }, "Buy it all!!!!"))));
     }
   }]);
 
@@ -14683,11 +14722,14 @@ var mSTP = function mSTP(state) {
     return cartItem.user_id === state.session.id;
   });
   var personal = myProfile[0];
+  var currentUser = state.entities.users[state.session.id];
+  var urserName = currentUser.email.split('@')[0];
   return {
-    currentUser: state.entities.users[state.session.id],
+    currentUser: currentUser,
     userId: state.session.id,
     personal: personal,
-    myItems: myItems
+    myItems: myItems,
+    urserName: urserName
   };
 };
 

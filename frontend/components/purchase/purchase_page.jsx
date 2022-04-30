@@ -32,15 +32,39 @@ class PurchasePage extends React.Component {
         <div id="purchase-confirm-container">
             <Navbar />
             <div id="purchase-main-div">
-                {console.log(this.props.myItems)}
-                {
-                    this.props.myItems.map(myItem => < PurchasePreview item={myItem} key={myItem.id}/> )
-                }
+                <div id="purchase-main-left">
+                    <div id="purchase-address-container">
+                        <big>
+                            Shipping Address
+                        </big>
 
-                Are you sure you want to buy these? Is your wallet full of money?
-                <button onClick={this.purchaseAllItems}>
-                    Buy it all!!!!
-                </button>
+                        <div id="purchase-adress">
+                            {this.props.userName}
+                            <br />
+                            1801 ANGELO DR 
+                            <br />
+                            BEVERLY HILLS, CA 90210
+                        </div>
+                    </div>
+
+                    <div id="divider-purchase" />
+
+                    <div id="review-items-to-purchase">
+                        <h3>
+                            Review Items
+                        </h3>
+                        {
+                            this.props.myItems.map(myItem => < PurchasePreview item={myItem} key={myItem.id}/> )
+                        }
+                    </div>
+                </div>
+
+                <div id="purchases-main-right">
+                    Are you sure you want to buy these? Is your wallet full of money?
+                    <button onClick={this.purchaseAllItems}>
+                        Buy it all!!!!
+                    </button>
+                </div>
             </div>
         </div>
         )

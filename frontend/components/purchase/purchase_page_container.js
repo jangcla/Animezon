@@ -14,11 +14,16 @@ const mSTP = state => {
 
     let personal = myProfile[0];
 
+    let currentUser = state.entities.users[state.session.id];
+
+    let urserName = currentUser.email.split('@')[0];
+
     return {
-        currentUser: state.entities.users[state.session.id],
+        currentUser: currentUser,
         userId: state.session.id,
         personal: personal,
         myItems: myItems,
+        urserName: urserName
     }
 }
 
