@@ -40,6 +40,8 @@ class CreateCartItem extends React.Component {
 
             this.props.createCart(cartItem)
                 .then(() => this.props.history.push('/added'))
+        } else {
+            this.props.history.push('/login')
         }
        
     }

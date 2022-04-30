@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
 import Navbar from "../nav/navbar";
+import PurchasePreview from "./purchasePreview";
 
 class PurchasePage extends React.Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class PurchasePage extends React.Component {
         this.props.myItems.forEach(item => {
             const purchase = {
                 user_id: this.props.userId,
-                item_id: item.id
+                item_id: item.item_id
             }
 
             this.props.createPurchase(purchase);
@@ -28,12 +29,19 @@ class PurchasePage extends React.Component {
 
     render() {
         return (
-        <div>
+        <div id="purchase-confirm-container">
             <Navbar />
-            Are you sure you want to buy these? Is your wallet full of money?
-            <button onClick={this.purchaseAllItems}>
-                Buy it all!!!!
-            </button>
+            <div id="purchase-main-div">
+                {console.log(this.props.myItems)}
+                {
+                    this.props.myItems.map(myItem => < PurchasePreview item={myItem} key={myItem.id}/> )
+                }
+
+                Are you sure you want to buy these? Is your wallet full of money?
+                <button onClick={this.purchaseAllItems}>
+                    Buy it all!!!!
+                </button>
+            </div>
         </div>
         )
     }

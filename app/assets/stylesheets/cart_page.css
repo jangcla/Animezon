@@ -15,7 +15,7 @@
 }
 #cart-right-div{
     background: #eaeded;
-    width: 16%;
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -36,7 +36,7 @@
 #cart-ad-holder{
     display: flex;
     justify-content: center;
-    height: 130px;
+    height: 145px;
 }
 
 #cart-ad{
