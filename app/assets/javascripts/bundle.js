@@ -11734,7 +11734,7 @@ var Cart = /*#__PURE__*/function (_React$Component) {
       }, "$", this.props.sumTotal.toFixed(2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "buy-for-yourself"
       }, "\uD83D\uDCE6 This order is a gift for yourself"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-        to: "/error/underdevelopment",
+        to: "/confirm/purchase",
         id: "proceed-to-checkout-button"
       }, "Proceed to checkout")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "cart-reccs"
@@ -14562,13 +14562,13 @@ var PurchasePage = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, PurchasePage);
 
     _this = _super.call(this, props);
-    _this.deleteAllItems = _this.deleteAllItems.bind(_assertThisInitialized(_this));
+    _this.purchaseAllItems = _this.purchaseAllItems.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(PurchasePage, [{
-    key: "deleteAllItems",
-    value: function deleteAllItems(e) {
+    key: "purchaseAllItems",
+    value: function purchaseAllItems(e) {
       var _this2 = this;
 
       e.preventDefault();
@@ -14582,12 +14582,13 @@ var PurchasePage = /*#__PURE__*/function (_React$Component) {
 
         _this2.props.deleteCart(item.id);
       });
+      this.props.history.push('/profile/personal');
     }
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Are you sure you want to buy these? Is your wallet full of money?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-        onClick: this.deleteAllItems
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), "Are you sure you want to buy these? Is your wallet full of money?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        onClick: this.purchaseAllItems
       }, "Buy it all!!!!"));
     }
   }]);

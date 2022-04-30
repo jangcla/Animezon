@@ -71,6 +71,7 @@
 
 #buy-now {
     background: rgb(255,164,27);
+    transition: .2s;
 }
 #buy-now:hover {
     background: rgb(255, 145, 27);
@@ -110,6 +111,7 @@
 #li {
     color: rgb(1,113,133);
     text-decoration: none;
+    transition: .2s;
 }
 
 #li:hover {

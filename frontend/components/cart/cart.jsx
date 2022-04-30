@@ -52,7 +52,7 @@ class Cart extends React.Component {
 
                                 <p id='buy-for-yourself'>📦 This order is a gift for yourself</p>
 
-                                <Link to='/error/underdevelopment' id='proceed-to-checkout-button'>Proceed to checkout</Link>
+                                <Link to='/confirm/purchase' id='proceed-to-checkout-button'>Proceed to checkout</Link>
                         </div>
 
                         <div id='cart-reccs'>
