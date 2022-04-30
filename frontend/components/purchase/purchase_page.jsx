@@ -9,9 +9,16 @@ class PurchasePage extends React.Component {
         this.deleteAllItems = this.deleteAllItems.bind(this);
     }
 
+
     deleteAllItems(e) {
         e.preventDefault();
         this.props.myItems.forEach(item => {
+            const purchase = {
+                user_id: this.props.userId,
+                item_id: item.id
+            }
+
+            this.props.createPurchase(purchase)
             this.props.deleteCart(item.id);
         });
     }

@@ -14573,6 +14573,13 @@ var PurchasePage = /*#__PURE__*/function (_React$Component) {
 
       e.preventDefault();
       this.props.myItems.forEach(function (item) {
+        var purchase = {
+          user_id: _this2.props.userId,
+          item_id: item.id
+        };
+
+        _this2.props.createPurchase(purchase);
+
         _this2.props.deleteCart(item.id);
       });
     }
