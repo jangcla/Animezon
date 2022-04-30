@@ -14,6 +14,14 @@
     width: 64.5%;
 }
 
+#capitalize {
+    text-transform: capitalize;
+}
+
+#margin-none {
+    margin: 0;
+}
+
 #purchase-main-left {
     width: 70%;
     display: flex;
@@ -24,9 +32,12 @@
 
 #purchase-address-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: 830px;
     gap: 75px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    align-content: center;
 }
 
 #green-prev-title {
@@ -60,6 +71,7 @@
     border-radius: 10px;
     width: 790px;
     padding: 20px;
+    margin-bottom: 15px;
 }
 
 #purchase-item-img {

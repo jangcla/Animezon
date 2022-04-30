@@ -12,18 +12,28 @@ const mSTP = state => {
     const cartItems = Object.values(state.entities.carts);
     let myItems = cartItems.filter(cartItem => cartItem.user_id === state.session.id);
 
+    let totalSum = 0;
+    myItems.forEach(item => {
+        let sum = item.price * item.quantity
+
+        totalSum += sum;
+    })
+    totalSum = totalSum.toFixed(2);
+
     let personal = myProfile[0];
 
     let currentUser = state.entities.users[state.session.id];
-
-    let urserName = currentUser.email.split('@')[0];
+    
+    let userName = currentUser.email.split('@')[0];
+    console.log(totalSum)
 
     return {
         currentUser: currentUser,
         userId: state.session.id,
         personal: personal,
         myItems: myItems,
-        urserName: urserName
+        userName: userName,
+        totalSum: totalSum
     }
 }
 
