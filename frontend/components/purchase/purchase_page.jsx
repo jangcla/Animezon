@@ -32,14 +32,16 @@ class PurchasePage extends React.Component {
         <div id="purchase-confirm-container">
             {/* <Navbar /> */}
             <div id="purchase-navbar">
-                <Link to="/"> Animezon</Link>
+                <Link to="/">
+                    <img id="checkout-logo" src="https://raw.githubusercontent.com/jangcla/Animezon/cartComp/photos/login-smile.png" />
+                </Link>
 
                 <big>
                     Checkout ( <Link to="/cart" id="blue-link">{this.props.myItems.length} items </Link> )
                 </big>  
 
                 <big>
-                    🔒
+                    <img id="checkout-lock-logo" src="https://cdn.pixabay.com/photo/2014/04/02/17/03/safety-307803_960_720.png" />  
                 </big>
             </div>
             <div id="purchase-main-div">

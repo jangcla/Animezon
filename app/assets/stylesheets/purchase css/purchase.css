@@ -1,11 +1,20 @@
 #purchase-navbar {
     display: flex;
-    gap: 35%;
-    justify-content: center;
+    gap: 30%;
     border-bottom: solid #d4d4d4;
     height: 65px;
     align-items: center;
     background: linear-gradient(180deg, #ffffff, #fffefe, #e4e4e4);
+    overflow: hidden;
+    padding-left: 5%;
+}
+
+#checkout-logo {
+    width: 185px;
+    margin-top: 28px;
+}
+#checkout-lock-logo {
+    width: 23px;
 }
 
 #purchase-main-div {

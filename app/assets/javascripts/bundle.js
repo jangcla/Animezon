@@ -14699,10 +14699,16 @@ var PurchasePage = /*#__PURE__*/function (_React$Component) {
         id: "purchase-navbar"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
         to: "/"
-      }, " Animezon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Checkout ( ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        id: "checkout-logo",
+        src: "https://raw.githubusercontent.com/jangcla/Animezon/cartComp/photos/login-smile.png"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Checkout ( ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
         to: "/cart",
         id: "blue-link"
-      }, this.props.myItems.length, " items "), " )"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "\uD83D\uDD12")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, this.props.myItems.length, " items "), " )"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        id: "checkout-lock-logo",
+        src: "https://cdn.pixabay.com/photo/2014/04/02/17/03/safety-307803_960_720.png"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "purchase-main-div"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "purchase-main-left"
