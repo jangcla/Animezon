@@ -185,7 +185,7 @@
     height: 35px;
     border: none;
     border-radius: 5px;
-    background: linear-gradient(180deg, rgb(252 213 55), #ffd814);
+    background: linear-gradient(180deg, rgb(252, 213, 55), #ffd814);
 }
 
 #order-summary-info {
