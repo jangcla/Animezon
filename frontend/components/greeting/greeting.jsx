@@ -62,17 +62,30 @@ const Greeting = ({currentUser, itemTotal, logout, fetchReviews}) => {
     );
     const personalGreeting = () => (
         <hgroup className="header-group"> 
-            <Link to='/profile/personal' id='nav-to-profile'>
-                View Profile
+            <Link to='/error/underdevelopment' id='nav-to-profile'>
+                About Project
             </Link>
 
             <div id='greeting'>
-                <div className="header-button" onClick={loggingOut} id='log-out'>
+                <div className="header-button" onClick={dropDown} id='log-out'>
                     <small id='uppercase'>Hello, {currentUser.email.split('@')[0]}</small>
                     <br />
                     <big id='acc-lists'>Account & Lists</big>
                 </div>
             </div>
+
+            {
+                dropdown === true ?
+                    <div id='nav-dropdown'>
+                        <Link to='/profile/personal' id='hover-signin-btn'>
+                            View Profile
+                        </Link>
+
+                        <small to='/signup' id='blue-link' onClick={loggingOut}>Log Out</small>
+                    </div>
+                    :
+                    null
+            }
             
             <Link to='/cart' id="cart-link">
                 <div id='cart-div-icon'>

@@ -12450,19 +12450,28 @@ var Greeting = function Greeting(_ref) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hgroup", {
       className: "header-group"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-      to: "/profile/personal",
+      to: "/error/underdevelopment",
       id: "nav-to-profile"
-    }, "View Profile"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    }, "About Project"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       id: "greeting"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "header-button",
-      onClick: loggingOut,
+      onClick: dropDown,
       id: "log-out"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
       id: "uppercase"
     }, "Hello, ", currentUser.email.split('@')[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", {
       id: "acc-lists"
-    }, "Account & Lists"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    }, "Account & Lists"))), dropdown === true ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      id: "nav-dropdown"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+      to: "/profile/personal",
+      id: "hover-signin-btn"
+    }, "View Profile"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", {
+      to: "/signup",
+      id: "blue-link",
+      onClick: loggingOut
+    }, "Log Out")) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
       to: "/cart",
       id: "cart-link"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
