@@ -248,3 +248,34 @@ option {
     align-content: center;
     height: 40px;
 }
+
+#nav-dropdown {
+    position: absolute;
+    margin-top: 62px;
+    margin-left: 40px;
+    z-index: 2;
+    width: 275px;
+    height: 115px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    flex-direction: column;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+#hover-signin-btn {
+    padding: 11px 80px 11px 80px;
+    background: linear-gradient(180deg, #f3e0af, #f1b51c);
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+#blue-link {
+    text-decoration: none;
+    color: #007185;
+}

@@ -2,15 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { login } from '../../actions/session_actions';
 import { useHistory } from 'react-router-dom';
+import { useState } from 'react';
 
 
 const Greeting = ({currentUser, itemTotal, logout, fetchReviews}) => {
+    const [dropdown, setDropdown] = useState(false);
     const history = useHistory();
 
     function loggingOut(e) {
         e.preventDefault();
         history.push({ pathname: `/`});
         logout();
+    };
+
+    const dropDown = (e) => {
+        e.preventDefault();
+        setDropdown(!dropdown);
     };
 
     const sessionLinks = () => (
@@ -21,13 +28,27 @@ const Greeting = ({currentUser, itemTotal, logout, fetchReviews}) => {
                 About Project
             </Link>
 
-            <div id="greeting">
-                <Link to='/signup' className="sign-in">
+            <div id="greeting" onClick={dropDown}>
+                <div className="sign-in">
                     <small id='uppercase'>Hello, Sign in</small>
                     <br />
                     <big id='acc-lists'>Account & Lists</big>
-                </Link>
+                </div>
             </div>
+
+            {
+                dropdown === true ? 
+                    <div id='nav-dropdown'>
+                        <Link to='/login' id='hover-signin-btn'>
+                            Sign In
+                        </Link>
+                        <small>
+                            New to Animezon? <Link to='/signup' id='blue-link'>Start here</Link>
+                        </small>
+                    </div>
+                :
+                    null
+            }
             
             <Link to='/login' id="cart-link">
                 <div >
