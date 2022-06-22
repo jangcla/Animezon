@@ -251,8 +251,8 @@ option {
 
 #nav-dropdown {
     position: absolute;
-    margin-top: 62px;
-    margin-left: 40px;
+    margin-top: 63px;
+    margin-left: -170px;
     z-index: 2;
     width: 275px;
     height: 115px;
@@ -264,6 +264,8 @@ option {
     flex-direction: column;
     border-radius: 5px;
     gap: 10px;
+    /* box-shadow: 5px 6px 10px 0px #c3c3c3; */
+    border: solid #d8d8d8;
 }
 
 #hover-signin-btn {

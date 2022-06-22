@@ -24,9 +24,9 @@ const Greeting = ({currentUser, itemTotal, logout, fetchReviews}) => {
         <nav className = 'header-group'>
             {/* <button><Link to = '/login' id='auth-link'>Login</Link></button>
             &nbsp;or&nbsp; */}
-            <Link to='/error/underdevelopment' id='nav-to-profile'>
+            {/* <Link to='/error/underdevelopment' id='nav-to-profile'>
                 About Project
-            </Link>
+            </Link> */}
 
             <div id="greeting" onClick={dropDown}>
                 <div className="sign-in">
@@ -62,9 +62,9 @@ const Greeting = ({currentUser, itemTotal, logout, fetchReviews}) => {
     );
     const personalGreeting = () => (
         <hgroup className="header-group"> 
-            <Link to='/error/underdevelopment' id='nav-to-profile'>
+            {/* <Link to='/error/underdevelopment' id='nav-to-profile'>
                 About Project
-            </Link>
+            </Link> */}
 
             <div id='greeting'>
                 <div className="header-button" onClick={dropDown} id='log-out'>
@@ -80,8 +80,9 @@ const Greeting = ({currentUser, itemTotal, logout, fetchReviews}) => {
                         <Link to='/profile/personal' id='hover-signin-btn'>
                             View Profile
                         </Link>
-
-                        <small to='/signup' id='blue-link' onClick={loggingOut}>Log Out</small>
+                        <small>
+                            <Link id='blue-link' onClick={loggingOut}>Log Out</Link>
+                        </small>
                     </div>
                     :
                     null

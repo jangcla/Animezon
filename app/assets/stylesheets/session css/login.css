@@ -107,8 +107,8 @@
 
 .header-group{
   display: flex;
-  width: 31%;
-  justify-content: space-between;
+  width: 25%;
+  justify-content: space-around;
 }
 
 #sign-in-change{

@@ -44,7 +44,7 @@ const PurchasePreview = ({item}) => {
                     <div id="purchase-delivery-info">
                         <p id='purchase-delivery-p'>
                             <big id="big-purch-delivery">
-                                Animezon Prime Delivery
+                                Animezon Prime Delivery Guarantee
                             </big>
                             <br />
                             <small id='small-purch-delivery'> 
@@ -54,6 +54,9 @@ const PurchasePreview = ({item}) => {
 
                         <img src="https://github.com/jangcla/Animezon/blob/main/photos/prime-box.jpg?raw=true" id="prev-purch-img"/>
                         
+                        <small id="fewer-packages">
+                            Get your packages in fewer boxes with the use of Animezon prime delivery. 
+                        </small>
                     </div>
                 </div>
 

@@ -30,7 +30,18 @@ class PurchasePage extends React.Component {
     render() {
         return (
         <div id="purchase-confirm-container">
-            <Navbar />
+            {/* <Navbar /> */}
+            <div id="purchase-navbar">
+                <Link to="/"> Animezon</Link>
+
+                <big>
+                    Checkout ( <Link to="/cart" id="blue-link">{this.props.myItems.length} items </Link> )
+                </big>  
+
+                <big>
+                    🔒
+                </big>
+            </div>
             <div id="purchase-main-div">
                 <div id="purchase-main-left">
                     <div id="purchase-address-container">
@@ -101,15 +112,19 @@ class PurchasePage extends React.Component {
 
                 <div id="purchases-main-right">
                     <div id="place-your-order">
-                        <button onClick={this.purchaseAllItems}>
-                            Buy it all!!!!
+                        <button onClick={this.purchaseAllItems} id="order-btn-to-buy">
+                            Place your order
                         </button>
+
+                        <small id="purchase-agreement-text">
+                            By placing your order, you agree to Animezon's privacy notice and conditions of use.
+                        </small>
 
                         <div id="divider" />
 
-                        <h2>
+                        <h3>
                             Order Summary
-                        </h2>
+                        </h3>
 
                         <div id="order-summary-info">
                             <div id="order-sum-info">
@@ -136,7 +151,7 @@ class PurchasePage extends React.Component {
                                     -$3.50
                                 </small>
                             </div>
-                            <div id="divider" />
+                            <div id="place-order-divider" />
                             <div id="order-sum-info">
                                 <small>
                                     Total before tax:
@@ -156,18 +171,33 @@ class PurchasePage extends React.Component {
                             <div id="divider" />
 
                             <div id="order-total-red">
-                                <h2>
+                                <h3 id="red-total-text">
                                     Order total:
-                                </h2>
+                                </h3>
 
-                                <h2>
+                                <h3 id="red-total-text">
                                     ${this.props.totalSum}
-                                </h2>
+                                </h3>
                             </div>
                         </div>
 
                     </div>
-                    Are you sure you want to buy these? Is your wallet full of money?
+
+                    <div id="place-your-order-subtext">
+                        <small>
+                            Qualifying offers:
+                            <br />
+                            • Your Coupon Savings
+                        </small>
+
+                        <small>
+                            A moment of silence to your wallet.
+                        </small>
+
+                        <small>
+                            Animezon Prime shipping benefits have been applied to your order.
+                        </small>
+                    </div>
                 </div>
             </div>
         </div>
