@@ -44,6 +44,7 @@
    background: linear-gradient(180deg, #f3e0af, #f1b51c);
    border-radius: 5px;
    border-color: rgb(248, 207, 159);
+   transition: .2s;
   }
   .session-submit1 {
    margin-left: 9px;
@@ -52,6 +53,7 @@
    background: linear-gradient(180deg, #afd6f3, #1ca6f1);
    border-radius: 5px;
    border-color: #1ca6f165;
+   transition: .2s;
   }
     
   .session-submit:hover {
@@ -105,8 +107,8 @@
 
 .header-group{
   display: flex;
-  width: 31%;
-  justify-content: space-between;
+  width: 25%;
+  justify-content: space-around;
 }
 
 #sign-in-change{

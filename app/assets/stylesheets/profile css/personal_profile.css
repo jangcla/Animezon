@@ -60,6 +60,7 @@
     border: solid #ffd814;
     background: #ffd814;
     box-shadow: 1px 4px 8px 0px #ede4e4;
+    transition: 0.1s;
 }
 #editing-profile-button:hover {
     border-radius: 7px;
@@ -68,7 +69,6 @@
     border: solid transparent;
     background: #f1b51c;
     box-shadow: 1px 4px 8px 0px #ede4e4;
-    transition: 0.1s;
 }
 
 #profile-body-split {

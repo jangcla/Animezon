@@ -182,10 +182,10 @@
 
 #slide-photo{
     position: relative;
+    transition: 1s;
 }
 
 #slide-photo:hover{
-   transition: 1s;
    opacity: 0;
 }
 
@@ -194,9 +194,9 @@
     background: url(https://github.com/jangcla/Animezon/blob/search/photos/animezon-splash-banner.png?raw=true);
     background-size: 100% 100%;
     margin-top: -1px;
+    transition: 2s;
 }
 
 #slide-photo1:hover{
-    transition: 2s;
     opacity: 0;
 }

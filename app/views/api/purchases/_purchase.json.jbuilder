@@ -1,0 +1,1 @@
+json.extract! purchase, :id, :user_id, :item_id, :created_at

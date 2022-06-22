@@ -24,7 +24,8 @@ html, body{
     text-decoration: none;
     outline: none;
     font: caption;
-    /* overflow-y: scroll; */
+    display: flex;
+    justify-content: center;
 }
 body{
     overflow-x: hidden;
@@ -47,4 +48,9 @@ body{
     margin-top: 30px;
     display: flex;
     justify-content: center;
+ }
+
+ #root {
+    max-width: 1660px;
+    min-width: 1440px;
  }

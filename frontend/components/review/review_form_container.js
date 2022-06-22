@@ -8,7 +8,7 @@ import ReviewForm from './review_form';
 
 const mSTP = state => {
     const profilesAll = Object.values(state.entities.profiles);
-    let myProfile = profilesAll.filter(profile => profile.user_id === state.session.id)
+    let myProfile = profilesAll.filter(profile => profile.user_id === state.session.id);
 
     let personal = myProfile[0]
     return {
