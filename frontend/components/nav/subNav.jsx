@@ -8,31 +8,29 @@ const SubNav = () => {
         window.scrollTo({
             top: document.documentElement.scrollHeight,
             behavior: 'auto'
-            /* you can also use 'auto' behaviour 
-               in place of 'smooth' */
         });
     }; 
 
     return (
-        <div>
-            <div id="search-link">
-                <Link to={'/search/ '}>
-                    All
+        <div id="sub-nav-bar">
+            <div id="search-link-to-main-items">
+                <Link to={'/search/ '} id='subnav-links'>
+                    <img src="https://icon-library.com/images/menu-icon-white/menu-icon-white-2.jpg" id="nav-logo-all"/> All
                 </Link>
-                <Link to={'/search/anime'}>
+                <Link to={'/search/anime'} id='subnav-links'>
                     Animes
                 </Link>
-                <Link to={'search/manga'}>
+                <Link to={'/search/manga'} id='subnav-links'>
                     Mangas
                 </Link>
-                <Link to={'search/merch'}>
+                <Link to={'/search/merch'} id='subnav-links'>
                     Merchendise
                 </Link>
             </div>
             
-            <button onClick={scrollToBottom}>
+            <div onClick={scrollToBottom} id="to-bottom-footer">
                 Learn more about Animezon 
-            </button>
+            </div>
         </div>
     )
 };

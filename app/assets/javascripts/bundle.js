@@ -13720,24 +13720,31 @@ var SubNav = function SubNav() {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
       behavior: 'auto'
-      /* you can also use 'auto' behaviour 
-         in place of 'smooth' */
-
     });
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    id: "search-link"
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "sub-nav-bar"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "search-link-to-main-items"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    to: '/search/ '
-  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    to: '/search/anime'
+    to: '/search/ ',
+    id: "subnav-links"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://icon-library.com/images/menu-icon-white/menu-icon-white-2.jpg",
+    id: "nav-logo-all"
+  }), " All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: '/search/anime',
+    id: "subnav-links"
   }, "Animes"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    to: 'search/manga'
+    to: '/search/manga',
+    id: "subnav-links"
   }, "Mangas"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    to: 'search/merch'
-  }, "Merchendise")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    onClick: scrollToBottom
+    to: '/search/merch',
+    id: "subnav-links"
+  }, "Merchendise")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    onClick: scrollToBottom,
+    id: "to-bottom-footer"
   }, "Learn more about Animezon"));
 };
 
