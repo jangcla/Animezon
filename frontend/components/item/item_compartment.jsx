@@ -36,6 +36,9 @@ class ItemCompartment extends React.Component {
                             }
                         </div>
                     </div>
+                    <div id="main-compartment">
+                        
+                    </div>
                 </div>
             )
             :

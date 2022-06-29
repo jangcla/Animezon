@@ -12773,7 +12773,9 @@ var ItemCompartment = /*#__PURE__*/function (_React$Component) {
           item: item,
           key: item.id
         });
-      })))) : null;
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "main-compartment"
+      })) : null;
     }
   }]);
 
@@ -12816,7 +12818,7 @@ var mSTP = function mSTP(state) {
   var randomAnime = [];
 
   if (anime.length !== 0) {
-    while (randomAnime.length < 6) {
+    while (randomAnime.length < 4) {
       var num = Math.floor(Math.random() * anime.length);
       var random = anime[num];
 
@@ -12829,7 +12831,7 @@ var mSTP = function mSTP(state) {
   var randomManga = [];
 
   if (manga.length !== 0) {
-    while (randomManga.length < 6) {
+    while (randomManga.length < 4) {
       var _num = Math.floor(Math.random() * manga.length);
 
       var _random = manga[_num];
@@ -12843,7 +12845,7 @@ var mSTP = function mSTP(state) {
   var randomMerch = [];
 
   if (merch.length !== 0) {
-    while (randomMerch.length < 6) {
+    while (randomMerch.length < 4) {
       var _num2 = Math.floor(Math.random() * merch.length);
 
       var _random2 = merch[_num2];

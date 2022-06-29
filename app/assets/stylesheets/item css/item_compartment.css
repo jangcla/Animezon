@@ -5,13 +5,13 @@
 
 }
 
-
 #main-compartment {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     background: white;
-    width: 32%;
+    width: 23%;
+    height: 78%;
 }
 
 #comp-categorry {
@@ -29,16 +29,17 @@
 }
 
 #indext-item {
-    width: 26%;
+    width: 40%;
     height: 50%;
     padding: 2.5%;
 }
 
 #home-within {
     position: relative;
-    margin-top: -11%;
+    margin-top: -33%;
 }
 
 #comp-index-title {
     margin-left: 3%;
+    margin-top: 10px;
 }
