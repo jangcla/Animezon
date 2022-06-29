@@ -34,8 +34,13 @@
 }
 
 #slide-one{
+    transition: 2s;
+    background: no-repeat;
     background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/you-should-watch.gif?raw=true);
     background-size: 100% 100%;
+    background-size: 36% 36%;
+    background-position-x: 90%;
+    background-color: black;
     /* display: flex;
     justify-content: center;
     align-items: center;
@@ -45,22 +50,40 @@
 .slide-two{
     width: 20%;
     transition: 2s;
+    background: no-repeat;
     background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/one-piece-intro.gif?raw=true);
     background-size: 100% 100%;
+    background-size: 36% 36%;
+    background-position-x: 90%;
+    background-color: #c62421;
 }
 
 .slide-three {
     width: 20%;
     transition: 2s;
+    background: no-repeat;
     background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/hunter-intro.gif?raw=true);
-    background-size: 100% 100%;
+    background-size: 36% 36%;
+    background-position-x: 90%;
+    background-color: #017019;
+    /* width: 20%;
+    transition: 2s;
+    background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/hunter-intro.gif?raw=true);
+    background-size: 100% 100%; */
 }
 
 .slide-four {
     width: 20%;
     transition: 2s;
+    background: no-repeat;
     background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/my-hero-fight-scene.gif?raw=true);
-    background-size: 100% 100%;
+    background-size: 36% 36%;
+    background-position-x: 90%;
+    background-color: #119778;
+    /* width: 20%;
+    transition: 2s;
+    background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/my-hero-fight-scene.gif?raw=true);
+    background-size: 100% 100%; */
 }
 #slide-Link:hover{
     background: red;
@@ -87,18 +110,18 @@
     color: white;
     position: absolute;
     font-size: 36px;
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
-    margin-top: 17%;
+    /* margin-top: 17%; */
     width: 100%;
 }
 #s1t1 {
     color: white;
     position: absolute;
     font-size: 36px;
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
-    margin-top: 17%;
+    /* margin-top: 17%; */
     width: 100%;
 }
 

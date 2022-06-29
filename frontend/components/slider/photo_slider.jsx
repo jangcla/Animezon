@@ -37,19 +37,19 @@ class PhotoSlider extends React.Component {
                                         </Link>
                                     </div>
                                     <div className="slide-two">
-                                        <p id='s1t1'><big> WATCH NOW</big></p>
+                                        <p id='s1t1'><big> One Piece</big></p>
                                         <Link to='/items/1' id='slide-link'>
                                             <img src="https://github.com/jangcla/Animezon/blob/search/profile-banners/op-banner.png?raw=true" id='slide-photo' />
                                         </Link>
                                     </div>
                                     <div className="slide-three">
-                                        <p id='s1t1'><big> WATCH NOW</big></p>
+                                        <p id='s1t1'><big> Hunter x Hunter</big></p>
                                         <Link to='/items/3' id='slide-link'>
                                             <img src="https://github.com/jangcla/Animezon/blob/search/profile-banners/hh-banner.png?raw=true" id='slide-photo' />
                                         </Link>
                                     </div>
                                     <div className="slide-four">
-                                        <p id='s1t1'><big> WATCH NOW</big></p>
+                                        <p id='s1t1'><big> My Hero Academia</big></p>
                                         <Link to='/items/8' id='slide-link'>
                                             <img src="https://github.com/jangcla/Animezon/blob/search/profile-banners/mh-banner.png?raw=true" id='slide-photo' />
                                         </Link>
