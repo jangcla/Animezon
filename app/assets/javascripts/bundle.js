@@ -11537,7 +11537,9 @@ var App = function App() {
     exact: true,
     path: "/",
     component: _home_home_page_container__WEBPACK_IMPORTED_MODULE_3__.default
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", null, "Copy \xA9 Animezon.com 2021-2022"));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", {
+    id: "footer"
+  }, "Copy \xA9 Animezon.com 2021-2022"));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -13617,9 +13619,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../greeting/greeting_container */ "./frontend/components/greeting/greeting_container.js");
 /* harmony import */ var _search_search_bar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../search/search_bar */ "./frontend/components/search/search_bar.jsx");
+/* harmony import */ var _subNav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./subNav */ "./frontend/components/nav/subNav.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13647,6 +13650,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var Navbar = /*#__PURE__*/function (_React$Component) {
   _inherits(Navbar, _React$Component);
 
@@ -13661,11 +13665,11 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
   _createClass(Navbar, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", {
         id: "nav-bar"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "nav-logo"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
         to: "/",
         id: "link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
@@ -13673,7 +13677,7 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
         id: "anime-home"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "location-selecting"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
         to: "/error/underdevelopment",
         id: "loc-li"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
@@ -13683,7 +13687,7 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
         id: "select-address"
       }, "Select your address"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "search-div"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_search_search_bar__WEBPACK_IMPORTED_MODULE_2__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__.default, null));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_search_search_bar__WEBPACK_IMPORTED_MODULE_2__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_subNav__WEBPACK_IMPORTED_MODULE_3__.default, null));
     }
   }]);
 
@@ -13691,6 +13695,53 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navbar);
+
+/***/ }),
+
+/***/ "./frontend/components/nav/subNav.jsx":
+/*!********************************************!*\
+  !*** ./frontend/components/nav/subNav.jsx ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+var SubNav = function SubNav() {
+  var scrollToBottom = function scrollToBottom(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'auto'
+      /* you can also use 'auto' behaviour 
+         in place of 'smooth' */
+
+    });
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "search-link"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: '/search/ '
+  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: '/search/anime'
+  }, "Animes"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: 'search/manga'
+  }, "Mangas"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: 'search/merch'
+  }, "Merchendise")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    onClick: scrollToBottom
+  }, "Learn more about Animezon"));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubNav);
 
 /***/ }),
 
@@ -15476,7 +15527,7 @@ var SearchBar = function SearchBar() {
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useHistory)();
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(function () {
-    return ' ';
+    return '';
   }),
       _useState2 = _slicedToArray(_useState, 2),
       keyword = _useState2[0],
@@ -15484,10 +15535,17 @@ var SearchBar = function SearchBar() {
 
   function handleKeyword(e) {
     e.preventDefault();
-    history.push({
-      pathname: "/search/".concat(keyword),
-      state: keyword
-    });
+
+    if (keyword === '') {
+      history.push({
+        pathname: "/search/ "
+      });
+    } else {
+      history.push({
+        pathname: "/search/".concat(keyword),
+        state: keyword
+      });
+    }
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
@@ -15537,7 +15595,7 @@ var mSTP = function mSTP(state, ownProps) {
   var keywords = ownProps.match.params.keyword;
   var keywordList = keywords.toLowerCase();
   var searchedItem = items.filter(function (item) {
-    return item.name.toLowerCase().includes(keywordList);
+    return item.name.toLowerCase().includes(keywordList) || item.type_tag.toLowerCase().includes(keywordList);
   });
   var allReviews = Object.values(state.entities.reviews); // console.log(searchedAnime);
 

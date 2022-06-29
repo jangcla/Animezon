@@ -35,7 +35,7 @@ const App = () => (
             
         </div>
 
-        <footer>
+        <footer id="footer">
            Copy © Animezon.com 2021-2022
         </footer>
     </div>
