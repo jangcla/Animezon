@@ -37,19 +37,19 @@ class PhotoSlider extends React.Component {
                                         </Link>
                                     </div>
                                     <div className="slide-two">
-                                        <p id='s1t1'><big> One Piece</big></p>
+                                        <p id='s1t1'><img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/one-piece-inner-banner.png?raw=true" id="one-piece-inner-banner" /></p>
                                         <Link to='/items/1' id='slide-link'>
                                             <img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/oneP-banner.png?raw=true" id='slide-photo' />
                                         </Link>
                                     </div>
                                     <div className="slide-three">
-                                        <p id='s1t1'><big> Hunter x Hunter</big></p>
+                                        <p id='s1t1'><img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/hunter-inner-banner.png?raw=true" id="hunter-inner-banner" /></p>
                                         <Link to='/items/3' id='slide-link'>
                                             <img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/hunterx-banner.png?raw=true" id='slide-photo' />
                                         </Link>
                                     </div>
                                     <div className="slide-four">
-                                        <p id='s1t1'><big> My Hero Academia</big></p>
+                                        <p id='s1t1'><img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/myhero-inner-banner.png?raw=true" id="my-hero-inner-banner"/></p>
                                         <Link to='/items/8' id='slide-link'>
                                             <img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/my-her0-banner.png?raw=true" id='slide-photo' />
                                         </Link>
