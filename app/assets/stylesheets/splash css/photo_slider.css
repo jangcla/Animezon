@@ -40,6 +40,7 @@
     background-size: 100% 100%;
     background-size: 36% 36%;
     background-position-x: 90%;
+    background-position-y: 6%;
     background-color: black;
     /* display: flex;
     justify-content: center;
@@ -55,6 +56,7 @@
     background-size: 100% 100%;
     background-size: 36% 36%;
     background-position-x: 90%;
+    background-position-y: 6%;
     background-color: #c62421;
 }
 
@@ -65,6 +67,7 @@
     background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/hunter-intro.gif?raw=true);
     background-size: 36% 36%;
     background-position-x: 90%;
+    background-position-y: 6%;
     background-color: #017019;
     /* width: 20%;
     transition: 2s;
@@ -79,6 +82,7 @@
     background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/my-hero-fight-scene.gif?raw=true);
     background-size: 36% 36%;
     background-position-x: 90%;
+    background-position-y: 6%;
     background-color: #119778;
     /* width: 20%;
     transition: 2s;
