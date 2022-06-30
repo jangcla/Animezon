@@ -16456,7 +16456,7 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
         to: "/items/1",
         id: "slide-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://github.com/jangcla/Animezon/blob/search/profile-banners/op-banner.png?raw=true",
+        src: "https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/oneP-banner.png?raw=true",
         id: "slide-photo"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "slide-three"
@@ -16466,7 +16466,7 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
         to: "/items/3",
         id: "slide-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://github.com/jangcla/Animezon/blob/search/profile-banners/hh-banner.png?raw=true",
+        src: "https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/hunterx-banner.png?raw=true",
         id: "slide-photo"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "slide-four"
@@ -16476,7 +16476,7 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
         to: "/items/8",
         id: "slide-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "https://github.com/jangcla/Animezon/blob/search/profile-banners/mh-banner.png?raw=true",
+        src: "https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/my-her0-banner.png?raw=true",
         id: "slide-photo"
       })))));
     }
