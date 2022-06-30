@@ -36,8 +36,8 @@ class ItemCompartment extends React.Component {
                             }
                         </div>
                     </div>
-                    <div id="main-compartment">
-                        
+                    <div id="ad-compartment-section">
+                        <img src="" alt="" />
                     </div>
                 </div>
             )

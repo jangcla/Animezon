@@ -14,6 +14,11 @@
     height: 78%;
 }
 
+#ad-compartment-section {
+    width: 23%;
+    height: 78%;
+}
+
 #comp-categorry {
     display: flex;
     flex-wrap: wrap;

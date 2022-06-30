@@ -12774,8 +12774,11 @@ var ItemCompartment = /*#__PURE__*/function (_React$Component) {
           key: item.id
         });
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: "main-compartment"
-      })) : null;
+        id: "ad-compartment-section"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "",
+        alt: ""
+      }))) : null;
     }
   }]);
 
