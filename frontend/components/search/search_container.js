@@ -7,10 +7,9 @@ import { fetchReviews } from '../../actions/review_actions';
 const mSTP = (state, ownProps) => {
     const items = Object.values(state.entities.items);
     const keywords = ownProps.match.params.keyword;
-
     const keywordList = keywords.toLowerCase();
 
-    let searchedItem = items.filter(item => item.name.toLowerCase().includes(keywordList));
+    let searchedItem = items.filter(item => item.name.toLowerCase().includes(keywordList) || item.type_tag.toLowerCase().includes(keywordList));
     let allReviews = Object.values(state.entities.reviews);
  
     

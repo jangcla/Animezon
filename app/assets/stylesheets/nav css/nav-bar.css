@@ -21,6 +21,7 @@
     padding: 10px;
     font-size: 14px;
     transition: 1s;
+    cursor: pointer;
 }
 #greeting:hover {
     display: flex;

@@ -34,8 +34,14 @@
 }
 
 #slide-one{
+    transition: 2s;
+    background: no-repeat;
     background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/you-should-watch.gif?raw=true);
     background-size: 100% 100%;
+    background-size: 36% 36%;
+    background-position-x: 90%;
+    background-position-y: 6%;
+    background-color: black;
     /* display: flex;
     justify-content: center;
     align-items: center;
@@ -45,22 +51,43 @@
 .slide-two{
     width: 20%;
     transition: 2s;
+    background: no-repeat;
     background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/one-piece-intro.gif?raw=true);
     background-size: 100% 100%;
+    background-size: 36% 36%;
+    background-position-x: 90%;
+    background-position-y: 6%;
+    background-color: #c62421;
 }
 
 .slide-three {
     width: 20%;
     transition: 2s;
+    background: no-repeat;
     background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/hunter-intro.gif?raw=true);
-    background-size: 100% 100%;
+    background-size: 36% 36%;
+    background-position-x: 90%;
+    background-position-y: 6%;
+    background-color: #017019;
+    /* width: 20%;
+    transition: 2s;
+    background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/hunter-intro.gif?raw=true);
+    background-size: 100% 100%; */
 }
 
 .slide-four {
     width: 20%;
     transition: 2s;
+    background: no-repeat;
     background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/my-hero-fight-scene.gif?raw=true);
-    background-size: 100% 100%;
+    background-size: 36% 36%;
+    background-position-x: 90%;
+    background-position-y: 6%;
+    background-color: #119778;
+    /* width: 20%;
+    transition: 2s;
+    background-image: url(https://github.com/jangcla/Animezon/blob/main/photos/my-hero-fight-scene.gif?raw=true);
+    background-size: 100% 100%; */
 }
 #slide-Link:hover{
     background: red;
@@ -87,18 +114,18 @@
     color: white;
     position: absolute;
     font-size: 36px;
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
-    margin-top: 17%;
+    /* margin-top: 17%; */
     width: 100%;
 }
 #s1t1 {
     color: white;
     position: absolute;
     font-size: 36px;
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
-    margin-top: 17%;
+    /* margin-top: 17%; */
     width: 100%;
 }
 
@@ -199,4 +226,54 @@
 
 #slide-photo1:hover{
     opacity: 0;
+}
+
+#one-piece-inner-banner {
+    width: 27%;
+    margin-left: 17%;
+}
+
+#hunter-inner-banner {
+    width: 30%;
+    margin-left: 15%;
+    margin-top: -1%;
+}
+
+#my-hero-inner-banner {
+    width: 28%;
+    margin-left: 15%;
+}
+
+#slider-buttons-l-r {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+    margin-left: 1px;
+}
+
+#slider-button-to-move-l {
+    margin-left: 7px;
+    border: solid 3px transparent;
+    border-radius: 5px;
+    width: 7%;
+    height: 325px;
+    background: transparent;
+    transition: 500ms;
+}
+#slider-button-to-move-l:hover {
+    border: solid 3px white;
+}
+#slider-button-to-move-r {
+    margin-right: -6px;
+    border: solid 3px transparent;
+    border-radius: 5px;
+    width: 7%;
+    height: 325px;
+    background: transparent;
+    transition: 500ms;
+}
+#slider-button-to-move-r:hover {
+    border: solid 3px white;
 }

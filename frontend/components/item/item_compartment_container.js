@@ -15,7 +15,7 @@ const mSTP = state => {
 
     let randomAnime = []
     if (anime.length !== 0) {
-        while (randomAnime.length < 6) {
+        while (randomAnime.length < 4) {
             let num = Math.floor(Math.random() * anime.length)
             let random = anime[num]
             if(!randomAnime.includes(random)) {
@@ -26,7 +26,7 @@ const mSTP = state => {
 
     let randomManga = []
     if (manga.length !== 0) {
-        while (randomManga.length < 6) {
+        while (randomManga.length < 4) {
             let num = Math.floor(Math.random() * manga.length)
             let random = manga[num]
             if(!randomManga.includes(random)) {
@@ -37,7 +37,7 @@ const mSTP = state => {
 
     let randomMerch = []
     if (merch.length !== 0) {
-        while (randomMerch.length < 6) {
+        while (randomMerch.length < 4) {
             let num = Math.floor(Math.random() * merch.length)
             let random = merch[num]
             if(!randomMerch.includes(random)) {

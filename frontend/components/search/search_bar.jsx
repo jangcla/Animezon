@@ -5,12 +5,16 @@ import { useHistory } from "react-router-dom";
 
 const SearchBar = () => {
     const history = useHistory();
-    const [keyword, SetKeyword] = useState(() => ' ');
+    const [keyword, SetKeyword] = useState(() => '');
 
     function handleKeyword(e) {
         e.preventDefault();
-        history.push({ pathname: `/search/${keyword}`, state: keyword })
-
+        
+        if (keyword === '') {
+            history.push({ pathname: `/search/ `})
+        } else {
+            history.push({ pathname: `/search/${keyword}`, state: keyword })
+        }
     }
 
     return(
