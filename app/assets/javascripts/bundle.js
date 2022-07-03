@@ -16396,10 +16396,18 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(PhotoSlider);
 
-  function PhotoSlider() {
+  function PhotoSlider(props) {
+    var _this;
+
     _classCallCheck(this, PhotoSlider);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+    _this.state = {
+      count: 1
+    };
+    _this.clickRight = _this.clickRight.bind(_assertThisInitialized(_this));
+    _this.clickLeft = _this.clickLeft.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(PhotoSlider, [{
@@ -16414,6 +16422,8 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
         if (counter > 4) {
           counter = 1;
         }
+
+        ;
       }, 5000);
     }
   }, {
@@ -16422,11 +16432,44 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
       clearInterval(this.time);
     }
   }, {
+    key: "clickRight",
+    value: function clickRight(e) {
+      e.preventDefault();
+      console.log(this.state);
+      clearInterval(this.time);
+      var val = this.state.count + 1 > 4 ? 1 : this.state.count + 1;
+      var slide = document.getElementById('radio' + val);
+      slide.checked = true;
+      this.setState({
+        "count": val
+      });
+    }
+  }, {
+    key: "clickLeft",
+    value: function clickLeft(e) {
+      e.preventDefault();
+      clearInterval(this.time);
+      var val = this.state.count - 1 < 1 ? 4 : this.state.count - 1;
+      var slide = document.getElementById('radio' + val);
+      slide.checked = true;
+      this.setState({
+        "count": val
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "slider"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "slider-buttons-l-r"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        onClick: this.clickLeft,
+        id: "slider-button-to-move-l"
+      }, "left"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        onClick: this.clickRight,
+        id: "slider-button-to-move-r"
+      }, "right")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "slides"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",

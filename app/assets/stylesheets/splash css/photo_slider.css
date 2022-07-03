@@ -243,3 +243,37 @@
     width: 28%;
     margin-left: 15%;
 }
+
+#slider-buttons-l-r {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+    margin-left: 1px;
+}
+
+#slider-button-to-move-l {
+    margin-left: 7px;
+    border: solid 3px transparent;
+    border-radius: 5px;
+    width: 7%;
+    height: 325px;
+    background: transparent;
+    transition: 500ms;
+}
+#slider-button-to-move-l:hover {
+    border: solid 3px white;
+}
+#slider-button-to-move-r {
+    margin-left: 8px;
+    border: solid 3px transparent;
+    border-radius: 5px;
+    width: 7%;
+    height: 325px;
+    background: transparent;
+    transition: 500ms;
+}
+#slider-button-to-move-r:hover {
+    border: solid 3px white;
+}

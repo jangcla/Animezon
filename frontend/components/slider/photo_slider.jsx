@@ -2,27 +2,73 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class PhotoSlider extends React.Component {
-    
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            count : 1
+        }
+
+        this.clickRight = this.clickRight.bind(this);
+        this.clickLeft = this.clickLeft.bind(this);
+    }
+
     componentDidMount() {
-        var counter = 1;
+        let counter = 1;
+
         this.time = setInterval(function () {
             let slide = document.getElementById('radio' + counter)
             slide.checked = true;
             counter++;
             if (counter > 4) {
                 counter = 1;
-            }
+            };
+           
         }, 5000);
     }
 
     componentWillUnmount() {
-        clearInterval(this.time)
+        clearInterval(this.time);
+    }
+
+    clickRight(e) {
+        e.preventDefault();
+
+        console.log(this.state)
+        clearInterval(this.time);
+        const val = this.state.count + 1  > 4 ? 1 : this.state.count + 1;
+        let slide = document.getElementById('radio' + val);
+        slide.checked = true;
+        this.setState({
+            "count" : val
+        })
+    }
+
+    clickLeft(e) {
+        e.preventDefault();
+
+        clearInterval(this.time);
+        const val = this.state.count - 1 < 1 ? 4 : this.state.count - 1;
+        let slide = document.getElementById('radio' + val);
+        slide.checked = true;
+        this.setState({
+            "count": val
+        })
     }
     
     render() {
         return (
  
                 <div className="slider">
+                    <div id="slider-buttons-l-r">
+                        <button onClick={this.clickLeft} id="slider-button-to-move-l">
+                            left  
+                        </button>
+
+                        <button onClick={this.clickRight} id='slider-button-to-move-r'>
+                            right
+                        </button>
+                    </div>
                     <div className="slides">
                 
                     <input type="radio" name="radio-btn" id="radio1"/>
