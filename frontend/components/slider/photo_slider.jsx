@@ -62,11 +62,11 @@ class PhotoSlider extends React.Component {
                 <div className="slider">
                     <div id="slider-buttons-l-r">
                         <button onClick={this.clickLeft} id="slider-button-to-move-l">
-                            left  
+                            <img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/icon-left.png?raw=true" id='slider-icon-l-and-r'/>
                         </button>
 
                         <button onClick={this.clickRight} id='slider-button-to-move-r'>
-                            right
+                            <img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/icon-right.png?raw=true" id='slider-icon-l-and-r'/>
                         </button>
                     </div>
                     <div className="slides">

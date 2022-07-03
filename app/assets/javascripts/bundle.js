@@ -16466,10 +16466,16 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         onClick: this.clickLeft,
         id: "slider-button-to-move-l"
-      }, "left"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/icon-left.png?raw=true",
+        id: "slider-icon-l-and-r"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         onClick: this.clickRight,
         id: "slider-button-to-move-r"
-      }, "right")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/icon-right.png?raw=true",
+        id: "slider-icon-l-and-r"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "slides"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "radio",
