@@ -60,7 +60,6 @@ class PhotoSlider extends React.Component {
         return (
  
                 <div className="slider">
-                    <div id="slider-buttons-l-r">
                         <button onClick={this.clickLeft} id="slider-button-to-move-l">
                             <img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/icon-left.png?raw=true" id='slider-icon-l-and-r'/>
                         </button>
@@ -68,7 +67,6 @@ class PhotoSlider extends React.Component {
                         <button onClick={this.clickRight} id='slider-button-to-move-r'>
                             <img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/icon-right.png?raw=true" id='slider-icon-l-and-r'/>
                         </button>
-                    </div>
                     <div className="slides">
                 
                     <input type="radio" name="radio-btn" id="radio1"/>

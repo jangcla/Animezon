@@ -257,22 +257,26 @@
     margin-left: 7px;
     border: solid 3px transparent;
     border-radius: 5px;
-    width: 7%;
+    width: 6%;
     height: 325px;
     background: transparent;
     transition: 500ms;
+    position: absolute;
+    z-index: 1;
 }
 #slider-button-to-move-l:hover {
     border: solid 3px white;
 }
 #slider-button-to-move-r {
-    margin-right: -6px;
+    margin-left: 94.4%;
     border: solid 3px transparent;
     border-radius: 5px;
-    width: 7%;
+    width: 6%;
     height: 325px;
     background: transparent;
     transition: 500ms;
+    position: absolute;
+    z-index: 1;
 }
 #slider-button-to-move-r:hover {
     border: solid 3px white;
