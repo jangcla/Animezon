@@ -118,7 +118,12 @@
     font-weight: bold;
     /* margin-top: 17%; */
     width: 100%;
+    margin-top: 135px;
 }
+#s1t big{
+    margin-left: 100px;
+}
+
 #s1t1 {
     color: white;
     position: absolute;
@@ -229,19 +234,26 @@
 }
 
 #one-piece-inner-banner {
-    width: 27%;
-    margin-left: 17%;
+    width: 386px;
+    height: 273px;
+    /* margin-left: 17%; */
+    margin-left: 243px;
 }
 
 #hunter-inner-banner {
-    width: 30%;
-    margin-left: 15%;
-    margin-top: -1%;
+    width: 428px;
+    height: 274px;
+    /* margin-left: 15%;
+    margin-top: -1%; */
+    margin-top: -14px;
+    margin-left: 214px;
 }
 
 #my-hero-inner-banner {
-    width: 28%;
-    margin-left: 15%;
+    width: 400px;
+    height: 267px;
+    /* margin-left: 15%; */
+    margin-left: 214px;
 }
 
 #slider-buttons-l-r {
@@ -271,7 +283,7 @@
     border: solid 3px white;
 }
 #slider-button-to-move-r {
-    margin-right: -4px;
+    margin-right: -5px;
     margin-top: -750px;
     border: solid 3px transparent;
     border-radius: 5px;
