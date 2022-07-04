@@ -60,13 +60,6 @@ class PhotoSlider extends React.Component {
         return (
  
                 <div className="slider">
-                        <button onClick={this.clickLeft} id="slider-button-to-move-l">
-                            <img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/icon-left.png?raw=true" id='slider-icon-l-and-r'/>
-                        </button>
-
-                        <button onClick={this.clickRight} id='slider-button-to-move-r'>
-                            <img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/icon-right.png?raw=true" id='slider-icon-l-and-r'/>
-                        </button>
                     <div className="slides">
                 
                     <input type="radio" name="radio-btn" id="radio1"/>
@@ -101,20 +94,16 @@ class PhotoSlider extends React.Component {
                                     
                                     
                     </div>
-                                    {/* <div className="navigation-auto">
-                                        <div className="auto-btn1"></div>
-                                        <div className="auto-btn2"></div>
-                                        <div className="auto-btn3"></div>
-                                        <div className="auto-btn4"></div>
-                                        </div>
-                                        
-                                        <div className="navigation-manual">
-                                        <label htmlFor="radio1" className="manual-btn"></label>
-                                        <label htmlFor="radio2" className="manual-btn"></label>
-                                        <label htmlFor="radio3" className="manual-btn"></label>
-                                        <label htmlFor="radio4" className="manual-btn"></label>
-                                    </div> */}
-                                
+
+                    <div id="slider-buttons-l-r">
+                        <button onClick={this.clickLeft} id="slider-button-to-move-l">
+                            <img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/icon-left.png?raw=true" id='slider-icon-l-and-r'/>
+                        </button>
+
+                        <button onClick={this.clickRight} id='slider-button-to-move-r'>
+                            <img src="https://github.com/jangcla/Animezon/blob/sales/photos/slider-banners/icon-right.png?raw=true" id='slider-icon-l-and-r'/>
+                        </button>
+                    </div>
                 </div>
         )
     }
@@ -130,6 +119,20 @@ export default PhotoSlider
 
 
 
+
+/* <div className="navigation-auto">
+    <div className="auto-btn1"></div>
+    <div className="auto-btn2"></div>
+    <div className="auto-btn3"></div>
+    <div className="auto-btn4"></div>
+    </div>
+    
+    <div className="navigation-manual">
+    <label htmlFor="radio1" className="manual-btn"></label>
+    <label htmlFor="radio2" className="manual-btn"></label>
+    <label htmlFor="radio3" className="manual-btn"></label>
+    <label htmlFor="radio4" className="manual-btn"></label>
+</div> */
 
 
 
