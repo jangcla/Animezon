@@ -11468,8 +11468,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _developing_unavailable__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./developing/unavailable */ "./frontend/components/developing/unavailable.jsx");
 /* harmony import */ var _cart_cart_item_add_container__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./cart/cart_item_add_container */ "./frontend/components/cart/cart_item_add_container.js");
 /* harmony import */ var _search_search_container__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./search/search_container */ "./frontend/components/search/search_container.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
+/* harmony import */ var _nav_footer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./nav/footer */ "./frontend/components/nav/footer.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
+
 
 
 
@@ -11491,55 +11493,53 @@ var App = function App() {
     id: "website-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "main-div"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_13__.AuthRoute, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_14__.AuthRoute, {
     path: "/signup",
     component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_2__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_13__.AuthRoute, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_14__.AuthRoute, {
     path: "/login",
     component: _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_1__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
     exact: true,
     path: "/cart",
     component: _cart_cart_container__WEBPACK_IMPORTED_MODULE_8__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
     exact: true,
     path: "/confirm/purchase",
     component: _purchase_purchase_page_container__WEBPACK_IMPORTED_MODULE_9__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
     exact: true,
     path: "/added",
     component: _cart_cart_item_add_container__WEBPACK_IMPORTED_MODULE_11__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
     exact: true,
     path: "/items/:itemId",
     component: _item_item_show_container__WEBPACK_IMPORTED_MODULE_4__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
     exact: true,
     path: "/profile/create",
     component: _profile_profile_form_container__WEBPACK_IMPORTED_MODULE_5__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
     exact: true,
     path: "/profile/personal",
     component: _profile_profile_container__WEBPACK_IMPORTED_MODULE_6__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
     exact: true,
     path: "/review/form",
     component: _review_review_form_container__WEBPACK_IMPORTED_MODULE_7__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
     exact: true,
     path: "/search/:keyword",
     component: _search_search_container__WEBPACK_IMPORTED_MODULE_12__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
     exact: true,
     path: "/error/underdevelopment",
     component: _developing_unavailable__WEBPACK_IMPORTED_MODULE_10__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
     exact: true,
     path: "/",
     component: _home_home_page_container__WEBPACK_IMPORTED_MODULE_3__.default
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", {
-    id: "footer"
-  }, "Copy \xA9 Animezon.com 2021-2022"));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_footer__WEBPACK_IMPORTED_MODULE_13__.default, null));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -11684,6 +11684,7 @@ var Cart = /*#__PURE__*/function (_React$Component) {
   _createClass(Cart, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
       this.props.fetchCarts();
       this.props.fetchItems();
     }
@@ -12071,6 +12072,8 @@ var ItemAdded = /*#__PURE__*/function (_React$Component) {
   _createClass(ItemAdded, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      window.scrollTo(0, 0);
+
       if (this.props.sessionId) {
         this.props.fetchCarts();
       }
@@ -12317,6 +12320,11 @@ var UnderConstruction = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(UnderConstruction, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -12604,6 +12612,8 @@ var HomePage = /*#__PURE__*/function (_React$Component) {
   _createClass(HomePage, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
+
       if (this.props.sessionId) {
         this.props.fetchCarts();
       }
@@ -12733,6 +12743,7 @@ var ItemCompartment = /*#__PURE__*/function (_React$Component) {
   _createClass(ItemCompartment, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      window.scrollTo(0, 0);
       this.props.fetchItems();
     }
   }, {
@@ -12939,6 +12950,7 @@ var ItemIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(ItemIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      window.scrollTo(0, 0);
       this.props.fetchItems();
     }
   }, {
@@ -13259,6 +13271,7 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
   _createClass(ItemShow, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
       this.props.fetchReviews();
       this.props.fetchItem(this.props.match.params.itemId);
     }
@@ -13614,6 +13627,73 @@ var CreateCartItem = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
+/***/ "./frontend/components/nav/footer.jsx":
+/*!********************************************!*\
+  !*** ./frontend/components/nav/footer.jsx ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+var Footer = function Footer() {
+  var scrollToTop = function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'auto'
+    });
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "footer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "to-top-of-page",
+    onClick: scrollToTop
+  }, "Back to top"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "links-to-info-pages"
+  }, "Terms and Services"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "footer-logos"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://github.com/jangcla/Animezon/blob/info/photos/footer-logo-2.png?raw=true",
+    id: "footer-logo"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "author-links"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://github.com/jangcla",
+    target: "_blank"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://github.com/jangcla/Animezon/blob/info/photos/git-logo.png?raw=true",
+    id: "footer-social-logo"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://www.linkedin.com/in/john-angcla-1418a9213/",
+    target: "_blank"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-icon-png.png",
+    id: "footer-social-logo"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://johnangcla.com",
+    target: "_blank"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://raw.githubusercontent.com/jangcla/portfolio/main/assets/img/ja-logo.png",
+    id: "footer-personal-logo"
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "footer-end-text"
+  }, "Copy \xA9 Animezon.com 2021-2022"));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
+
+/***/ }),
+
 /***/ "./frontend/components/nav/navbar.jsx":
 /*!********************************************!*\
   !*** ./frontend/components/nav/navbar.jsx ***!
@@ -13829,6 +13909,7 @@ var Profile = /*#__PURE__*/function (_React$Component) {
   _createClass(Profile, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
       this.props.fetchProfiles();
       this.props.fetchReviews();
     }
@@ -14070,6 +14151,7 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
   _createClass(ProfileForm, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
       this.props.fetchProfiles();
     }
   }, {
@@ -14738,6 +14820,11 @@ var PurchasePage = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(PurchasePage, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
+  }, {
     key: "purchaseAllItems",
     value: function purchaseAllItems(e) {
       var _this2 = this;
@@ -14831,7 +14918,7 @@ var PurchasePage = /*#__PURE__*/function (_React$Component) {
         id: "place-order-divider"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "order-sum-info"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "Total before tax:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "$", this.props.totalSum - 3.5)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "Total before tax:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "$", (this.props.totalSum - 3.5).toFixed(2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "order-sum-info"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "Estimated tax to be collected:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "$3.50")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "divider"
@@ -14995,6 +15082,8 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
   _createClass(ReviewForm, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
+
       if (this.props.userId) {
         this.props.fetchProfiles();
       }
@@ -15467,6 +15556,7 @@ var Search = /*#__PURE__*/function (_React$Component) {
   _createClass(Search, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
       this.props.fetchItems();
       this.props.fetchReviews();
     }
@@ -15847,6 +15937,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
   _createClass(LoginForm, [{
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
+      window.scrollTo(0, 0);
       this.props.receiveErrors([]);
       this.update('email');
     }
@@ -16200,6 +16291,11 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(SessionForm, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
+  }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       this.props.receiveErrors([]);
@@ -16407,24 +16503,34 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
     };
     _this.clickRight = _this.clickRight.bind(_assertThisInitialized(_this));
     _this.clickLeft = _this.clickLeft.bind(_assertThisInitialized(_this));
+    _this.startSlides = _this.startSlides.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(PhotoSlider, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var counter = 1;
-      this.time = setInterval(function () {
-        var slide = document.getElementById('radio' + counter);
-        slide.checked = true;
-        counter++;
+      this.time = setInterval(this.startSlides, 5000);
+    } // function() {
+    //     let slide = document.getElementById('radio' + counter)
+    //     slide.checked = true;
+    //     counter++;
+    //     if (counter > 4) {
+    //         counter = 1;
+    //     };
+    // }
 
-        if (counter > 4) {
-          counter = 1;
-        }
-
-        ;
-      }, 5000);
+  }, {
+    key: "startSlides",
+    value: function startSlides() {
+      var counter = this.state.count;
+      counter++;
+      if (counter > 4) counter = 1;
+      var slide = document.getElementById('radio' + counter);
+      slide.checked = true;
+      this.setState({
+        "count": counter
+      });
     }
   }, {
     key: "componentWillUnmount",
@@ -16435,7 +16541,6 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
     key: "clickRight",
     value: function clickRight(e) {
       e.preventDefault();
-      console.log(this.state);
       clearInterval(this.time);
       var val = this.state.count + 1 > 4 ? 1 : this.state.count + 1;
       var slide = document.getElementById('radio' + val);

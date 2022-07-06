@@ -10,6 +10,9 @@ class PurchasePage extends React.Component {
         this.purchaseAllItems = this.purchaseAllItems.bind(this);
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
 
     purchaseAllItems(e) {
         e.preventDefault();
@@ -159,7 +162,7 @@ class PurchasePage extends React.Component {
                                     Total before tax:
                                 </small>
                                 <small>
-                                    ${this.props.totalSum - 3.5}
+                                    ${(this.props.totalSum - 3.5).toFixed(2)}
                                 </small>
                             </div>
                             <div id="order-sum-info">

@@ -16,6 +16,8 @@ class ProfileForm extends React.Component {
     }
 
     UNSAFE_componentWillMount() {
+        window.scrollTo(0, 0);
+        
         this.props.fetchProfiles()
     }
 

@@ -6,6 +6,8 @@ import LoginFormContainer from '../session_form/login_form_container';
 
 class ItemAdded extends React.Component {
     componentDidMount() {
+        window.scrollTo(0, 0);
+        
         if (this.props.sessionId) {
             this.props.fetchCarts();
         }

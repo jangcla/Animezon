@@ -9,8 +9,9 @@ import { faStar } from '@fortawesome/free-regular-svg-icons';
 
 
 class ItemShow extends React.Component {
-
     UNSAFE_componentWillMount(){
+        window.scrollTo(0, 0);
+        
         this.props.fetchReviews();
         this.props.fetchItem(this.props.match.params.itemId);
     }
