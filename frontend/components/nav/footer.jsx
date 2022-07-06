@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
 
             <div id="footer-logo">
-                <img src="" alt="" />
+                <img src="https://github.com/jangcla/Animezon/blob/info/photos/footer-logo.png?raw=true" />
             </div>
 
             <div id="footer-end-text">
