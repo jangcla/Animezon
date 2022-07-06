@@ -23,3 +23,14 @@
 #to-top-of-page:hover {
     background: #444444;
 }
+
+#footer-logos{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#footer-logo {
+    width: 150px;
+}

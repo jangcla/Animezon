@@ -13645,10 +13645,31 @@ var Footer = function Footer() {
   }, "Back to top"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "links-to-info-pages"
   }, "Terms and Services"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    id: "footer-logo"
+    id: "footer-logos"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "https://github.com/jangcla/Animezon/blob/info/photos/footer-logo.png?raw=true"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    src: "https://github.com/jangcla/Animezon/blob/info/photos/footer-logo-2.png?raw=true",
+    id: "footer-logo"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "author-links"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://github.com/jangcla",
+    target: "_blank"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://www.nicepng.com/png/full/52-520535_free-files-github-github-icon-png-white.png",
+    id: "footer-git-logo"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://www.linkedin.com/in/john-angcla-1418a9213/",
+    target: "_blank"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-icon-png.png",
+    id: "footer-link-logo"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://johnangcla.com",
+    target: "_blank"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://raw.githubusercontent.com/jangcla/portfolio/main/assets/img/ja-logo.png",
+    id: "footer-personal-logo"
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "footer-end-text"
   }, "Copy \xA9 Animezon.com 2021-2022"));
 };

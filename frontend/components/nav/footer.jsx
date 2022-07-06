@@ -19,8 +19,23 @@ const Footer = () => {
                 Terms and Services
             </div>
 
-            <div id="footer-logo">
-                <img src="https://github.com/jangcla/Animezon/blob/info/photos/footer-logo.png?raw=true" />
+            <div id="footer-logos">
+                <img src="https://github.com/jangcla/Animezon/blob/info/photos/footer-logo-2.png?raw=true" id="footer-logo"/>
+
+                <div id="author-links">
+                    <a href="https://github.com/jangcla" target="_blank">
+                        <img src="https://www.nicepng.com/png/full/52-520535_free-files-github-github-icon-png-white.png" id="footer-git-logo"/>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/john-angcla-1418a9213/" target="_blank">
+                        <img src="https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-icon-png.png" id="footer-link-logo"/>
+                    </a>
+
+                    <a href="https://johnangcla.com" target="_blank">
+                        <img src="https://raw.githubusercontent.com/jangcla/portfolio/main/assets/img/ja-logo.png" id="footer-personal-logo"/>
+                    </a>
+                    
+                </div>
             </div>
 
             <div id="footer-end-text">
