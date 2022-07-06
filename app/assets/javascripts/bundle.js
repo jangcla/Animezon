@@ -13655,14 +13655,14 @@ var Footer = function Footer() {
     href: "https://github.com/jangcla",
     target: "_blank"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "https://www.nicepng.com/png/full/52-520535_free-files-github-github-icon-png-white.png",
-    id: "footer-git-logo"
+    src: "https://github.com/jangcla/Animezon/blob/info/photos/git-logo.png?raw=true",
+    id: "footer-social-logo"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "https://www.linkedin.com/in/john-angcla-1418a9213/",
     target: "_blank"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-icon-png.png",
-    id: "footer-link-logo"
+    id: "footer-social-logo"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "https://johnangcla.com",
     target: "_blank"
@@ -14895,7 +14895,7 @@ var PurchasePage = /*#__PURE__*/function (_React$Component) {
         id: "place-order-divider"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "order-sum-info"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "Total before tax:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "$", this.props.totalSum - 3.5)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "Total before tax:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "$", (this.props.totalSum - 3.5).toFixed(2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "order-sum-info"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "Estimated tax to be collected:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "$3.50")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "divider"

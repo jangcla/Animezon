@@ -24,11 +24,11 @@ const Footer = () => {
 
                 <div id="author-links">
                     <a href="https://github.com/jangcla" target="_blank">
-                        <img src="https://www.nicepng.com/png/full/52-520535_free-files-github-github-icon-png-white.png" id="footer-git-logo"/>
+                        <img src="https://github.com/jangcla/Animezon/blob/info/photos/git-logo.png?raw=true" id="footer-social-logo"/>
                     </a>
 
                     <a href="https://www.linkedin.com/in/john-angcla-1418a9213/" target="_blank">
-                        <img src="https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-icon-png.png" id="footer-link-logo"/>
+                        <img src="https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-icon-png.png" id="footer-social-logo"/>
                     </a>
 
                     <a href="https://johnangcla.com" target="_blank">
