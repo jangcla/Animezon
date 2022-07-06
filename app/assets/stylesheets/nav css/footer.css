@@ -1,0 +1,26 @@
+#footer {
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    gap: 25px;
+}
+
+#to-top-of-page {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #282828;
+    transition: 250ms;
+    cursor: pointer;
+}
+#to-top-of-page:hover {
+    background: #444444;
+}

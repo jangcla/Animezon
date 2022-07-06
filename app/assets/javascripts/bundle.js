@@ -13646,6 +13646,11 @@ var Footer = function Footer() {
     id: "links-to-info-pages"
   }, "Terms and Services"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "footer-logo"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "",
+    alt: ""
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "footer-end-text"
   }, "Copy \xA9 Animezon.com 2021-2022"));
 };
 

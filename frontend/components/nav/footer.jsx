@@ -20,6 +20,10 @@ const Footer = () => {
             </div>
 
             <div id="footer-logo">
+                <img src="" alt="" />
+            </div>
+
+            <div id="footer-end-text">
                 Copy © Animezon.com 2021-2022
             </div>
         </div>

@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     height: 37px;
-    background: #161616;
+    background: #282828;
     justify-content: space-between;
 }
 
@@ -21,7 +21,7 @@
     color: white;
     font-size: 17px;
     font-weight: bold;
-    border: 2px solid #161616;
+    border: 2px solid #282828;
     padding: 1px 10px 1px 10px;
     transition: 500ms;
 }
@@ -37,7 +37,7 @@
     font-size: 17px;
     font-weight: bold;
     margin-right: 50px;
-    border: 2px solid #161616;
+    border: 2px solid #282828;
     padding: 1px 10px 1px 10px;
     transition: 500ms;
     cursor: pointer;
