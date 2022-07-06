@@ -60,3 +60,20 @@
     width: 45px;
     border-radius: 4px;
 }
+
+#links-to-info-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 35px;
+}
+
+#footer-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+#footer-link:hover {
+    text-decoration: underline;
+}

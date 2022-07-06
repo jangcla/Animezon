@@ -16,7 +16,17 @@ const Footer = () => {
             </div>
 
             <div id="links-to-info-pages">
-                Terms and Services
+                <Link id="footer-link" to="/about/animzezon">
+                    Learn About Animezon
+                </Link>
+
+                <Link id="footer-link" to="/about/functions">
+                    Animezon functions
+                </Link>
+
+                <Link id="footer-link" to="/about/terms-services">
+                    Terms and Services
+                </Link>
             </div>
 
             <div id="footer-logos">

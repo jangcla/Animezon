@@ -11533,12 +11533,11 @@ var App = function App() {
     component: _search_search_container__WEBPACK_IMPORTED_MODULE_12__.default
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
     exact: true,
-    path: "/error/underdevelopment",
-    component: _developing_unavailable__WEBPACK_IMPORTED_MODULE_10__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
-    exact: true,
     path: "/",
     component: _home_home_page_container__WEBPACK_IMPORTED_MODULE_3__.default
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+    path: "/",
+    component: _developing_unavailable__WEBPACK_IMPORTED_MODULE_10__.default
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_footer__WEBPACK_IMPORTED_MODULE_13__.default, null));
 };
 
@@ -12340,7 +12339,7 @@ var UnderConstruction = /*#__PURE__*/function (_React$Component) {
         id: "app-cont"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "apology"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Sorry looks like the page you're looking for is currently under going development"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Sorry looks like the page you're looking does not exist or is being developed"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://www.nicepng.com/png/full/111-1110394_itachi-facepalm-anime-facepalm.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "apology2"
@@ -13658,7 +13657,16 @@ var Footer = function Footer() {
     onClick: scrollToTop
   }, "Back to top"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "links-to-info-pages"
-  }, "Terms and Services"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    id: "footer-link",
+    to: "/about/animzezon"
+  }, "Learn About Animezon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    id: "footer-link",
+    to: "/about/functions"
+  }, "Animezon functions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    id: "footer-link",
+    to: "/about/terms-services"
+  }, "Terms and Services")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "footer-logos"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/"
