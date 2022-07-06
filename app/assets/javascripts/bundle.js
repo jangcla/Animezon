@@ -16503,24 +16503,34 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
     };
     _this.clickRight = _this.clickRight.bind(_assertThisInitialized(_this));
     _this.clickLeft = _this.clickLeft.bind(_assertThisInitialized(_this));
+    _this.startSlides = _this.startSlides.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(PhotoSlider, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var counter = 1;
-      this.time = setInterval(function () {
-        var slide = document.getElementById('radio' + counter);
-        slide.checked = true;
-        counter++;
+      this.time = setInterval(this.startSlides, 5000);
+    } // function() {
+    //     let slide = document.getElementById('radio' + counter)
+    //     slide.checked = true;
+    //     counter++;
+    //     if (counter > 4) {
+    //         counter = 1;
+    //     };
+    // }
 
-        if (counter > 4) {
-          counter = 1;
-        }
-
-        ;
-      }, 5000);
+  }, {
+    key: "startSlides",
+    value: function startSlides() {
+      var counter = this.state.count;
+      counter++;
+      if (counter > 4) counter = 1;
+      var slide = document.getElementById('radio' + counter);
+      slide.checked = true;
+      this.setState({
+        "count": counter
+      });
     }
   }, {
     key: "componentWillUnmount",
@@ -16531,7 +16541,6 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
     key: "clickRight",
     value: function clickRight(e) {
       e.preventDefault();
-      console.log(this.state);
       clearInterval(this.time);
       var val = this.state.count + 1 > 4 ? 1 : this.state.count + 1;
       var slide = document.getElementById('radio' + val);
