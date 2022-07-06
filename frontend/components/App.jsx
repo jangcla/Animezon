@@ -11,6 +11,7 @@ import PurchasePageContainer from "./purchase/purchase_page_container";
 import UnderConstruction from "./developing/unavailable";
 import ItemAddedContainer from "./cart/cart_item_add_container";
 import SearchContainer from "./search/search_container";
+import Footer from "./nav/footer";
 import {Route, HashRouter, Switch} from 'react-router-dom'
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
@@ -35,9 +36,7 @@ const App = () => (
             
         </div>
 
-        <footer id="footer">
-           Copy © Animezon.com 2021-2022
-        </footer>
+        <Footer/>
     </div>
 
 );
