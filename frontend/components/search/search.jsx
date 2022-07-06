@@ -5,11 +5,10 @@ import SearchedItem from "./search_item";
 class Search extends React.Component {
     constructor(props){
         super(props)
-
-
     }
 
     UNSAFE_componentWillMount() {
+        window.scrollTo(0, 0);
         this.props.fetchItems();
         this.props.fetchReviews();
     }

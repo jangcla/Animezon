@@ -15556,6 +15556,7 @@ var Search = /*#__PURE__*/function (_React$Component) {
   _createClass(Search, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
       this.props.fetchItems();
       this.props.fetchReviews();
     }
