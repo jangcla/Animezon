@@ -10,6 +10,9 @@ class PurchasePage extends React.Component {
         this.purchaseAllItems = this.purchaseAllItems.bind(this);
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
 
     purchaseAllItems(e) {
         e.preventDefault();

@@ -18,6 +18,7 @@ class Profile extends React.Component {
     }
 
     UNSAFE_componentWillMount() {
+        window.scrollTo(0, 0);
         this.props.fetchProfiles();
         this.props.fetchReviews();
     }

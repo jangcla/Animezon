@@ -14,6 +14,8 @@ class LoginForm extends React.Component {
     }
 
     componentWillUnmount() {
+        window.scrollTo(0, 0);
+        
         this.props.receiveErrors([])
         this.update('email')
     }

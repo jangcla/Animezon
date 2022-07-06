@@ -20,7 +20,9 @@ const Footer = () => {
             </div>
 
             <div id="footer-logos">
-                <img src="https://github.com/jangcla/Animezon/blob/info/photos/footer-logo-2.png?raw=true" id="footer-logo"/>
+                <Link to='/'>
+                    <img src="https://github.com/jangcla/Animezon/blob/info/photos/footer-logo-2.png?raw=true" id="footer-logo"/>
+                </Link>
 
                 <div id="author-links">
                     <a href="https://github.com/jangcla" target="_blank">

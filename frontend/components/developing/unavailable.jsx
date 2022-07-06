@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import Navbar from '../nav/navbar';
 
 class UnderConstruction extends React.Component {
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+    
     render() {
         return (
             <div id="unavailable-main">

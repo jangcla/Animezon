@@ -13,6 +13,10 @@ class SessionForm extends React.Component {
 	
   }
 
+  componentDidMount() {
+	  window.scrollTo(0, 0);
+  }
+
 	componentWillUnmount() {
 		this.props.receiveErrors([])
 	}

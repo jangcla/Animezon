@@ -19,6 +19,8 @@ class ReviewForm extends React.Component {
     }
 
     UNSAFE_componentWillMount() {
+        window.scrollTo(0, 0);
+        
         if (this.props.userId) {
             this.props.fetchProfiles();
 

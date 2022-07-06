@@ -3,10 +3,12 @@ import ItemIndexItem from './item_index_item'
 import { Link } from 'react-router-dom'
 
 class ItemIndex extends React.Component {
+    
     componentDidMount() {
+        window.scrollTo(0, 0);
+
         this.props.fetchItems()
     }
-
 
     render() {
         return this.props.items ?

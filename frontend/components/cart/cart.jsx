@@ -7,6 +7,7 @@ import CartSimilar from './cart_similar';
 class Cart extends React.Component {
 
     UNSAFE_componentWillMount() {
+        window.scrollTo(0, 0);
         this.props.fetchCarts();
         this.props.fetchItems();
     }

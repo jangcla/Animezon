@@ -11684,6 +11684,7 @@ var Cart = /*#__PURE__*/function (_React$Component) {
   _createClass(Cart, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
       this.props.fetchCarts();
       this.props.fetchItems();
     }
@@ -12071,6 +12072,8 @@ var ItemAdded = /*#__PURE__*/function (_React$Component) {
   _createClass(ItemAdded, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      window.scrollTo(0, 0);
+
       if (this.props.sessionId) {
         this.props.fetchCarts();
       }
@@ -12317,6 +12320,11 @@ var UnderConstruction = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(UnderConstruction, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -12604,6 +12612,8 @@ var HomePage = /*#__PURE__*/function (_React$Component) {
   _createClass(HomePage, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
+
       if (this.props.sessionId) {
         this.props.fetchCarts();
       }
@@ -12733,6 +12743,7 @@ var ItemCompartment = /*#__PURE__*/function (_React$Component) {
   _createClass(ItemCompartment, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      window.scrollTo(0, 0);
       this.props.fetchItems();
     }
   }, {
@@ -12939,6 +12950,7 @@ var ItemIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(ItemIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      window.scrollTo(0, 0);
       this.props.fetchItems();
     }
   }, {
@@ -13259,6 +13271,7 @@ var ItemShow = /*#__PURE__*/function (_React$Component) {
   _createClass(ItemShow, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
       this.props.fetchReviews();
       this.props.fetchItem(this.props.match.params.itemId);
     }
@@ -13626,6 +13639,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
 
 
@@ -13646,10 +13660,12 @@ var Footer = function Footer() {
     id: "links-to-info-pages"
   }, "Terms and Services"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "footer-logos"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "https://github.com/jangcla/Animezon/blob/info/photos/footer-logo-2.png?raw=true",
     id: "footer-logo"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "author-links"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "https://github.com/jangcla",
@@ -13893,6 +13909,7 @@ var Profile = /*#__PURE__*/function (_React$Component) {
   _createClass(Profile, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
       this.props.fetchProfiles();
       this.props.fetchReviews();
     }
@@ -14134,6 +14151,7 @@ var ProfileForm = /*#__PURE__*/function (_React$Component) {
   _createClass(ProfileForm, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
       this.props.fetchProfiles();
     }
   }, {
@@ -14802,6 +14820,11 @@ var PurchasePage = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(PurchasePage, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
+  }, {
     key: "purchaseAllItems",
     value: function purchaseAllItems(e) {
       var _this2 = this;
@@ -15059,6 +15082,8 @@ var ReviewForm = /*#__PURE__*/function (_React$Component) {
   _createClass(ReviewForm, [{
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
+      window.scrollTo(0, 0);
+
       if (this.props.userId) {
         this.props.fetchProfiles();
       }
@@ -15911,6 +15936,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
   _createClass(LoginForm, [{
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
+      window.scrollTo(0, 0);
       this.props.receiveErrors([]);
       this.update('email');
     }
@@ -16264,6 +16290,11 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(SessionForm, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
+  }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       this.props.receiveErrors([]);
