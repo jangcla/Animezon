@@ -44,6 +44,12 @@ const InfoPage = ({infoWord}) => {
         </div>
     )
 
+    const termsInfo =  (
+        <div id="info-about-terms">
+            This terms and agreement section of the info component
+        </div>
+    )
+
 
 
 
@@ -68,6 +74,12 @@ const InfoPage = ({infoWord}) => {
                                 null
                         }
 
+                        {
+                            infoWord === "Terms Services" ? 
+                                termsInfo
+                                :
+                                null
+                        }
 
                     </div>
                 </div>
