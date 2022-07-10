@@ -12713,9 +12713,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var InfoPage = function InfoPage(_ref) {
   var infoWord = _ref.infoWord;
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    window.scrollTo(0, 0);
+  });
   var animezonInfo = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "info-about-animezon"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "animezon-background-text"
+  }, "Animezon is a fullstack clone of e-commerce website Amazon. This website is the culmination of technologies and techniques I learned during my time in App Academy.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Animezon is developed with a postgreSQL data base, through the use of Ruby to create the necesarry API routes with Ruby on Rails. For the frontend aspect of the project, the data from the backend is passed forward with the use of Redux states and then given to the React library to be presented with detail oriented CSS and HTML."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "animezon-tech-logos"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "https://cdn.iconscout.com/icon/free/png-256/ruby-47-1175102.png"
@@ -12734,13 +12739,13 @@ var InfoPage = function InfoPage(_ref) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "https://github.com/jangcla/github-profile/blob/main/profile-photos/ruby-on-rails-icon.png?raw=true"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "https://github.com/jangcla/github-profile/blob/main/profile-photos/heroku-icon.png?raw=true"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "https://github.com/jangcla/github-profile/blob/main/profile-photos/aws.png?raw=true"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    id: "animezon-background-text"
-  }));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://github.com/jangcla/github-profile/blob/main/profile-photos/heroku-icon.png?raw=true"
+  })));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "info-page"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "info-main-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "info-photo-container"
@@ -12749,7 +12754,9 @@ var InfoPage = function InfoPage(_ref) {
     id: "info-photo"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "info-text"
-  }, infoWord === "animezon" ? animezonInfo : null)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    id: "info-text-header"
+  }, "Learn more about ", infoWord), infoWord === "Animezon" ? animezonInfo : null))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InfoPage);
@@ -13758,13 +13765,13 @@ var Footer = function Footer() {
     id: "links-to-info-pages"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     id: "footer-link",
-    to: "/about/animezon"
+    to: "/about/Animezon"
   }, "Learn About Animezon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     id: "footer-link",
-    to: "/about/functions"
+    to: "/about/Functional Components"
   }, "Animezon functions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     id: "footer-link",
-    to: "/about/terms-services"
+    to: "/about/Terms Services"
   }, "Terms and Services")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "footer-logos"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {

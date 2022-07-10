@@ -1,8 +1,68 @@
+#info-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    background: #eaeded;
+}
 
+#info-main-container {
+    width: 95%;
+    height: 660px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
 
+#info-text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 45px;
+}
+
+#info-text-header {
+    width: 100%;
+    background: white;
+    padding: 25px 0px 25px 0px;
+    text-align: center;
+    margin: 0;
+}
+
+#info-photo-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #info-photo {
-    width: 70%;
+    width: 80%;
+}
+
+#animezon-tech-logos {
+    background: white;
+    padding: 5px 10px 5px 10px;
 }
 #animezon-tech-logos img {
-    width: 20%;
+    width: 10%;
+}
+
+
+/* About animezon css */
+#info-about-animezon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+}
+
+#animezon-background-text {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 30px 60px 30px 60px;
+    background: white;
 }
