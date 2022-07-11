@@ -12743,6 +12743,9 @@ var InfoPage = function InfoPage(_ref) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "https://github.com/jangcla/github-profile/blob/main/profile-photos/heroku-icon.png?raw=true"
   })));
+  var termsInfo = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "info-about-terms"
+  }, "This terms and agreement section of the info component");
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "info-page"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -12756,7 +12759,7 @@ var InfoPage = function InfoPage(_ref) {
     id: "info-text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     id: "info-text-header"
-  }, "Learn more about ", infoWord), infoWord === "Animezon" ? animezonInfo : null))));
+  }, "Learn more about ", infoWord), infoWord === "Animezon" ? animezonInfo : null, infoWord === "Terms Services" ? termsInfo : null))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InfoPage);
