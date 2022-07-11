@@ -12748,7 +12748,7 @@ var InfoPage = function InfoPage(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "about-use-of-animezon"
   }, "Welcome to Animezon's terms of use information page. To clarify and remind those on the website, Animezon is not a real e-commerce website and no actual purchasing and handling of products are available on the website. This website is simply a fullstack clone of Amazon for learning technologies such as react, javascript, api's, styling, and backend databases."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    id: "about-sensitive-info-use"
+    id: "about-use-of-animezon"
   }, "When interacting with the website, please remember that other people have access to this website and I ask you not to input information you don't want on the internet to see. So please refrain from saving, inputing, and adding sensitive information on the website."));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "info-page"
@@ -12763,7 +12763,7 @@ var InfoPage = function InfoPage(_ref) {
     id: "info-text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     id: "info-text-header"
-  }, "Learn more about ", infoWord), infoWord === "Animezon" ? animezonInfo : null, infoWord === "Terms of Use" ? termsInfo : null))));
+  }, "Learn about ", infoWord), infoWord === "Animezon" ? animezonInfo : null, infoWord === "Terms of Use" ? termsInfo : null))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InfoPage);
@@ -13775,11 +13775,11 @@ var Footer = function Footer() {
     to: "/about/Animezon"
   }, "Learn About Animezon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     id: "footer-link",
-    to: "/about/Functional Components"
-  }, "Animezon functions and features"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    id: "footer-link",
     to: "/about/Terms of Use"
-  }, "Animezon's Terms of Use")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Animezon's Terms of Use"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    id: "footer-link",
+    to: "/about/Functions and Features"
+  }, "Animezon Functions and Features")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "footer-logos"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/"
@@ -16711,7 +16711,7 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "s1t"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, " YOU SHOULD BE WATCHING")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-        to: "/error/underdevelopment"
+        to: "/about/Animezon"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         id: "slide-photo1"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {

@@ -20,12 +20,12 @@ const Footer = () => {
                     Learn About Animezon
                 </Link>
 
-                <Link id="footer-link" to="/about/Functional Components">
-                    Animezon functions and features
-                </Link>
-
                 <Link id="footer-link" to="/about/Terms of Use">
                     Animezon's Terms of Use
+                </Link>
+
+                <Link id="footer-link" to="/about/Functions and Features">
+                    Animezon Functions and Features
                 </Link>
             </div>
 

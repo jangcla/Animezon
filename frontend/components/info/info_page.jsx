@@ -52,7 +52,7 @@ const InfoPage = ({infoWord}) => {
                 fullstack clone of Amazon for learning technologies such as react, javascript, api's, styling, and backend databases.
             </div>
 
-            <div id="about-sensitive-info-use">
+            <div id="about-use-of-animezon">
                 When interacting with the website, please remember that other people have access to this website and I ask you not to
                 input information you don't want on the internet to see. So please refrain from saving, inputing, and adding
                 sensitive information on the website.
@@ -74,7 +74,7 @@ const InfoPage = ({infoWord}) => {
 
                     <div id="info-text">
                         <h1 id="info-text-header">
-                            Learn more about {infoWord}
+                            Learn about {infoWord}
                         </h1>
 
                         {

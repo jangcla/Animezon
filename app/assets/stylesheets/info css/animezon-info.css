@@ -66,3 +66,21 @@
     padding: 30px 60px 30px 60px;
     background: white;
 }
+
+
+/* Animezon's term of use  */
+#info-about-terms {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 45px;
+}
+
+#about-use-of-animezon {
+    background: white;
+    max-width: 100%;
+    padding: 35px;
+    font-size: 18px;
+    font-weight: bold;
+}
