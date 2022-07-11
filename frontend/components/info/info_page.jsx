@@ -46,7 +46,17 @@ const InfoPage = ({infoWord}) => {
 
     const termsInfo =  (
         <div id="info-about-terms">
-            This terms and agreement section of the info component
+            <div id="about-use-of-animezon">
+                Welcome to Animezon's terms of use information page. To clarify and remind those on the website, Animezon is not a real 
+                e-commerce website and no actual purchasing and handling of products are available on the website. This website is simply a 
+                fullstack clone of Amazon for learning technologies such as react, javascript, api's, styling, and backend databases.
+            </div>
+
+            <div id="about-sensitive-info-use">
+                When interacting with the website, please remember that other people have access to this website and I ask you not to
+                input information you don't want on the internet to see. So please refrain from saving, inputing, and adding
+                sensitive information on the website.
+            </div>
         </div>
     )
 
@@ -75,7 +85,7 @@ const InfoPage = ({infoWord}) => {
                         }
 
                         {
-                            infoWord === "Terms Services" ? 
+                            infoWord === "Terms of Use" ? 
                                 termsInfo
                                 :
                                 null

@@ -12745,7 +12745,11 @@ var InfoPage = function InfoPage(_ref) {
   })));
   var termsInfo = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "info-about-terms"
-  }, "This terms and agreement section of the info component");
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "about-use-of-animezon"
+  }, "Welcome to Animezon's terms of use information page. To clarify and remind those on the website, Animezon is not a real e-commerce website and no actual purchasing and handling of products are available on the website. This website is simply a fullstack clone of Amazon for learning technologies such as react, javascript, api's, styling, and backend databases."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "about-sensitive-info-use"
+  }, "When interacting with the website, please remember that other people have access to this website and I ask you not to input information you don't want on the internet to see. So please refrain from saving, inputing, and adding sensitive information on the website."));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "info-page"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -12759,7 +12763,7 @@ var InfoPage = function InfoPage(_ref) {
     id: "info-text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     id: "info-text-header"
-  }, "Learn more about ", infoWord), infoWord === "Animezon" ? animezonInfo : null, infoWord === "Terms Services" ? termsInfo : null))));
+  }, "Learn more about ", infoWord), infoWord === "Animezon" ? animezonInfo : null, infoWord === "Terms of Use" ? termsInfo : null))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InfoPage);
@@ -13772,10 +13776,10 @@ var Footer = function Footer() {
   }, "Learn About Animezon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     id: "footer-link",
     to: "/about/Functional Components"
-  }, "Animezon functions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }, "Animezon functions and features"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     id: "footer-link",
-    to: "/about/Terms Services"
-  }, "Terms and Services")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    to: "/about/Terms of Use"
+  }, "Animezon's Terms of Use")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "footer-logos"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/"
@@ -13791,7 +13795,7 @@ var Footer = function Footer() {
     src: "https://github.com/jangcla/Animezon/blob/info/photos/git-logo.png?raw=true",
     id: "footer-social-logo"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "https://www.linkedin.com/in/john-angcla-1418a9213/",
+    href: "https://www.linkedin.com/in/johnangcla",
     target: "_blank"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-icon-png.png",
