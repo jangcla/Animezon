@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../nav/navbar";
 import { Link } from "react-router-dom";
 
 const InfoPage = ({infoWord}) => {
+
+    const [feature, setFeature] = useState("");
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -69,6 +71,7 @@ const InfoPage = ({infoWord}) => {
             <div id="info-page">
                 <div id="info-main-container">
                     <div id="info-photo-container">
+                        
                         <img src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/info-logo.png?raw=true" id="info-photo"/>
                     </div>
 
