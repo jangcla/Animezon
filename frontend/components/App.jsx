@@ -14,6 +14,7 @@ import SearchContainer from "./search/search_container";
 import Footer from "./nav/footer";
 import {Route, HashRouter, Switch} from 'react-router-dom'
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
+import InfoPageContainer from "./info/info_page_container";
 
 
 const App = () => (
@@ -30,8 +31,10 @@ const App = () => (
                 <Route exact path='/profile/personal' component={ProfileContainer}/>
                 <Route exact path='/review/form' component={ReviewFormContainer}/>
                 <Route exact path='/search/:keyword' component={SearchContainer}/>
-                <Route exact path='/error/underdevelopment' component={UnderConstruction}/>
+                <Route exact path='/about/:infoword' component={InfoPageContainer}/>
+                {/* <Route exact path='/error/underdevelopment' component={UnderConstruction}/> */}
                 <Route exact path="/" component={HomePageContainer}/>
+                <Route path="/" component={UnderConstruction}/>
             </Switch> 
             
         </div>

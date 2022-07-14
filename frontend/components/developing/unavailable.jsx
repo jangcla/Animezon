@@ -18,7 +18,7 @@ class UnderConstruction extends React.Component {
 
                     <div id="app-cont">
                         <div id="apology">
-                            <p>Sorry looks like the page you're looking for is currently under going development</p>
+                            <p>Sorry looks like the page you're looking does not exist or is being developed</p>
                             <img src="https://www.nicepng.com/png/full/111-1110394_itachi-facepalm-anime-facepalm.png"/>
                         </div>
 

@@ -16,7 +16,17 @@ const Footer = () => {
             </div>
 
             <div id="links-to-info-pages">
-                Terms and Services
+                <Link id="footer-link" to="/about/Animezon">
+                    Learn About Animezon
+                </Link>
+
+                <Link id="footer-link" to="/about/Terms of Use">
+                    Animezon's Terms of Use
+                </Link>
+
+                <Link id="footer-link" to="/about/Functions and Features">
+                    Animezon Functions and Features
+                </Link>
             </div>
 
             <div id="footer-logos">
@@ -29,7 +39,7 @@ const Footer = () => {
                         <img src="https://github.com/jangcla/Animezon/blob/info/photos/git-logo.png?raw=true" id="footer-social-logo"/>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/john-angcla-1418a9213/" target="_blank">
+                    <a href="https://www.linkedin.com/in/johnangcla" target="_blank">
                         <img src="https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-icon-png.png" id="footer-social-logo"/>
                     </a>
 

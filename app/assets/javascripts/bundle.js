@@ -11469,8 +11469,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cart_cart_item_add_container__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./cart/cart_item_add_container */ "./frontend/components/cart/cart_item_add_container.js");
 /* harmony import */ var _search_search_container__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./search/search_container */ "./frontend/components/search/search_container.js");
 /* harmony import */ var _nav_footer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./nav/footer */ "./frontend/components/nav/footer.jsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
+/* harmony import */ var _info_info_page_container__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./info/info_page_container */ "./frontend/components/info/info_page_container.js");
+
 
 
 
@@ -11493,52 +11495,55 @@ var App = function App() {
     id: "website-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "main-div"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_14__.AuthRoute, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_14__.AuthRoute, {
     path: "/signup",
     component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_2__.default
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_14__.AuthRoute, {
     path: "/login",
     component: _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_1__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
     exact: true,
     path: "/cart",
     component: _cart_cart_container__WEBPACK_IMPORTED_MODULE_8__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
     exact: true,
     path: "/confirm/purchase",
     component: _purchase_purchase_page_container__WEBPACK_IMPORTED_MODULE_9__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
     exact: true,
     path: "/added",
     component: _cart_cart_item_add_container__WEBPACK_IMPORTED_MODULE_11__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
     exact: true,
     path: "/items/:itemId",
     component: _item_item_show_container__WEBPACK_IMPORTED_MODULE_4__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
     exact: true,
     path: "/profile/create",
     component: _profile_profile_form_container__WEBPACK_IMPORTED_MODULE_5__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
     exact: true,
     path: "/profile/personal",
     component: _profile_profile_container__WEBPACK_IMPORTED_MODULE_6__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
     exact: true,
     path: "/review/form",
     component: _review_review_form_container__WEBPACK_IMPORTED_MODULE_7__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
     exact: true,
     path: "/search/:keyword",
     component: _search_search_container__WEBPACK_IMPORTED_MODULE_12__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
     exact: true,
-    path: "/error/underdevelopment",
-    component: _developing_unavailable__WEBPACK_IMPORTED_MODULE_10__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+    path: "/about/:infoword",
+    component: _info_info_page_container__WEBPACK_IMPORTED_MODULE_15__.default
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
     exact: true,
     path: "/",
     component: _home_home_page_container__WEBPACK_IMPORTED_MODULE_3__.default
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+    path: "/",
+    component: _developing_unavailable__WEBPACK_IMPORTED_MODULE_10__.default
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_footer__WEBPACK_IMPORTED_MODULE_13__.default, null));
 };
 
@@ -12340,7 +12345,7 @@ var UnderConstruction = /*#__PURE__*/function (_React$Component) {
         id: "app-cont"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "apology"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Sorry looks like the page you're looking for is currently under going development"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Sorry looks like the page you're looking does not exist or is being developed"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: "https://www.nicepng.com/png/full/111-1110394_itachi-facepalm-anime-facepalm.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "apology2"
@@ -12397,8 +12402,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var Greeting = function Greeting(_ref) {
   var currentUser = _ref.currentUser,
       itemTotal = _ref.itemTotal,
-      logout = _ref.logout,
-      fetchReviews = _ref.fetchReviews;
+      logout = _ref.logout;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -12687,6 +12691,187 @@ var mDTP = function mDTP(dispatch) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mSTP, mDTP)(_home_page__WEBPACK_IMPORTED_MODULE_3__.default));
+
+/***/ }),
+
+/***/ "./frontend/components/info/info_page.jsx":
+/*!************************************************!*\
+  !*** ./frontend/components/info/info_page.jsx ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _nav_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../nav/navbar */ "./frontend/components/nav/navbar.jsx");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var InfoPage = function InfoPage(_ref) {
+  var infoWord = _ref.infoWord;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("animezon"),
+      _useState2 = _slicedToArray(_useState, 2),
+      feature = _useState2[0],
+      setFeature = _useState2[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    window.scrollTo(0, 0);
+  });
+
+  var updateFeature = function updateFeature(e) {
+    var target = e.currentTarget.value;
+    setFeature(target);
+  };
+
+  var infoFeatures = {
+    animezon: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/info-logo.png?raw=true", "Welcome to the features informational page of animezon. To understand the useable features of the website, either explore on your own or select one of the feature buttons above."],
+    slider: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/auto-slider-demo.gif?raw=true", "On the home page of the website, we can see an automatic photo slider that features an on hover effect. When hovering on the banner, the user is presented with a preview of the product video. Once the banner is clicked, the user is then redirected on to the proper product view page."],
+    cart: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/cart-demo.gif?raw=true", "The cart function is used to add, edit and delete possible item purchases onto the cart. With this function, we are able to simulate and display the cart function that Amazon has to offer it's users."],
+    search: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/search-demo.gif?raw=true", "With the help of React hooks, Animezon was able to emulate the search bar function that Amazon has to offer. The search function can search either using title names or the different types of items whether it be anime, manga, or merchendise"],
+    checkout: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/checkout-demo.gif?raw=true", "The checkout functional component is the following continuation of the cart function. Where the cart function emulates the adding of items to the cart, the checkout function creates new items that the user has purchased over time."],
+    account: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/create-account-demo.gif?raw=true", "Animezon allows users to search and view items on the website, but in order to write reviews, add items to cart, purchase items, and even customize one's profile, an account is first needed. To make an account find the accounts and links button on the navbar and signup or login to an account"],
+    profile: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/profile-demo.gif?raw=true", "The creation of the user account gives any animezon user a default profile page. But if the user wishes to add another layer personaliztion, one can create a profile page in which other users can see their reviews as well as personalized profile page"],
+    review: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/review-demo.gif?raw=true", "As with any e-commerce website the user is able to leave behind reccomendations to other users with the review function. Emulating amazon's reviews system, the user once logged in is able to leave behind a rating ang comment on the product of choice for other users to view either on the product view page or the user profile page"]
+  };
+  var animezonInfo = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "info-about-animezon"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "animezon-background-text"
+  }, "Animezon is a fullstack clone of e-commerce website Amazon. This website is the culmination of technologies and techniques I learned during my time in App Academy.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Animezon is developed with a postgreSQL data base, through the use of Ruby to create the necesarry API routes with Ruby on Rails. For the frontend aspect of the project, the data from the backend is passed forward with the use of Redux states and then given to the React library to be presented with detail oriented CSS and HTML."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "animezon-tech-logos"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://cdn.iconscout.com/icon/free/png-256/ruby-47-1175102.png"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://raw.githubusercontent.com/jangcla/github-profile/3b4d2cde84319e2b6dc1b0a042ba2fb9199a6a35/profile-photos/redux-icon.svg"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1985px-Postgresql_elephant.svg.png"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://github.com/jangcla/github-profile/blob/main/profile-photos/ruby-on-rails-icon.png?raw=true"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://github.com/jangcla/github-profile/blob/main/profile-photos/aws.png?raw=true"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "https://github.com/jangcla/github-profile/blob/main/profile-photos/heroku-icon.png?raw=true"
+  })));
+  var termsInfo = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "info-about-terms"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "about-use-of-animezon"
+  }, "Welcome to Animezon's terms of use information page. To clarify and remind those on the website, Animezon is not a real e-commerce website and no actual purchasing and handling of products are available on the website. This website is simply a fullstack clone of Amazon for learning technologies such as react, javascript, api's, styling, and backend databases."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "about-use-of-animezon"
+  }, "When interacting with the website, please remember that other people have access to this website and I ask you not to input information you don't want on the internet to see. So please refrain from saving, inputing, and adding sensitive information on the website."));
+  var featuresInfo = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "info-about-features"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "select-a-feature"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    id: "feature-select",
+    onClick: updateFeature,
+    value: "animezon"
+  }, "Animezon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    id: "feature-select",
+    onClick: updateFeature,
+    value: "account"
+  }, "account"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    id: "feature-select",
+    onClick: updateFeature,
+    value: "profile"
+  }, "profile"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    id: "feature-select",
+    onClick: updateFeature,
+    value: "slider"
+  }, "slider"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    id: "feature-select",
+    onClick: updateFeature,
+    value: "cart"
+  }, "cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    id: "feature-select",
+    onClick: updateFeature,
+    value: "checkout"
+  }, "checkout"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    id: "feature-select",
+    onClick: updateFeature,
+    value: "search"
+  }, "search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    id: "feature-select",
+    onClick: updateFeature,
+    value: "review"
+  }, "review")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "feature-selected-inform"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Learn about the ", feature, " feature"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), infoFeatures[feature][1]));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "info-page"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "info-main-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "info-photo-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: infoFeatures[feature][0],
+    id: "info-photo"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "info-text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    id: "info-text-header"
+  }, "Learn about ", infoWord), infoWord === "Animezon" ? animezonInfo : null, infoWord === "Terms of Use" ? termsInfo : null, infoWord === "Functions and Features" ? featuresInfo : null))));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InfoPage);
+
+/***/ }),
+
+/***/ "./frontend/components/info/info_page_container.js":
+/*!*********************************************************!*\
+  !*** ./frontend/components/info/info_page_container.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _info_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./info_page */ "./frontend/components/info/info_page.jsx");
+
+
+
+var mSTP = function mSTP(state, ownProps) {
+  var infoWord = ownProps.match.params.infoword;
+  console.log(infoWord);
+  return {
+    infoWord: infoWord
+  };
+};
+
+var mDTP = function mDTP(dispatch) {
+  return {};
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_0__.connect)(mSTP, mDTP)(_info_page__WEBPACK_IMPORTED_MODULE_1__.default));
 
 /***/ }),
 
@@ -13658,7 +13843,16 @@ var Footer = function Footer() {
     onClick: scrollToTop
   }, "Back to top"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "links-to-info-pages"
-  }, "Terms and Services"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    id: "footer-link",
+    to: "/about/Animezon"
+  }, "Learn About Animezon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    id: "footer-link",
+    to: "/about/Terms of Use"
+  }, "Animezon's Terms of Use"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    id: "footer-link",
+    to: "/about/Functions and Features"
+  }, "Animezon Functions and Features")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "footer-logos"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/"
@@ -13674,7 +13868,7 @@ var Footer = function Footer() {
     src: "https://github.com/jangcla/Animezon/blob/info/photos/git-logo.png?raw=true",
     id: "footer-social-logo"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "https://www.linkedin.com/in/john-angcla-1418a9213/",
+    href: "https://www.linkedin.com/in/johnangcla",
     target: "_blank"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-icon-png.png",
@@ -16590,7 +16784,7 @@ var PhotoSlider = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         id: "s1t"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, " YOU SHOULD BE WATCHING")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-        to: "/error/underdevelopment"
+        to: "/about/Animezon"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         id: "slide-photo1"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {

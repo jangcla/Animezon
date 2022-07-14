@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 
 
-const Greeting = ({currentUser, itemTotal, logout, fetchReviews}) => {
+const Greeting = ({currentUser, itemTotal, logout}) => {
     const [dropdown, setDropdown] = useState(false);
     const history = useHistory();
 

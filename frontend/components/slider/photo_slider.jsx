@@ -81,7 +81,7 @@ class PhotoSlider extends React.Component {
                                 
                                     <div className="slide first" id='slide-one'>
                                         <p id='s1t'><big> YOU SHOULD BE WATCHING</big></p>
-                                        <Link to='/error/underdevelopment'>
+                                        <Link to='/about/Animezon'>
                                             <img id='slide-photo1'/>
                                         </Link>
                                     </div>
