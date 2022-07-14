@@ -12726,7 +12726,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var InfoPage = function InfoPage(_ref) {
   var infoWord = _ref.infoWord;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("splash"),
       _useState2 = _slicedToArray(_useState, 2),
       feature = _useState2[0],
       setFeature = _useState2[1];
@@ -12734,6 +12734,16 @@ var InfoPage = function InfoPage(_ref) {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     window.scrollTo(0, 0);
   });
+  var infoPhotos = {
+    splash: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/info-logo.png?raw=true",
+    slider: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/auto-slider-demo.gif?raw=true",
+    cart: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/cart-demo.gif?raw=true",
+    search: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/search-demo.gif?raw=true",
+    checkout: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/checkout-demo.gif?raw=true",
+    account: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/create-account-demo.gif?raw=true",
+    profile: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/profile-demo.gif?raw=true",
+    review: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/review-demo.gif?raw=true"
+  };
   var animezonInfo = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "info-about-animezon"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -12775,7 +12785,7 @@ var InfoPage = function InfoPage(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "info-photo-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/info-logo.png?raw=true",
+    src: infoPhotos[feature],
     id: "info-photo"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "info-text"

@@ -4,11 +4,22 @@ import { Link } from "react-router-dom";
 
 const InfoPage = ({infoWord}) => {
 
-    const [feature, setFeature] = useState("");
+    const [feature, setFeature] = useState("splash");
 
     useEffect(() => {
         window.scrollTo(0, 0);
     })
+
+    const infoPhotos = {
+        splash: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/info-logo.png?raw=true",
+        slider: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/auto-slider-demo.gif?raw=true",
+        cart: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/cart-demo.gif?raw=true",
+        search: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/search-demo.gif?raw=true",
+        checkout: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/checkout-demo.gif?raw=true",
+        account: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/create-account-demo.gif?raw=true",
+        profile: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/profile-demo.gif?raw=true",
+        review: "https://github.com/jangcla/Animezon/blob/info/photos/info-photos/review-demo.gif?raw=true"
+    }
 
     const animezonInfo = (
         <div id="info-about-animezon">
@@ -71,8 +82,7 @@ const InfoPage = ({infoWord}) => {
             <div id="info-page">
                 <div id="info-main-container">
                     <div id="info-photo-container">
-                        
-                        <img src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/info-logo.png?raw=true" id="info-photo"/>
+                        <img src={infoPhotos[feature]} id="info-photo"/>
                     </div>
 
                     <div id="info-text">
