@@ -12726,7 +12726,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var InfoPage = function InfoPage(_ref) {
   var infoWord = _ref.infoWord;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("splash"),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("animezon"),
       _useState2 = _slicedToArray(_useState, 2),
       feature = _useState2[0],
       setFeature = _useState2[1];
@@ -12741,7 +12741,7 @@ var InfoPage = function InfoPage(_ref) {
   };
 
   var infoFeatures = {
-    splash: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/info-logo.png?raw=true", "Welcome to the features informational page of animezon. To understand the useable features of the website, either explore on your own or select one of the feature buttons above."],
+    animezon: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/info-logo.png?raw=true", "Welcome to the features informational page of animezon. To understand the useable features of the website, either explore on your own or select one of the feature buttons above."],
     slider: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/auto-slider-demo.gif?raw=true", "On the home page of the website, we can see an automatic photo slider that features an on hover effect. When hovering on the banner, the user is presented with a preview of the product video. Once the banner is clicked, the user is then redirected on to the proper product view page."],
     cart: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/cart-demo.gif?raw=true", "The cart function is used to add, edit and delete possible item purchases onto the cart. With this function, we are able to simulate and display the cart function that Amazon has to offer it's users."],
     search: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/search-demo.gif?raw=true", "With the help of React hooks, Animezon was able to emulate the search bar function that Amazon has to offer. The search function can search either using title names or the different types of items whether it be anime, manga, or merchendise"],
@@ -12791,7 +12791,7 @@ var InfoPage = function InfoPage(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     id: "feature-select",
     onClick: updateFeature,
-    value: "splash"
+    value: "animezon"
   }, "Animezon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     id: "feature-select",
     onClick: updateFeature,
@@ -12822,7 +12822,7 @@ var InfoPage = function InfoPage(_ref) {
     value: "review"
   }, "review")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "feature-selected-inform"
-  }, infoFeatures[feature][1]));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("big", null, "Learn about the ", feature, " feature"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), infoFeatures[feature][1]));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_nav_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "info-page"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {

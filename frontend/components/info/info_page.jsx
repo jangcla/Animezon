@@ -3,7 +3,7 @@ import Navbar from "../nav/navbar";
 import { Link } from "react-router-dom";
 
 const InfoPage = ({infoWord}) => {
-    const [feature, setFeature] = useState("splash");
+    const [feature, setFeature] = useState("animezon");
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -16,7 +16,7 @@ const InfoPage = ({infoWord}) => {
     }
 
     const infoFeatures = {
-        splash: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/info-logo.png?raw=true", 
+        animezon: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/info-logo.png?raw=true", 
             "Welcome to the features informational page of animezon. To understand the useable features of the website, either explore on your own or select one of the feature buttons above."],
         slider: ["https://github.com/jangcla/Animezon/blob/info/photos/info-photos/auto-slider-demo.gif?raw=true", 
             "On the home page of the website, we can see an automatic photo slider that features an on hover effect. When hovering on the banner, the user is presented with a preview of the product video. Once the banner is clicked, the user is then redirected on to the proper product view page."],
@@ -89,7 +89,7 @@ const InfoPage = ({infoWord}) => {
     const featuresInfo = (
         <div id="info-about-features">
             <div id="select-a-feature">
-                <button id="feature-select" onClick={updateFeature} value="splash">
+                <button id="feature-select" onClick={updateFeature} value="animezon">
                     Animezon
                 </button>
                 <button id="feature-select" onClick={updateFeature} value="account">
@@ -116,6 +116,10 @@ const InfoPage = ({infoWord}) => {
             </div>
 
             <div id="feature-selected-inform">
+                <big>
+                    Learn about the {feature} feature
+                </big>
+                <br />
                 {infoFeatures[feature][1]}
             </div>
         </div>
