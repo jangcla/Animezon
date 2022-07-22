@@ -31,5 +31,8 @@ It also makes use of AWS S3 as the an online container for the item photos.
 
 <img align='left' alt='heroku' width='35px' src="https://github.com/jangcla/github-profile/blob/main/profile-photos/heroku-icon.png?raw=true" />
 
+<br />
+<br />
+
 ## Website features
 ### Splash page features
