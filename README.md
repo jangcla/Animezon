@@ -1,5 +1,5 @@
 # Animezon
-<img alt="Animezon" width="70%" src="https://media-exp1.licdn.com/dms/image/C562DAQFAzV6D5J7qWg/profile-treasury-image-shrink_800_800/0/1657416040643?e=1659063600&v=beta&t=LsBWA2YGTN9yuSV6EOiTE_ZOllu8urp1augz-7bVFSM" />
+<img alt="Animezon" width="100%" src="https://media.discordapp.net/attachments/964182254718963722/1005238342650171463/azone.PNG?width=817&height=468" />
 
 [Animezon](https://animezon.herokuapp.com) is a full stack react clone of Amazon focusing on the commerce of all things related to anime, from Anime shows, Manga books, and merchendise assoscited with different manga and anime.
 
@@ -34,5 +34,21 @@ It also makes use of AWS S3 as the an online container for the item photos.
 <br />
 <br />
 
-## Website features
-### Splash page features
+## Features Highlight
+### Splash page automatic slider
+<img alt="splash slider" width="45%" src="https://cdn.discordapp.com/attachments/1005242216891027518/1005243007261495316/auto-slider-demo.gif" />
+
+### User Create
+<img alt="splash slider" width="45%" src="https://cdn.discordapp.com/attachments/1005242216891027518/1005243008997928991/create-account-demo.gif" />
+
+## State & Database
+### Redux Store State
+<img alt="Redux State" width="45%" src="https://media.discordapp.net/attachments/964182254718963722/1005233269211660369/Screen_Shot_2022-07-21_at_6.45.17_PM.png" />
+The Redux store uses a normalized state shape for a time complexity of O(1) when accessing data that's being updated, deleted, and/or rendered.
+<br />
+<br />
+In addition to being accessible by their unique IDs, the items are set under the user and can still be accessed by when the current user is not logged in. The user entity is the main focus on an eCommerce website so the profile/reviews/carts/purchases fall under the user to optimize load times and lessen the fetch calls needed from the backend database.
+
+### Database Schema
+<img alt="DB Schema" width="45%" src="https://cdn.discordapp.com/attachments/964182254718963722/1005233269635293365/Screen_Shot_2022-07-25_at_2.08.03_PM.png" />
+
