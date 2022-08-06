@@ -42,7 +42,7 @@ It also makes use of AWS S3 as the an online container for the item photos.
 <img alt="user demo" width="45%" src="https://cdn.discordapp.com/attachments/1005242216891027518/1005243008997928991/create-account-demo.gif" />
 
 ### Profile 
-<img alt="profile demo" width="45%" src="" />
+<img alt="profile demo" width="45%" src="https://cdn.discordapp.com/attachments/1005242216891027518/1005552911532703824/ezgif-4-06e0bef686.gif" />
 
 ### Cart
 <img alt="cart demo" width="45%" src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/cart-demo.gif?raw=true" />
@@ -67,7 +67,7 @@ It also makes use of AWS S3 as the an online container for the item photos.
 The Redux store uses a normalized state shape for a time complexity of O(1) when accessing data that's being updated, deleted, and/or rendered.
 <br />
 <br />
-In addition to being accessible by their unique IDs, the items are set under the user and can still be accessed by when the current user is not logged in. The user entity is the main focus on an eCommerce website so the profile/reviews/carts/purchases fall under the user to optimize load times and lessen the fetch calls needed from the backend database.
+In addition to being accessible by their unique IDs, the items are set under the user and can still be accessed when the current user is not logged in. The user entity is the main focus on an eCommerce website so the profile/reviews/carts/purchases fall under the user to optimize load times and lessen the fetch calls needed from the backend database.
 
 ### Database Schema
 <img alt="DB Schema" width="45%" src="https://cdn.discordapp.com/attachments/964182254718963722/1005233269635293365/Screen_Shot_2022-07-25_at_2.08.03_PM.png" />
