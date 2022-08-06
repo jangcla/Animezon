@@ -35,31 +35,104 @@ It also makes use of AWS S3 as the an online container for the item photos.
 <br />
 
 ## Features Highlight
-### Splash page automatic slider
-<img alt="splash slider" width="45%" src="https://cdn.discordapp.com/attachments/1005242216891027518/1005243007261495316/auto-slider-demo.gif" />
-
 ### User 
 <img alt="user demo" width="45%" src="https://cdn.discordapp.com/attachments/1005242216891027518/1005243008997928991/create-account-demo.gif" />
+Animezon allows you the user to view and browse through items without the use of an account. However, for actions such as adding items to the cart, checking out an item in the cart, creating and customizing a user profile, and leaving reviews, the user needs to create an account. 
+<br />
+(A demo account is accessible for the user on the sign up page as well.)
 
 ### Profile 
 <img alt="profile demo" width="45%" src="https://cdn.discordapp.com/attachments/1005242216891027518/1005552911532703824/ezgif-4-06e0bef686.gif" />
+A user is able to create a customized profile to showcase their individuality. The profile function is a person's view page for all their personal reviews on items found on the website. It is customizable and can be edited and changed at the users time.
 
 ### Cart
 <img alt="cart demo" width="45%" src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/cart-demo.gif?raw=true" />
+The cart function allows the user to add items they deem fit for purchase into an online basket. This basket contains and displays all previously added and created cart items, to either edit or delete. The cart function also has a randomizer select items for the customer to view if they want similar items in their cart.
 
 ### Checkout
 <img alt="checkout demo" width="45%" src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/checkout-demo.gif?raw=true" />
+The checkout function is created in order to create a list of purchased items for users to be have a sensation of purchasing. No real currency or delivery is actual made on the account and only serves the purpose of emulating a purchasing aspect of a eCommerce website. 
+<br />
+<br />
+( The next implementation and update, is to create a proper display page for all user purchases. )
 
 ### Review
 <img alt="review demo" width="45%" src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/review-demo.gif?raw=true" />
+The creation of the review is one of the main aspects of a eCommerce website. The ability to leave reviews allow the users to be able to express their feelings towards a previously purchased item. All user made reviews can be viewed and checked on the reviewers personal profile page. 
+<br />
+<br />
+( The next update and implementation for the review function is to add comments under the persons review. )
 
 ### Search
 <img alt="search demo" width="45%" src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/search-demo.gif?raw=true" />
+The implementation of the search function is made with React functional components ("React Hooks"), with the goal to learn and develop new technologies into my project, the creaation of the search functionality was a great introduction and practice into the world of react hooks. The search functionality uses a customized filtering on the frontend aspect of the webpage and runs in a linear out put O(n). 
+<br />
+<br />
+(The next implementation and update, is to create a backend query on the database to filter on the backend first, then be continued to be filtered on the frontend aspect of the website in order to reduce the space and time complexity of the filtering of items.)
 
 ### Automated carousel
 <img alt="splash slider" width="45%" src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/auto-slider-demo.gif?raw=true" />
+The automated carousel is the outcome of my personal attempt at creating a react class component autamtic function. Although the project may not be as complicated as most functions, this project presents my very first attempt at deconstructing different ideas from a css implementation that is combined to a functional state rerendering and mounting technologies. This component was one of the most satisfying "aha" moments of the project because it presented to me one of my earlier ephinany moments that further developed my love for building cool technologies with software development.
+<br />
+```
+class PhotoSlider extends React.Component {
+    constructor(props) {
+        super(props);
 
+        this.state = {
+            count : 1
+        }
 
+        this.clickRight = this.clickRight.bind(this);
+        this.clickLeft = this.clickLeft.bind(this);
+        this.startSlides = this.startSlides.bind(this);
+    }
+
+    componentDidMount() {
+        this.time = setInterval(this.startSlides, 5000);
+    }
+
+    startSlides() {
+        let counter = this.state.count;
+        counter++;
+        if (counter > 4) counter = 1;
+
+        let slide = document.getElementById('radio' + counter)
+        slide.checked = true;
+
+        this.setState({
+            "count" : counter
+        })
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.time);
+    }
+
+    clickRight(e) {
+        e.preventDefault();
+
+        clearInterval(this.time);
+        const val = this.state.count + 1  > 4 ? 1 : this.state.count + 1;
+        let slide = document.getElementById('radio' + val);
+        slide.checked = true;
+        this.setState({
+            "count" : val
+        })
+    }
+
+    clickLeft(e) {
+        e.preventDefault();
+
+        clearInterval(this.time);
+        const val = this.state.count - 1 < 1 ? 4 : this.state.count - 1;
+        let slide = document.getElementById('radio' + val);
+        slide.checked = true;
+        this.setState({
+            "count": val
+        })
+    }
+```
 
 ## State & Database
 ### Redux Store State
