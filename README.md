@@ -74,6 +74,8 @@ The implementation of the search function is made with React functional componen
 <img alt="splash slider" width="45%" src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/auto-slider-demo.gif?raw=true" />
 The automated carousel is the outcome of my personal attempt at creating a react class component autamtic function. Although the project may not be as complicated as most functions, this project presents my very first attempt at deconstructing different ideas from a css implementation that is combined to a functional state rerendering and mounting technologies. This component was one of the most satisfying "aha" moments of the project because it presented to me one of my earlier ephinany moments that further developed my love for building cool technologies with software development.
 <br />
+<br />
+
 ```
 class PhotoSlider extends React.Component {
     constructor(props) {
