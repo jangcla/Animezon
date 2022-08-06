@@ -38,8 +38,28 @@ It also makes use of AWS S3 as the an online container for the item photos.
 ### Splash page automatic slider
 <img alt="splash slider" width="45%" src="https://cdn.discordapp.com/attachments/1005242216891027518/1005243007261495316/auto-slider-demo.gif" />
 
-### User Create
-<img alt="splash slider" width="45%" src="https://cdn.discordapp.com/attachments/1005242216891027518/1005243008997928991/create-account-demo.gif" />
+### User 
+<img alt="user demo" width="45%" src="https://cdn.discordapp.com/attachments/1005242216891027518/1005243008997928991/create-account-demo.gif" />
+
+### Profile 
+<img alt="profile demo" width="45%" src="" />
+
+### Cart
+<img alt="cart demo" width="45%" src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/cart-demo.gif?raw=true" />
+
+### Checkout
+<img alt="checkout demo" width="45%" src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/checkout-demo.gif?raw=true" />
+
+### Review
+<img alt="review demo" width="45%" src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/review-demo.gif?raw=true" />
+
+### Search
+<img alt="search demo" width="45%" src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/search-demo.gif?raw=true" />
+
+### Automated carousel
+<img alt="splash slider" width="45%" src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/auto-slider-demo.gif?raw=true" />
+
+
 
 ## State & Database
 ### Redux Store State
