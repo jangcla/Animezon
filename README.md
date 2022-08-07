@@ -36,7 +36,7 @@ It also makes use of AWS S3 as the an online container for the item photos.
 
 ## Features Highlight
 ### User 
-<img alt="user demo" width="45%" src="https://cdn.discordapp.com/attachments/1005242216891027518/1005243008997928991/create-account-demo.gif" />
+<img alt="user demo" width="45%" src="https://github.com/jangcla/Animezon/blob/info/photos/info-photos/create-account-demo.gif?raw=true" />
 Animezon allows you - the user, to view and browse through items without the use of an account. However, for actions such as adding items to the cart, checking out an item in the cart, creating and customizing a user profile, and leaving reviews, the user needs to create an account. 
 <br />
 (A demo account is accessible for the user on the sign up page as well.)
