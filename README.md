@@ -94,6 +94,10 @@ class PhotoSlider extends React.Component {
         this.time = setInterval(this.startSlides, 5000);
     }
 
+    componentWillUnmount() {
+        clearInterval(this.time);
+    }
+    
     startSlides() {
         let counter = this.state.count;
         counter++;
@@ -105,10 +109,6 @@ class PhotoSlider extends React.Component {
         this.setState({
             "count" : counter
         })
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.time);
     }
 
     clickRight(e) {
