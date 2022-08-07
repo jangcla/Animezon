@@ -84,9 +84,7 @@ class PhotoSlider extends React.Component {
         this.state = {
             count : 1
         }
-
-        this.clickRight = this.clickRight.bind(this);
-        this.clickLeft = this.clickLeft.bind(this);
+        this.click = this.click.bind(this);
         this.startSlides = this.startSlides.bind(this);
     }
 
@@ -110,29 +108,25 @@ class PhotoSlider extends React.Component {
             "count" : counter
         })
     }
-
-    clickRight(e) {
-        e.preventDefault();
-
+    
+    click(number) {
         clearInterval(this.time);
-        const val = this.state.count + 1  > 4 ? 1 : this.state.count + 1;
+
+        let val;
+        if (this.state.count + number > 4) {
+            val = 1;
+        } else if (this.state + number < 1) {
+            val = 4;
+        } else {
+            val = this.state.count + number;
+        }
+
         let slide = document.getElementById('radio' + val);
         slide.checked = true;
         this.setState({
-            "count" : val
+           "count" : val
         })
-    }
-
-    clickLeft(e) {
-        e.preventDefault();
-
-        clearInterval(this.time);
-        const val = this.state.count - 1 < 1 ? 4 : this.state.count - 1;
-        let slide = document.getElementById('radio' + val);
-        slide.checked = true;
-        this.setState({
-            "count": val
-        })
+    
     }
 ```
 
